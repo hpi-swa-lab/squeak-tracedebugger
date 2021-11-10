@@ -4,7 +4,7 @@
 
 Programmers often inspect systems using a debugger in order to understand their implementation, find the cause of defects, or even discover extension points for new features. However, in complex systems, usually only a small part of a program flow is relevant for a single debugging session, causing a significant overhead in programmers when they navigate to the relevant part during debugging. Programmers try to reduce this overhead by choosing a close entry point for the debugging session, but often, such entry points do not exist, or the required knowledge for narrowing the program flow is unavailable before answering the original search problem through the very intended debugging session.
 
-> Motivating example tasks in Squeak/Smalltalk:
+> Motivating example tasks in Squeak/Smalltalk (find more examples in the [product visions](./product-visions.md)):
 >
 > - Find the relevant event handlers for a `MorphicEvent` that is propagated through the world.
 > - Jump to the next `RxmLink` of a regular expression that causes backtracking in the matching engine.
@@ -20,7 +20,7 @@ Another idea we pursue refers to the localization of relevant program places by 
 
 ## Impact
 
-With this project, we hope to drive means for improving debugging experience in complex systems forward. Our goal is to build the prototype of a debugger that upgrades the existing debugging experience in Squeak/Smalltalk. In the long term, it should be able to replace Squeak‘s built-in Debugger, which imposes non-functional requirements to our prototype with regard to the interface compatibility for integration into the base system and to the familiarity for users.
+With this project, we hope to drive means for improving debugging experience in complex systems forward. Our goal is to build the prototype of a debugger that upgrades the existing debugging experience in Squeak/Smalltalk. This prototype should also serve as a experimentation platform for future studies regarding debugging experience. In the long term, it should be able to replace Squeak‘s built-in Debugger, which imposes non-functional requirements to our prototype with regard to the interface compatibility for integration into the base system and to the familiarity for users.
 
 ## Implementation
 
