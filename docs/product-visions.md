@@ -165,3 +165,23 @@
 - Start/stop background tracing analogously to profiler
 - Stopping the tracing will bring up a new window with the trace
 - if performance is a problem: indicate method reference from where the recording should start
+
+## Wireframes
+
+### Debugger
+
+![image](https://user-images.githubusercontent.com/38782922/141184561-c47130a7-ac70-4e08-ba25-2a875dbe1910.png)
+
+![image](https://user-images.githubusercontent.com/38782922/141184632-e16855c4-8a1e-4482-9185-a16c06d8f05b.png)
+
+### Series Explorer
+
+![image](https://user-images.githubusercontent.com/38782922/141184497-63acda9c-6fcc-434f-8051-b56a6c48809a.png)
+
+### Background Tracer
+
+![image](https://user-images.githubusercontent.com/38782922/141184610-ca751f97-1c63-4098-8bb4-37b9b71137f4.png)
+
+### DualDebugger
+
+![image](https://user-images.githubusercontent.com/38782922/141184662-c273d32c-f6c5-49a8-9138-e9c5869443c6.png)
