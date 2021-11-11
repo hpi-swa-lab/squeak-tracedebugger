@@ -4,7 +4,7 @@
 
 | Persona	| Profile	| Role	| Context	| Challenges	| Goals	|
 | ---	| ---	| ---	| ---	| ---	| ---	|
-| **Domain expert**	| knowledge of larger parts of a system and its underyling architecture	| maintaining or extending a system	| uses the debugger to find the cause of a bug or to understand a particular aspect of the system (e.g., to extend it)	| Despite good knowledge of the system, debugging single aspects is difficult, especially if there are no fine-grained tests available. In iterative control flows, understanding of temporal-causal relationships requires intensive short-time memory.	| speed up debugging through the code base to find points of interest more efficiently	|
+| **Domain expert**	| knowledge of larger parts of a system and its underlying architecture	| maintaining or extending a system	| uses the debugger to find the cause of a bug or to understand a particular aspect of the system (e.g., to extend it)	| Despite good knowledge of the system, debugging single aspects is difficult, especially if there are no fine-grained tests available. In iterative control flows, understanding of temporal-causal relationships requires intensive short-time memory.	| speed up debugging through the code base to find points of interest more efficiently	|
 | **Domain learner**	| newbie to a system/slightly advanced knowledge	| improve understanding of the code base	| uses the debugger to travel through the code base and understand interconnections between parts of the system	| In systems with many actors and callbacks, navigation through the code base is difficult.	| improve overview in the debugger of different parts of the system and their interconnections	|
 | **Domain outsider**	| no or very limited knowledge of the system	| look up a particular implementation detail/fix a particular bug	| uses the debugger for dynamic program slicing	| Irrelevant actors and methods are hard to ignore.	| focus on particular aspects and bugs more efficiently
 
@@ -122,6 +122,7 @@
 ### Extended navigation support
 
 - bookmarking/labeling of stack frames?
+- coloring/highlighting of associated stack frames/objects?
 - spawn subtree of trace in a new window?
 - linear navigation history like in browsers?
 
