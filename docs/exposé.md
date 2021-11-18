@@ -4,7 +4,7 @@
 
 Programmers often inspect systems using a debugger in order to understand their implementation, find the cause of defects, or even discover extension points for new features. However, in complex systems, usually only a small part of a program flow is relevant for a single debugging session, causing a significant overhead in programmers when they navigate to the relevant part during debugging. Programmers try to reduce this overhead by choosing a close entry point for the debugging session, but often, such entry points do not exist, or the required knowledge for narrowing the program flow is unavailable before answering the original search problem through the very intended debugging session.
 
-> Motivating example tasks in Squeak/Smalltalk:
+> Motivating example tasks in Squeak/Smalltalk (find more examples in the [product visions](./product-visions.md)):
 >
 > - Find the relevant event handlers for a `MorphicEvent` that is propagated through the world.
 > - Jump to the next `RxmLink` of a regular expression that causes backtracking in the matching engine.
@@ -20,7 +20,7 @@ Another idea we pursue refers to the localization of relevant program places by 
 
 ## Impact
 
-With this project, we hope to drive means for improving debugging experience in complex systems forward. Our goal is to build the prototype of a debugger that upgrades the existing debugging experience in Squeak/Smalltalk. In the long term, it should be able to replace Squeak‘s built-in Debugger, which imposes non-functional requirements to our prototype with regard to the interface compatibility for integration into the base system and to the familiarity for users.
+With this project, we hope to drive means for improving debugging experience in complex systems forward. Our goal is to build the prototype of a debugger that upgrades the existing debugging experience in Squeak/Smalltalk. This prototype should also serve as a experimentation platform for future studies regarding debugging experience. In the long term, it should be able to replace Squeak‘s built-in Debugger, which imposes non-functional requirements to our prototype with regard to the interface compatibility for integration into the base system and to the familiarity for users.
 
 ## Implementation
 
@@ -37,13 +37,13 @@ Keywords: program traces, call graphs, back-in-time-debugger, dynamic analysis
 - [PathFinder](https://www.hpi.uni-potsdam.de/hirschfeld/trac/SqueakCommunityProjects/wiki/path%3ApathFinder): Back-in-time debugger for navigating through test cases with incremental dynamic analysis. Limited trace granularity for sub-method-level instructions (?). Very basic filtering of stack frames by their labels, no means for querying traces. Assumes reproducible entry point.
   - [Test-driven Fault Navigation](https://www.hpi.uni-potsdam.de/hirschfeld/trac/SqueakCommunityProjects/wiki/path%3Atutorial%3Atdfn): Toolset „for debugging reproducible failures with the scientific method“ based on invariant mining, fault prediction and tracing of potential anomalies in the back-in-time debugger.
 - [Multi-level Debugging](https://github.com/abstraktor/multileveldebugging-QoppaS): Perspective-dependent stack-frame filtering.
-- [Moldable Debugger:](http://scg.unibe.ch/research/moldabledebugger) „Framework for developing domain-specific debuggers“, views, and operations. Basic stack-filtering. No support for back-in-time debugging.
-- [Unstuck](https://de.slideshare.net/MarcusDenker/unstuck): Trace-based back-in-time debugger built upon ByteSurgeon. No filtering. Queries for events, variable accesses, message sends. Coloring of objects for tracking.
-- [Practical Back-in-time-Debugging](http://scg.unibe.ch/archive/phd/lienhard-phd.pdf#practical%20back-in-time%20debugging): Optimized program trace with metadata in VM data structure.
+- [Moldable Debugger:](http://scg.unibe.ch/research/moldabledebugger) „Framework for developing domain-specific debuggers“, views, and operations. Basic stack filtering. No support for back-in-time debugging.
+- [Unstuck](https://de.slideshare.net/MarcusDenker/unstuck): Trace-based back-in-time debugger built upon ByteSurgeon (byte code rewriting). No filtering. Queries for events such as variable accesses, assignments, or message sends. Coloring of objects for tracking. Object history view. Not compatible with Squeak 5.x VMs.
+- [Practical Back-in-time-Debugging (Lienhard)](http://scg.unibe.ch/archive/phd/lienhard-phd.pdf#practical%20back-in-time%20debugging): Optimized program trace with metadata in VM data structure.
 
 Further related work (not applicable in Squeak):
 
-- [Expositor](https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5021.pdf) (C): Debugging framework for time-travel debugging and script queries, based on efficient execution trace. No GUI or views.
+- [Expositor](https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5021.pdf) (C): Debugging framework for time-travel debugging and script queries, based on efficient execution trace. User interaction model: Incremental filtering and detail querying from original trace. No GUI or views.
 - [Dynamic Query-based Debugging of Object-oriented Programs](https://www.cs.purdue.edu/homes/xyzhang/spring07/Papers/query-debugging.pdf) (Java): Dynamic query DSL for inter-object relationships. Optimized query compilation and incremental reevaluation. No GUI or views.
 - [ZStep 95](https://web.media.mit.edu/~lieber/Lieberary/ZStep/ZStep-SoftViz/ZStep-SoftViz.html) (Lisp): Back-in-time debugging based on execution traces. Behavior-oriented stepping operations. Focus on dimensions of immediacy. Tied to the domain of graphics.
 - [GUI-driven code tracing](https://www.researchgate.net/publication/261442641_GUI_code_tracing_through_direct_program_interaction) (Java/Eclipse): Time-travel debugging for construction of GUI widgets. Time slider and domain-specific visualizations.
