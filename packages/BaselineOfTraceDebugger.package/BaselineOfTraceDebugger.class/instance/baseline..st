@@ -6,7 +6,9 @@ baseline: spec
 		"dependencies"
 		spec
 			baseline: 'SimulationStudio' with: [
-				spec repository: 'github://LinqLover/packages'].
+				spec
+					repository: 'github://LinqLover/SimulationStudio/packages';
+					loads: #('SimulationStudio-Base')].
 		
 		"packages"
 		spec
