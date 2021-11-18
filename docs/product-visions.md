@@ -4,15 +4,17 @@
 
 | Persona	| Profile	| Role	| Context	| Challenges	| Goals	|
 | ---	| ---	| ---	| ---	| ---	| ---	|
-| **Domain expert**	| knowledge of larger parts of a system and its underlying architecture	| maintaining or extending a system	| uses the debugger to find the cause of a bug or to understand a particular aspect of the system (e.g., to extend it)	| Despite good knowledge of the system, debugging single aspects is difficult, especially if there are no fine-grained tests available. In iterative control flows, understanding of temporal-causal relationships requires intensive short-time memory.	| speed up debugging through the code base to find points of interest more efficiently	|
-| **Domain learner**	| newbie to a system/slightly advanced knowledge	| improve understanding of the code base	| uses the debugger to travel through the code base and understand interconnections between parts of the system	| In systems with many actors and callbacks, navigation through the code base is difficult.	| improve overview in the debugger of different parts of the system and their interconnections	|
-| **Domain outsider**	| no or very limited knowledge of the system	| look up a particular implementation detail/fix a particular bug	| uses the debugger for dynamic program slicing	| Irrelevant actors and methods are hard to ignore.	| focus on particular aspects and bugs more efficiently
+| **System expert**	| knowledge of larger parts of a system and its underlying architecture	 | maintaining or extending a system	| uses the debugger to find the cause of a bug or to understand a particular aspect of the system (e.g., to extend it)	| Despite good knowledge of the system, debugging single aspects is difficult, especially if there are no fine-grained tests available. In iterative control flows, understanding of temporal-causal relationships requires intensive short-time memory.	| speed up debugging through the code base to find points of interest more efficiently	|
+| **System learner**	| newbie to a system/slightly advanced knowledge	| improve understanding of the code base	| uses the debugger to travel through the code base and understand interconnections between parts of the system	| In systems with many actors and callbacks, navigation through the code base is difficult.	| improve overview in the debugger of different parts of the system and their interconnections	|
+| **System outsider**	| no or very limited knowledge of the system	| look up a particular implementation detail/fix a particular bug	| uses the debugger for dynamic program slicing	| Irrelevant actors and methods are hard to ignore.	| focus on particular aspects and bugs while minimizing distraction by other system parts	|
+
+**Note:** *Domain* knowledge is required in any case, *system* refers to the specific implementation of the domain.
 
 ## Scenarios
 
 ### Explore Morphic event handling
 
-- **Roles:** Domain learner, domain expert
+- **Roles:** System learner (understand the entire process), system expert (already knows most static artifacts, wants to fix a specific bug)
 - **Goal:** Explore the relevant event handlers for a `MorphicEvent` that is propagated through the world (including composed handlers, submorphs, event filters, rejecting handlers, etc.).
 - **Examples:**
   - Debug menu invocation (e.g., world menu)
@@ -36,7 +38,7 @@
 
 ### Debug Morphic layouting
 
-- **Roles:** Domain outsider, domain expert
+- **Roles:** System outsider (nearly zero prior knowledge about the system), system expert (already knows precisely where to search)
 - **Goal:** Understand the reason for an `AssertionFailure` signaled from `#doLayoutAgain`
 - **Example:** Layouting of an etoys script morph (see EToys-ct.403 and ["Etoys car example.1.cs"](https://github.com/hpi-swa-lab/squeak/issues/60#issuecomment-694497128))
 - **Problems:** Narrowing down when the property `#doLayoutAgain` is added to the morph requires stepping into all details or performing a binary search by starting a new debugger whenever it was stepped too far.
@@ -46,7 +48,7 @@
 
 ### Explore Morphic construction/rendering
 
-- **Roles:** Domain learner, domain expert
+- **Roles:** System learner (understand the entire process), system expert (find a specific bug)
 - **Goal:** Explore the construction/toolbuilding process or the rendering/drawing process of a complex morph
 - **Examples:**
   - `ToolBuilder build: (Inspector on: #(1 2 3))`
@@ -67,7 +69,7 @@
 
 ### Explore regex matching
 
-- **Roles:** Domain learner, domain expert
+- **Roles:** System learner, system expert
 - **Goals:**
   - Retrace the matching process of a string against a regular expression
   - Understand the reason for backtracking in the matching process
@@ -93,7 +95,7 @@
 
 ### Advanced: Localize the cause of a bug via comparative debugging
 
-- **Roles:** Domain learner, domain newbie, domain expert
+- **Roles:** System learner, system newbie, system expert
 - **Goal:** Compare two varying program traces one of which works expected and the other one results in a bug
 - **Examples:**
   - Debug Morphic event handling bug fixed in Morphic-ct.1789: Open an object explorer, copy the tree view into the world/a dialog window, and debug each a yellow button click on both tree views.
