@@ -4,8 +4,12 @@
 
 UI:
 
-- Maximize compatibility with default Squeak Debugger
-- Replace default debugger via `ToolSet`/`AppRegistry`
+- Maximize compatibility with default Squeak Debugger (hooks)
+- Maximize accessibility of traces from normal system (i.e., by replacing the default debugger via `ToolSet`/`AppRegistry`)
+
+Framework:
+
+- Build a general-purpose solution that does not focus too much on domain-specific knowledge, but nevertheless should be extensible for individual domains (cf. custom inspectors)
 
 Tracing:
 
@@ -21,13 +25,14 @@ Tracing:
 
 UI:
 
-- Too large tree views: Add horizontal scroll bar, auto-scroll, maybe add mode to only display current stack
+- Too large tree views: Add horizontal scroll bar, auto-scroll, spawn, maybe add mode to only display current stack
 
 Tracing:
 
 - Sufficient memory/execution time efficiency: optimize on demand
 - Handle object identity forwarding correctly
 - Collect value series efficiently
+- Reevaluation – have there been partial changes of global state since the original recording?
 
 ## Related Work
 
