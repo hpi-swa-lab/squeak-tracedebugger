@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfTraceDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfTraceDebugger",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

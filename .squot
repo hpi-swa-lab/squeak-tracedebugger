@@ -1,0 +1,5 @@
+OrderedDictionary {
+	'packages/BaselineOfTraceDebugger.package' : #SquotCypressCodeSerializer,
+	'packages/TraceDebugger.package' : #SquotCypressCodeSerializer,
+	'packages/TraceDebuggerTests.package' : #SquotCypressCodeSerializer
+}

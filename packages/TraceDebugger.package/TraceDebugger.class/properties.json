@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TraceDebugger",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }
