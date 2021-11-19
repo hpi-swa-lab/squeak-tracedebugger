@@ -1,0 +1,4 @@
+accessing
+traceClass
+
+	^ TDBTrace

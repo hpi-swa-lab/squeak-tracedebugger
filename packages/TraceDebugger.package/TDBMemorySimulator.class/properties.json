@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		 ],
+	"name" : "TDBMemorySimulator",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Simulator",
 	"type" : "normal" }

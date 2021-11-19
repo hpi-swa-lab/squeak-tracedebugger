@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		"trace",
+		"timeIndex" ],
+	"name" : "TDBCursor",
 	"pools" : [
 		 ],
 	"super" : "Object",

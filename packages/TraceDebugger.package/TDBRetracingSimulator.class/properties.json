@@ -7,9 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		"timeIndex" ],
+	"name" : "TDBRetracingSimulator",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDBMemorySimulator",
 	"type" : "normal" }

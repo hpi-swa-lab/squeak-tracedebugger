@@ -1,0 +1,4 @@
+private
+xxxtdbproxyObject
+
+	^ object

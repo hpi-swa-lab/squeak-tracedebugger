@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"forBlock:" : "ct 11/18/2021 18:07",
+		"forContext:" : "ct 11/18/2021 18:09" },
 	"instance" : {
-		 } }
+		"contextAtTime:" : "ct 11/18/2021 18:46",
+		"initializeWithContext:" : "ct 11/18/2021 18:10",
+		"memory" : "ct 11/18/2021 18:48",
+		"object:atTime:" : "ct 11/18/2021 18:48" } }

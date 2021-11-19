@@ -1,15 +1,14 @@
 {
-	"category" : "TraceDebugger-Core",
+	"category" : "TraceDebuggerTests-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		 ],
+	"name" : "TDBCursorTest",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

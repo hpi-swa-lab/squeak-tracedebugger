@@ -1,5 +1,5 @@
 {
-	"category" : "TraceDebugger-Core",
+	"category" : "TraceDebuggerTests-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,9 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		"object" ],
+	"name" : "TDBRetracingSimulatorTest",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

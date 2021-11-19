@@ -1,14 +1,14 @@
 {
-	"category" : "TraceDebugger-Core",
+	"category" : "TraceDebuggerTests-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memory",
-		"originalContext" ],
-	"name" : "TDBTrace",
+		"plonk",
+		"griffle" ],
+	"name" : "TDBTestObject",
 	"pools" : [
 		 ],
 	"super" : "Object",
