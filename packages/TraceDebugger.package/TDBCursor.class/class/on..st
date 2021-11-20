@@ -2,5 +2,5 @@ instance creation
 on: aTrace
 
 	^ self new
-		trace: aTrace;
+		rootTrace: aTrace;
 		yourself

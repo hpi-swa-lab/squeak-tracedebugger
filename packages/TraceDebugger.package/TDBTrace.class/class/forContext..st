@@ -1,4 +1,4 @@
 instance creation
 forContext: aContext
 
-	^ self new initializeWithContext: aContext
+	^ self new context: aContext

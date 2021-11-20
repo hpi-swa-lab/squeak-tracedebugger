@@ -1,4 +1,4 @@
 accessing
 trace
 
-	^ trace
+	^ self rootTrace traceAtTime: self timeIndex

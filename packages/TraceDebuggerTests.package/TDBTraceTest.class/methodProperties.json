@@ -3,4 +3,6 @@
 		 },
 	"instance" : {
 		"classUnderTest" : "ct 11/18/2021 18:45",
-		"test" : "ct 11/18/2021 23:33" } }
+		"test" : "ct 11/19/2021 23:37",
+		"testDetectTrace" : "ct 11/20/2021 23:00",
+		"testWithAllDescendants" : "ct 11/20/2021 23:01" } }

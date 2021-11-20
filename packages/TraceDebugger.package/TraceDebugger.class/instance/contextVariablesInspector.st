@@ -1,0 +1,4 @@
+accessing - private
+contextVariablesInspector
+
+	^ contextVariablesInspector

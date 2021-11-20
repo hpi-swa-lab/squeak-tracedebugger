@@ -1,11 +1,16 @@
 {
 	"class" : {
 		"forBlock:" : "ct 11/18/2021 18:06",
-		"on:" : "ct 11/18/2021 18:12",
+		"forContext:" : "ct 11/20/2021 19:41",
+		"on:" : "ct 11/20/2021 21:25",
 		"traceClass" : "ct 11/18/2021 18:06" },
 	"instance" : {
+		"childContextsFor:" : "ct 11/20/2021 21:25",
 		"context" : "ct 11/18/2021 18:41",
 		"initialize" : "ct 11/19/2021 21:36",
+		"object:" : "ct 11/20/2021 22:28",
+		"rootTrace" : "ct 11/20/2021 21:24",
+		"rootTrace:" : "ct 11/20/2021 21:24",
 		"timeIndex" : "ct 11/18/2021 18:42",
-		"trace" : "ct 11/18/2021 18:42",
-		"trace:" : "ct 11/18/2021 18:13" } }
+		"timeIndex:" : "ct 11/20/2021 22:12",
+		"trace" : "ct 11/20/2021 21:24" } }

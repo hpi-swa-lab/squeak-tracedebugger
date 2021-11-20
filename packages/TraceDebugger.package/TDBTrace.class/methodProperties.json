@@ -1,9 +1,14 @@
 {
 	"class" : {
-		"forBlock:" : "ct 11/18/2021 18:07",
-		"forContext:" : "ct 11/18/2021 18:09" },
+		"forBlock:" : "ct 11/20/2021 00:28",
+		"forContext:" : "ct 11/20/2021 23:04" },
 	"instance" : {
+		"children" : "ct 11/19/2021 23:17",
+		"context:" : "ct 11/20/2021 23:04",
 		"contextAtTime:" : "ct 11/18/2021 18:46",
-		"initializeWithContext:" : "ct 11/18/2021 18:10",
+		"detectTraceFor:atTime:" : "ct 11/19/2021 23:22",
+		"initialize" : "ct 11/20/2021 23:04",
 		"memory" : "ct 11/18/2021 18:48",
-		"object:atTime:" : "ct 11/18/2021 18:48" } }
+		"object:atTime:" : "ct 11/18/2021 18:48",
+		"traceAtTime:" : "ct 11/20/2021 21:23",
+		"withAllDescendants" : "ct 11/19/2021 23:15" } }

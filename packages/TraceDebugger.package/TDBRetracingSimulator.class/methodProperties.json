@@ -4,6 +4,7 @@
 	"instance" : {
 		"context:doPrimitive:method:receiver:args:do:" : "ct 11/19/2021 20:43",
 		"context:primitiveFailTokenFor:" : "ct 11/13/2021 02:26",
+		"context:push:" : "ct 11/20/2021 00:21",
 		"context:pushField:at:ifInMemory:" : "ct 11/19/2021 21:11",
 		"context:pushInstVar:at:ifInMemory:" : "ct 11/19/2021 21:11",
 		"context:pushLiteralVariable:do:" : "ct 11/13/2021 00:44",
@@ -14,7 +15,6 @@
 		"context:simulatedObject:basicAt:ifInMemory:" : "ct 11/19/2021 19:59",
 		"context:simulatedObject:instVarAt:" : "ct 11/19/2021 20:24",
 		"context:simulatedObject:instVarAt:ifInMemory:" : "ct 11/19/2021 21:05",
-		"evaluate:" : "ct 11/19/2021 20:17",
 		"memory" : "ct 11/19/2021 20:29",
 		"memory:" : "ct 11/18/2021 21:15",
 		"simulatedObjectSize:" : "ct 11/18/2021 21:24",

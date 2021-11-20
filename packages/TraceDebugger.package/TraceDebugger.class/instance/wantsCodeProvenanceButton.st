@@ -1,0 +1,4 @@
+toolbuilder - constants
+wantsCodeProvenanceButton
+
+	^ false
