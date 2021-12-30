@@ -1,5 +1,7 @@
 dynamic forwarding - superfluous messages on ProtoObject
-withArgs: argArray executeMethod: compiledMethod
+withArgs: arguments executeMethod: compiledMethod
+	<ignoreForCoverage>
 
+	memory ifNil: [^ super withArgs: arguments executeMethod: compiledMethod].
 	^ self xxxtdbproxyForward:
-		[self withArgs: argArray executeMethod: compiledMethod]
+		[self withArgs: arguments executeMethod: compiledMethod]

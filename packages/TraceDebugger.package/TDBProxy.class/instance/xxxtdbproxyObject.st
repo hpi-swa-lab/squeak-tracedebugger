@@ -1,4 +1,5 @@
 private
 xxxtdbproxyObject
+	<ignoreForCoverage>
 
 	^ object

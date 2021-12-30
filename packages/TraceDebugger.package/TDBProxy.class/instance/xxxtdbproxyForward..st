@@ -1,5 +1,6 @@
 private
 xxxtdbproxyForward: aBlock
+	<ignoreForCoverage>
 	
 	| result |
 	result := (TDBRetracingSimulator forMemory: memory atTime: timeIndex)
