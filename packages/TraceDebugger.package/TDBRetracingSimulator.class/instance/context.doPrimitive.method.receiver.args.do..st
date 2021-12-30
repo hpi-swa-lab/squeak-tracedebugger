@@ -10,21 +10,24 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 					at: index put: argument xxxtdbproxyObject]].
 	arguments ifNil: [arguments := originalArguments].
 	
+	self flag: #todo. "Robustize primitives against missing arguments - return fail tokens"
+	self flag: #todo. "Deduplicate"
+	
 	primitiveIndex
 		caseOf:
-			{[38 "primitiveFloatAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[60 "primitiveAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
+			{[38 "primitiveFloatAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[60 "primitiveAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[62 "primitiveSize"] -> [^ aContext push:
-				(self simulatedObjectSize: receiver)].
-			[63 "primitiveStringAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[68 "primitiveObjectAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[73 "primitiveInstVarAt"] -> [self context: aContext pushInstVar: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[143 "primitiveShortAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[165 "primitiveIntegerAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[173 "primitiveSlotAt"] -> [self context: aContext pushInstVar: receiver at: arguments first ifInMemory: [:result | ^ result]].
-			[210 "primitiveContextAt"] -> [self context: aContext pushField: receiver at: arguments first ifInMemory: [:result | ^ result]].
+				(self simulatedObjectSize: (arguments atLast: 1 ifAbsent: [receiver]))].
+			[63 "primitiveStringAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[68 "primitiveObjectAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[73 "primitiveInstVarAt"] -> [self context: aContext pushInstVar: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[143 "primitiveShortAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[165 "primitiveIntegerAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[173 "primitiveSlotAt"] -> [self context: aContext pushInstVar: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
+			[210 "primitiveContextAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[212 "primitiveContextSize"] -> [^ self context: aContext push:
-				(self simulatedObjectSize: receiver)]}
+				(self simulatedObjectSize: (arguments atLast: 1 ifAbsent: [receiver]))]}
 		otherwise: [
 			(primitiveIndex >= 264 and: [primitiveIndex <=  519]) "primitiveLoadInstVar"
 				ifTrue: [self context: aContext pushInstVar: receiver at: primitiveIndex - 264 + 1 ifInMemory: [:result | ^ result]]].
