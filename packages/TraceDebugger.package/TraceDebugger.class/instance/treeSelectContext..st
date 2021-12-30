@@ -1,4 +1,5 @@
 accessing - toolbuilder
 treeSelectContext: aContext
 
-	self selectContext: aContext.
+	self basicSelectContext:
+		(self cursor object: aContext).

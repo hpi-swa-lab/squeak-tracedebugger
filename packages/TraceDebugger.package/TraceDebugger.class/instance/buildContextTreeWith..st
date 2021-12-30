@@ -8,6 +8,7 @@ buildContextTreeWith: aBuilder
 		label: #contextLabelFor:;
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
+		getSelectedPath: #treeSelectedContextPath;
 		menu: #contextStackMenu:shifted:; 
 		icon: #messageIconFor:;
 		help: #messageHelpFor:;

@@ -1,4 +1,5 @@
 initialize-release
 context: aContext
 
-	originalContext := aContext.
+	context := aContext.
+	timeInterval := 0 to: 0.

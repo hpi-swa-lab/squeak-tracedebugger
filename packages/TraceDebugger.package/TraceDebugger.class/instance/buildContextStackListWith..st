@@ -1,6 +1,7 @@
 toolbuilder
 buildContextStackListWith: aBuilder
 
+	self flag: #todo. "Revise - should we use tree... selectors here? Try out!"
 	^ aBuilder pluggableListSpec new
 		model: self;
 		list: #contextStack;

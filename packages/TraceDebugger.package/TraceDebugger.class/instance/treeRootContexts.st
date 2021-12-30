@@ -1,4 +1,5 @@
 accessing - toolbuilder
 treeRootContexts
 
-	^ self rootContexts collect: [:ctx | ctx tdbproxyYourself]
+	^ self rootContexts
+		collect: [:ctx | ctx tdbproxyYourself]

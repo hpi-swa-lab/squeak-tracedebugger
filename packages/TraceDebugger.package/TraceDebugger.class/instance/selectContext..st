@@ -1,6 +1,6 @@
 accessing
 selectContext: aContext
 
-	selectedContext := self cursor object: aContext.
+	self basicSelectContext: aContext.
 	
-	self changed: #selectedContext.
+	self changed: #treeSelectedContextPath.

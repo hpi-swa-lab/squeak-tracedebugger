@@ -5,7 +5,7 @@ test
 	semaphore := Semaphore new.
 	process := [Processor activeProcess suspend]
 		forkAt: Processor activePriority + 1.
-	self assert: process isSuspended.
+	self should: process isSuspended.
 	context := process suspendedContext.
 	
 	trace := self classUnderTest forContext: context.

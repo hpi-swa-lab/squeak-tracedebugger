@@ -2,6 +2,7 @@ menus
 shiftedContextStackMenu: aMenu
 	<contextStackMenuShifted: true>
 
+	self flag: #shouldBeImplemented.
 	^ aMenu
 		addList:
 			#(('browse class hierarchy'				browseClassHierarchy)

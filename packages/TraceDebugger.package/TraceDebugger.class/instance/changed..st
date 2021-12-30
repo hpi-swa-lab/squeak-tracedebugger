@@ -8,6 +8,5 @@ changed: aspect
 	
 	aspect
 		caseOf:
-			{[#currentCompiledMethod] -> [self currentCompiledMethod].
-			[#selectedContext] -> [self updateInspectors]}
+			{[#selectedContext] -> [self updateInspectors]}
 		otherwise: [].

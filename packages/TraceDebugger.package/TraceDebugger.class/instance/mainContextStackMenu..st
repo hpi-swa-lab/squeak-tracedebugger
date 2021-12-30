@@ -2,6 +2,7 @@ menus
 mainContextStackMenu: aMenu
 	<contextStackMenuShifted: false>
 
+	self flag: #shouldBeImplemented.
 	^ aMenu
 		addList:
 			#(('restart (r)' 					restart) 

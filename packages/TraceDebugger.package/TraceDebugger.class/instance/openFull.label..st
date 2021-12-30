@@ -7,5 +7,5 @@ openFull: aBoolean label: aString
 	^ builder
 		open: (self buildFull: aBoolean with: builder)
 		label: (aString isEmptyOrNil
-			ifFalse: ['{1}: {2}' format: {self class appName. aString}]
-			ifTrue: [self class appName])
+			ifFalse: ['{1}: {2}' format: {self labelString. aString}]
+			ifTrue: [self labelString])

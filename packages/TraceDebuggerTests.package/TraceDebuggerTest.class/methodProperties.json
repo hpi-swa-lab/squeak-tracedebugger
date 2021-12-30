@@ -3,9 +3,11 @@
 		 },
 	"instance" : {
 		"classUnderTest" : "ct 11/18/2021 17:47",
+		"runDebuggerFrom:assertionsAndSteps:" : "ct 12/8/2021 23:14",
 		"shouldntFail:" : "ct 11/20/2021 22:42",
-		"test" : "ct 11/20/2021 20:09",
 		"testBuildDebugger" : "ct 11/20/2021 22:46",
 		"testBuildNotifier" : "ct 11/20/2021 22:42",
+		"testViewUpdates" : "ct 12/8/2021 22:12",
+		"testViewUpdatesAfterSelection" : "ct 12/8/2021 23:18",
 		"toolBuilder" : "ct 11/20/2021 22:41",
 		"validateWindow:" : "ct 11/20/2021 22:51" } }

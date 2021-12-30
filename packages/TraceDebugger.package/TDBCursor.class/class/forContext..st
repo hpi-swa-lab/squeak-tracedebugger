@@ -1,5 +1,4 @@
 instance creation
 forContext: aContext
 
-	^ self on:
-		(self traceClass forContext: aContext)
+	^ self forStackOfContext: aContext

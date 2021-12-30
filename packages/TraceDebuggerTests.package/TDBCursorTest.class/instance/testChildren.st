@@ -1,5 +1,5 @@
-tests
-testChildContexts
+tests - accessing
+testChildren
 
 	| cursor context1 context2 context3 context4 trace1 trace2 trace3 trace4 |
 	context1 := [] asContext.
@@ -21,3 +21,8 @@ testChildContexts
 	self assert: (cursor childContextsFor: context2) isEmpty.
 	self assert: (cursor childContextsFor: context3) asArray = {context4}.
 	self assert: (cursor childContextsFor: context4) isEmpty.
+	
+	self assert: (cursor traceFor: context1) = trace1.
+	self assert: (cursor traceFor: context2) = trace2.
+	self assert: (cursor traceFor: context3) = trace3.
+	self assert: (cursor traceFor: context4) = trace4.

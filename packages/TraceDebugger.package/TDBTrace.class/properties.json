@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
+		"parent",
+		"children",
 		"memory",
-		"originalContext",
-		"children" ],
+		"context",
+		"timeInterval" ],
 	"name" : "TDBTrace",
 	"pools" : [
 		 ],
