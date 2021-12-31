@@ -4,4 +4,4 @@ exampleRegex
 	self exampleRegex
 	"
 
-	self openForBlock: ['\w+' asRegex].
+	['\w+' asRegex] debugTrace.
