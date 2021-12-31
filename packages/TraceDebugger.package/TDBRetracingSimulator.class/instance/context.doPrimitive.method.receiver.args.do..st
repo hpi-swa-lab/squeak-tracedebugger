@@ -4,7 +4,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	| arguments |
 	arguments := nil.
 	originalArguments withIndexDo: [:argument :index |
-		((aContext objectClass: argument) == TDBProxy
+		((aContext objectClass: argument) isTdbProxy
 			and: [argument xxxtdbproxyMemory == memory])
 				ifTrue: [(arguments ifNil: [arguments := originalArguments copy])
 					at: index put: argument xxxtdbproxyObject]].

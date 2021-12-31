@@ -1,0 +1,4 @@
+testing
+isTdbProxy
+
+	^ true

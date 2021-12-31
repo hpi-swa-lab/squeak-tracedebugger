@@ -9,7 +9,8 @@
 		"rootTrace",
 		"timeIndex",
 		"process",
-		"enableSimulatorBlock" ],
+		"enableSimulatorBlock",
+		"currentTrace" ],
 	"name" : "TDBCursor",
 	"pools" : [
 		 ],

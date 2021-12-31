@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 12/31/2021 02:45",
+	"instvars" : [
+		 ],
+	"name" : "TDBContextProxy",
+	"pools" : [
+		 ],
+	"super" : "TDBProxy",
+	"type" : "normal" }

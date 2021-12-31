@@ -1,4 +1,5 @@
 testing
 canStepForward
 
-	^ (self selectedContext ifNil: [^ false flag: #workaround]) isDead not
+	^ (self selectedContext ifNil: [^ false])
+		isDead not

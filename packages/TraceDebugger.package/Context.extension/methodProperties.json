@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"asTdbProxyInMemory:atTime:" : "ct 12/30/2021 23:14",
 		"tdbHasHome:" : "ct 11/30/2021 22:52",
 		"tdbLivingHome" : "ct 11/30/2021 22:49",
 		"tdbStack" : "ct 11/19/2021 22:58" } }

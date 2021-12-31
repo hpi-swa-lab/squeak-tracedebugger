@@ -1,6 +1,10 @@
 accessing
 trace
 
-	self flag: #optimize. "Cache this during stepping -> O(1) instead O(n log n)!"
-	
-	^ self rootTrace traceAtTime: self timeIndex
+	"cached."
+	currentTrace ifNotNil:
+		[currentTrace key = self timeIndex
+			ifTrue: [^ currentTrace value]].
+	^ (currentTrace := self timeIndex ->
+		(self rootTrace traceAtTime: self timeIndex))
+			value

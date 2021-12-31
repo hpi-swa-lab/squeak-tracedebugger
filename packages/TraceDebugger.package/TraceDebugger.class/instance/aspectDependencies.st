@@ -11,6 +11,7 @@ aspectDependencies
 		"context and cursor"
 		at: #canStepBackward put: #(selectedContext);
 		at: #canStepForward put: #(selectedContext);
+		at: #childContextsFor: put: #(cursorPosition);
 		at: #contextStack put: #(interruptedContext);
 		at: #cursorPosition put: #(cursor);
 		at: #interruptedContext put: #(cursorPosition);

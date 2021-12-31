@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"for:in:atTime:" : "ct 11/30/2021 22:33" },
+		"for:inMemory:atTime:" : "ct 12/30/2021 23:09",
+		"isTdbProxy" : "ct 12/30/2021 23:13" },
 	"instance" : {
 		"==" : "ct 12/30/2021 17:14",
 		"doesNotUnderstand:" : "ct 12/30/2021 17:14",
@@ -10,7 +11,7 @@
 		"scaledIdentityHash" : "ct 12/30/2021 17:14",
 		"tdbproxyYourself" : "ct 12/30/2021 17:14",
 		"withArgs:executeMethod:" : "ct 12/30/2021 17:14",
-		"xxxtdbproxyForward:" : "ct 12/30/2021 17:14",
+		"xxxtdbproxyForward:" : "ct 12/30/2021 23:12",
 		"xxxtdbproxyMemory" : "ct 12/30/2021 17:14",
 		"xxxtdbproxyObject" : "ct 12/30/2021 17:15",
 		"xxxtdbproxyObject:memory:timeIndex:" : "ct 11/18/2021 19:25",

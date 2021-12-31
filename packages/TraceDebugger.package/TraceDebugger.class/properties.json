@@ -12,7 +12,8 @@
 		"cursor",
 		"receiverInspector",
 		"contextVariablesInspector",
-		"selectedContext" ],
+		"selectedContext",
+		"childContexts" ],
 	"name" : "TraceDebugger",
 	"pools" : [
 		 ],

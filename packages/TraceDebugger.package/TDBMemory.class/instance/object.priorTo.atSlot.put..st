@@ -1,4 +1,4 @@
-private
+accessing
 object: anObject priorTo: timeIndex atSlot: slot put: value
 
 	| priorTimeIndex |

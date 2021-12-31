@@ -4,7 +4,9 @@ changedDependent: aspect
 	"Reset cached state"
 	aspect
 		caseOf:
-			{[#contents] ->
+			{[#childContextsFor:] ->
+				[childContexts := nil].
+			[#contents] ->
 				[contents := nil.
 				self contents].
 			[#currentCompiledMethod] ->
