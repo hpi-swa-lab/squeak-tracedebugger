@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classUnderTest" : "ct 12/8/2021 23:21",
+		"runSimulated:" : "ct 12/8/2021 23:27",
+		"setUp" : "ct 12/8/2021 23:21",
+		"testGriffle" : "ct 12/8/2021 23:23",
+		"testGriffleMethodReturn" : "ct 12/8/2021 23:23",
+		"testPlonk" : "ct 12/8/2021 23:22",
+		"testSimulation" : "ct 12/8/2021 23:26",
+		"testWiffy" : "ct 12/8/2021 23:22",
+		"testZiffy" : "ct 12/8/2021 23:21" } }

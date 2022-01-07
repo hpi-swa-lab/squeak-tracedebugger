@@ -1,0 +1,4 @@
+accesing
+memoryClass
+
+	^ TDBMemory

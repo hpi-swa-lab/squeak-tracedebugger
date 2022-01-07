@@ -9,7 +9,7 @@ SmalltalkCISpec {
 	],
 	#testing : {
 		#coverage : {
-			#packages : [ 'TraceDebugger-Core' ],
+			#packages : [ 'TraceDebugger' ],
 			#format : #coveralls
 		}
 	}

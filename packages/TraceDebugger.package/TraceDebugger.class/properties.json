@@ -2,13 +2,21 @@
 	"category" : "TraceDebugger-UI",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"process",
+		"messageText",
+		"cursor",
+		"receiverInspector",
+		"contextVariablesInspector",
+		"selectedContext",
+		"childContexts" ],
 	"name" : "TraceDebugger",
 	"pools" : [
 		 ],
-	"super" : "Model",
+	"super" : "CodeHolder",
+	"traitcomposition" : "TTDBChangesGraph",
 	"type" : "normal" }

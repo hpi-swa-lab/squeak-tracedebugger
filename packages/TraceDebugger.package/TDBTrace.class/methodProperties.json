@@ -1,5 +1,26 @@
 {
 	"class" : {
-		 },
+		"forContext:" : "ct 11/20/2021 23:04",
+		"forContext:parent:timeIndex:" : "ct 11/30/2021 16:33",
+		"forStackOfContext:" : "ct 12/1/2021 00:53" },
 	"instance" : {
-		 } }
+		"advance" : "ct 12/9/2021 00:59",
+		"advanceUntil:" : "ct 12/9/2021 01:00",
+		"advancedTo:atTime:" : "ct 12/9/2021 01:00",
+		"atTime:putChild:" : "ct 12/1/2021 00:53",
+		"children" : "ct 11/19/2021 23:17",
+		"context:" : "ct 12/1/2021 00:57",
+		"context:parent:timeIndex:" : "ct 12/9/2021 02:28",
+		"contextAtTime:" : "ct 11/30/2021 16:16",
+		"defangUnhandledErrorIfAny" : "ct 12/9/2021 03:59",
+		"detectTraceFor:atTime:" : "ct 12/2/2021 01:21",
+		"initialize" : "ct 11/21/2021 01:44",
+		"maxTimeIndex" : "ct 11/30/2021 16:40",
+		"memory" : "ct 11/18/2021 18:48",
+		"minTimeIndex" : "ct 11/21/2021 01:45",
+		"object:atTime:" : "ct 11/18/2021 18:48",
+		"parent" : "ct 11/30/2021 16:17",
+		"printOn:" : "ct 12/1/2021 23:08",
+		"traceAtTime:" : "ct 11/30/2021 20:26",
+		"traceAtTime:ifAbsent:" : "ct 12/31/2021 02:11",
+		"withAllDescendants" : "ct 11/19/2021 23:15" } }

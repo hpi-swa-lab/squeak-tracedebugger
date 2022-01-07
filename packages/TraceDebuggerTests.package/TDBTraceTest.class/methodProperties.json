@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"test" : "ct 11/18/2021 16:25" } }
+		"classUnderTest" : "ct 11/18/2021 18:45",
+		"setUp" : "ct 12/31/2021 01:40",
+		"test" : "ct 11/21/2021 00:26",
+		"testDetectTrace" : "ct 12/31/2021 01:43",
+		"testTraceAtTime" : "ct 12/31/2021 01:34",
+		"testWithAllDescendants" : "ct 12/31/2021 01:41" } }

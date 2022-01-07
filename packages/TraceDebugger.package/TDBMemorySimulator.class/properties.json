@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBMemorySimulator",
+	"pools" : [
+		 ],
+	"super" : "Simulator",
+	"type" : "normal" }

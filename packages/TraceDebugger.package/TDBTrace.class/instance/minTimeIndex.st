@@ -1,0 +1,4 @@
+accessing
+minTimeIndex
+
+	^ timeInterval start

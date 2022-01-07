@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"plonk",
+		"griffle" ],
+	"name" : "TDBTestObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

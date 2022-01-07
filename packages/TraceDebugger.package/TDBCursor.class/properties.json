@@ -1,0 +1,18 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rootTrace",
+		"timeIndex",
+		"process",
+		"enableSimulatorBlock",
+		"currentTrace" ],
+	"name" : "TDBCursor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

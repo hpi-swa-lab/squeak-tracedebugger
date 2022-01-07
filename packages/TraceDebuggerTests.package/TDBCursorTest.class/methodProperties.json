@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classUnderTest" : "ct 11/18/2021 18:14",
+		"runCursorFrom:step:assertions:" : "ct 12/30/2021 12:58",
+		"runCursorFrom:stepsAndAssertions:" : "ct 12/30/2021 13:55",
+		"test" : "ct 11/19/2021 21:36",
+		"testChildren" : "ct 12/9/2021 00:47",
+		"testDoStepInto" : "ct 12/30/2021 14:39",
+		"testDoStepIntoFromSender" : "ct 12/8/2021 22:07",
+		"testDoStepOver" : "ct 12/30/2021 14:40",
+		"testDoStepOverError" : "ct 12/30/2021 14:39",
+		"testDoStepOverSignalerContext" : "ct 12/30/2021 14:52",
+		"testDoStepOverUnhandledSignalerContext" : "ct 12/30/2021 14:51",
+		"testDoStepThrough" : "ct 12/30/2021 14:40",
+		"traceClass" : "ct 11/18/2021 18:14" } }

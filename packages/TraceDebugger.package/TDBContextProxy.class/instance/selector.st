@@ -1,0 +1,4 @@
+accessing
+selector
+
+	^ object selector
