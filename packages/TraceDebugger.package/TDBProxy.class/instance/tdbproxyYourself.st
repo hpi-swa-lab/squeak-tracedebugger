@@ -1,5 +1,4 @@
 accessing
 tdbproxyYourself
-	<ignoreForCoverage>
 
 	^ object

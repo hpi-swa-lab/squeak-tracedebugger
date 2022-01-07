@@ -1,5 +1,4 @@
 private
 xxxtdbproxyMemory
-	<ignoreForCoverage>
 
 	^ memory
