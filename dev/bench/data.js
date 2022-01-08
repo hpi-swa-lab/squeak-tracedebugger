@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641673011858,
+  "lastUpdate": 1641679769020,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -108,6 +108,60 @@ window.BENCHMARK_DATA = {
             "value": 1955.6666666666667,
             "unit": "Milliseconds",
             "range": 4034.3333333333335
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "c1e01df33344edd9ce926cb3222bbd6956fbb322",
+          "message": "Connect CI-generated historic benchmark data in image\n\nUsage:\n\n\tTDBBenchmarkRunner exploreHistoricTimesToRun",
+          "timestamp": "2022-01-08T23:06:38+01:00",
+          "tree_id": "7a443a3ca176fe4a497160e35a5e20f475271dfb",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/c1e01df33344edd9ce926cb3222bbd6956fbb322"
+        },
+        "date": 1641679768565,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2828.6666666666665,
+            "unit": "Milliseconds",
+            "range": 15537.333333333334
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 1115.3333333333333,
+            "unit": "Milliseconds",
+            "range": 1194.3333333333333
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1472.3333333333333,
+            "unit": "Milliseconds",
+            "range": 212.33333333333334
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4816,
+            "unit": "Milliseconds",
+            "range": 15199
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2719,
+            "unit": "Milliseconds",
+            "range": 525
           }
         ]
       }
