@@ -1,0 +1,4 @@
+accessing
+regexStringSize
+
+	^ 250

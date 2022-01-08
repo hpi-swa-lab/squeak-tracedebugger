@@ -1,0 +1,16 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Base",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"benchmarks",
+		"results",
+		"timesToRepeat" ],
+	"name" : "TDBBenchmarkRunner",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

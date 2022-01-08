@@ -1,0 +1,21 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Base",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selector",
+		"timeout",
+		"wrappers",
+		"hasRun",
+		"totalTime",
+		"preparationTime",
+		"postparationTime",
+		"timeToRun" ],
+	"name" : "TDBBenchmark",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
