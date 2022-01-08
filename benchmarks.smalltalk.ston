@@ -6,5 +6,8 @@ SmalltalkCISpec {
 			#platforms : [ #squeak ],
 			#load : [ 'TraceDebuggerBenchmarks' ]
 		}
-	]
+	],
+	#testing : {
+		#packages : [ 'TraceDebuggerBenchmarks' ],
+	}
 }
