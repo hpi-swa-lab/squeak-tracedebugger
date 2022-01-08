@@ -1,4 +1,4 @@
-name: Tests
+name: Tests & Benchmarks
 
 on: [push]
 
@@ -11,8 +11,31 @@ jobs:
         uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: Squeak64-Trunk
-      - run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }}
+      - name: Run tests
+        run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} tests.smalltalk.ston
         timeout-minutes: 15
         env:
           # for uploading coverage reports
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Benchmarks
+      - name: Run benchmarks
+        id: run_benchmarks
+        run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} benchmarks.smalltalk.ston
+        timeout-minutes: 15
+        env:
+          TDB_BENCHMARK_RESULTS_PATH: benchmark-data.json
+      - name: Download previous benchmark data
+        uses: actions/cache@v1
+        with:
+          path: ./cache
+          key: ${{ runner.os }}-benchmark
+      - name: Store benchmark data
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          tool: customSmallerIsBetter
+          output-file-path: ${{ steps.run_benchmarks.env.TDB_BENCHMARK_RESULTS_PATH }}
+          external-data-json-path: ./cache/benchmark-data.json
+          comment-always: true
+          fail-on-alert: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}

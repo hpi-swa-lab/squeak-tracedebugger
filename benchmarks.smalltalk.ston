@@ -1,0 +1,10 @@
+SmalltalkCISpec {
+	#loading : [
+		SCIMetacelloLoadSpec {
+			#baseline : 'TraceDebugger',
+			#directory : 'packages',
+			#platforms : [ #squeak ],
+			#load : [ 'TraceDebuggerBenchmarks' ]
+		}
+	]
+}
