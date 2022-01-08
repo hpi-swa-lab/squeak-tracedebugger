@@ -29,7 +29,6 @@ jobs:
         with:
           smalltalk-image: ${{ env.SMALLTALK_IMAGE }}
       - name: Run benchmarks
-        id: run_benchmarks
         run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} benchmarks.smalltalk.ston
         timeout-minutes: 15
         env:
@@ -43,7 +42,7 @@ jobs:
         uses: benchmark-action/github-action-benchmark@v1
         with:
           tool: customSmallerIsBetter
-          output-file-path: ${{ steps.run_benchmarks.env.TDB_BENCHMARK_RESULTS_PATH }}
+          output-file-path: benchmark-data.json
           external-data-json-path: ./cache/benchmark-data.json
           comment-always: true
           fail-on-alert: true
