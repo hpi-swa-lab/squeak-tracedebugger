@@ -17,8 +17,10 @@ jobs:
         env:
           # for uploading coverage reports
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      # Benchmarks
+  benchmarks:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
       - name: Run benchmarks
         id: run_benchmarks
         run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} benchmarks.smalltalk.ston
