@@ -44,6 +44,8 @@ jobs:
           tool: customSmallerIsBetter
           output-file-path: ${{ runner.temp }}/benchmark-data.json
           external-data-json-path: ./cache/benchmark-data.json
+          auto-push: true
+          gh-pages-branch: gh-pages-benchmarks
           comment-always: true
           fail-on-alert: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
