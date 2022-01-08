@@ -32,7 +32,7 @@ jobs:
         run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} benchmarks.smalltalk.ston
         timeout-minutes: 15
         env:
-          TDB_BENCHMARK_RESULTS_PATH: ${{ env.RUNNER_TEMP }}/benchmark-data.json
+          TDB_BENCHMARK_RESULTS_PATH: ${{ runner.temp }}/benchmark-data.json
       - name: Download previous benchmark data
         uses: actions/cache@v1
         with:
@@ -42,7 +42,7 @@ jobs:
         uses: benchmark-action/github-action-benchmark@v1
         with:
           tool: customSmallerIsBetter
-          output-file-path: ${{ env.RUNNER_TEMP }}/benchmark-data.json
+          output-file-path: ${{ runner.temp }}/benchmark-data.json
           external-data-json-path: ./cache/benchmark-data.json
           comment-always: true
           fail-on-alert: true
