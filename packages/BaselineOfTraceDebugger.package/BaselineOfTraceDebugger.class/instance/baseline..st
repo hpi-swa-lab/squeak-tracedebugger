@@ -11,7 +11,10 @@ baseline: spec
 				spec
 					repository: 'github://LinqLover/SimulationStudio/packages';
 					loads: #('SimulationStudio-Base' 'SimulationStudio-Support');
-					flag: #(workaround moveUpstream) "we only need BlockClosure>>#valueAndStoreTimeToRun:. Contribute to Trunk and/or see https://github.com/LinqLover/SimulationStudio/issues/41"].
+					flag: #(workaround moveUpstream) "we only need BlockClosure>>#valueAndStoreTimeToRun:. Contribute to Trunk and/or see https://github.com/LinqLover/SimulationStudio/issues/41"];
+			baseline: 'StatisticsWorkbench' with: [
+				spec
+					repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
 		
 		"packages"
 		spec
@@ -20,7 +23,7 @@ baseline: spec
 			package: 'TraceDebuggerTests' with: [
 				spec requires: 'TraceDebugger'];
 			package: 'TraceDebuggerBenchmarks' with: [
-				spec requires: #('TraceDebugger' 'JSON')].
+				spec requires: #('TraceDebugger' 'JSON' 'StatisticsWorkbench')].
 		
 		"groups"
 		spec
