@@ -7,11 +7,12 @@ historicTimesToRun
 	^ benchmarks values
 		collect: [:benchmark |
 			benchmark ->
-				(data
+				((data
 					collect: [:entry |
 						entry "date" index ->
 							(entry benches
 								detect: [:bench | bench benchmark shortPrintString = benchmark shortPrintString]
 								ifFound: [:bench | bench benchmark timeToRun])]
-					as: Dictionary)]
-		as: Dictionary.
+					as: Dictionary)
+						reject: #isNil)]
+		as: Dictionary
