@@ -1,0 +1,4 @@
+testing
+isTdbBenchmarkClass
+
+	^ true
