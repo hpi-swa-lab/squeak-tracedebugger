@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641758175584,
+  "lastUpdate": 1641769377014,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -1171,6 +1171,79 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 7891.0",
             "extra": "{\"postparationTime\":0.0,\"preparationTime\":113.66666666666667,\"totalTime\":13005.666666666666}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "93a3911cb01dc671dfb1e49b37a07bab3ee1157b",
+          "message": "Trace context stack in memory, implement retracing of object size",
+          "timestamp": "2022-01-09T23:54:09+01:00",
+          "tree_id": "682794598e8339611c27dccb8320131632d6051b",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/93a3911cb01dc671dfb1e49b37a07bab3ee1157b"
+        },
+        "date": 1641769376314,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2978,
+            "unit": "Milliseconds",
+            "range": "stdev: 6889.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2978.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 1196.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 60.333333333333336",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.6666666666666666,\"totalTime\":1197.3333333333333}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4934.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 2105.3333333333335",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":4934.666666666667}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 5677.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 2.0410308333333332e7",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":5677.666666666667}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 7637.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 206252.33333333334",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":7637.666666666667}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2953,
+            "unit": "Milliseconds",
+            "range": "stdev: 513.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":211.33333333333334,\"totalTime\":3164.3333333333335}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 12995.666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 245492.33333333334",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":111.33333333333333,\"totalTime\":13107.0}"
           }
         ]
       }
