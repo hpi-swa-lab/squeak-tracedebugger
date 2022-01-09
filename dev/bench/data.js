@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641748492341,
+  "lastUpdate": 1641752139942,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -730,6 +730,65 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 10297.0",
             "extra": "{\"postparationTime\":0.0,\"preparationTime\":67.0,\"totalTime\":1403.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "a0683221efd3cf312c36a44bb7da9593aa99c96c",
+          "message": "Add link to benchmarks in README.md",
+          "timestamp": "2022-01-09T19:10:24+01:00",
+          "tree_id": "ec8625d35383781f23ac4a630d56f9b6f68add51",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/a0683221efd3cf312c36a44bb7da9593aa99c96c"
+        },
+        "date": 1641752139468,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2564,
+            "unit": "Milliseconds",
+            "range": "stdev: 3796.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2564.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 1068.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 336.3333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":1068.3333333333333}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4449,
+            "unit": "Milliseconds",
+            "range": "stdev: 679.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":4449.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2540.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 672.3333333333334",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":132.0,\"totalTime\":2672.6666666666665}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1473,
+            "unit": "Milliseconds",
+            "range": "stdev: 12700.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":68.66666666666667,\"totalTime\":1541.6666666666667}"
           }
         ]
       }
