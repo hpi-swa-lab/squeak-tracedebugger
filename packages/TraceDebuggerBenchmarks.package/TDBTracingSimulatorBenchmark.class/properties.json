@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBTracingSimulatorBenchmark",
+	"pools" : [
+		 ],
+	"super" : "TDBSimulatorBenchmark",
+	"type" : "normal" }
