@@ -1,0 +1,4 @@
+*TraceDebuggerBenchmarks-testing
+isTdbBenchmarkClass
+
+	^ false
