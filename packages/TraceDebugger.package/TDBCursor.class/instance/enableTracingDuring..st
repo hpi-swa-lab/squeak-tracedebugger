@@ -1,10 +1,14 @@
 private
-enableSimulatorDuring: aBlock
+enableTracingDuring: aBlock
 
-	self flag: #todo. "Install simulator"
+	| home |
+	home := thisContext.
+	
+	home wrap: [:block |
+		self rootTrace enableSimulatorDuring: block].
 	
 	process ifNotNil:
-		[thisContext wrap: [:block |
+		[home wrap: [:block |
 			process suspendedContext: nil.
 			Processor activeProcess
 				evaluate: [block

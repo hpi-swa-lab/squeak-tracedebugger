@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"forMemory:atTime:" : "ct 1/7/2022 20:41" },
+	"instance" : {
+		"context:step:" : "ct 1/8/2022 01:40",
+		"memory" : "ct 1/7/2022 20:42",
+		"memory:" : "ct 1/7/2022 20:41",
+		"timeIndex" : "ct 1/7/2022 20:42",
+		"timeIndex:" : "ct 1/7/2022 20:41" } }
