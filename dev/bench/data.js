@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641690883900,
+  "lastUpdate": 1641691517219,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -339,6 +339,65 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 7934.333333333333",
             "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":4562.333333333333}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@outlook.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@outlook.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "2b592ccab3a600dc869ece831a6a5b6039eae860",
+          "message": "Revert \"<debug>Disable build job\"\n\nThis reverts commit d9cda1f04048580364f25dbfff03d45c824351a5.",
+          "timestamp": "2022-01-09T01:13:01Z",
+          "tree_id": "db887b885f3554463dd1d072e2005a6301a5a1ef",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/2b592ccab3a600dc869ece831a6a5b6039eae860"
+        },
+        "date": 1641691516523,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2767.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 7497.333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2767.6666666666665}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 1216.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 4450.333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":1216.6666666666667}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1461.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 1684.3333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":86.66666666666667,\"totalTime\":1548.3333333333333}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4962.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 7714.333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":4962.666666666667}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2848,
+            "unit": "Milliseconds",
+            "range": "stdev: 9892.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":130.33333333333334,\"totalTime\":2978.3333333333335}"
           }
         ]
       }
