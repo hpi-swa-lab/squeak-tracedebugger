@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641748110545,
+  "lastUpdate": 1641748492341,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -671,6 +671,65 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 1249.3333333333333",
             "extra": "{\"postparationTime\":0.0,\"preparationTime\":79.0,\"totalTime\":1575.6666666666667}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@outlook.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@outlook.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "15c7980cd316bf42b2ba9361a6eb493ee5a9fd07",
+          "message": "Revert \"<debug>Disable build job\"\n\nThis reverts commit d9cda1f04048580364f25dbfff03d45c824351a5.",
+          "timestamp": "2022-01-09T17:06:07Z",
+          "tree_id": "913d329429680645db8b04fd862e11aedf0c450f",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/15c7980cd316bf42b2ba9361a6eb493ee5a9fd07"
+        },
+        "date": 1641748491802,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2302,
+            "unit": "Milliseconds",
+            "range": "stdev: 619.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2302.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 962,
+            "unit": "Milliseconds",
+            "range": "stdev: 147.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":962.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 3990.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 1908.3333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":3990.6666666666665}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2455,
+            "unit": "Milliseconds",
+            "range": "stdev: 127.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":129.0,\"totalTime\":2584.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1336,
+            "unit": "Milliseconds",
+            "range": "stdev: 10297.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":67.0,\"totalTime\":1403.0}"
           }
         ]
       }
