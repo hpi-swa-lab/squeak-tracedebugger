@@ -1,8 +1,58 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641741267960,
+  "lastUpdate": 1641741467619,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
+      {
+        "commit": {
+          "author": {
+            "name": "Christoph Thiede",
+            "username": "LinqLover",
+            "email": "christoph.thiede@student.hpi.de"
+          },
+          "committer": {
+            "name": "Christoph Thiede",
+            "username": "LinqLover",
+            "email": "christoph.thiede@student.hpi.de"
+          },
+          "id": "92c6ede5e70ea32ac8d9eb6692930c12fc061839",
+          "message": "Add first version of tracer & cursor for stack frames. Memory not yet connected. Extend & refactor UI. Comprehensive integration & acceptance tests.",
+          "timestamp": "2021-12-30T20:19:06Z",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/92c6ede5e70ea32ac8d9eb6692930c12fc061839"
+        },
+        "date": 1641741466665,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2227,
+            "unit": "Milliseconds",
+            "range": "stdev: 7591.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2227.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4119.333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 47008.333333333336",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.3333333333333333,\"totalTime\":4119.666666666667}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 295396.3333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.5143299086533334e11",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":1291.0,\"totalTime\":296687.3333333333}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 26073.333333333332,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.6782523333333333e6",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":246.33333333333334,\"totalTime\":26319.666666666668}"
+          }
+        ]
+      },
       {
         "commit": {
           "author": {
