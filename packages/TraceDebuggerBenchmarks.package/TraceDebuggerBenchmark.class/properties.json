@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebuggerBenchmarks-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"debugger",
+		"window" ],
+	"name" : "TraceDebuggerBenchmark",
+	"pools" : [
+		 ],
+	"super" : "TDBBenchmark",
+	"type" : "normal" }
