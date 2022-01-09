@@ -36,7 +36,7 @@
 		"tearDown" : "ct 1/8/2022 16:25",
 		"timeToRun" : "ct 1/8/2022 14:02",
 		"timeout:after:" : "ct 1/8/2022 14:19",
-		"timeoutForBenchmark" : "ct 1/9/2022 03:25",
-		"timeoutForSetUp" : "ct 1/9/2022 03:25",
+		"timeoutForBenchmark" : "ct 1/8/2022 18:43",
+		"timeoutForSetUp" : "ct 1/8/2022 14:17",
 		"totalTime" : "ct 1/8/2022 19:09",
 		"wrap:" : "ct 1/8/2022 14:33" } }
