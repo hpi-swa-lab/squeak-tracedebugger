@@ -1,5 +1,8 @@
 private
 simulatedObjectSize: anObject
 
-	"todo!"
-	^ thisContext objectSize: anObject
+	^ memory
+		object: anObject
+		atTime: timeIndex
+		atSlot: 0
+		ifAbsent: [thisContext objectSize: anObject]
