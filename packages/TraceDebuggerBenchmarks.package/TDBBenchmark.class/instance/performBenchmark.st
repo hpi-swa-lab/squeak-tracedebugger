@@ -1,12 +1,14 @@
 private
 performBenchmark
-
-	hasRun := false.
+ 
+	result := #running.
 	totalTime := nil.
 	preparationTime := Duration zero.
 	postparationTime := Duration zero.
-	[self perform: selector.
-	hasRun := true]
+	[[self perform: selector.
+	result := #completed]
 		valueAndStoreTimeToRunWithoutGC: [:duration |
 			totalTime := duration.
-			timeToRun := totalTime - preparationTime - postparationTime].
+			timeToRun := totalTime - preparationTime - postparationTime]]
+				on: Error, Warning, Halt
+				do: [:ex | result := ex].

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"benchmarks",
 		"results",
-		"timesToRepeat" ],
+		"timesToRepeat",
+		"resultsFilePath" ],
 	"name" : "TDBBenchmarkRunner",
 	"pools" : [
 		 ],

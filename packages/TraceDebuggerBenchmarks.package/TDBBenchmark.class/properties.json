@@ -9,7 +9,7 @@
 		"selector",
 		"timeout",
 		"wrappers",
-		"hasRun",
+		"result",
 		"totalTime",
 		"preparationTime",
 		"postparationTime",
