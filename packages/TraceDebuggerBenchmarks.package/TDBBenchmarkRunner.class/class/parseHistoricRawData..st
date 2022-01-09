@@ -18,9 +18,7 @@ parseHistoricRawData: rawData
 			entry index: index]].
 	rawData entries do: [:entries |
 		entries do: [:entry |
-			entry benches do: [:bench |
-				bench benchmark: (benchmarks at: bench name put: [ | meth |
-					meth := CompiledCode readFrom: (bench name copyReplaceAll: '>>' with: ' lookupSelector: ').
-					(meth methodClass selector: meth selector)
-						privateTimeToRun: bench value milliSeconds;
-						yourself] value)]]].
+			entry benches do: [:bench | | benchmark |
+				benchmark := self parseHistoricBench: bench.
+				benchmarks at: bench name put: benchmark.
+				bench benchmark: benchmark]]].
