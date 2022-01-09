@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1641752901352,
+  "lastUpdate": 1641753230370,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -848,6 +848,65 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 2647.0",
             "extra": "{\"postparationTime\":0.0,\"preparationTime\":83.0,\"totalTime\":1912.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "df345395eb5cf2cf09d98a38d543e31e8f648f99",
+          "message": "Add benchmark framework (#4)\n\nThis patch adds a benchmark package (TraceDebuggerBenchmarks) for different time-critical components of the TraceDebugger. The benchmarks are arranged in subclasses of TDBBenchmark which has a similar design to SUnit's TestCase. All benchmarks are automatically run on the CI via an SUnit adapter TDBBenchmarkRunner that is run in a second smalltalkCI job via GitHub Actions. The benchmark-action/github-action-benchmark action is used to automatically store benchmark results on the gh-pages-benchmarks branch, analyze any performance decreases, and notify the author via commit comment. The TDBBenchmarkRunner also provides two more faculties: fetch and display historic benchmark results right in Squeak (TDBBenchmarkRunner exploreHistoricTimesToRun) and run the benchmark suite against historic commits (see the bulk running protocol).\r\n\r\nThe automatic benchmarks dashboard can be retrieved here:\r\n\r\nhttps://LinqLover.github.io/squeak-tracedebugger/dev/bench/",
+          "timestamp": "2022-01-09T18:28:26Z",
+          "tree_id": "6f40a4e1454214674421c95c8b9775158a7d146e",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/df345395eb5cf2cf09d98a38d543e31e8f648f99"
+        },
+        "date": 1641753229617,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2573,
+            "unit": "Milliseconds",
+            "range": "stdev: 975.0",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":2573.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 1069.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 272.3333333333333",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":1069.6666666666667}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 4521.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 2885.3333333333335",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":0.0,\"totalTime\":4521.666666666667}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 2569.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 956.3333333333334",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":134.0,\"totalTime\":2703.3333333333335}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1418.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 36.333333333333336",
+            "extra": "{\"postparationTime\":0.0,\"preparationTime\":64.66666666666667,\"totalTime\":1483.3333333333333}"
           }
         ]
       }
