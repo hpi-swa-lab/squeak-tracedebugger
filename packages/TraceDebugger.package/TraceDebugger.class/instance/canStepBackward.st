@@ -1,4 +1,4 @@
 testing
 canStepBackward
 
-	^ false
+	^ true
