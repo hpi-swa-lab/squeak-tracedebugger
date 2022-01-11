@@ -1,9 +1,19 @@
 simulation
 enableSimulatorDuring: aBlock
 
-	| simulator |
-	self flag: #rename.
+	| simulator contexts |
 	simulator := self tracingSimulatorClass forMemory: memory atTime: self maxTimeIndex.
-	self enableSimulator: simulator.
+	contexts := Array streamContents: [:stream |
+		self streamAllContextsOn: stream].
+	
+	contexts
+		elementsForwardIdentityTo: (contexts
+			collect: [:context |
+				simulator customize: context])
+		copyHash: true.
 	^ aBlock ensure:
-		[self disableSimulator]
+		[contexts
+			elementsForwardIdentityTo: (contexts
+				collect: [:context |
+					context decustomize: context])
+			copyHash: true.]
