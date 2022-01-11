@@ -4,7 +4,7 @@ context: aContext step: aBlock
 	| oldSender oldPC result oldStack |
 	oldSender := aContext sender.
 	oldPC := aContext pc.
-	oldStack := aContext tdbStack copy.
+	oldStack := aContext tdbVariableStack copy.
 	
 	timeIndex := timeIndex + 1.
 	result := super context: aContext step: aBlock.

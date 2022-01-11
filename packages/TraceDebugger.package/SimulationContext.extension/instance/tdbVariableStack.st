@@ -1,4 +1,4 @@
 *TraceDebugger-Core-accessing
-tdbStack
+tdbVariableStack
 
 	^ stack
