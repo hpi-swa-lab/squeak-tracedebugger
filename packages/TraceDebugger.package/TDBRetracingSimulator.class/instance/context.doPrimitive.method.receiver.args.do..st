@@ -18,7 +18,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			{[38 "primitiveFloatAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[60 "primitiveAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[62 "primitiveSize"] -> [^ aContext push:
-				(self simulatedObjectSize: (arguments atLast: 1 ifAbsent: [receiver]))].
+				(self context: aContext simulatedObjectSize: (arguments atLast: 1 ifAbsent: [receiver]))].
 			[63 "primitiveStringAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[68 "primitiveObjectAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[73 "primitiveInstVarAt"] -> [self context: aContext pushInstVar: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
@@ -27,7 +27,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			[173 "primitiveSlotAt"] -> [self context: aContext pushInstVar: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[210 "primitiveContextAt"] -> [self context: aContext pushField: (arguments atLast: 2 ifAbsent: [receiver]) at: (arguments atLast: 1) ifInMemory: [:result | ^ result]].
 			[212 "primitiveContextSize"] -> [^ self context: aContext push:
-				(self simulatedObjectSize: (arguments atLast: 1 ifAbsent: [receiver]))]}
+				(self context: aContext simulatedObjectContextSize: (arguments atLast: 1 ifAbsent: [receiver]))]}
 		otherwise: [
 			(primitiveIndex >= 264 and: [primitiveIndex <=  519]) "primitiveLoadInstVar"
 				ifTrue: [self context: aContext pushInstVar: receiver at: primitiveIndex - 264 + 1 ifInMemory: [:result | ^ result]]].
