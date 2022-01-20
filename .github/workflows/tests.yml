@@ -46,6 +46,6 @@ jobs:
           auto-push: true
           gh-pages-branch: gh-pages-benchmarks-2
           comment-always: false
-          fail-on-alert: true
+          fail-on-alert: false
           alert-threshold: "150%"
           github-token: ${{ secrets.GITHUB_TOKEN }}
