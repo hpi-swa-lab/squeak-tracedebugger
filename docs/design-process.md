@@ -72,3 +72,30 @@ maps, multisets, and multimaps that enables programmers to
 maximize the efficiency of their debugging scripts.
 - Lazy tracing: first navigate to stack frames of interest, then start tracing and cache results
 - Functional API to search/filter traces
+
+## Preliminary Architecture
+
+- **Trace Debugger:** Shows a hierarchy of all traces under a root **trace** and displays & makes editable the current state of the **trace cursor** in detail by retrieving a **proxy object** for the context at this state.
+- **Trace Cursor:** Refers to a **trace** at an **index.** Implements navigational stepping queries.
+- **Trace:** Represents the trace of a stackframe, implemented by a **simulator context** which is stepped lazily. Composite. If root trace, has a **memory**. Can be forked at a specified index.
+- **Memory:** Stores historic states of objects affected by the program execution in an efficients data structure (`RunArray`). Provides means to access historic states and objects.
+- **Memory state:** Represents the state of a **memory** at a certain **index.**
+- **Simulator context:** Stackframe that is controlled via a **simulator.**
+- **Simulator:** Performs requested stepping instructions on a **simulator context.** Virtual.
+- **Memory simulator:** Provides general virtual hooks to control memory access.
+- **Tracing simulator:** **Memory simulator** that logs state changes to a **trace** at an **index.**
+- **Retracing simulator:** **Memory simulator** that reads states from a **memory state** and signals a **retrace side effect** exception when an attempt is made to edit the memory state.
+- **Retrace side effect:** Exception that is signaled from a **retracing simulator** when an attempt is made to edit its memory state. Can be resumed to overwrite the memory or to fork it.
+- **Proxy object:** Transparent lazy proxy around a traced **object** at a certain **memory state.** Uses a **retracing simulator** to evaluate messages send to the underlying object. Can be rematerialized when the trace is forked.
+
+Open issues:
+
+- Measure overhead of separate simulator class
+- Consider partial rematerialization of proxy objects rather than retracing simulator
+  - might be faster
+  - state management and clean-up of proxies and materializations required
+  - limited compatibility between proxies and primitives
+  - for manipulations, explicit scanning of materialized objects for side-effects required
+  - alternatively, use deep rematerialization (compare performance)
+- Discuss model of forked memories
+- Discuss efficient series exploration for complex expressions. Either analyze expression for all changed objects' slots and filter memory accordingly or implement simulator with vector semantics for simultaneous evaluation against all memory states.

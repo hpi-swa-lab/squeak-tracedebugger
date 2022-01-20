@@ -143,7 +143,7 @@
     - for efficiency: may use binary search
   - all stores into variable
     - integrate directly into inspector field menu
-  - all sends to class/instance with certain argument
+  - all sends to class/instance/selector with certain argument
   - custom predicates (?)
   - all predicates should be sandboxable
 - gaps between filtered methods should still be visible/explorable (maybe use highlights only?)
