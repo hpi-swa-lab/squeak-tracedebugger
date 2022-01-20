@@ -11,4 +11,4 @@ benchRegex
 					ifTrue: [$ ]
 					ifFalse: [(random nextInt: 255) asCharacter])]]].
 	
-	[simulator evaluate: ['(?<=\w*\s)\w+' asRegex matchesIn: string]] timeToRun.
+	simulator evaluate: ['(\w*\s)\w+' asRegex matchesIn: string].

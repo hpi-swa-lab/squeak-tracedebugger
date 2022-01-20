@@ -2,8 +2,8 @@ benchmarks
 benchExpandAll
 
 	| item previousItem tree |
-	self prepare: [
-		self openDebuggerForBlock: ['\w+' asRegex].
+	self prepare:
+		[self openDebuggerForBlock: ['\w+[a-z]*' asRegex].
 		tree := window findA: PluggableTreeMorph.
 		item := previousItem := nil.
 		debugger stepOver].
@@ -14,10 +14,10 @@ benchExpandAll
 	self displayWindow]
 		doWhileTrue: [
 			tree selectedMorph = previousItem
-				ifTrue: [
-					item canExpand
+				ifTrue:
+					[item canExpand
 						and: [item isExpanded not]]
-				ifFalse: [
-					previousItem := item.
+				ifFalse:
+					[previousItem := item.
 					item := tree selectedMorph.
-					true]]
+					true]].

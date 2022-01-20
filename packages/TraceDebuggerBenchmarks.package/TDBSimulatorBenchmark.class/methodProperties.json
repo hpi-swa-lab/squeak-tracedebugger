@@ -3,8 +3,8 @@
 		"isAbstract" : "ct 1/8/2022 16:50" },
 	"instance" : {
 		"benchFactorial" : "ct 1/8/2022 18:47",
-		"benchRegex" : "ct 1/8/2022 18:43",
-		"factorialFactor" : "ct 1/8/2022 18:52",
+		"benchRegex" : "ct 1/11/2022 20:08",
+		"factorialFactor" : "ct 1/11/2022 21:40",
 		"memoryClass" : "ct 1/8/2022 16:49",
 		"regexStringSize" : "ct 1/8/2022 17:06",
 		"setUp" : "ct 1/8/2022 16:49",

@@ -9,6 +9,6 @@ benchProxyImageForm
 		morph privateBounds: bounds.
 		morph privateFullBounds: fullBounds].
 	
-	100 timesRepeat: [
-		morph step.
+	500 timesRepeat:
+		[morph step.
 		morph imageForm].
