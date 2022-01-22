@@ -1,9 +1,9 @@
 private
-context: aContext pushInstVar: anObject at: anInteger ifInMemory: aBlock
+context: aContext pushInstVar: anObject at: anInteger ifHit: aBlock
 
 	^ self
 		context: aContext
 		simulatedObject: anObject
 		instVarAt: anInteger
-		ifInMemory: [:value |
+		ifHit: [:value |
 			aBlock value: (aContext push: value)]

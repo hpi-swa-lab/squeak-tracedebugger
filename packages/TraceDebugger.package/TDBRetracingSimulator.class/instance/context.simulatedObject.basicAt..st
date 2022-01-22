@@ -8,5 +8,5 @@ context: aContext simulatedObject: anObject basicAt: index
 	^ memory
 		object: anObject
 		atTime: timeIndex
-		atSlot: index
+		fieldAt: index
 		ifAbsent: [aContext object: anObject basicAt: index]

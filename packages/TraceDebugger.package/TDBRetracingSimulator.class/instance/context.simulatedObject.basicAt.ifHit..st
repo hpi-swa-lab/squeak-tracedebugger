@@ -1,5 +1,5 @@
 private
-context: aContext simulatedObject: anObject basicAt: index ifInMemory: aBlock
+context: aContext simulatedObject: anObject basicAt: index ifHit: aBlock
 
 	| result |
 	index > 0
@@ -8,6 +8,6 @@ context: aContext simulatedObject: anObject basicAt: index ifInMemory: aBlock
 	result := memory
 		object: anObject
 		atTime: timeIndex
-		atSlot: index
+		fieldAt: index
 		ifAbsent: [^ nil].
 	^ aBlock value: result

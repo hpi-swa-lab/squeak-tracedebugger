@@ -7,5 +7,5 @@ context: aContext simulatedObject: anObject instVarAt: index
 	^ memory
 		object: anObject
 		atTime: timeIndex
-		atSlot: index negated
+		instVarAt: index
 		ifAbsent: [aContext object: anObject instVarAt: index]

@@ -1,4 +1,4 @@
-accessing
+private
 object: anObject atTime: timeIndex atSlot: slot ifAbsent: aBlock
 
 	| run runs |
