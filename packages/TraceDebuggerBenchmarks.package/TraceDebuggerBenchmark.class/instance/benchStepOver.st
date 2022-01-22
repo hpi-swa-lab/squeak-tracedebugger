@@ -1,8 +1,8 @@
 benchmarks
 benchStepOver
 
-	self prepare: [
-		self openDebuggerForBlock: [WatchMorph new imageForm]].
+	self prepare:
+		[self openDebuggerForBlock: [WatchMorph new imageForm]].
 	
 	debugger stepOver.
 	self displayWindow.

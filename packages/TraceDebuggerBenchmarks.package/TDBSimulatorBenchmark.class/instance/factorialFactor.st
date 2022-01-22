@@ -1,4 +1,4 @@
 accessing
 factorialFactor
 
-	^ 50000
+	^ 100000
