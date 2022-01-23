@@ -13,4 +13,9 @@ testGroups
 	groups at: #FloatTest put: ((groups at: #FloatTest) , {
 		#testFractionAsFloat. "too expensive"}).
 	
+	(groups at: self) ifNotEmpty:
+		[self assert: (groups at: self) first ~= #-.
+		groups at: self put: ((groups at: self) , {#-.
+			#testExceptionHandlerAroundSimulator flag: #todo "not yet supported"})].
+	
 	^ groups
