@@ -18,6 +18,9 @@ Watch this repo for releases to get notified about major advances. 🙂
 
 ## Installation
 
+Get a [recent VM](https://files.squeak.org/nightly/) first.
+Then do the following in a workspace:
+
 ```smalltalk
 Metacello new
     baseline: 'TraceDebugger';
