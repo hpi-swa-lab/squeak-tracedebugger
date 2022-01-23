@@ -2,7 +2,7 @@ tests
 testSimpleSend
 
 	| simulator |
-	memory object: object priorTo: 4 atSlot: -2 put: 3.
+	memory object: object priorTo: 4 instVarAt: 2 put: 3.
 	simulator := self classUnderTest forMemory: memory atTime: 3.
 	
 	self assert: object plonk equals: (simulator evaluate: [object plonk]).
