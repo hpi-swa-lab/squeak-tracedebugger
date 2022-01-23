@@ -18,7 +18,7 @@ Watch this repo for releases to get notified about major advances. 🙂
 
 ## Installation
 
-Get a [recent VM](https://files.squeak.org/nightly/) first.
+Get a [recent VM](https://github.com/OpenSmalltalk/opensmalltalk-vm/releases) (latest pre-release recommended) first.
 Then do the following in a workspace:
 
 ```smalltalk
