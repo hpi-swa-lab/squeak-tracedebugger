@@ -1,4 +1,5 @@
 *TraceDebugger-Core-proxies-converting
 asTdbProxyInMemory: aMemory atTime: timeIndex
 
-	^ self
+	^ (super asTdbProxyInMemory: aMemory atTime: timeIndex) shallowCopy
+		tdbproxyYourself

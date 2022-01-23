@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"UseProxiesAlways" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"values",
