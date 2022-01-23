@@ -11,6 +11,7 @@ runCursorFrom: homeContext stepsAndAssertions: stepsAndAssertions
 	
 	stepsAndAssertions
 		tdbTuplesDo: [:stepBlock :contexts :checks | | contextChecks |
+			Transcript showln: 'step and assertions: '; show: {stepBlock. contexts. checks}.
 			contextChecks := OrderedCollection streamContents: [:checksOut |
 				("{contexts} flattened" contexts isArray
 					flag: #workaround; "#flattened fails for nested compiled codes, see http://lists.squeakfoundation.org/pipermail/squeak-dev/2021-December/217930.html"
@@ -27,6 +28,7 @@ runCursorFrom: homeContext stepsAndAssertions: stepsAndAssertions
 					checksOut nextPutAll: contextsIn]].
 			
 			checks do: [:check |
+				Transcript showln: 'step '; show: cursor; show: ' with '; show: stepBlock.
 				stepBlock numArgs + stepBlock isSymbol asBit > 1
 					ifTrue: [stepBlock value: cursor value: cursor context]
 					ifFalse: [stepBlock value: cursor].
@@ -36,6 +38,8 @@ runCursorFrom: homeContext stepsAndAssertions: stepsAndAssertions
 						cursor context pc > cursor context startpc].
 				
 				contextChecks do: [:contextCheck |
+					Transcript showln: 'check context '; show: cursor context; show: ' with '; show: contextCheck.
 					self assert: (contextCheck value: cursor context) description: ['Hit {1}' format: {cursor context}]].
+				Transcript showln: 'check '; show: cursor; show: ' with '; show: check.
 				self assert:
 					(check value: cursor context)]].
