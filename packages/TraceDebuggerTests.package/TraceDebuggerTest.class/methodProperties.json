@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"changePreferencesDuring:" : "ct 1/23/2022 03:43",
 		"classUnderTest" : "ct 11/18/2021 17:47",
+		"performTest" : "ct 1/23/2022 03:41",
 		"runDebuggerFrom:assertionsAndSteps:" : "ct 1/20/2022 23:47",
 		"shouldntFail:" : "ct 11/20/2021 22:42",
 		"testBuildDebugger" : "ct 11/20/2021 22:46",
