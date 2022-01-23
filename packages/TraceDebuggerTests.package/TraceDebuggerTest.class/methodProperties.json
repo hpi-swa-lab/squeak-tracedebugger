@@ -3,11 +3,12 @@
 		 },
 	"instance" : {
 		"classUnderTest" : "ct 11/18/2021 17:47",
-		"runDebuggerFrom:assertionsAndSteps:" : "ct 12/8/2021 23:14",
+		"runDebuggerFrom:assertionsAndSteps:" : "ct 1/20/2022 23:47",
 		"shouldntFail:" : "ct 11/20/2021 22:42",
 		"testBuildDebugger" : "ct 11/20/2021 22:46",
 		"testBuildNotifier" : "ct 11/20/2021 22:42",
-		"testViewUpdates" : "ct 12/8/2021 22:12",
-		"testViewUpdatesAfterSelection" : "ct 12/8/2021 23:18",
+		"testViewUpdates" : "ct 1/20/2022 21:24",
+		"testViewUpdatesAfterSelection" : "ct 1/20/2022 21:28",
+		"testViewUpdatesHistory" : "ct 1/20/2022 23:45",
 		"toolBuilder" : "ct 11/20/2021 22:41",
 		"validateWindow:" : "ct 11/20/2021 22:51" } }

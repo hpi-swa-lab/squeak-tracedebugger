@@ -1,4 +1,4 @@
 testing
 canStepBackward
 
-	^ true
+	^ self cursor timeIndex > 0
