@@ -10,8 +10,8 @@ baseline: spec
 			baseline: 'SimulationStudio' with: [
 				spec
 					repository: 'github://LinqLover/SimulationStudio/packages';
-					loads: #('SimulationStudio-Base' 'SimulationStudio-Support');
-					flag: #(workaround moveUpstream) "we only need BlockClosure>>#valueAndStoreTimeToRun:. Contribute to Trunk and/or see https://github.com/LinqLover/SimulationStudio/issues/41"];
+					loads: #('SimulationStudio-Base' 'SimulationStudio-Support' 'SimulationStudio-Tests-Base');
+					flag: #(workaround) "Support is only required for Tests & Benchmarks, and Tests-Base is only required for Tests. But at the moment, we seem to lack a protocol for specifying this exact relationship. See: https://github.com/Metacello/metacello/issues/551"];
 			baseline: 'StatisticsWorkbench' with: [
 				spec
 					repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
