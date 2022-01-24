@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"forMemory:atTime:" : "ct 1/23/2022 16:17" },
 	"instance" : {
-		 } }
+		"context:primitiveFailTokenFor:" : "ct 1/23/2022 16:16",
+		"memory" : "ct 1/23/2022 16:15",
+		"memory:" : "ct 1/23/2022 16:15",
+		"timeIndex" : "ct 1/23/2022 16:15",
+		"timeIndex:" : "ct 1/23/2022 16:15" } }

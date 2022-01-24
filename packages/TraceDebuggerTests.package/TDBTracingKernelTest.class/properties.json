@@ -1,0 +1,16 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"snapshots",
+		"limit",
+		"limitFactor" ],
+	"name" : "TDBTracingKernelTest",
+	"pools" : [
+		 ],
+	"super" : "TDBMemorySimulatorKernelTest",
+	"type" : "normal" }

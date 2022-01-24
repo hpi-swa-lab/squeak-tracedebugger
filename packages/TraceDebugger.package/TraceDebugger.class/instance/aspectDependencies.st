@@ -15,12 +15,16 @@ aspectDependencies
 		at: #contextStack put: #(interruptedContext);
 		at: #cursorPosition put: #(cursor);
 		at: #interruptedContext put: #(cursorPosition);
+		at: #isDisplayingHistory put: #(cursorPosition);
+		at: #labelString put: #(isDisplayingHistory);
 		at: #rootContexts put: #(contextStack);
 		at: #selectedMessage put: #(currentCompiledMethod);
 		
 		"toolbuilder"
+		at: #defaultWindowColor put: #(isDisplayingHistory);
 		at: #treeSelectedContext put: #(selectedContext);
 		"at: #treeSelectedContextPath put: #(selectedContext);"
 		at: #treeRootContexts put: #(rootContexts);
+		at: #windowColorToUse put: #(defaultWindowColor);
 		
 		yourself

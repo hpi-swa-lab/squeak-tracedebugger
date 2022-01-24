@@ -19,10 +19,19 @@ testDoStepOverUnhandledSignalerContext
 			{#doStepInto. UndefinedObject >> #handleSignal:. #(willReallySend)}.
 			{#doStepInto. Error >> #defaultAction. #(willReallySend)}.
 			{#doStepInto. UnhandledError class >> #signalForException:. #(willReallySend)}.
+			
+			"step over unhandled signaler context"
 			{#doStepOver. UnhandledError class >> #signalForException:. #(willReallySend willReallySend)}.
 			{#doStepOver. UnhandledError >> #defaultAction. #(willReturn)}.
-			{#doStepOver. Context >> #resumeEvaluating:. #(willReallySend willReturn)}.
+			{#doStepOver. UndefinedObject >> #handleSignal:. #(willReallySend)}.
+			} , self stepsAndAssertionsForContextResumeEvaluating , {
+			{#doStepOver. UnhandledError class >> #signalForException:. #(willReturn)}.
+			
+			"back in safe waters again"
 			{#doStepOver. Error >> #defaultAction. #(willReturn)}.
-			{#doStepOver. Context >> #resumeEvaluating:. #(willReallySend willReturn)}.
+			{#doStepOver. UndefinedObject >> #handleSignal:. #(willReallySend)}.
+			} , self stepsAndAssertionsForContextResumeEvaluating , {
+			{#doStepOver. Exception >> #signal:. #(willReturn)}.
 			{#doStepOver. #error:. #(willReturn)}.
+			{#doStepOver. #error. #(willReturn)}.
 			{#doStepOver. #signalError. #(willReturn isDead)}}.

@@ -13,8 +13,11 @@ jobs:
         uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: ${{ env.SMALLTALK_IMAGE }}
+      - id: download-vm
+        name: Download latest VM
+        run: scripts/download_vm.sh
       - name: Run tests
-        run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} tests.smalltalk.ston
+        run: smalltalkci -s "${{ steps.smalltalkci.outputs.smalltalk-image }}" --vm "${{ steps.download-vm.outputs.vm-path }}" tests.smalltalk.ston
         timeout-minutes: 15
         env:
           # for uploading coverage reports

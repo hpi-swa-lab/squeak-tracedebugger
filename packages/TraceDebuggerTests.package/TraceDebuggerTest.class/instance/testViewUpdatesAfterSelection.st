@@ -14,12 +14,12 @@ testViewUpdatesAfterSelection
 			#(stepThrough stepThrough).
 			#(griffle 'wiffy2' (griffle (griffle:with: (griffle ()) (griffle ())))).
 			#(stepInto).
-			#(wiffy2 '^ 3' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			#(wiffy2 '^ 3' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))) (() ('stack1' '3'))).
 			{[:debugger | debugger
 				selectContext: (debugger contextStack
 					detect: [:ctx | ctx selector = #griffle:with:]);
 				stepInto]}.
-			#(griffle:with: '* anotherBlock value' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			#(griffle:with: '* anotherBlock value' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))) (() ('all temp vars' 'aBlock:*anotherBlock:*' 'stack3' '2'))).
 			{[:debugger | debugger
 				selectContext: (debugger contextStack
 					detect: [:ctx | ctx selector = #griffle]);

@@ -7,6 +7,6 @@ stepToSendOrReturn
 	
 	self stepUntil: [:context |
 		context ~= start
-			or: [start willReallySend]
-			or: [start willReturn]
-			or: [start willReallyStore]].
+			or: [context willReallySend]
+			or: [context willReturn]
+			or: [context willReallyStore]].

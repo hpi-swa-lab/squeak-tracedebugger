@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBTracingSimulatorKernelTest",
+	"pools" : [
+		 ],
+	"super" : "TDBMemorySimulatorKernelTest",
+	"type" : "normal" }
