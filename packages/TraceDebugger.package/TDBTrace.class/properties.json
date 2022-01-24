@@ -10,7 +10,8 @@
 		"children",
 		"memory",
 		"context",
-		"timeInterval" ],
+		"timeInterval",
+		"maxTimeIndex" ],
 	"name" : "TDBTrace",
 	"pools" : [
 		 ],

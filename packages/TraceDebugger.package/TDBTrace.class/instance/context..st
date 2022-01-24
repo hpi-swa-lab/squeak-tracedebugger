@@ -3,3 +3,4 @@ context: aContext
 
 	context := aContext.
 	timeInterval := 0 to: 0.
+	maxTimeIndex := 0.
