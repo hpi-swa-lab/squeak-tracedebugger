@@ -2,9 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
+		"closure" : "ct 1/23/2022 20:41",
 		"debuggerMap" : "ct 12/30/2021 23:23",
-		"isDead" : "ct 12/30/2021 23:17",
+		"isDead" : "ct 1/23/2022 20:26",
 		"method" : "ct 12/30/2021 23:23",
+		"pc" : "ct 1/23/2022 20:26",
 		"selector" : "ct 12/30/2021 23:18",
+		"startpc" : "ct 1/23/2022 20:24",
+		"tdbHasHome:" : "ct 1/23/2022 20:30",
 		"tdbIdentical:" : "ct 12/31/2021 02:33",
 		"tempNames" : "ct 12/31/2021 00:51" } }
