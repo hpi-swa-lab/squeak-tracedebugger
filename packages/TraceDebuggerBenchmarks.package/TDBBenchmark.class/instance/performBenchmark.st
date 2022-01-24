@@ -11,4 +11,6 @@ performBenchmark
 			totalTime := duration.
 			timeToRun := totalTime - preparationTime - postparationTime]]
 				on: Error, Warning, Halt
-				do: [:ex | result := ex].
+				do: [:ex |
+					result := ex.
+					ex pass].
