@@ -2,6 +2,11 @@ accessing
 selectContext: aContext
 
 	self cacheSourcesDuring:
-		[self basicSelectContext: aContext.
+		[| oldTreeSelectedContextPath |
+		(aContext tdbIdentical: self selectedContext tdbproxyYourself)
+			ifTrue: [oldTreeSelectedContextPath := self treeSelectedContextPath].
 		
-		self changed: #treeSelectedContextPath].
+		self basicSelectContext: aContext.
+		
+		(oldTreeSelectedContextPath notNil and: [oldTreeSelectedContextPath = self treeSelectedContextPath])
+			ifFalse: [self changed: #treeSelectedContextPath]].
