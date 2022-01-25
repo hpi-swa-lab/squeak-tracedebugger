@@ -35,7 +35,7 @@ jobs:
         name: Download latest VM
         run: scripts/download_vm.sh
       - name: Run benchmarks
-        run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} benchmarks.smalltalk.ston
+        run: smalltalkci -s ${{ steps.smalltalkci.outputs.smalltalk-image }} --vm "${{ steps.download-vm.outputs.vm-path }}" benchmarks.smalltalk.ston
         timeout-minutes: 15
         env:
           TDB_BENCHMARK_RESULTS_PATH: ${{ runner.temp }}/benchmark-data.json
