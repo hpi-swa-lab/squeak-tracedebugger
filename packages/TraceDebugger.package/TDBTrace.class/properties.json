@@ -11,7 +11,8 @@
 		"memory",
 		"context",
 		"timeInterval",
-		"maxTimeIndex" ],
+		"maxTimeIndex",
+		"tracesForContexts" ],
 	"name" : "TDBTrace",
 	"pools" : [
 		 ],

@@ -1,4 +1,4 @@
 accessing
 traceFor: aContext
 
-	^ self rootTrace detectTraceFor: aContext
+	^ self rootTrace traceForContext: aContext
