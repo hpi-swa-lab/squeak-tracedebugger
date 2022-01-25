@@ -3,4 +3,5 @@ basicSelectContext: aContext
 
 	selectedContext := aContext.
 	
-	self changed: #selectedContext.
+	self cacheSourcesDuring:
+		[self changed: #selectedContext].

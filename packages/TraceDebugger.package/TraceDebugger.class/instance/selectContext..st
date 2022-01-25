@@ -1,6 +1,7 @@
 accessing
 selectContext: aContext
 
-	self basicSelectContext: aContext.
-	
-	self changed: #treeSelectedContextPath.
+	self cacheSourcesDuring:
+		[self basicSelectContext: aContext.
+		
+		self changed: #treeSelectedContextPath].
