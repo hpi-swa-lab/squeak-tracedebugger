@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643060548031,
+  "lastUpdate": 1643070075748,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -1307,6 +1307,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 4.932882862316247",
             "extra": "{\"totalTime\":3278.6666666666665,\"preparationTime\":82.33333333333333,\"singleTimesToRun\":[3194.0,3193.0,3202.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "937a4fc35281e036eb4eefb3bdf1882c56b0091c",
+          "message": "Optimize TDBTrace >> #traceAtTime:ifAbsent:\n\n- Early exit if timeIndex it out of the current trace's range\n- Exploit the the OrderedDictionary's internal structure for greater performance\n\nIn a larger tracing exercise for #15, this method still takes 8% of the time (as opposed to 39%) before.\n\nNote that we have still the possibility to implement an inline binary search; however; a large majority of all traces has <= 4 children only (measured 95% - 98.5% for different domains, avg length ~ 1.00), so this is left as an exercise to the reader.",
+          "timestamp": "2022-01-25T01:01:33+01:00",
+          "tree_id": "16c0ffb8191bdcaf315c070abb51c9d1939a5240",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/937a4fc35281e036eb4eefb3bdf1882c56b0091c"
+        },
+        "date": 1643070074884,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 8760.333333333334,
+            "unit": "Milliseconds",
+            "range": "stdev: 333.9615746359652",
+            "extra": "{\"totalTime\":8760.333333333334,\"preparationTime\":0.0,\"singleTimesToRun\":[8504.0,9138.0,8639.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 6979.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 105.15861036231571",
+            "extra": "{\"totalTime\":6980.666666666667,\"preparationTime\":1.0,\"singleTimesToRun\":[7088.0,6878.0,6973.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 121.33333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 5.686240703077327",
+            "extra": "{\"totalTime\":121.33333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[126.0,123.0,115.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2779.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 58.07179464536406",
+            "extra": "{\"totalTime\":2779.6666666666665,\"preparationTime\":0.0,\"singleTimesToRun\":[2783.0,2836.0,2720.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 306.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 12.897028081435403",
+            "extra": "{\"totalTime\":306.6666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[296.0,321.0,303.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 8469.666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 144.34103135745337",
+            "extra": "{\"totalTime\":8634.333333333334,\"preparationTime\":164.66666666666666,\"singleTimesToRun\":[8303.0,8552.0,8554.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 1288.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 13.576941236277534",
+            "extra": "{\"totalTime\":1368.0,\"preparationTime\":79.66666666666667,\"singleTimesToRun\":[1274.0,1301.0,1290.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 2781,
+            "unit": "Milliseconds",
+            "range": "stdev: 25.15949125081825",
+            "extra": "{\"totalTime\":2862.0,\"preparationTime\":81.0,\"singleTimesToRun\":[2810.0,2768.0,2765.0],\"postparationTime\":0.0}"
           }
         ]
       }
