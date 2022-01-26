@@ -3,6 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
+		"Mirror",
 		"UseProxiesAlways" ],
 	"commentStamp" : "",
 	"instvars" : [

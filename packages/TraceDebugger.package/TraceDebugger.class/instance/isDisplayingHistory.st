@@ -1,4 +1,4 @@
 testing
 isDisplayingHistory
 
-	^ self cursor timeIndex < self cursor maxTimeIndex
+	^ self cursor timeIndex < (self cursor maxTimeIndex ifNil: [^ false])

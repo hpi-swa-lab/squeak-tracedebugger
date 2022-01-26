@@ -1,21 +1,25 @@
 accessing
 traceAtTime: timeIndex ifAbsent: absentBlock
 
-	| assocs i nextTime size assoc prevAssoc |
-	self flag: #optimized. "findBinary/findDelta are NOT faster here. We could still try to implement inline binary search."
+	| assocs assoc high index low test |
+	#optimized. "inline binary search, adopted from SequenceableCollection>>#findBinaryIndex:do:ifNone:."
 	
-	assocs := self children associations.
-	i := 0.
-	size := assocs size.
-	nextTime := 0.
-	assoc := nil.
-	[(nextTime <= timeIndex ifTrue: [prevAssoc := assoc. true] ifFalse: [false])
-		and: [(i := i + 1) <= size]]
-			whileTrue:
-				[assoc := assocs at: i.
-				(nextTime := assoc key) = timeIndex
-					ifTrue: [^ assoc value traceAtTime: timeIndex]].
-	^ (prevAssoc ifNotNil: [:left | left value traceAtTime: timeIndex ifAbsent: []])
-		ifNil: [timeIndex <= timeInterval stop
-			ifTrue: [self]
-			ifFalse: [absentBlock value]]
+	timeIndex > self maxTimeIndex ifTrue: [^ absentBlock value].
+	
+	assocs := self children tdbOrder. "exploit the OrderedDictionary's internal structure for greater performance"
+	low := 1.
+	high := self children tdbTally.
+	[high < low] whileFalse:
+		[index := high + low // 2.
+		(test := timeIndex - (assoc := assocs at: index) key) < 0
+			ifTrue: [high := index - 1]
+			ifFalse: [0 < test
+				ifTrue: [low := index + 1]
+				ifFalse:
+					["test = 0"
+					^ assoc value traceAtTime: timeIndex]]].
+	^ ((high > 0 ifTrue: [assocs at: high]) ifNotNil: [:left |
+		(left value traceAtTime: timeIndex ifAbsent: nil)])
+			ifNil: [timeIndex <= timeInterval stop
+				ifTrue: [self]
+				ifFalse: [absentBlock value]]

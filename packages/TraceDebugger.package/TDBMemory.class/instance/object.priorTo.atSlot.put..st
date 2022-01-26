@@ -15,7 +15,7 @@ object: anObject priorTo: timeIndex atSlot: slot put: value
 				ifTrue:
 					["override existing run"
 					^ lastRun at: 2 put: value].
-			(thisContext object: (lastRun at: 2) eqeq: value)
+			(Mirror object: (lastRun at: 2) eqeq: value)
 				ifTrue:
 					["extend existing run"
 					lastRun at: 1 put: priorTimeIndex.

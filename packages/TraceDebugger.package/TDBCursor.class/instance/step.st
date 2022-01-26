@@ -11,5 +11,5 @@ step
 	enableSimulatorBlock ifNotNil:
 		[enableSimulatorBlock value].
 	
-	trace advanceUntil:
-		[self maxTimeIndex >= self timeIndex].
+	trace advanceUntil: [:newTrace "avoid #cull:" |
+		self maxTimeIndex >= self timeIndex].
