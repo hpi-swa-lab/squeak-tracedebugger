@@ -11,7 +11,7 @@ doStep: aBlock
 	
 	self selectContext: self interruptedContext.
 	self selectedContext ifNil:
-		[self flag: #(coroutines workaround). "After stepping over an unhandled error, #resumeEvaluating: cannot be displayed because its temporary is nil."
-		self selectContext: self interruptedContext sender].
+		[self flag: #coroutines. "The new context path may no longer contain the interrupted context at the expected position from the trace. Select it again without updating the context path."
+		self basicSelectContext: self interruptedContext].
 	
 	^ result
