@@ -2,8 +2,7 @@ private
 updateMaxTimeIndex: timeIndex from: aTrace
 
 	self == aTrace ifFalse:
-		[self children size = 0 ifTrue: [^ self halt].
-		self children last value == aTrace ifFalse: [^ self]].
+		[self children last value == aTrace ifFalse: [^ self]].
 	
 	timeIndex > maxTimeIndex
 		ifFalse: [^ self].

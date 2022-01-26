@@ -2,7 +2,7 @@ accessing
 traceAtTime: timeIndex ifAbsent: absentBlock
 
 	| assocs assoc high index low test |
-	#optimized. "inline binary search"
+	#optimized. "inline binary search, adopted from SequenceableCollection>>#findBinaryIndex:do:ifNone:."
 	
 	timeIndex > self maxTimeIndex ifTrue: [^ absentBlock value].
 	

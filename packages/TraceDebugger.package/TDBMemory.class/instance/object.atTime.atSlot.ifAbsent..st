@@ -8,7 +8,7 @@ object: anObject atTime: timeIndex atSlot: slot ifAbsent: aBlock
 	runs := (values at: anObject ifAbsent: [^ aBlock value])
 		at: slot ifAbsent: [^ aBlock value].
 	
-	self flag: #optimize. "Use interpolation search (#findDelta:)?"
+	self flag: #optimize. "Inline. Use interpolation search (#findDelta:)?"
 	run := runs
 		findBinary: [:ea | timeIndex - ea first]
 		ifNone: [:left :right |
