@@ -21,7 +21,7 @@ context: aContext cloneIntoTop: sourceObject
 	
 	size := copyClass == Context
 		ifTrue: [sourceObject stackPtr]
-		ifFalse: [thisContext objectSize: sourceObject].
+		ifFalse: [aContext objectSize: sourceObject].
 	1 to: size do: [:index |
 		self context: aContext simulatedObject: sourceObject basicAt: index ifHit: [:value |
 			(copyClass includesBehavior: String)
