@@ -2,12 +2,11 @@ menus
 shiftedContextStackMenu: aMenu
 	<contextStackMenuShifted: true>
 
-	self flag: #shouldBeImplemented.
 	^ aMenu
 		addList:
-			#(('browse class hierarchy'				browseClassHierarchy)
-			('browse class'							browseClass)
-			('implementors of sent messages'		browseAllMessages)
+			#(('browse class hierarchy (h)'			browseClassHierarchy)
+			('browse class (b)'						browseClass)
+			('implementors of sent messages (m)'	browseAllMessages)
 			('change sets with this method'			findMethodInChangeSets)
 			-	
 			('inspect instances'						inspectInstances)
