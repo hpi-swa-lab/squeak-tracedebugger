@@ -1,0 +1,6 @@
+*TraceDebugger-UI-copying
+tdbWithoutPrefix: prefix
+
+	(self beginsWith: prefix)
+		ifFalse: [^ self].
+	^ self allButFirst: prefix size

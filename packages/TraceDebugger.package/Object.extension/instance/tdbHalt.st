@@ -8,6 +8,6 @@ tdbHalt
 	^ TraceDebugger
 		openOn: Processor activeProcess
 		context: thisContext sender
-		label: thisContext selector
+		label: thisContext sender selector
 		contents: nil
-		fullView: true
+		fullView: false

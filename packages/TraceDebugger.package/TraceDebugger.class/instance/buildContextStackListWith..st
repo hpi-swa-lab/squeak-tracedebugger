@@ -6,7 +6,7 @@ buildContextStackListWith: aBuilder
 		model: self;
 		list: #contextStack;
 		getSelected: #selectedContext;
-		setSelected: #selectContext:;
+		setSelected: #notifierSelectContext:;
 		icon: #messageIconAt:;
 		helpItem: #messageHelpAt:;
 		menu: #contextStackMenu:shifted:;
