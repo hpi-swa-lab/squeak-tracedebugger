@@ -17,14 +17,15 @@ aspectDependencies
 		at: #interruptedContext put: #(cursorPosition);
 		at: #isDisplayingHistory put: #(cursorPosition);
 		at: #labelString put: #(isDisplayingHistory);
-		at: #rootContexts put: #(contextStack);
 		at: #selectedMessage put: #(currentCompiledMethod);
 		
 		"toolbuilder"
 		at: #defaultWindowColor put: #(isDisplayingHistory);
 		at: #treeSelectedContext put: #(selectedContext);
 		"at: #treeSelectedContextPath put: #(selectedContext);"
-		at: #treeRootContexts put: #(rootContexts);
+		at: #treeRootContexts put:
+			{#rootContexts.
+			#interruptedContext flag: #workaround "update the entire tree to miss no new message sends anywhere"};
 		at: #windowColorToUse put: #(defaultWindowColor);
 		
 		yourself
