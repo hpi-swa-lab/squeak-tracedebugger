@@ -9,6 +9,7 @@ aspectDependencies
 		at: #windowTitle put: #(labelString);
 		
 		"context and cursor"
+		at: #canProceed put: #(interruptedContext);
 		at: #canStepBackward put: #(selectedContext);
 		at: #canStepForward put: #(selectedContext);
 		at: #childContextsFor: put: #(cursorPosition);
