@@ -13,4 +13,5 @@ buildContextTreeWith: aBuilder
 		icon: #messageIconFor:;
 		help: #messageHelpFor:;
 		keyPress: #contextTreeKey:from:;
+		hScrollBarPolicy: #whenNeeded;
 		yourself
