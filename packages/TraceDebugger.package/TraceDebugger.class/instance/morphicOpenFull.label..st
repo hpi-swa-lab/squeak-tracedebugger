@@ -4,6 +4,9 @@ morphicOpenFull: aBoolean label: titleOrNil
 	| uiBlock |
 	uiBlock := [
 		| window |
+		(self interruptedContext tdbIdentical:  self process suspendedContext)
+			ifFalse: [self process runUntil: [:context | self interruptedContext tdbIdentical: context]].
+		
 		window := self openFull: aBoolean label: titleOrNil.
 		
 		"Try layouting the debugger tool at least once to avoid freeze."
