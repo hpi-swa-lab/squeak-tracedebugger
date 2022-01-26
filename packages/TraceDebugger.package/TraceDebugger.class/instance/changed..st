@@ -8,5 +8,7 @@ changed: aspect
 	
 	aspect
 		caseOf:
-			{[#selectedContext] -> [self updateInspectors]}
+			{[#bottomContexts] -> [self updateRootContexts].
+			[#contextStack] -> [self updateRootContexts].
+			[#selectedContext] -> [self updateInspectors]}
 		otherwise: [].
