@@ -1,4 +1,4 @@
 toolbuilder - constants
 notifierStackSize
 
-	^ Debugger notifierStackSize
+	^ self class fallbackDebugger notifierStackSize

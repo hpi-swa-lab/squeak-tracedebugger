@@ -1,4 +1,4 @@
-message list
+accessing - code pane
 selectedMessage
 
 	contents ifNotNil: [^ contents copy].

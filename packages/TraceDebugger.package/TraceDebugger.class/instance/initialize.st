@@ -3,5 +3,5 @@ initialize
 
 	super initialize.
 	
-	receiverInspector := Inspector on: nil.
-	contextVariablesInspector := ContextVariablesInspector on: nil.
+	receiverInspector := self inspectorClass on: nil.
+	contextVariablesInspector := self contextVariablesInspectorClass on: nil.
