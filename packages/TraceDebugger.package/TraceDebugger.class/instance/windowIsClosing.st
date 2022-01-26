@@ -5,8 +5,7 @@ windowIsClosing
 	contextVariablesInspector := nil.
 	
 	process == nil ifTrue: [^ self].
-	process terminateAggressively.
-	process := nil.
+	self terminateProcess.
 	
 	Project current restoreDisplay.
 	Smalltalk installLowSpaceWatcher.

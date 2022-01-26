@@ -1,4 +1,4 @@
 accessing
 contextStack
 
-	^ self interruptedContext tdbStack
+	^ self stackForContext: self interruptedContext

@@ -1,13 +1,13 @@
-actions
+actions - process
 proceed
 
 	| theProcess errorWasInUIProcess |
 	self okToChange ifFalse: [^ self].
 	Smalltalk okayToProceedEvenIfSpaceIsLow ifFalse: [^ self].
+	self canProceed ifFalse: [^ self changed: #flash].
 	
-	theProcess := process. "would be terminated during #close otherwise"
-	process := nil.
-	errorWasInUIProcess := theProcess environmentRemoveKey: #tdbErrorWasInUIProcess ifAbsent: [false].
+	errorWasInUIProcess := process environmentRemoveKey: #tdbErrorWasInUIProcess ifAbsent: [false].
+	theProcess := self releaseProcess.
 	self close.
 	
 	errorWasInUIProcess ifTrue:
