@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643227397533,
+  "lastUpdate": 1643227604766,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -2427,6 +2427,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 12.12435565298214",
             "extra": "{\"totalTime\":1843.6666666666667,\"preparationTime\":82.66666666666667,\"singleTimesToRun\":[1754.0,1754.0,1775.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "8380eaf34ddbe453ee33070cf5950e45413227e5",
+          "message": "Refactor debugger: recategorize selectors, bundle dependencies on fallback classes",
+          "timestamp": "2022-01-26T20:58:44+01:00",
+          "tree_id": "ee381e7b5cc63bb17b29fbb05cf27ba7e0f117f9",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/8380eaf34ddbe453ee33070cf5950e45413227e5"
+        },
+        "date": 1643227604006,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 6884.333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 78.76759062795645",
+            "extra": "{\"totalTime\":6884.333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[6797.0,6906.0,6950.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 5346.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 4.041451884327381",
+            "extra": "{\"totalTime\":5348.0,\"preparationTime\":1.3333333333333333,\"singleTimesToRun\":[5349.0,5342.0,5349.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 101,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.0",
+            "extra": "{\"totalTime\":101.0,\"preparationTime\":0.0,\"singleTimesToRun\":[102.0,100.0,101.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2164,
+            "unit": "Milliseconds",
+            "range": "stdev: 79.77468270071653",
+            "extra": "{\"totalTime\":2164.0,\"preparationTime\":0.0,\"singleTimesToRun\":[2256.0,2114.0,2122.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 228.66666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 5.507570547286102",
+            "extra": "{\"totalTime\":228.66666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[235.0,225.0,226.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 6587,
+            "unit": "Milliseconds",
+            "range": "stdev: 99.03534722511958",
+            "extra": "{\"totalTime\":6715.666666666667,\"preparationTime\":128.66666666666666,\"singleTimesToRun\":[6699.0,6511.0,6551.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 1084.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 39.10669166949991",
+            "extra": "{\"totalTime\":1151.3333333333333,\"preparationTime\":66.66666666666667,\"singleTimesToRun\":[1122.0,1088.0,1044.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1757.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 18.0092568789868",
+            "extra": "{\"totalTime\":1839.3333333333333,\"preparationTime\":82.0,\"singleTimesToRun\":[1749.0,1778.0,1745.0],\"postparationTime\":0.0}"
           }
         ]
       }
