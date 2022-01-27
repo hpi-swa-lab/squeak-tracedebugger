@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"debugger",
+		"context" ],
+	"name" : "TDBTraceSurrogate",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -14,5 +14,7 @@ buildContextTreeWith: aBuilder
 		icon: #messageIconFor:;
 		help: #messageHelpFor:;
 		keyPress: #contextTreeKey:from:;
+		dragItem: #dragContext:;
+		dragType: #dragTypeForContext:;
 		hScrollBarPolicy: #whenNeeded;
 		yourself

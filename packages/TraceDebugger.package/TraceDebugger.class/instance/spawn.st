@@ -1,6 +1,4 @@
 actions
 spawn
 
-	self copy
-		bottomContexts: {self selectedContext};
-		open
+	^ self spawn: self selectedContext
