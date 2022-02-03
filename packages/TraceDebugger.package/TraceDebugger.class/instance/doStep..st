@@ -5,9 +5,7 @@ doStep: aBlock
 	self okToChange ifFalse: [^ false].
 	self selectedContext ifNil: [^ false].
 	
-	result := aBlock ensure:
-		["Update the tree structure even if the operation was interrupted."
-		self changed: #cursorPosition].
+	result := self basicDoStep: aBlock.
 	
 	self selectContext: self interruptedContext.
 	self selectedContext ifNil:

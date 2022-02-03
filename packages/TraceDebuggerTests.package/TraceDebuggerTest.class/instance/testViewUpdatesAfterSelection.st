@@ -24,4 +24,12 @@ testViewUpdatesAfterSelection
 				selectContext: (debugger contextStack
 					detect: [:ctx | ctx selector = #griffle]);
 				stepThrough]}.
+			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			{[:debugger | debugger selectContext:
+				"select dead context"
+				(debugger childContextsFor: debugger selectedContext) first]}.
+			#(griffle:with: 'value' nil (() ('ThisContext size' '3'))).
+			{[:debugger | debugger
+				"select alive context"
+				selectContext: debugger selectedContext sender]}.
 			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))))}.

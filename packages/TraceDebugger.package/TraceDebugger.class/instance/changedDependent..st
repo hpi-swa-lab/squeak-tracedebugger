@@ -14,7 +14,8 @@ changedDependent: aspect
 				self currentCompiledMethod.
 				self decorateButtons].
 			[#selectedContext] ->
-				[selectedContext := self cursor context]}
+				[self isThisEverCalled.
+				selectedContext := self interruptedContext]}
 		otherwise: [].
 	
 	self changed: aspect.
