@@ -7,6 +7,11 @@ mainContextStackMenu: aMenu
 			#(('spawn (o)' 					spawn)
 			('toggle bottom (O)'			toggleBottomContext)
 			-
+			('find (f)'						findContext)
+			('find again (g)'					findContextAgain)
+			('find class (F)'					findClass)
+			('find class again (G)'			findClassAgain)
+			-
 			('restart (r)' 					restart)
 			('proceed (p)' 					proceed)
 			('step over (t)' 					stepOver)

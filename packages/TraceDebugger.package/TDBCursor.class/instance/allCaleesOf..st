@@ -1,4 +1,4 @@
-private
+private - stepping
 allCaleesOf: aContext
 
 	^ (self rootTrace withAllDescendants

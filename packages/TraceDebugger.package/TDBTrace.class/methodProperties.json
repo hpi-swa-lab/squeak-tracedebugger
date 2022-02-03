@@ -7,7 +7,7 @@
 		"advance" : "ct 12/9/2021 00:59",
 		"advanceUntil:" : "ct 12/9/2021 01:00",
 		"advancedTo:atTime:" : "ct 1/24/2022 22:15",
-		"allDescendantsDo:" : "ct 1/25/2022 01:35",
+		"allDescendantsBreadthFirstDo:" : "ct 2/3/2022 19:08",
 		"atTime:putChild:" : "ct 1/25/2022 20:24",
 		"children" : "ct 11/19/2021 23:17",
 		"context:" : "ct 1/25/2022 20:28",
@@ -30,5 +30,9 @@
 		"traceForContext:" : "ct 1/25/2022 20:23",
 		"tracingSimulatorClass" : "ct 1/7/2022 19:58",
 		"updateMaxTimeIndex:from:" : "ct 1/25/2022 21:26",
-		"withAllDescendants" : "ct 1/25/2022 02:21",
-		"withAllDescendantsDo:" : "ct 1/25/2022 01:32" } }
+		"withAllDescendants" : "ct 2/3/2022 20:48",
+		"withAllDescendantsBreadthFirst" : "ct 2/3/2022 20:47",
+		"withAllDescendantsBreadthFirstDo:" : "ct 2/3/2022 19:07",
+		"withAllDescendantsDepthFirst" : "ct 2/3/2022 20:47",
+		"withAllDescendantsDepthFirstDo:" : "ct 2/3/2022 19:09",
+		"withAllDescendantsDo:" : "ct 2/3/2022 19:08" } }

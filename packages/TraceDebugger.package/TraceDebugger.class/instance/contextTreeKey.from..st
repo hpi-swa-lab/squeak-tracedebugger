@@ -5,6 +5,12 @@ contextTreeKey: aCharacter from: requestor
 		caseOf:
 			{[$o] -> [self spawn].
 			[$O] -> [self toggleBottomContext].
+			
+			[$f] -> [self findContext].
+			[$g] -> [self findContextAgain].
+			[$F] -> [self findClass].
+			[$G] -> [self findClassAgain].
+		
 			[$e] -> [self stepInto].
 			[$t] -> [self stepOver].
 			[$T] -> [self stepIntoBlock].

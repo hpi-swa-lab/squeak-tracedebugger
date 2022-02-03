@@ -9,4 +9,7 @@ postCopy
 	receiverInspector := receiverInspector copy.
 	contextVariablesInspector := contextVariablesInspector copy.
 	bottomContexts := bottomContexts copy.
+	selectedContext := selectedContext.
+	findSignature := findSignature.
+	findClass := findClass.
 	childContexts := rootContexts := nil.

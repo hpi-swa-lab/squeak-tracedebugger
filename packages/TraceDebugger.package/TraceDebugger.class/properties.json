@@ -14,6 +14,8 @@
 		"contextVariablesInspector",
 		"bottomContexts",
 		"selectedContext",
+		"findSignature",
+		"findClass",
 		"childContexts",
 		"rootContexts" ],
 	"name" : "TraceDebugger",

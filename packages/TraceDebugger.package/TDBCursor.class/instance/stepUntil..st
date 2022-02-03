@@ -1,4 +1,4 @@
-private
+private - stepping
 stepUntil: aBlock
 
 	| context start |

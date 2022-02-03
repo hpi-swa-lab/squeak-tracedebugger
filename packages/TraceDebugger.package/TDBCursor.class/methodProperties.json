@@ -8,6 +8,8 @@
 		"traceClass" : "ct 11/18/2021 18:06" },
 	"instance" : {
 		"allCaleesOf:" : "ct 12/2/2021 01:22",
+		"allContextClasses" : "ct 2/3/2022 16:32",
+		"allContextHomeSignatures" : "ct 2/3/2022 18:34",
 		"calleeOf:" : "ct 1/12/2022 01:20",
 		"childContextsFor:" : "ct 1/26/2022 00:03",
 		"completeStep:" : "ct 1/12/2022 01:21",
@@ -26,6 +28,9 @@
 		"doStepThrough" : "ct 12/30/2021 14:39",
 		"doStepThrough:" : "ct 11/30/2021 22:25",
 		"enableTracingDuring:" : "ct 1/26/2022 18:51",
+		"findContextForClass:startingAtTime:" : "ct 2/3/2022 16:59",
+		"findContextForSignature:startingAtTime:" : "ct 2/3/2022 16:59",
+		"findContextSuchThat:startingAtTime:" : "ct 2/3/2022 19:08",
 		"initialize" : "ct 11/19/2021 21:36",
 		"maxTimeIndex" : "ct 11/21/2021 01:40",
 		"maxTimeIndexFor:" : "ct 2/3/2022 15:34",
