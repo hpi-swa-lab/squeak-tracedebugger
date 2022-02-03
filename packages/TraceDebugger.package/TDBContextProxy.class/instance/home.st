@@ -1,5 +1,5 @@
 accessing
-closure
+home
 
-	^ object closure
+	^ object home
 		 tdbInMemory: memory atTime: timeIndex
