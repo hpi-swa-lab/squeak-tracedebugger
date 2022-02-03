@@ -1,5 +1,6 @@
 benchmarks
 benchExpandAll
+	<timeoutFactor: 3>
 
 	| item previousItem tree |
 	self prepare:
