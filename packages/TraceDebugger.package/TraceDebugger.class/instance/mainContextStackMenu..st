@@ -22,14 +22,14 @@ mainContextStackMenu: aMenu
 			-
 			('return entered value' 			returnValue)
 			-
-			('senders of    (n)' 			browseSendersOfMessages)
-			('implementors of    (m)' 		browseMessages)
+			('senders of (n)' 				browseSendersOfMessages)
+			('implementors of (m)' 			browseMessages)
 			('inheritance (i)' 				methodHierarchy)
 			-
 			('versions (v)' 					browseVersions)
 			-
-			('references    (r)' 				browseVariableReferences)
-			('assignments    (a)' 			browseVariableAssignments)
+			('references (r)' 				browseVariableReferences)
+			('assignments (a)' 				browseVariableAssignments)
 			-
 			('class refs (N)' 					browseClassRefs)
 			('browse full (b)' 				browseMethodFull)

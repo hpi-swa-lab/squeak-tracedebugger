@@ -16,6 +16,7 @@ aspectDependencies
 		at: #contextStack put: #(interruptedContext);
 		at: #cursorPosition put: #(cursor);
 		at: #interruptedContext put: #(cursorPosition);
+		at: #hasContextSelected put: #(selectedContext);
 		at: #isDisplayingHistory put: #(cursorPosition);
 		at: #labelString put: #(isDisplayingHistory);
 		at: #selectedMessage put: #(currentCompiledMethod);
