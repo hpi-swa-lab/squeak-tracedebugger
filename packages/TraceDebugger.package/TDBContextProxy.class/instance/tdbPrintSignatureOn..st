@@ -12,7 +12,7 @@ tdbPrintSignatureOn: aStream
 			 outer tdbPrintSignatureOn: aStream.
 			 ^ self]].
 	
-	class := self objectClass: self receiver.
+	class := object objectClass: self receiver tdbproxyYourself.
 	methodClass := method methodClass.
 	selector := method selector ifNil: [method defaultSelector].
 	
