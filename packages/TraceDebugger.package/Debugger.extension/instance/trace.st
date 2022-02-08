@@ -13,7 +13,9 @@ trace
 	self close.
 	
 	traceDebugger := TraceDebugger openOn: process context: process suspendedContext label: self labelString contents: nil fullView: true.
+	"---- In MVC, the lines after this will not be executed ---"
 	"Copy old states to new window"
+	ToolBuilder default class setBoundsForWindow: traceDebugger containingWindow to: currentBounds.
 	traceDebugger selectContext: self selectedContext.
 	#(receiverInspector contextVariablesInspector) do: [:path | | newInspector oldInspector |
 		oldInspector := path value: self.
@@ -26,5 +28,3 @@ trace
 				contentsTyped: contents;
 				changed: #editString with: contents]].
 	
-	"---- In MVC, the lines after this will not be executed ---"
-	ToolBuilder default class setBoundsForWindow: traceDebugger containingWindow to: currentBounds.
