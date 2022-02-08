@@ -1,6 +1,9 @@
 actions
 toggleBottomContext: aContext
 
+	aContext == aContext tdbproxyYourself ifFalse:
+		[^ self toggleBottomContext: aContext tdbproxyYourself].
+	
 	self bottomContexts:
 		(aContext
 			ifNil: [#()]

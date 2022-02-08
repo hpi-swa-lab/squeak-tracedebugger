@@ -4,7 +4,7 @@ contextTreeKey: aCharacter from: requestor
 	^ aCharacter
 		caseOf:
 			{[$o] -> [self spawn].
-			[$O] -> [self toggleBottomContext].
+			[$ ] -> [self toggleBottomContext].
 			
 			[$f] -> [self findContext].
 			[$g] -> [self findContextAgain].
