@@ -5,6 +5,6 @@ tdbChooseFromValues: values title: aString
 	
 	^ self
 		chooseFromLabeledValues: (values
-			collect: [:value | value asString -> value]
+			collect: [:value | value -> value]
 			as: OrderedDictionary)
 		title: aString
