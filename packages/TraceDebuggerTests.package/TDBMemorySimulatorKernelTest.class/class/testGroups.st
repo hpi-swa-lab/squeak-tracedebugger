@@ -17,4 +17,9 @@ testGroups
 	groups at: #SimulationContextTest put: ((groups at: #SimulationContextTest) ,
 		{#testExceptionHandlerAroundSimulator flag: #todo "not yet supported"}).
 	
+	self assert: (groups at: self) first ~= #-.
+	groups at: self put: ((groups at: self) copyWithoutAll:
+		{#testContextRunUntilErrorOrReturnFromError flag: #todo.
+		#testContextRunUntilErrorOrReturnFromNoError flag: #todo}).
+	
 	^ groups

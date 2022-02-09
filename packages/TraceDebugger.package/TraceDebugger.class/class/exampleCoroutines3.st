@@ -1,8 +1,9 @@
 examples
-exampleCoroutines2
+exampleCoroutines3
 	"
-	self exampleCoroutines2
+	self exampleCoroutines3
 	"
 
 	self flag: #coroutines. "Not yet supported! Technically, this example works, but the trace is displayed incompletely."
-	self openForBlock: [self systemNavigation allBehaviors take: 2].
+	self openForBlock:
+		[(Generator on: [:gen | gen yield: 1; yield: 2]) next].
