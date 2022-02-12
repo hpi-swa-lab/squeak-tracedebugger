@@ -1,0 +1,3 @@
+I wrap around a regular inspector that is embedded in a TraceDebugger. My inspected object can be a TDBProxy which requires some adoptions of the original inspector logic to support proxy-transparent do-its, syntax highlighting, and autocompletion(*). To do this, I install myself as a mediator between the original inspector instance and its views (see 'forwarding' protocols). Besides, I also enhance the inspecting experience (#addSelectionAsField et al.).
+
+(*) My existence might be a good argument for no longer inlining the message send #class in the Trunk, which would make all proxy-aware adoptions superfluous ...

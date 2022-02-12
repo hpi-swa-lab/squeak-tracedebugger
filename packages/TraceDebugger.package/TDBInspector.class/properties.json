@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 2/12/2022 20:37",
+	"instvars" : [
+		"inspector",
+		"debugger" ],
+	"name" : "TDBInspector",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }
