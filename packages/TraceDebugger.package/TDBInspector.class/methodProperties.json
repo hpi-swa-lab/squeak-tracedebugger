@@ -3,6 +3,7 @@
 		"forInspector:debugger:" : "ct 2/12/2022 20:01" },
 	"instance" : {
 		"aboutToStyle:requestor:" : "ct 2/12/2022 17:16",
+		"addCustomField:" : "ct 2/13/2022 22:18",
 		"addSelectionAsField" : "ct 2/12/2022 19:53",
 		"browseClass" : "ct 2/12/2022 17:58",
 		"browseClassHierarchy" : "ct 2/12/2022 17:58",
@@ -17,6 +18,7 @@
 		"codeTextMorph" : "ct 2/12/2022 18:24",
 		"contents" : "ct 2/12/2022 17:00",
 		"contents:notifying:" : "ct 2/12/2022 17:00",
+		"contentsTyped:" : "ct 2/13/2022 22:16",
 		"context:" : "ct 2/12/2022 16:47",
 		"createCustomFieldFor:orCancel:" : "ct 2/12/2022 20:08",
 		"debugger" : "ct 2/12/2022 20:01",

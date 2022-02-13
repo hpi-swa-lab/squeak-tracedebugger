@@ -1,7 +1,7 @@
 *TraceDebugger-UI
 trace
 
-	| currentBounds process traceDebugger window |
+	| currentBounds process traceDebugger window postBuild |
 	self okToChange ifFalse: [^ self changed: #flash].
 	
 	"Save current state"
@@ -16,6 +16,7 @@ trace
 		messageText: message;
 		errorWasInUIProcess: self errorWasInUIProcess;
 		yourself.
+	postBuild := nil.
 	"Copy old state to new window"
 	traceDebugger selectContext: self selectedContext.
 	#(receiverInspector contextVariablesInspector) do: [:path | | newInspector oldInspector |
@@ -24,12 +25,16 @@ trace
 		oldInspector customFields do: [:field |
 			newInspector addCustomField: field].
 		newInspector selectFieldNamed: oldInspector selectedFieldName.
-		oldInspector contentsTyped ifNotNil: [:contents |
-			newInspector
-				contentsTyped: contents;
-				changed: #editString with: contents]].
+		oldInspector contentsTyped ifNotNil: [:contents | | previousBuild |
+			newInspector contentsTyped: contents.
+			"Updating strings is only possible after toolbuilding"
+			previousBuild := postBuild.
+			postBuild := [previousBuild value.
+				newInspector changed: #editString with: contents]]].
 	
 	"Open"
 	window := traceDebugger openFull: true label: self labelString.
 	"---- In MVC, the lines after this will not be executed ---"
 	ToolBuilder default class setBoundsForWindow: window to: currentBounds.
+	
+	postBuild value.
