@@ -13,7 +13,7 @@ contextTreeKey: aCharacter from: requestor
 		
 			[$e] -> [self stepInto].
 			[$t] -> [self stepOver].
-			[$T] -> [self stepIntoBlock].
+			[$T] -> [self stepThrough].
 			[$B] -> [self stepBack].
 			[$p] -> [self proceed].
 			[$r] -> [self restart].
