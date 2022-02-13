@@ -5,6 +5,6 @@ inspectSelection
 	self inspector hasSelection ifFalse: [^ self inspector changed: #flash].
 	
 	object := self inspector selectionOrObject.
-	^ self displaySnapshotView:
-		(ToolSet inspect: object label:
-			('{1} [snapshot]' format: {object defaultLabelForInspector})).
+	^ self
+		decorateView: (ToolSet inspect: object)
+		forObject: object

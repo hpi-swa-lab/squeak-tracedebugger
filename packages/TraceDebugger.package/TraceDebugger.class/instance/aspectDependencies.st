@@ -19,7 +19,7 @@ aspectDependencies
 		at: #interruptedContext put: #(cursorPosition);
 		at: #hasContextSelected put: #(selectedContext);
 		at: #isDisplayingHistory put: #(cursorPosition);
-		at: #labelString put: #(isDisplayingHistory);
+		at: #labelString put: #(cursorPosition hasContextSelected isDisplayingHistory);
 		at: #pcRange put: #(cursorPosition);
 		at: #selectedMessage put: #(currentCompiledMethod);
 		
