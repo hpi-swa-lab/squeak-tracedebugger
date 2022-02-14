@@ -7,7 +7,7 @@ createCustomFieldFor: expression requestor: requestor orCancel: cancelBlock
 	compilationCue := self
 		newCompilationCueFor: expression
 		requestor: requestor.
-	getter := (compilationCue receiver class evaluatorClass
+	getter := (compilationCue receiver class evaluatorClass new
 		compileCue: compilationCue
 		noPattern: true
 		ifFail: [^ cancelBlock value])
