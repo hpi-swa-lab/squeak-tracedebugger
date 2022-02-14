@@ -9,4 +9,4 @@ evaluateExpression: aStringOrText requestor: requestor
 		ifFail: [requestor flash. ^ nil]
 		logged: true] 
 			on: OutOfScopeNotification 
-			do: [ :ex | ex resume: true]
+			do: [:ex | ex resume: true]
