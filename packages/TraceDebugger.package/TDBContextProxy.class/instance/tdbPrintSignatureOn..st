@@ -20,3 +20,7 @@ tdbPrintSignatureOn: aStream
 	methodClass ~~ class ifTrue:
 		[aStream nextPut: $(; nextPutAll: methodClass name; nextPut: $)].
 	aStream nextPutAll: '>>'; nextPutAll: selector.
+	
+	(methodClass whichCategoryIncludesSelector: selector)
+		ifNotNil: [:category |
+			aStream nextPut: $ ; nextPut: ${; nextPutAll: category; nextPut: $}].
