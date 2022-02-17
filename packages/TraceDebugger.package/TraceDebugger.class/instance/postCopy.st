@@ -7,7 +7,9 @@ postCopy
 	messageText := messageText copy.
 	cursor := cursor copy.
 	receiverInspector := receiverInspector copy.
+	receiverInspector debugger: self.
 	contextVariablesInspector := contextVariablesInspector copy.
+	contextVariablesInspector debugger: self.
 	bottomContexts := bottomContexts copy.
 	selectedContext := selectedContext.
 	findSignature := findSignature.
