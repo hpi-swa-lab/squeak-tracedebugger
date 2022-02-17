@@ -32,4 +32,9 @@ testViewUpdatesAfterSelection
 			{[:debugger | debugger
 				"select alive context"
 				selectContext: debugger selectedContext sender]}.
+			#(griffle 'griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			{[:debugger | debugger
+				"reselect context"
+				selectContext: nil;
+				selectContext: debugger interruptedContext]}.
 			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))))}.
