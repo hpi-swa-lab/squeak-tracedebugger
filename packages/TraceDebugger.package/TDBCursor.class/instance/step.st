@@ -8,8 +8,6 @@ step
 	self maxTimeIndex >= self timeIndex
 		ifTrue: [^ self].
 	
-	enableSimulatorBlock ifNotNil:
-		[enableSimulatorBlock value].
-	
-	trace advanceUntil: [:newTrace "avoid #cull:" |
-		self maxTimeIndex >= self timeIndex].
+	self assureTracingDuring:
+		[trace advanceUntil: [:newTrace "avoid #cull:" |
+			self maxTimeIndex >= self timeIndex]].

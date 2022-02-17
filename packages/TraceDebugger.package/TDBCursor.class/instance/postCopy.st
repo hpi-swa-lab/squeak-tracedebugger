@@ -4,5 +4,5 @@ postCopy
 	super postCopy.
 	
 	"Caches"
-	enableSimulatorBlock := nil.
+	outerTracingContext := nil.
 	currentTrace := nil.
