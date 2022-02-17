@@ -13,7 +13,7 @@ buildContextTreeWith: aBuilder
 		doubleClick: #toggleBottomContext:;
 		icon: #messageIconFor:;
 		help: #messageHelpFor:;
-		keyPress: #contextTreeKey:from:;
+		keyPress: #contextTreeKey:from:event:;
 		dragItem: #dragContext:;
 		dragType: #dragTypeForContext:;
 		hScrollBarPolicy: #whenNeeded;

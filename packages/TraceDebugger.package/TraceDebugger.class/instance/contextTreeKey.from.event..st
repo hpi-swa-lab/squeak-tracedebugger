@@ -1,6 +1,8 @@
 menus
-contextTreeKey: aCharacter from: requestor
+contextTreeKey: aCharacter from: requestor event: event
 
+	event anyModifierKeyPressed ifFalse: [^ false].
+	
 	^ aCharacter
 		caseOf:
 			{[$o] -> [self spawn].
