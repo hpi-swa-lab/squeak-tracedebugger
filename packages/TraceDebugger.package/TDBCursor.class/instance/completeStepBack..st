@@ -7,8 +7,10 @@ completeStepBack: aContext
 	start isDead ifTrue: [^ self].
 	trace := self traceFor: aContext.
 	
-	self stepBackUntil:
-		[| context pc |
+	self stepBackUntil: [:ctx "avoid #cull:" |
+		| context pc |
 		(pc := (context := trace contextAtTime: self timeIndex) pc) isNil
 			or: [pc <= context startpc]].
-	self stepBack.
+	
+	(self context tdbIdentical: aContext) ifTrue:
+		[self stepBack].
