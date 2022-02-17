@@ -3,7 +3,7 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 
 	| debugger process |
 	process := Process forContext: homeContext.
-	debugger := self classUnderTest newOn: process.
+	debugger := self newDebuggerOn: process.
 	
 	self assert: process equals: debugger process.
 	self should: (debugger selectedContext tdbIdentical: homeContext).

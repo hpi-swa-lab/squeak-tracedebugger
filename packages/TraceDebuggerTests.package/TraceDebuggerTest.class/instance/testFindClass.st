@@ -2,7 +2,7 @@ tests
 testFindClass
 
 	| debugger selection |
-	debugger := self classUnderTest newOn:
+	debugger := self newDebuggerOn:
 		(Process forBlock: [TDBTestLogic doPlonk]).
 	
 	debugger stepOver.

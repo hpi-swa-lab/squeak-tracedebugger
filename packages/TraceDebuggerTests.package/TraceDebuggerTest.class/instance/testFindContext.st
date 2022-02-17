@@ -2,7 +2,7 @@ tests
 testFindContext
 
 	| debugger selection |
-	debugger := self classUnderTest newOn:
+	debugger := self newDebuggerOn:
 		(Process forBlock: [(TDBTestLogic doPlonk; new) plonkPlus]).
 	
 	3 timesRepeat: [debugger stepOver].

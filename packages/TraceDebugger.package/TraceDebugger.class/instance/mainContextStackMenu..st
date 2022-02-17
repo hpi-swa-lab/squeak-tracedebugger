@@ -6,7 +6,9 @@ mainContextStackMenu: aMenu
 		addList:
 			#(('spawn (o)' 					spawn)
 			('toggle bottom ( )'				toggleBottomContext)
-			('jump to presence'				jumpToPresence)
+			('jump to presence (D)'			jumpToPresence)
+			('jump to sender (w)'				jumpToSender)
+			('jump to callee (s)'				jumpToCallee)
 			-
 			('find (f)'						findContext)
 			('find again (g)'					findContextAgain)

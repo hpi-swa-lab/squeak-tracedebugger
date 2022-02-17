@@ -2,7 +2,7 @@ tests
 testRunToSelection
 
 	| debugger index |
-	debugger := self classUnderTest newOn:
+	debugger := self newDebuggerOn:
 		(Process forBlock: [TDBTestLogic new griffleMethodReturn]).
 	
 	debugger stepOver; stepInto.

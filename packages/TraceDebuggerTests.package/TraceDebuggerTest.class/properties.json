@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"flashes" ],
 	"name" : "TraceDebuggerTest",
 	"pools" : [
 		 ],
