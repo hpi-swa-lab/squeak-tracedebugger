@@ -1,4 +1,4 @@
-toolbuilder
+toolbuilder - private
 buildButtonRowWith: builder from: specs
 
 	^ builder pluggablePanelSpec new

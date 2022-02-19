@@ -14,7 +14,7 @@ aspectDependencies
 		at: #canStepForward put: #(cursorPosition selectedContext);
 		at: #childContextsFor: put: #(cursorPosition);
 		at: #contentsSelection put: #(pcRange);
-		at: #contextStack put: #(interruptedContext);
+		at: #contextStack put: #(interruptedContext rootContexts);
 		at: #cursorPosition put: #(cursor);
 		at: #interruptedContext put: #(cursorPosition);
 		at: #hasContextSelected put: #(selectedContext);
@@ -24,6 +24,7 @@ aspectDependencies
 		at: #selectedMessage put: #(currentCompiledMethod);
 		
 		"toolbuilder"
+		at: #buildContextStackItems put: #(shouldShowContextStack shouldShowContextTree);
 		at: #defaultWindowColor put: #(isDisplayingHistory);
 		at: #treeSelectedContext put: #(selectedContext);
 		"at: #treeSelectedContextPath put: #(selectedContext);"
