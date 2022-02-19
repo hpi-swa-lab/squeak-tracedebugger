@@ -23,21 +23,5 @@ mainContextStackMenu: aMenu
 			('step back (B)'					stepBack)
 			('where (w)' 					showWhere)
 			-
-			('return entered value' 			returnValue)
-			-
-			('senders of (n)' 				browseSendersOfMessages)
-			('implementors of (m)' 			browseMessages)
-			('inheritance (i)' 				methodHierarchy)
-			-
-			('versions (v)' 					browseVersions)
-			-
-			('references (r)' 				browseVariableReferences)
-			('assignments (a)' 				browseVariableAssignments)
-			-
-			('class refs (N)' 					browseClassRefs)
-			('browse full (b)' 				browseMethodFull)
-			('file out ' 			 			fileOutMessage)
-			('remove method (x) ' 			removeMessage)
-			-
 			('copy bug report to clipboard'	copyBugReportToClipboard));
 		yourself
