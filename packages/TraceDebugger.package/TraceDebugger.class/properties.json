@@ -5,7 +5,8 @@
 	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
 		"ShouldShowContextStack",
-		"ShouldShowContextTree" ],
+		"ShouldShowContextTree",
+		"ShouldShowReturnValue" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"process",
