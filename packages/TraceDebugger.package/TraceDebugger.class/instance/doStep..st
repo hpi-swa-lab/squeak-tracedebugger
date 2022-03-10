@@ -15,4 +15,6 @@ doStep: aBlock
 		self cursor timeIndex: interruptedTimeIndex.
 		self basicSelectContext: interruptedContext].
 	
+	self shrinkBorderContexts.
+	
 	^ result
