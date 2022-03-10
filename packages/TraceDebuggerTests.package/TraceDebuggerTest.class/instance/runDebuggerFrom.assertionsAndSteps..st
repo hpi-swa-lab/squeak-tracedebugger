@@ -14,7 +14,8 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 			
 			"check code pane"
 			self assert: (debugger selectedClassOrMetaClass newParser parseSelector: debugger contents asString lines first) = expected first.
-			self assert: debugger selectedContents = expected second.
+			expected second ifNotNil: [:expectedSelection |
+				self assert: debugger selectedContents = expectedSelection].
 			
 			"check inspectors"
 			self should: (debugger contextVariablesInspector object tdbIdentical: debugger selectedContext).
