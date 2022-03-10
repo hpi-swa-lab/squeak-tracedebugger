@@ -2,6 +2,8 @@ accessing - toolbuilder
 contextToolTipFor: aContext
 
 	| tips |
+	thisContext wrap: [:block | self computeViewPropertyString: block].
+	
 	tips := OrderedCollection new: 2.
 	self cursor
 		returnValueFor: aContext

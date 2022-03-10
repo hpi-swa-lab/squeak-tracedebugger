@@ -5,14 +5,13 @@ buildContextTreeWith: aBuilder
 		model: self;
 		roots: #treeRootContexts;
 		getChildren: #treeChildContextsFor:;
-		label: #contextLabelFor:;
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
 		getSelectedPath: #treeSelectedContextPath;
 		menu: #contextMenu:shifted:; 
 		doubleClick: #toggleBorderContext:;
-		label: #labelForContext:;
-		icon: #messageIconFor:;
+		label: #contextLabelFor:;
+		icon: #contextIconFor:;
 		help: #contextToolTipFor:;
 		keyPress: #contextTreeKey:from:event:;
 		dragItem: #dragContext:;

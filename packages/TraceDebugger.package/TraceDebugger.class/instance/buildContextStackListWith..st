@@ -6,7 +6,7 @@ buildContextStackListWith: aBuilder
 		list: #contextStack;
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
-		icon: #messageIconAt:;
+		icon: #contextIconAt:;
 		helpItem: #contextToolTipAt:;
 		menu: #contextMenu:shifted:;
 		yourself
