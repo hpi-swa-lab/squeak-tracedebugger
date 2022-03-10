@@ -9,8 +9,8 @@ buildContextTreeWith: aBuilder
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
 		getSelectedPath: #treeSelectedContextPath;
-		menu: #contextStackMenu:shifted:; 
-		doubleClick: #toggleBottomContext:;
+		menu: #contextMenu:shifted:; 
+		doubleClick: #toggleBorderContext:;
 		label: #labelForContext:;
 		icon: #messageIconFor:;
 		help: #contextToolTipFor:;

@@ -1,4 +1,0 @@
-accessing
-bottomContexts
-
-	^ bottomContexts ifNil: [{}]

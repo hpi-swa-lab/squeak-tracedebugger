@@ -1,6 +1,6 @@
 menus
-shiftedContextStackMenu: aMenu
-	<contextStackMenuShifted: true>
+shiftedContextMenu: aMenu
+	<contextMenuShifted: true>
 
 	^ aMenu
 		addList:

@@ -4,6 +4,7 @@
 		 ],
 	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
+		"ShouldReplaceInspectorsWithExplorers",
 		"ShouldShowContextStack",
 		"ShouldShowContextTree",
 		"ShouldShowReturnValue" ],
@@ -14,7 +15,7 @@
 		"cursor",
 		"receiverInspector",
 		"contextVariablesInspector",
-		"bottomContexts",
+		"borderContexts",
 		"selectedContext",
 		"findSignature",
 		"findClass",

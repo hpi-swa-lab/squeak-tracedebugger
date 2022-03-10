@@ -3,7 +3,7 @@ openFull: aBoolean label: aString
 	"Create, schedule and answer a debugger with the given label."
 
 	| builder |
-	self bottomContexts: (aBoolean ifFalse:
+	self borderContexts: (aBoolean ifFalse:
 		[{(self interruptedContext stackOfSize: self notifierStackSize) last}]).
 	
 	(self interruptedContext tdbIdentical: self process suspendedContext)

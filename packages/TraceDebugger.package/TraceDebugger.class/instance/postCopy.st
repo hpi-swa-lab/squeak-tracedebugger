@@ -5,12 +5,12 @@ postCopy
 	
 	self setProcess: process. "register new view"
 	messageText := messageText copy.
-	cursor := cursor copy.
+	self cursor: cursor copy.
 	receiverInspector := receiverInspector copy.
 	receiverInspector debugger: self.
 	contextVariablesInspector := contextVariablesInspector copy.
 	contextVariablesInspector debugger: self.
-	bottomContexts := bottomContexts copy.
+	borderContexts := borderContexts copy.
 	selectedContext := selectedContext.
 	findSignature := findSignature.
 	findClass := findClass.

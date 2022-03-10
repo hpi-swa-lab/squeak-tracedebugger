@@ -8,5 +8,5 @@ buildContextStackListWith: aBuilder
 		setSelected: #treeSelectContext:;
 		icon: #messageIconAt:;
 		helpItem: #contextToolTipAt:;
-		menu: #contextStackMenu:shifted:;
+		menu: #contextMenu:shifted:;
 		yourself
