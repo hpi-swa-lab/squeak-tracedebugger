@@ -1,4 +1,4 @@
-tests
+tests - ui
 testBuildDebugger
 
 	| debugger window |

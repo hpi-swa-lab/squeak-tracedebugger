@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerTests-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBInspectorTest",
+	"pools" : [
+		 ],
+	"super" : "TDBTestCase",
+	"type" : "normal" }

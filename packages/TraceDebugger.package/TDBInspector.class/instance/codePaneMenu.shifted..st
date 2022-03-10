@@ -1,4 +1,4 @@
-forwarding - value pane
+forwarding - code pane
 codePaneMenu: menu shifted: shifted
 
 	| fullMenu |

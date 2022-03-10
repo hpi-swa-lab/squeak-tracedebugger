@@ -1,4 +1,4 @@
-tests
+tests - ui
 testTraceIt
 
 	| process context squeakDebugger squeakWindow debugger window |
@@ -6,6 +6,7 @@ testTraceIt
 	context := process suspendedContext.
 	squeakDebugger := self newSqueakDebuggerOn: process.
 	squeakWindow := squeakDebugger containingWindow.
+	self addTearDown: [squeakWindow delete].
 	self should: squeakWindow isInWorld.
 	
 	3 timesRepeat: [squeakDebugger stepInto].

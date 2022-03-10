@@ -1,7 +1,6 @@
 instance creation
 forInspector: originalInspector debugger: aTraceDebugger
 
-	^ self new
-		inspector: originalInspector;
+	^ (self forInspector: originalInspector)
 		debugger: aTraceDebugger;
 		yourself

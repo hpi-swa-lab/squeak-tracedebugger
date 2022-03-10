@@ -1,0 +1,4 @@
+accessing
+selectedClass
+
+	^ self objectClass

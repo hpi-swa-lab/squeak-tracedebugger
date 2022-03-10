@@ -1,0 +1,4 @@
+inspector compatibility
+doItContext
+
+	^ context

@@ -1,4 +1,4 @@
 accessing
 classOfSelection
 
-	^ (self inspector selectionOrObject) perform: #class
+	^ self classOf: (self inspector selectionOrObject)

@@ -1,11 +1,11 @@
 forwarding - field list
 inspectorKey: aChar from: view
-	"Respond to a Command key issued while the cursor is over my field list"
+	"Copied from Inspector."
 
 	| selector |
 	selector := aChar
-		caseOf: {
-			[$x]	->	[#removeSelection].
+		caseOf:
+			{[$x]	->	[#removeSelection].
 			
 			[$i]		->	[#inspectSelection].
 			[$I]		->	[#exploreSelection].
@@ -18,5 +18,6 @@ inspectorKey: aChar from: view
 			[$c]	->	[#copyName].
 			[$t]		->	[#tearOffTile].
 			[$v]	->	[#viewerForValue] }
-		otherwise:	[^self arrowKey: aChar from: view].
-	self perform: selector orSendTo: self inspector.
+		otherwise:	[^ self inspector inspectorKey: aChar from: view].
+	
+	^ self perform: selector orSendTo: self inspector

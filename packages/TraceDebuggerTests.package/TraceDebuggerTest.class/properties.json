@@ -10,5 +10,5 @@
 	"name" : "TraceDebuggerTest",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TDBTestCase",
 	"type" : "normal" }

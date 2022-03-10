@@ -1,8 +1,6 @@
 field list menu
 exploreSelection
 
-	| object |
-	object := self inspector selectionOrObject.
-	^ self
-		decorateView: (ToolSet explore: object)
-		forObject: object
+	self inspector hasSelection ifFalse: [^ self inspector changed: #flash].
+	
+	^ self exploreObject: self inspector selectionOrObject
