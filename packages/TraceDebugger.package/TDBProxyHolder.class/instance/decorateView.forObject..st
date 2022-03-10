@@ -2,7 +2,7 @@ private
 decorateView: view forObject: anObject
 	"Decorate the opened view as a proxy model for anObject, if appropriate. This includes converting the model to a proxy model and adjusting the view optically."
 
-	view ifNil:
+	(view respondsTo: #model) ifFalse:
 		[self flag: #hacked. "Retry with the topmost window, presuming that the sender has opened it right before."
 		self flag: #Morphic.
 		^ self
