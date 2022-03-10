@@ -1,7 +1,7 @@
 *TraceDebugger-UI
 trace
 
-	| currentBounds process traceDebugger window postBuild |
+	| currentBounds process context oldInspectors traceDebugger window postBuild |
 	self okToChange ifFalse: [^ self changed: #flash].
 	
 	"Save current state"
@@ -10,17 +10,21 @@ trace
 	"Close first because MVC fiddles around with processes."
 	process := self interruptedProcess.
 	interruptedProcess := nil. "Before delete, so release doesn't terminate it"
+	context := self selectedContext.
+	oldInspectors := #(receiverInspector contextVariablesInspector)
+		collect: [:path | path -> (path value: self)]
+		as: Dictionary.
 	self close.
 	
 	traceDebugger := (TraceDebugger newOn: process context: process suspendedContext)
 		messageText: message;
-		errorWasInUIProcess: self errorWasInUIProcess;
 		yourself.
+	(self respondsTo: #errorWasInUIProcess) ifTrue:
+		[traceDebugger errorWasInUIProcess: self errorWasInUIProcess].
 	postBuild := nil.
 	"Copy old state to new window"
-	traceDebugger selectContext: self selectedContext.
-	#(receiverInspector contextVariablesInspector) do: [:path | | newInspector oldInspector |
-		oldInspector := path value: self.
+	traceDebugger selectContext: context.
+	oldInspectors keysAndValuesDo: [:path :oldInspector | | newInspector |
 		newInspector := path value: traceDebugger.
 		oldInspector customFields do: [:field |
 			newInspector addCustomField: field].
@@ -38,3 +42,4 @@ trace
 	ToolBuilder default class setBoundsForWindow: window to: currentBounds.
 	
 	postBuild value.
+	^ window
