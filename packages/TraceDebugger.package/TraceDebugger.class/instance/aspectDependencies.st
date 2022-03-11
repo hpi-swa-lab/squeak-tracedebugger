@@ -9,17 +9,22 @@ aspectDependencies
 		at: #windowTitle put: #(labelString);
 		
 		"context and cursor"
-		at: #canStepBackward put: #(selectedContext);
-		at: #canStepForward put: #(selectedContext);
+		at: #canProceed put: #(interruptedContext isDisplayingHistory);
+		at: #canStepBackward put: #(cursorPosition);
+		at: #canStepForward put: #(cursorPosition selectedContext);
 		at: #childContextsFor: put: #(cursorPosition);
-		at: #contextStack put: #(interruptedContext);
+		at: #contentsSelection put: #(pcRange);
+		at: #contextStack put: #(interruptedContext rootContexts);
 		at: #cursorPosition put: #(cursor);
 		at: #interruptedContext put: #(cursorPosition);
+		at: #hasContextSelected put: #(selectedContext);
 		at: #isDisplayingHistory put: #(cursorPosition);
-		at: #labelString put: #(isDisplayingHistory);
+		at: #labelString put: #(cursorPosition hasContextSelected isDisplayingHistory);
+		at: #pcRange put: #(cursorPosition);
 		at: #selectedMessage put: #(currentCompiledMethod);
 		
 		"toolbuilder"
+		at: #buildContextStackItems put: #(shouldShowContextStack shouldShowContextTree shouldShowReturnValue);
 		at: #defaultWindowColor put: #(isDisplayingHistory);
 		at: #treeSelectedContext put: #(selectedContext);
 		"at: #treeSelectedContextPath put: #(selectedContext);"

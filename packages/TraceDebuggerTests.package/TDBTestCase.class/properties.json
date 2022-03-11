@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"wrappers" ],
+	"name" : "TDBTestCase",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

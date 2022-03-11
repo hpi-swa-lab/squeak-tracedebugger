@@ -1,10 +1,11 @@
 benchmarks
 benchExpandAll
+	<timeoutFactor: 3>
 
 	| item previousItem tree |
 	self prepare:
 		[self openDebuggerForBlock: ['\w+[a-z]*' asRegex].
-		tree := window findA: PluggableTreeMorph.
+		tree := window findDeeplyA: PluggableTreeMorph.
 		item := previousItem := nil.
 		debugger stepOver].
 	

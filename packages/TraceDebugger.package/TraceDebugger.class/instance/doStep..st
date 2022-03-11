@@ -1,17 +1,20 @@
 private
 doStep: aBlock
 
-	| result |
+	| result interruptedContext interruptedTimeIndex |
 	self okToChange ifFalse: [^ false].
 	self selectedContext ifNil: [^ false].
 	
-	result := aBlock ensure:
-		["Update the tree structure even if the operation was interrupted."
-		self changed: #cursorPosition].
+	result := self basicDoStep: aBlock.
 	
-	self selectContext: self interruptedContext.
-	self selectedContext ifNil:
-		[self flag: #(coroutines workaround). "After stepping over an unhandled error, #resumeEvaluating: cannot be displayed because its temporary is nil."
-		self selectContext: self interruptedContext sender].
+	interruptedContext := self interruptedContext.
+	interruptedTimeIndex := self cursor timeIndex.
+	self selectContext: interruptedContext.
+	(self selectedContext tdbIdentical: interruptedContext) ifFalse:
+		[self flag: #coroutines. "The new context path may no longer contain the interrupted context at the expected position from the trace. Select it again without updating the context path."
+		self cursor timeIndex: interruptedTimeIndex.
+		self basicSelectContext: interruptedContext].
+	
+	self shrinkBorderContexts.
 	
 	^ result

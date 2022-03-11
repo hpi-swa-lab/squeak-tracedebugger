@@ -1,0 +1,4 @@
+Autocompletion
+completionControllerClass
+
+	^ self class fallbackDebugger new completionControllerClass

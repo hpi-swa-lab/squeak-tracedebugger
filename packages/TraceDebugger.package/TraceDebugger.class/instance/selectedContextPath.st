@@ -3,4 +3,4 @@ selectedContextPath
 
 	^ self selectedContext
 		ifNil: [#()]
-		ifNotNil: [:context | context tdbStack contents reversed]
+		ifNotNil: [:context | (self stackForContext: context) reversed]

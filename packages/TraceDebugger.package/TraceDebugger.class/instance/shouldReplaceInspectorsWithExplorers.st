@@ -1,0 +1,4 @@
+testing
+shouldReplaceInspectorsWithExplorers
+
+	^ self class shouldReplaceInspectorsWithExplorers

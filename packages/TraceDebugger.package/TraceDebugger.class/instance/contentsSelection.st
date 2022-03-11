@@ -1,4 +1,4 @@
-accessing
+accessing - code pane
 contentsSelection
 	"Reverse the selection (i.e., point block and mark block) to put the text cursor at the beginning to ensure visibility of the beginning in small windows."
 	

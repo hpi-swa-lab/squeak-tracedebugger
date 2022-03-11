@@ -12,9 +12,7 @@ changedDependent: aspect
 			[#currentCompiledMethod] ->
 				[currentCompiledMethod := nil.
 				self currentCompiledMethod.
-				self decorateButtons].
-			[#selectedContext] ->
-				[selectedContext := self cursor context]}
+				self decorateButtons]}
 		otherwise: [].
 	
 	self changed: aspect.

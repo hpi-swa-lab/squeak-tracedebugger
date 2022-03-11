@@ -2,5 +2,5 @@ private
 doStepBackward: aBlock
 
 	^ self doStep:
-		[self assert: self canStepBackward.
+		[self canStepBackward ifFalse: [^ self changed: #flash].
 		aBlock value]

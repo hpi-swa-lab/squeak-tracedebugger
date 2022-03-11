@@ -1,4 +1,4 @@
-message list
+accessing - code pane
 selectedMessage
 
 	contents ifNotNil: [^ contents copy].
@@ -7,7 +7,10 @@ selectedMessage
 	
 	self showingDecompile ifTrue: [^ self decompiledSourceIntoContents].
 	
-	^ contents := (self showingDocumentation
+	contents := (self showingDocumentation
 		ifFalse: [self sourceStringPrettifiedAndDiffed]
 		ifTrue: [self commentContents])
-			copy asText makeSelectorBoldIn: self selectedClassOrMetaClass
+			copy asText.
+	self selectedClassOrMetaClass ifNotNil: [:class |
+		contents makeSelectorBoldIn: class].
+	^ contents

@@ -5,12 +5,21 @@ buildContextTreeWith: aBuilder
 		model: self;
 		roots: #treeRootContexts;
 		getChildren: #treeChildContextsFor:;
-		label: #contextLabelFor:;
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
 		getSelectedPath: #treeSelectedContextPath;
-		menu: #contextStackMenu:shifted:; 
-		icon: #messageIconFor:;
-		help: #messageHelpFor:;
-		keyPress: #contextTreeKey:from:;
+		menu: #contextMenu:shifted:; 
+		doubleClick: #toggleBorderContext:;
+		label: #contextLabelFor:;
+		icon: #contextIconFor:;
+		help: #contextToolTipFor:;
+		keyPress: #contextTreeKey:from:event:;
+		dragItem: #dragContext:;
+		dragType: #dragTypeForContext:;
+		hScrollBarPolicy: #whenNeeded;
+		columns: (self shouldShowReturnValue ifTrue:
+			[{[:listMorph | (listMorph filteredItems collect: [:item |
+				item preferredWidthOfColumn: 1]) max].
+			[:listMorph | (listMorph filteredItems collect: [:item |
+				item preferredWidthOfColumn: 2]) max]}]);
 		yourself

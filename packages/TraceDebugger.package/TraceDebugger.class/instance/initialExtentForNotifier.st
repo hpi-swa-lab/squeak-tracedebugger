@@ -1,4 +1,4 @@
 toolbuilder - constants
 initialExtentForNotifier
 
-	^ Debugger new initialExtentForNotifier
+	^ self class fallbackDebugger new initialExtentForNotifier

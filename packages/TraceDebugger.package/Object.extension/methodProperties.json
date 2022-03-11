@@ -2,5 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"asTdbProxyHolderFor:" : "ct 3/10/2022 22:39",
+		"isTdbProxyHolder" : "ct 3/10/2022 22:39",
+		"tdbHalt" : "ct 1/26/2022 20:14",
 		"tdbIdentical:" : "ct 12/2/2021 01:21",
+		"tdbNotify:" : "ct 1/26/2022 20:28",
 		"tdbproxyYourself" : "ct 11/20/2021 20:20" } }

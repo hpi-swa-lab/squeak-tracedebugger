@@ -4,7 +4,10 @@
 		 ],
 	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
-		 ],
+		"ShouldReplaceInspectorsWithExplorers",
+		"ShouldShowContextStack",
+		"ShouldShowContextTree",
+		"ShouldShowReturnValue" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"process",
@@ -12,8 +15,10 @@
 		"cursor",
 		"receiverInspector",
 		"contextVariablesInspector",
-		"bottomContexts",
+		"borderContexts",
 		"selectedContext",
+		"findSignature",
+		"findClass",
 		"childContexts",
 		"rootContexts" ],
 	"name" : "TraceDebugger",

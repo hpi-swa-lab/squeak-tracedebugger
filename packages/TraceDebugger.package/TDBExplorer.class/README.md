@@ -1,0 +1,1 @@
+I wrap around a regular explorer that is spawned from a TraceDebugger.

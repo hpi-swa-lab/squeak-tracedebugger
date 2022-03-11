@@ -4,14 +4,14 @@ openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNi
 
 	| activeProcess |
 	Smalltalk isMorphic
-		ifFalse: [^ Debugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
+		ifFalse: [^ self fallbackDebugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
 	
 	activeProcess := Processor activeProcess.
 	
 	"If the active process re-enters this method again, something went wrong with invoking the debugger."
 	(activeProcess hasTdbRecursiveError) ifTrue:
 		[activeProcess clearTdbErrorRecursionFlag.
-		^ Debugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
+		^ self fallbackDebugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
 	
 	"Explicitely handle logging exceptions. No need to bother the recursion mechanism here."
 	[Preferences logDebuggerStackToFile

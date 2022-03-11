@@ -1,4 +1,4 @@
 toolbuilder - constants
 colorForPresence
 
-	^ Debugger new defaultWindowColor
+	^ self class fallbackDebugger new defaultWindowColor

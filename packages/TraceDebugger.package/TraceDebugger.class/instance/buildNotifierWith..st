@@ -6,7 +6,7 @@ buildNotifierWith: aBuilder
 		{self controlButtonsFrame -> [self buildNotifierButtonsWith: aBuilder].
 		self contextStackFrame -> [self messageText
 			ifNotNil: [self buildMessagePaneWith: aBuilder]
-			ifNil: [self buildContextStackListWith: aBuilder]]}.
+			ifNil: [self buildContextStackListForNotifierWith: aBuilder]]}.
 
 	windowSpec extent: self initialExtentForNotifier.
 

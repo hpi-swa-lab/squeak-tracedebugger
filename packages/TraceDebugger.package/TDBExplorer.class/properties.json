@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 2/21/2022 21:08",
+	"instvars" : [
+		"explorer",
+		"context" ],
+	"name" : "TDBExplorer",
+	"pools" : [
+		 ],
+	"super" : "TDBProxyHolder",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
 toolbuilder - constants
 wantsAnnotationPane
 
-	^ Debugger wantsAnnotationPane
+	^ self class fallbackDebugger wantsAnnotationPane

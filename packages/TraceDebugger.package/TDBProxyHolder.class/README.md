@@ -1,0 +1,4 @@
+I wrap around a regular inspector-like model that is embedded in or spawned from a TraceDebugger or another proxy model. The displayed object can be a TDBProxy which requires some adoptions of the original model logic to support proxy-transparent do-its, syntax highlighting, and Autocompletion(*)(**). To do this, I install myself as a mediator between the original model instance and its views (see 'forwarding' protocols). I also make sure to convert any subsequently spawned models into proxy models to maintain the proxy-transparent properties throughout complex interaction paths. I am an abstract subclass to be specialized for concrete model classes.
+
+(*) My existence might be a good argument for no longer inlining the message send #class in the Trunk, which would make all proxy-aware adoptions superfluous ...
+(**) Autocompletion: https://github.com/LeonMatthes/Autocompletion

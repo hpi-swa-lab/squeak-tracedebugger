@@ -2,13 +2,18 @@
 	"class" : {
 		 },
 	"instance" : {
-		"closure" : "ct 1/23/2022 20:41",
+		"closure" : "ct 2/3/2022 18:56",
 		"debuggerMap" : "ct 12/30/2021 23:23",
+		"home" : "ct 2/3/2022 18:56",
 		"isDead" : "ct 1/23/2022 20:26",
 		"method" : "ct 12/30/2021 23:23",
+		"methodClass" : "ct 2/4/2022 17:44",
 		"pc" : "ct 1/23/2022 20:26",
+		"receiver" : "ct 2/3/2022 18:56",
 		"selector" : "ct 12/30/2021 23:18",
 		"startpc" : "ct 1/23/2022 20:24",
 		"tdbHasHome:" : "ct 1/23/2022 20:30",
 		"tdbIdentical:" : "ct 12/31/2021 02:33",
+		"tdbPrintSignatureOn:" : "ct 2/13/2022 01:19",
+		"tdbSignature" : "ct 2/3/2022 16:08",
 		"tempNames" : "ct 12/31/2021 00:51" } }

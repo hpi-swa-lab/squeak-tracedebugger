@@ -2,8 +2,8 @@ toolbuilder - opening
 morphicOpenFull: aBoolean label: titleOrNil
 	
 	| uiBlock |
-	uiBlock := [
-		| window |
+	uiBlock :=
+		[| window |
 		window := self openFull: aBoolean label: titleOrNil.
 		
 		"Try layouting the debugger tool at least once to avoid freeze."

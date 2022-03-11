@@ -1,4 +1,4 @@
-private
+private - stepping
 stepToHome: aContext 
 	"Resume self until the home of top context is aContext. Top context may be a block context. Catch any UnhandledErrors that are created while stepping, answering the relevant signalerContext if so.
 	NOTE that this will cause weird effects if using through to step through UnhandledError code, but as the doctor ordered, don't do that; use over or into instead."

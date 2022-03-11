@@ -1,4 +1,4 @@
-accessing
+private - process
 errorWasInUIProcess: aBoolean
 
-	self flag: #todo. "implement proceed"
+	process environmentAt: #tdbErrorWasInUIProcess put: aBoolean.
