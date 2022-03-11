@@ -2,11 +2,15 @@
 	"class" : {
 		"doPlonk" : "ct 11/21/2021 00:48" },
 	"instance" : {
+		"doLoop" : "ct 2/21/2022 03:31",
+		"doPrimitive" : "ct 3/10/2022 12:59",
 		"griffle" : "ct 12/2/2021 02:06",
 		"griffle:with:" : "ct 12/2/2021 02:06",
 		"griffleMethodReturn" : "ct 12/2/2021 02:06",
+		"loop" : "ct 2/21/2022 03:30",
 		"plonk" : "ct 11/21/2021 00:48",
 		"plonkPlus" : "ct 1/20/2022 20:51",
+		"primitive" : "ct 3/10/2022 13:03",
 		"signalError" : "ct 12/30/2021 12:52",
 		"wiffy" : "ct 11/21/2021 00:49",
 		"wiffy1" : "ct 11/21/2021 00:49",
