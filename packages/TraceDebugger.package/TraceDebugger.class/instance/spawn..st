@@ -2,5 +2,5 @@ actions
 spawn: aContext
 
 	^ self copy
-		bottomContexts: {aContext};
+		borderContexts: (self borderContexts copyWith: aContext);
 		open
