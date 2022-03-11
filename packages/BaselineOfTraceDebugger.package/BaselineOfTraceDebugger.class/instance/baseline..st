@@ -10,8 +10,9 @@ baseline: spec
 			baseline: 'SimulationStudio' with: [
 				spec
 					repository: 'github://LinqLover/SimulationStudio/packages';
-					loads: #('SimulationStudio-Base' 'SimulationStudio-Support' 'SimulationStudio-Tests-Base');
-					flag: #(workaround) "Support is only required for Tests & Benchmarks, and Tests-Base is only required for Tests. But at the moment, we seem to lack a protocol for specifying this exact relationship. See: https://github.com/Metacello/metacello/issues/551"];
+					loads: #('SimulationStudio-Base')];
+			project: 'SimulationStudio-Tests' copyFrom: 'SimulationStudio' with: [
+				spec loads: #('SimulationStudio-Base' 'SimulationStudio-Support' 'SimulationStudio-Tests-Base')];
 			baseline: 'StatisticsWorkbench' with: [
 				spec
 					repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
@@ -21,7 +22,7 @@ baseline: spec
 			package: 'TraceDebugger' with: [
 				spec requires: 'SimulationStudio'];
 			package: 'TraceDebuggerTests' with: [
-				spec requires: 'TraceDebugger'];
+				spec requires: #('TraceDebugger' 'SimulationStudio-Tests')];
 			package: 'TraceDebuggerBenchmarks' with: [
 				spec requires: #('TraceDebugger' 'JSON' 'StatisticsWorkbench')].
 		
