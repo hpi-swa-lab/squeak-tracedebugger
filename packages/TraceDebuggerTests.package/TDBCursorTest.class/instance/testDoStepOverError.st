@@ -8,7 +8,7 @@ testDoStepOverError
 			method: TDBTestLogic >> #signalError
 			arguments: #())
 		stepsAndAssertions:
-			{{#doStepOver. nil. #(willReallySend)}.
-			{#doStepOver. #error:. #(willReturn)}.
-			{#doStepInto. #error. #(willReturn)}.
-			{#doStepInto. #signalError. #(willReturn isDead)}}.
+			#((doStepOver nil (willReallySend))
+			(doStepOver error: (willReturn))
+			(doStepInto error (willReturn))
+			(doStepInto signalError (willReturn isDead))).
