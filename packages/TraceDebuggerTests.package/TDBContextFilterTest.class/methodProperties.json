@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classUnderTest" : "ct 2/20/2022 19:52",
+		"doesExclude:" : "ct 2/20/2022 19:54",
+		"doesExcludeContext:" : "ct 2/20/2022 19:54",
+		"doesExcludeReceiver:" : "ct 2/20/2022 20:12",
+		"setUp" : "ct 2/20/2022 19:52",
+		"shouldExclude:" : "ct 2/20/2022 19:53",
+		"shouldExcludeReceiver:" : "ct 2/20/2022 20:06",
+		"shouldntExclude:" : "ct 2/20/2022 19:54",
+		"shouldntExcludeReceiver:" : "ct 2/20/2022 20:07",
+		"testExcludeMessageCategory" : "ct 2/20/2022 20:16",
+		"testExcludeMethodClass" : "ct 2/20/2022 20:00",
+		"testExcludeMethodClassHierarchy" : "ct 2/20/2022 20:03",
+		"testExcludePackage" : "ct 2/20/2022 19:52",
+		"testExcludeReceiverClass" : "ct 2/20/2022 20:13",
+		"testExcludeReceiverClasses" : "ct 2/20/2022 20:14",
+		"testExcludeSelector" : "ct 2/20/2022 20:18",
+		"testExcludeSystemCategory" : "ct 2/20/2022 19:58",
+		"testExcludedMessageCategories" : "ct 2/20/2022 20:21",
+		"testExcludedMethodClass" : "ct 2/20/2022 20:22",
+		"testExcludedMethodClassHierarchies" : "ct 2/20/2022 20:22",
+		"testExcludedPackages" : "ct 2/20/2022 20:23",
+		"testExcludedSelectors" : "ct 2/20/2022 20:23",
+		"testExcludedSystemCategories" : "ct 2/20/2022 20:23" } }

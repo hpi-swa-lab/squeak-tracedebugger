@@ -1,4 +1,7 @@
 actions
 jumpToSender
 
-	^ self selectContext: self selectedContext sender
+	| sender |
+	sender := self cursor senderOf: self selectedContext.
+	sender ifNil: [^ self changed: #flash].
+	^ self selectContext: sender

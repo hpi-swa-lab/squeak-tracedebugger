@@ -2,7 +2,7 @@ instance creation
 forStackOfContext: aContext
 
 	| root |
-	aContext tdbStack contents reversed
+	aContext tdbFullStack reversed
 		inject: nil
 		into: [:parent :current | parent
 			ifNil: [root := self forContext: current]

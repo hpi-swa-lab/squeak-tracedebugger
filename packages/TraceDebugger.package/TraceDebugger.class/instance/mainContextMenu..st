@@ -22,8 +22,11 @@ mainContextMenu: aMenu
 			('find class again (G)' findClassAgain)
 			-).
 	
+	self contextFilterMenu: aMenu.
+	
 	aMenu addList:
-		#(('proceed (p)' proceed 'close the debugger and proceed')
+		#(-
+		('proceed (p)' proceed 'close the debugger and proceed')
 		('restart (r)' restart 'rewind this context to its start')
 		('step into (e)' stepInto 'step into next message send')
 		('step over (t)' stepOver 'step over next message send')

@@ -2,7 +2,7 @@ private
 stackForContext: aContext
 
 	| rootIndex stack |
-	stack := aContext tdbStack contents.
+	stack := self cursor stackForContext: aContext.
 	self flag: #forLater. "Extract border contexts to cursor?"
 	rootIndex := stack findFirst: [:context | self borderContexts
 		ifEmpty: [false]

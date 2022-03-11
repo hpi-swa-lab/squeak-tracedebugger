@@ -8,7 +8,7 @@ testViewUpdatesHistory
 			method: TDBTestLogic >> #plonkPlus
 			arguments: #())
 		assertionsAndSteps:
-			(#((plonkPlus nil (plonkPlus ()))
+			#((plonkPlus nil (plonkPlus ()))
 			(stepOver stepInto)
 			(wiffyPlus ':= 1' (plonkPlus (wiffyPlus ())) (() ('x' 'nil' 'y' 'nil' 'stack3' '1')))
 			(stepOver stepOver)
@@ -20,4 +20,4 @@ testViewUpdatesHistory
 			(stepBack stepInto)
 			(ziffy '* 7' (plonkPlus (wiffyPlus () (ziffy ()))) ((self 'a TDBTestLogic') ('stack1' '6' 'stack2' '7')))
 			(stepOver stepOver)
-			(plonkPlus 'yourself' (plonkPlus (wiffy (wiffy2 ()) (ziffy ()))) (() ('stack1' 'a TDBTestLogic'))))).
+			(plonkPlus 'yourself' (plonkPlus (wiffy (wiffy2 ()) (ziffy ()))) (() ('stack1' 'a TDBTestLogic')))).

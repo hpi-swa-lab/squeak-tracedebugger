@@ -1,13 +1,17 @@
 private - stepping
 step
+	"Do at least one step forward to the next visible context. Answer the new current context or nil if the execution has completed."
 
-	| trace |
-	trace := self trace.
-	timeIndex := timeIndex + 1.
+	| context filter filtered method newMethod result |
+	result := self basicStep ifNil: [^ nil].
+	filter := self contextFilter ifNil: [^ result].
 	
-	self maxTimeIndex >= self timeIndex
-		ifTrue: [^ self].
-	
-	self assureTracingDuring:
-		[trace advanceUntil: [:newTrace "avoid #cull:" |
-			self maxTimeIndex >= self timeIndex]].
+	method := nil.
+	[(newMethod := (context := self context) method) == method
+		ifFalse:
+			[method := newMethod.
+			filtered := filter value: context]
+		ifTrue: [filtered]]
+			whileFalse:
+				[result := self basicStep ifNil: [^ nil]].
+	^ result

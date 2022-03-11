@@ -8,6 +8,7 @@
 	"instvars" : [
 		"rootTrace",
 		"timeIndex",
+		"contextFilter",
 		"process",
 		"outerTracingContext",
 		"currentTrace" ],

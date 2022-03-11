@@ -1,0 +1,1 @@
+I provide means to filter the contexts in a trace based on several properties. My public filtering interface is the message #value:. I can be configured via the accessing selectors.
