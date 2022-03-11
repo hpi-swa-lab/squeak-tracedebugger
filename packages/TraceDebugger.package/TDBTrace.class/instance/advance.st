@@ -1,5 +1,6 @@
 advancing
 advance
+	"Execute the next step of the receiver context and update the trace structure accordingly. ASSUMES that the receiver is the active trace, i.e., its context is a top context. Answer the trace which is active afterwards, or nil if the execution has completed."
 
 	| timeIndex result newRoot |
 	result := context step.

@@ -1,12 +1,12 @@
 private - stepping
 completeStep: aContext 
-	"Run self until aContext is popped or an unhandled error is raised.  Return self's new top context, unless an unhandled error was raised then return the signaler context (rather than open a debugger)."
-	
+	"Step forward until aContext is popped or an exception is raised. Answer the next current context."
+
 	| start trace |
-	aContext ifNil: [^ self].
+	aContext ifNil: [^ nil].
 	start := self context.
-	start isDead ifTrue: [^ self].
+	start isDead ifTrue: [^ nil].
 	trace := self traceFor: aContext.
 	
-	self stepUntil:
-		[(trace contextAtTime: self timeIndex) isDead].
+	^ self stepUntil: [:context "avoid #cull:" |
+		(trace contextAtTime: self timeIndex) isDead]
