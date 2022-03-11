@@ -19,3 +19,5 @@ validateWindow: aToolBuilderSpec
 				buttons: 0
 				hand: hand)
 			focus: window].
+	
+	self validateMenusIn: window.
