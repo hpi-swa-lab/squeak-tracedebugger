@@ -1,4 +1,4 @@
 accessing
 object: anObject
 
-	^ self rootTrace object: anObject atTime: self timeIndex
+	^ self object: anObject atTime: self timeIndex
