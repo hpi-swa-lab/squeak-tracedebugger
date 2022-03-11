@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1647025173911,
+  "lastUpdate": 1647025989511,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -5547,6 +5547,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 266.7027058980342",
             "extra": "{\"totalTime\":3184.6666666666665,\"preparationTime\":90.0,\"singleTimesToRun\":[3215.0,3280.0,2789.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e2ea71277975405fefa89b21c412824da11171ca",
+          "message": "Merge pull request #47 from LinqLover/feat/context-filters\n\nThis PR adds support for context filters in the cursor interface and in the debugger UI. Context filters allow users to filter out irrelevant method invocations. By opening the context menu on any method, new filters can be defined quickly by example.",
+          "timestamp": "2022-03-11T19:59:39+01:00",
+          "tree_id": "65d11c91f136c4e34d9ff8a897d3beb3c94958d2",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/e2ea71277975405fefa89b21c412824da11171ca"
+        },
+        "date": 1647025988972,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 8330.666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 296.8237411888297",
+            "extra": "{\"totalTime\":8330.666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[7989.0,8478.0,8525.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 7076.333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 88.29684781085525",
+            "extra": "{\"totalTime\":7077.666666666667,\"preparationTime\":1.3333333333333333,\"singleTimesToRun\":[7177.0,7040.0,7012.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 129.66666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 7.505553499465135",
+            "extra": "{\"totalTime\":129.66666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[121.0,134.0,134.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 3645.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 216.64333207678777",
+            "extra": "{\"totalTime\":3645.6666666666665,\"preparationTime\":0.0,\"singleTimesToRun\":[3398.0,3739.0,3800.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 387.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 17.009801096230763",
+            "extra": "{\"totalTime\":387.3333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[368.0,400.0,394.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 16418,
+            "unit": "Milliseconds",
+            "range": "stdev: 1289.9104620088947",
+            "extra": "{\"totalTime\":16589.333333333332,\"preparationTime\":171.33333333333334,\"singleTimesToRun\":[17895.0,15513.0,15846.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 1158,
+            "unit": "Milliseconds",
+            "range": "stdev: 4.58257569495584",
+            "extra": "{\"totalTime\":1242.6666666666667,\"preparationTime\":84.66666666666667,\"singleTimesToRun\":[1153.0,1159.0,1162.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 3481,
+            "unit": "Milliseconds",
+            "range": "stdev: 137.3935951927891",
+            "extra": "{\"totalTime\":3586.0,\"preparationTime\":105.0,\"singleTimesToRun\":[3338.0,3493.0,3612.0],\"postparationTime\":0.0}"
           }
         ]
       }
