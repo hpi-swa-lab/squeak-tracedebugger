@@ -1,5 +1,5 @@
 testing
-testTdbStack
+testTdbFullStack
 
 	| context process semaphore stack |
 	semaphore := Semaphore new.
@@ -8,6 +8,6 @@ testTdbStack
 	self should: process isSuspended.
 	context := process suspendedContext.
 	
-	stack := context tdbStack.
+	stack := context tdbFullStack.
 	
-	self assert: context stack asArray equals: stack contents asArray.
+	self assert: context stack asArray equals: stack asArray.
