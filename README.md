@@ -20,9 +20,9 @@ Watch this repo for releases to get notified about major advances. 🙂
 
 ```smalltalk
 Metacello new
-    baseline: 'TraceDebugger';
-    repository: 'github://LinqLover/squeak-tracedebugger';
-    load.
+	baseline: 'TraceDebugger';
+	repository: 'github://LinqLover/squeak-tracedebugger';
+	load.
 ```
 
 You can also check out the repository via [Squot](https://github.com/hpi-swa/Squot) and install all dependencies manually.
