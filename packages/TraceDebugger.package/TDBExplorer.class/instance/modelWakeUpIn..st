@@ -1,9 +1,10 @@
 inspector compatibility
-modelWakeUpIn: aWindow
+modelWakeUpIn: window
 
-	((aWindow valueOfProperty: #tdbModelsInitializedInView ifAbsentPut: [Set new]) includes: self)
-		ifFalse:
-			[(aWindow valueOfProperty: #tdbModelsInitializedInView) add: self.
-			self changed: #expandRootsRequested].
+	(window respondsTo: #valueOfProperty:ifAbsentPut:) ifTrue:
+		[((window valueOfProperty: #tdbModelsInitializedInView ifAbsentPut: [Set new]) includes: self)
+			ifFalse:
+				[(window valueOfProperty: #tdbModelsInitializedInView) add: self.
+				self changed: #expandRootsRequested]].
 	
-	^ super modelWakeUpIn: aWindow
+	^ super modelWakeUpIn: window

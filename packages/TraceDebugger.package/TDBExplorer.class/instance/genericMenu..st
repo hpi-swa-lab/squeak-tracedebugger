@@ -7,12 +7,12 @@ genericMenu: menu
 	fullMenu := self explorer genericMenu: fullMenu.
 	
 	"Dismiss items not appropriate for proxies."
-	self trimMenu: fullMenu removeAllSelectors: 
+	fullMenu tdbRemoveAllSelectors: 
 		#(objectReferencesToSelection chasePointersForSelection explorePointersForSelection  "The semantics of these operations would be unclear when the object is referenced in the trace or historic memory."
 		monitorSelection "Proxies do not change.").
 	
 	"Dismiss not-yet-forwarded items."
-	self trimMenu: fullMenu removeAllSelectors:
+	fullMenu tdbRemoveAllSelectors:
 		#(referencesToSelection defsOfSelection).
 	
 	^ fullMenu
