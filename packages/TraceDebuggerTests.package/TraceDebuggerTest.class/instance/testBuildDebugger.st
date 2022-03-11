@@ -1,8 +1,7 @@
 tests - ui
 testBuildDebugger
+	<timeout: 15 "seconds"> "updating many open debuggers might be costly"
 
-	| debugger window |
-	debugger := self newDebuggerOn: [self notify: 'foo'] newProcess.
-	
-	self shouldntFail: [window := debugger buildFullWith: self toolBuilder].
-	self validateWindow: window.
+	self
+		withMatrixOfPreferences: #(shouldReplaceInspectorsWithExplorers shouldShowContextStack shouldShowReturnValue)
+		do: [self testBuildDebugger].
