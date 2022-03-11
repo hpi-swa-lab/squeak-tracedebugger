@@ -33,6 +33,7 @@
 	"instance" : {
 		"abandon" : "ct 1/26/2022 15:59",
 		"aboutToStyle:requestor:" : "ct 2/12/2022 17:25",
+		"addModelItemsToWindowMenu:" : "ct 3/11/2022 15:00",
 		"aspectDependencies" : "ct 2/19/2022 14:57",
 		"basicDoStep:" : "ct 2/12/2022 23:54",
 		"basicSelectContext:" : "ct 2/12/2022 21:57",
@@ -73,6 +74,7 @@
 		"computeViewPropertyIcon:" : "ct 2/19/2022 21:27",
 		"computeViewPropertyString:" : "ct 2/19/2022 21:19",
 		"contentsSelection" : "ct 11/20/2021 00:18",
+		"contentsSymbolQuints" : "ct 3/11/2022 15:00",
 		"contextIconAt:" : "ct 3/11/2022 00:21",
 		"contextIconFor:" : "ct 3/11/2022 00:24",
 		"contextLabelFor:" : "ct 3/11/2022 00:22",
