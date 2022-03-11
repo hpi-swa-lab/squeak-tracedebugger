@@ -28,6 +28,7 @@ baseline: spec
 		
 		"groups"
 		spec
-			group: #default with: #('TraceDebugger' 'TraceDebuggerTests' 'TraceDebuggerBenchmarks');
+			group: #default with: #(full);
+			group: #full with: #('TraceDebugger' 'TraceDebuggerTests' 'TraceDebuggerBenchmarks');
 			group: #minimal with: #('TraceDebugger');
 			group: #tests with: #('TraceDebuggerTests')].
