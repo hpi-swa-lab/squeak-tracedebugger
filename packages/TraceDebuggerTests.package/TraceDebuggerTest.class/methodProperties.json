@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"basicTestBuildDebugger" : "ct 3/11/2022 01:00",
+		"basicTestBuildDebugger" : "ct 3/11/2022 20:03",
 		"changePreferencesDuring:" : "ct 1/23/2022 03:43",
 		"classUnderTest" : "ct 11/18/2021 17:47",
 		"invokeMenu:matching:" : "ct 2/20/2022 20:38",
@@ -17,7 +17,9 @@
 		"shouldReplaceInspectorsWithExplorers:during:" : "ct 3/10/2022 19:18",
 		"shouldntFail:" : "ct 11/20/2021 22:42",
 		"testBuildDebugger" : "ct 3/11/2022 14:14",
-		"testBuildNotifier" : "ct 2/17/2022 23:52",
+		"testBuildNotifier" : "ct 3/11/2022 20:03",
+		"testBuildNotifier:" : "ct 3/11/2022 20:03",
+		"testBuildNotifierWithMessage" : "ct 3/11/2022 20:04",
 		"testExplorer" : "ct 3/10/2022 19:45",
 		"testFindClass" : "ct 2/17/2022 23:52",
 		"testFindContext" : "ct 2/21/2022 02:34",
