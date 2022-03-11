@@ -1,4 +1,4 @@
 initialize-release
 defaultContextFilter
 
-	^ nil
+	^ TDBContextFilter new

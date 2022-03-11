@@ -1,0 +1,4 @@
+accessing - exclusions
+excludedReceiverClasses
+
+	^ excludedReceiverClasses

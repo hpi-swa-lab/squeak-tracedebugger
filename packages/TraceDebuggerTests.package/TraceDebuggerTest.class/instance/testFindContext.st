@@ -9,7 +9,7 @@ testFindContext
 	self should: debugger selectedContext willReturn.
 	
 	[debugger findContext]
-		valueSupplyingAnswer: #('*signature*' 'TDBTestLogic>>ziffy {as yet unclassified}').
+		valueSupplyingAnswer: #('*signature*' 'TDBTestLogic>>ziffy {the ziffy category}').
 	selection := debugger selectedContext.
 	self assert: TDBTestLogic >> #ziffy equals: selection method.
 	self assert: (selection findContextSuchThat: [:ctxt | ctxt selector = #doPlonk]) notNil.

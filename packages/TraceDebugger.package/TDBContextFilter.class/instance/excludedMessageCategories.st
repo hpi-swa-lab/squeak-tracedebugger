@@ -1,0 +1,4 @@
+accessing - exclusions
+excludedMessageCategories
+
+	^ excludedMessageCategories

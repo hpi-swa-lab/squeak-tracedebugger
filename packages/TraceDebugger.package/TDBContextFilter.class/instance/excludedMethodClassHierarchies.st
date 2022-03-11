@@ -1,0 +1,4 @@
+accessing - exclusions
+excludedMethodClassHierarchies
+
+	^ excludedMethodClassHierarchies
