@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1647005422949,
+  "lastUpdate": 1647006526937,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -4587,6 +4587,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 44.170125650715555",
             "extra": "{\"totalTime\":3384.6666666666665,\"preparationTime\":102.66666666666667,\"singleTimesToRun\":[3231.0,3307.0,3308.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9f5d1354f3451f34cffcbd6815741489a2d3e663",
+          "message": "Merge pull request #42 from LinqLover/conveniences\n\nThis mega PR improves several conveniences aspects of the TraceDebugger. Amongst others, this includes:\r\n\r\n- feature: spawn trace (relates #29)\r\n- feature: toggle border context (closes #28)\r\n- feature: context search (closes #44)\r\n- feature: \"trace it\" button in the normal debugger (closes #36)\r\n- feature: navigation commands \"jump to presence\", \"jump to sender\", \"jump to callee\"\r\n- feature: snapshot inspectors & explorers\r\n- feature: run to selection\r\n- improve support for code evaluation in all code panes (syntax highlighting, access to instance variables)\r\n- working notifier window and proceed/abandon buttons, implement all remaining menu commands, clean up and rearrange menu items\r\n- stepping improvements (coroutines, EHS)\r\n- call tree convenience (scroll bar, display of return values, graying out dead contexts, adjust timeIndex when selecting context, support for type-to-filter)\r\n- preference to display stack list instead of stack tree\r\n- tracing improvements: fix tracing of coroutines and simulation (relates #14, closes #13); fix tracing of failed primitives",
+          "timestamp": "2022-03-11T14:34:25+01:00",
+          "tree_id": "2857638d9da1b6702bba51eae19389b0e0f42b80",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/9f5d1354f3451f34cffcbd6815741489a2d3e663"
+        },
+        "date": 1647006526504,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 6187.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 12.055427546683418",
+            "extra": "{\"totalTime\":6187.666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[6189.0,6175.0,6199.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 4774.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 8.504900548115382",
+            "extra": "{\"totalTime\":4775.333333333333,\"preparationTime\":0.6666666666666666,\"singleTimesToRun\":[4783.0,4766.0,4775.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 91.33333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.5275252316519468",
+            "extra": "{\"totalTime\":91.33333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[91.0,90.0,93.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2376.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 42.15843134336634",
+            "extra": "{\"totalTime\":2376.3333333333335,\"preparationTime\":0.0,\"singleTimesToRun\":[2353.0,2425.0,2351.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 263,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.7320508075688772",
+            "extra": "{\"totalTime\":263.0,\"preparationTime\":0.0,\"singleTimesToRun\":[265.0,262.0,262.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 12487.333333333334,
+            "unit": "Milliseconds",
+            "range": "stdev: 956.2585075874272",
+            "extra": "{\"totalTime\":12605.333333333334,\"preparationTime\":118.0,\"singleTimesToRun\":[13591.0,11965.0,11906.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 1074.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 2.0816659994661326",
+            "extra": "{\"totalTime\":1138.0,\"preparationTime\":63.666666666666664,\"singleTimesToRun\":[1075.0,1076.0,1072.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 2433.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 30.53413390507963",
+            "extra": "{\"totalTime\":2511.0,\"preparationTime\":77.66666666666667,\"singleTimesToRun\":[2402.0,2463.0,2435.0],\"postparationTime\":0.0}"
           }
         ]
       }
