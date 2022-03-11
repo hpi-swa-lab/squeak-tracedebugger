@@ -1,7 +1,11 @@
 extensions
 isContextAlive: aContext
-	"This is a bit more complicated than just sending #isDead, which would not detect whether the context has *not yet* been created."
+	"Answer whether is aContext alive at the current time index.
+	Senders might be tempted to simply send #isDead to the context, but there is no contract guaranteeing that this would answer false for *not yet* created context instances. This dispatch encapsulates the tracing details of context instances."
 
-	^ self timeIndex
+	" ^ self timeIndex
 		between: (self minTimeIndexFor: aContext)
-		and: (self maxTimeIndexFor: aContext)
+		and: (self maxTimeIndexFor: aContext)"
+	
+	^ aContext isDead not
+	"See TDBTracingSimulator>>#context:activateMethod:withArgs:receiver:do:."
