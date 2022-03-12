@@ -2,7 +2,7 @@ extensions
 returnValueFor: aContext ifPresent: aBlock
 
 	| latestTime contextAfterReturn |
-	(thisContext objectClass: aContext) isTdbProxy ifTrue:
+	(thisContext objectClass: aContext) isTdbProxyClass ifTrue:
 		[^ self returnValueFor: aContext tdbproxyYourself ifPresent: aBlock].
 	aContext isDead ifFalse: [^ nil].
 	

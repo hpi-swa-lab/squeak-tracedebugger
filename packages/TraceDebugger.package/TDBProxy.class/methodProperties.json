@@ -1,7 +1,7 @@
 {
 	"class" : {
 		"for:inMemory:atTime:" : "ct 12/30/2021 23:09",
-		"isTdbProxy" : "ct 12/30/2021 23:13" },
+		"isTdbProxyClass" : "ct 3/12/2022 17:03" },
 	"instance" : {
 		"==" : "ct 11/19/2021 20:28",
 		"doesNotUnderstand:" : "ct 1/7/2022 18:39",

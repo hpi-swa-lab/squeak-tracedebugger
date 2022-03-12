@@ -2,7 +2,7 @@ controlling
 context: aContext send: selector to: originalReceiver with: arguments lookupIn: originalLookupClass do: aBlock
 
 	| receiver lookupClass |
-	((aContext objectClass: (receiver := originalReceiver)) isTdbProxy
+	((aContext objectClass: (receiver := originalReceiver)) isTdbProxyClass
 		and: [originalReceiver xxxtdbproxyMemory == memory])
 			ifTrue:
 				[receiver := originalReceiver xxxtdbproxyObject.

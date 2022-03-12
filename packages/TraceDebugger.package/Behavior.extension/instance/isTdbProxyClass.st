@@ -1,4 +1,4 @@
 *TraceDebugger-Core-testing
-isTdbProxy
+isTdbProxyClass
 
 	^ false

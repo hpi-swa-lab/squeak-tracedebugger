@@ -9,7 +9,7 @@ decorateView: view forObject: anObject
 			decorateView: (self currentWorld findA: SystemWindow)
 			forObject: anObject].
 	
-	(thisContext objectClass: anObject) isTdbProxy ifFalse: [^ view].
+	(thisContext objectClass: anObject) isTdbProxyClass ifFalse: [^ view].
 	
 	view model isTdbProxyHolder ifFalse:
 		[| newModel |

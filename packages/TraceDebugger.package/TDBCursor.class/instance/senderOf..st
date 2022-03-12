@@ -3,7 +3,7 @@ senderOf: aContext
 	"Answer the next visible context whose sender is aContext."
 
 	| sender filter |
-	(thisContext objectClass: aContext) isTdbProxy ifTrue:
+	(thisContext objectClass: aContext) isTdbProxyClass ifTrue:
 		[^ self senderOf: aContext tdbproxyYourself].
 	
 	sender := (self object: aContext) sender.

@@ -5,7 +5,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	"Resolve proxy arguments for the same memory by replacing them with the original receiver."
 	arguments := nil.
 	originalArguments withIndexDo: [:argument :index |
-		((aContext objectClass: argument) isTdbProxy
+		((aContext objectClass: argument) isTdbProxyClass
 			and: [argument xxxtdbproxyMemory == memory])
 				ifTrue: [(arguments ifNil: [arguments := originalArguments copy])
 					at: index put: argument xxxtdbproxyObject]].
