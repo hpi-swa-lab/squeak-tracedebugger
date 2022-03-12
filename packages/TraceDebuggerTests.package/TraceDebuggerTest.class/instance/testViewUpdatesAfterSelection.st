@@ -37,4 +37,10 @@ testViewUpdatesAfterSelection
 				"reselect context"
 				selectContext: nil;
 				selectContext: debugger interruptedContext]}.
-			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))))}.
+			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			{[:debugger | self currentEvent tdbWithShiftPressed becomeActiveDuring:
+				"select context sender (shift + red)"
+				[debugger treeSelectContext:
+					(#(1 2 1) inject: debugger selectedContext into: [:ctx :idx |
+						(debugger childContextsFor: ctx) at: idx])]]}.
+			#(griffle 'wiffy2' nil)}.

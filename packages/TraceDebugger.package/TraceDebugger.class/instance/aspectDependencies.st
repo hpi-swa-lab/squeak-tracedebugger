@@ -26,6 +26,7 @@ aspectDependencies
 		"toolbuilder"
 		at: #buildContextStackItems put: #(shouldShowContextStack shouldShowContextTree shouldShowReturnValue);
 		at: #defaultWindowColor put: #(isDisplayingHistory);
+		at: #listSelectedContext put: #(selectedContext);
 		at: #treeSelectedContext put: #(selectedContext);
 		"at: #treeSelectedContextPath put: #(selectedContext);"
 		at: #treeRootContexts put:

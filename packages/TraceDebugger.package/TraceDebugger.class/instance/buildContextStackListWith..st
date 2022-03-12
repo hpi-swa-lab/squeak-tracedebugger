@@ -4,8 +4,8 @@ buildContextStackListWith: aBuilder
 	^ aBuilder pluggableListSpec new
 		model: self;
 		list: #contextStack;
-		getSelected: #treeSelectedContext;
-		setSelected: #treeSelectContext:;
+		getSelected: #listSelectedContext;
+		setSelected: #listSelectContext:;
 		icon: #contextIconAt:;
 		helpItem: #contextToolTipAt:;
 		menu: #contextMenu:shifted:;
