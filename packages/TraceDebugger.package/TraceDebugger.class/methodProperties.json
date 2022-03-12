@@ -49,11 +49,12 @@
 	"instance" : {
 		"abandon" : "ct 1/26/2022 15:59",
 		"aboutToStyle:requestor:" : "ct 2/12/2022 17:25",
-		"addModelItemsToWindowMenu:" : "ct 3/12/2022 17:53",
+		"addModelItemsToWindowMenu:" : "ct 3/12/2022 19:37",
 		"appName" : "ct 3/12/2022 17:41",
 		"aspectDependencies" : "ct 2/19/2022 19:49",
 		"basicDoStep:" : "ct 2/12/2022 23:54",
 		"basicSelectContext:" : "ct 2/12/2022 21:57",
+		"basicTerminateProcess" : "ct 3/12/2022 19:36",
 		"bench:for:" : "ct 3/12/2022 17:19",
 		"borderContexts" : "ct 3/10/2022 23:34",
 		"borderContexts:" : "ct 3/10/2022 23:35",
@@ -208,7 +209,7 @@
 		"stepThrough" : "ct 12/30/2021 17:35",
 		"tdbExplorerClass" : "ct 3/10/2022 17:29",
 		"tdbInspectorClass" : "ct 2/12/2022 20:47",
-		"terminateProcess" : "ct 1/26/2022 19:53",
+		"terminateProcess" : "ct 3/12/2022 19:37",
 		"textFrame" : "ct 2/9/2022 02:16",
 		"toggleBorderContext" : "ct 2/21/2022 19:48",
 		"toggleBorderContext:" : "ct 2/21/2022 19:47",
@@ -225,4 +226,4 @@
 		"wantsOptionalButtons" : "ct 11/20/2021 15:25",
 		"wantsStepsIn:" : "ct 1/25/2022 02:19",
 		"windowColorToUse" : "ct 1/8/2022 01:57",
-		"windowIsClosing" : "ct 1/26/2022 19:43" } }
+		"windowIsClosing" : "ct 3/12/2022 19:36" } }
