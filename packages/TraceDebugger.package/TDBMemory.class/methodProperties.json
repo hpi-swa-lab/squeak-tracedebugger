@@ -12,4 +12,5 @@
 		"object:atTime:instVarAt:ifAbsent:" : "ct 12/30/2021 23:16",
 		"object:priorTo:atSlot:put:" : "ct 1/26/2022 14:46",
 		"object:priorTo:fieldAt:put:" : "ct 1/22/2022 15:40",
-		"object:priorTo:instVarAt:put:" : "ct 11/19/2021 18:55" } }
+		"object:priorTo:instVarAt:put:" : "ct 11/19/2021 18:55",
+		"spaceUsed" : "ct 2/14/2022 17:19" } }

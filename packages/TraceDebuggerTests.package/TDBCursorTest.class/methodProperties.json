@@ -29,6 +29,7 @@
 		"testDoStepThrough" : "ct 12/30/2021 14:40",
 		"testDoStepThroughUntil" : "ct 2/17/2022 19:09",
 		"testReturnValue" : "ct 2/19/2022 03:45",
+		"testSpaceUsed" : "ct 3/12/2022 17:15",
 		"testTraceContextFilter" : "ct 2/20/2022 19:39",
 		"testTraceFor:contextFilter:like:" : "ct 2/20/2022 19:43",
 		"testTraceFor:like:" : "ct 2/20/2022 19:39",
