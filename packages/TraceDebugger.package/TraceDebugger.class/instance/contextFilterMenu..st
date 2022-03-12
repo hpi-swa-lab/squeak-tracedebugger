@@ -9,7 +9,8 @@ contextFilterMenu: menu
 				(menu tdbMakeSubmenuForTarget: self))
 			target: self
 			selector: #yourself
-			argumentList: #()].
+			argumentList: #().
+		menu balloonTextForLastItem: 'hide all contexts matching a given pattern\(their children will be lifted up)'].
 	
 	editLabel := 'edit filters'.
 	filterCount := self contextFilter totalExcludedCount.

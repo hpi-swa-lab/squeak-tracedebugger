@@ -3,7 +3,7 @@ notifierButtonSpecs
 
 	| specs |
 	specs :=
-		#(('Proceed'	proceed	'cose this window and continue this process'	canProceed)
+		#(('Proceed'	proceed	'close this window and continue this process'	canProceed)
 		('Abandon'		abandon	'terminate this process and close this window')
 		('Debug'		debug 		'bring up a trace debugger for this process'))
 			asOrderedCollection.

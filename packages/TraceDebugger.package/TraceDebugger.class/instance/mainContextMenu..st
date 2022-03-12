@@ -1,30 +1,39 @@
 menus
-mainContextMenu: aMenu
+mainContextMenu: menu
 	<contextMenuShifted: false>
 
 	| context |
 	context := self selectedContext.
-	aMenu
-		addList:
-			#(('spawn (o)' spawn 'open a new window on the selected portion of the trace'));
-		tdbAddUpdating: 'border context'
+	
+	menu
+		add: 'spawn (o)' action: #spawn;
+		balloonTextForLastItem: (context
+			ifNil: ['open a new window on the trace']
+			ifNotNil: ['open a new window on the selected portion of the trace']).
+	context ifNotNil:
+		[menu
+			tdbAddUpdating: 'border context'
 			getState: [context ifNotNil: [self isBorderContext: context]]
 			setState: [self toggleBorderContext: context];
-		balloonTextForLastItem: 'control whether the displayed trace will be clipped beyond this context';
-		addList:
-			#(('jump to presence (D)' jumpToPresence 'jump to the currently active context')
-			('jump to sender (w)' jumpToSender 'jump to the context that has activated this context')
-			('jump to callee (s)' jumpToCallee 'jump to the active context that was activated by this context')
-			-
-			('find (f)' findContext 'search the trace for a context signature')
-			('find again (g)' findContextAgain)
-			('find class (F)' findClass 'search the class for a method class')
-			('find class again (G)' findClassAgain)
-			-).
+			balloonTextForLastItem: 'control whether the displayed trace will be clipped beyond this context'].
+	menu addList:
+		#(('jump to presence (D)' jumpToPresence 'jump to the currently active context')).
+	context ifNotNil:
+		[menu addList:
+			#(('jump to sender (w)' jumpToSender 'jump to the context that has activated this context')
+			('jump to callee (s)' jumpToCallee 'jump to the context that was activated by this context'))].
 	
-	self contextFilterMenu: aMenu.
+	menu addList:
+		#(-
+		('find (f)' findContext 'search the trace for a context signature')
+		('find again (g)' findContextAgain)
+		('find class (F)' findClass 'search the class for a method class')
+		('find class again (G)' findClassAgain)
+		-).
 	
-	aMenu addList:
+	self contextFilterMenu: menu.
+	
+	menu addList:
 		#(-
 		('proceed (p)' proceed 'close the debugger and proceed')
 		('restart (r)' restart 'rewind this context to its start')
@@ -35,4 +44,5 @@ mainContextMenu: aMenu
 		('where (w)' showWhere 'select next expression')
 		-
 		('copy bug report to clipboard'	copyBugReportToClipboard)).
-	^ aMenu
+	
+	^ menu

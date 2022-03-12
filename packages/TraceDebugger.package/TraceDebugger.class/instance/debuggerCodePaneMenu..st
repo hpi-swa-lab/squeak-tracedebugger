@@ -1,9 +1,9 @@
 menus
-debuggerCodePaneMenu: aMenu
+debuggerCodePaneMenu: menu
 	<codePaneMenu>
 	<menuPriority: 200>
 
-	^ aMenu
+	^ menu
 		add: 'run to here' target: self selector: #runToSelection: argument: self codePaneSelectionInterval;
 		addLine;
 		yourself

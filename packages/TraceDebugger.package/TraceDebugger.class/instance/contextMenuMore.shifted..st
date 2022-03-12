@@ -1,10 +1,10 @@
 menus
-contextMenuMore: aMenu shifted: shifted
-	"The 'more..' link that toggles between shifted and unshifted menus."
+contextMenuMore: menu shifted: shifted
+	"The 'more...' link that toggles between shifted and unshifted menus."
 	<contextMenu>
 	<menuPriority: 1000>
 
-	^ aMenu
+	^ menu
 		addLine;
 		add: 'more...'
 			target: self
