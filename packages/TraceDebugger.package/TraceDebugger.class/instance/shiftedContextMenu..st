@@ -1,8 +1,8 @@
 menus
-shiftedContextMenu: aMenu
+shiftedContextMenu: menu
 	<contextMenuShifted: true>
 
-	^ aMenu
+	^ menu
 		addList:
 			#(('browse full (b)' 				browseMethodFull)
 			('senders of (n)' 				browseSendersOfMessages)

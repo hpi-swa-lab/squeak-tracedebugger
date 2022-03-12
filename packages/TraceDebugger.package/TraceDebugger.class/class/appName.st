@@ -1,4 +1,4 @@
-accessing
+app - accessing
 appName
 
 	^ 'Trace Debugger'

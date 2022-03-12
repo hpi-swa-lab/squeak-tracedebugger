@@ -2,7 +2,7 @@ toolbuilder - opening
 labelString
 
 	| label |
-	label := self class appName.
+	label := self appName.
 	self hasContextSelected ifTrue:
 		[label := '{1} @ {2}' format: {label. self cursor timeIndex}].
 	self isDisplayingHistory ifTrue:
