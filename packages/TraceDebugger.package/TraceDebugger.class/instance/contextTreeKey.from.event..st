@@ -1,7 +1,7 @@
 menus
 contextTreeKey: aCharacter from: requestor event: event
 
-	event anyModifierKeyPressed ifFalse: [^ false].
+	(event anyModifierKeyPressed or: [aCharacter = $ ]) ifFalse: [^ false].
 	
 	^ aCharacter
 		caseOf:
