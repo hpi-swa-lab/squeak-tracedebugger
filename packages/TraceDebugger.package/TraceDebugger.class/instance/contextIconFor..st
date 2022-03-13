@@ -8,4 +8,4 @@ contextIconFor: aContext
 	self flag: #iconColumnIndex. "The column position of the icon is 2, as hardcoded in IndentingListItemMorph class>>#iconColumnIndex."
 	^ self cursor
 		returnValueFor: aContext
-		ifPresent: [:value | self iconForValue: value]
+		ifPresent: [:value | (self iconForValue: value) tdbproxyYourself]
