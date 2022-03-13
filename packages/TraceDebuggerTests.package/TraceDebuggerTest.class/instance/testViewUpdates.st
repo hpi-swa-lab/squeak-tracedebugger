@@ -8,12 +8,12 @@ testViewUpdates
 			method: TDBTestLogic >> #plonk
 			arguments: #())
 		assertionsAndSteps:
-			#((plonk nil (plonk ()))
+			#((plonk nil (plonk))
 			(stepInto stepInto)
-			(wiffy 'wiffy1' (plonk (wiffy ())) ((self 'a TDBTestLogic') ('stack1' 'a TDBTestLogic')))
+			(wiffy 'wiffy1' (plonk (wiffy)) ((self 'a TDBTestLogic') ('stack1' 'a TDBTestLogic')))
 			(stepOver stepInto)
-			(wiffy2 '^ 3' (plonk (wiffy (wiffy2 ()))) ((self 'a TDBTestLogic') ('stack1' '3')))
+			(wiffy2 '^ 3' (plonk (wiffy (wiffy2))) ((self 'a TDBTestLogic') ('stack1' '3')))
 			(stepInto stepThrough stepThrough)
-			(plonk 'ziffy' (plonk (wiffy (wiffy2 ()))))
+			(plonk 'ziffy' (plonk (wiffy (wiffy2))))
 			(stepThrough)
-			(plonk 'yourself' (plonk (wiffy (wiffy2 ()) (ziffy ()))) (() (thisContext 'TDBTestLogic>>plonk')))).
+			(plonk 'yourself' (plonk (wiffy (wiffy2)) (ziffy)) (() (thisContext 'TDBTestLogic>>plonk')))).

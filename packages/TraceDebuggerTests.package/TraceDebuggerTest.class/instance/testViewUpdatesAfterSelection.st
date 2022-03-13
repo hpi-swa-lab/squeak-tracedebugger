@@ -8,23 +8,23 @@ testViewUpdatesAfterSelection
 			method: TDBTestLogic >> #griffle
 			arguments: #())
 		assertionsAndSteps:
-			{#(griffle nil (griffle ())).
+			{#(griffle nil (griffle)).
 			#(stepOver stepThrough).
-			#(griffle 'wiffy1' (griffle (griffle:with: (griffle ())))).
+			#(griffle 'wiffy1' (griffle (griffle:with: (griffle)))).
 			#(stepThrough stepThrough).
-			#(griffle 'wiffy2' (griffle (griffle:with: (griffle ()) (griffle ())))).
+			#(griffle 'wiffy2' (griffle (griffle:with: (griffle) (griffle)))).
 			#(stepInto).
-			#(wiffy2 '^ 3' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))) (() ('stack1' '3'))).
+			#(wiffy2 '^ 3' (griffle (griffle:with: (griffle) (griffle (wiffy2)))) (() ('stack1' '3'))).
 			{[:debugger | debugger
 				selectContext: (debugger contextStack
 					detect: [:ctx | ctx selector = #griffle:with:]);
 				stepInto]}.
-			#(griffle:with: '* anotherBlock value' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ())))) (() ('all temp vars' 'aBlock:*anotherBlock:*' 'stack3' '2'))).
+			#(griffle:with: '* anotherBlock value' (griffle (griffle:with: (griffle) (griffle (wiffy2)))) (() ('all temp vars' 'aBlock:*anotherBlock:*' 'stack3' '2'))).
 			{[:debugger | debugger
 				selectContext: (debugger contextStack
 					detect: [:ctx | ctx selector = #griffle]);
 				stepThrough]}.
-			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle) (griffle (wiffy2))))).
 			{[:debugger | debugger selectContext:
 				"select dead context"
 				(debugger childContextsFor: debugger selectedContext) first]}.
@@ -32,12 +32,12 @@ testViewUpdatesAfterSelection
 			{[:debugger | debugger
 				"select alive context"
 				selectContext: debugger selectedContext sender]}.
-			#(griffle 'griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			#(griffle 'griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle) (griffle (wiffy2))))).
 			{[:debugger | debugger
 				"reselect context"
 				selectContext: nil;
 				selectContext: debugger interruptedContext]}.
-			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle ()) (griffle (wiffy2 ()))))).
+			#(griffle '^ self griffle: [self wiffy1] with: [self wiffy2]' (griffle (griffle:with: (griffle) (griffle (wiffy2))))).
 			{[:debugger | self currentEvent tdbWithShiftPressed becomeActiveDuring:
 				"select context sender (shift + red)"
 				[debugger treeSelectContext:

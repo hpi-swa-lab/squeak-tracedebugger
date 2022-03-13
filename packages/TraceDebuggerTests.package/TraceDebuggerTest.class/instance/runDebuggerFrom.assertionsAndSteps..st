@@ -24,17 +24,19 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 			"check tree"
 			expected third in: [:expectedTree |
 				roots := debugger rootContexts.
+				self assert: 1 equals: roots size.
 				nodeCheck := nil.
-				nodeCheck := [:expectedNodes :actualNodes |
-					self assert: actualNodes size = expectedNodes size.
-					actualNodes readStream in: [:nodeStream |
-						expectedNodes pairsDo: [:expectedSelector :expectedChildren | | node |
-							node := nodeStream next.
-							self assert: node selector = expectedSelector.
-							nodeCheck 
-								value: expectedChildren
-								value: (debugger childContextsFor: node)]]].
-				nodeCheck value: {expectedTree} value: roots].
+				nodeCheck := [:expectedNode :actualNode | | expectedSelector expectedChildren actualChildren |
+					expectedSelector := expectedNode first.
+					expectedChildren := expectedNode allButFirst.
+					actualChildren := debugger childContextsFor: actualNode.
+					self assert: expectedChildren size equals: actualChildren size.
+					expectedChildren with: actualChildren do: [:expectedChild :actualChild |
+						nodeCheck 
+							value: expectedChild
+							value: actualChild]].
+				expectedTree ifNotNil:
+					[nodeCheck value: expectedTree value: roots first]].
 			
 			"check inspectors"
 			(expected at: 4 ifAbsent: []) ifNotNil: [:expectedValues |
