@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"isAbstract" : "ct 3/13/2022 18:59" },
 	"instance" : {
 		"addTearDown:" : "ct 3/10/2022 19:41",
 		"setUp" : "ct 3/10/2022 19:39",
