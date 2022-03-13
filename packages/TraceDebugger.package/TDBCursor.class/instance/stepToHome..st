@@ -3,15 +3,17 @@ stepToHome: aContext
 	"Step forward until the home of top context is aContext or an exception is signaled."
 
 	| home homeTrace |
-	self flag: #moveUpstream. "Support for dead home contexts (from another process):
-	(Process forContext: [2 in: [:x | x / 3]] asContext) debug"
+	self flag: #moveUpstream. "Support for dead home contexts and foreign home contexts (from another process):
+	(Process forContext: [2 in: [:x | x / 3]] asContext) debug.
+	(Process forContext: [2 in: [:x | x / 3]] asContext) debug halt."
 	
-	home := aContext tdbLivingHome.
-	homeTrace := self traceFor: home.
+	homeTrace := self livingHomeTraceFor: aContext.
 	
 	self step ifNil: [^ nil].
-	(homeTrace contextAtTime: self timeIndex) isDead
-		ifTrue: [^ self context].
+	home := homeTrace contextAtTime: self timeIndex.
+	home isDead ifTrue:
+		[^ self context].
+	home := home tdbproxyYourself.
 	^ self stepUntil: [:context |
 		context isDead
 			or: [context tdbHasHome: home]]

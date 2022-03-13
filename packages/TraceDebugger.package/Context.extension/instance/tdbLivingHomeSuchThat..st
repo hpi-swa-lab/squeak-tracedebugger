@@ -1,8 +1,10 @@
 *TraceDebugger-Core-accessing
-tdbLivingHome
+tdbLivingHomeSuchThat: aBlock
 
 	| outerContext |
 	closureOrNil ifNil: [^ self].
 	(outerContext := closureOrNil outerContext) isDead
 		ifTrue: [^ self].
-	^ outerContext tdbLivingHome
+	(aBlock value: outerContext)
+		ifFalse: [^ self].
+	^ outerContext tdbLivingHomeSuchThat: aBlock

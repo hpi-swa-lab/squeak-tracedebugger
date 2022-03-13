@@ -5,9 +5,9 @@ doStepThrough: aContext until: aBlock
 	self flag: #forLater. "Think about #doStepIntoUntil: and #doStepBackUntil:?"
 	
 	^ self doStepForward:
-		[| value home context |
-		home := aContext tdbLivingHome.
-		(self context tdbLivingHome tdbIdentical: home)
+		[| home context value |
+		home := (self livingHomeTraceFor: aContext) contextAtTime: self timeIndex.
+		(((self livingHomeTraceFor: self context) contextAtTime: self timeIndex) tdbIdentical: home)
 			ifFalse: [self doStepThrough: aContext].
 		[(home := self object: home tdbproxyYourself) isDead not
 			and: [((context := self context) tdbIdentical: home tdbproxyYourself) ==> [home willReturn not]]
