@@ -1,0 +1,4 @@
+accessing
+styledTextFor: aText
+
+	^ aText

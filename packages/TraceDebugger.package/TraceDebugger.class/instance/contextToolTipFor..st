@@ -5,12 +5,8 @@ contextToolTipFor: aContext
 	thisContext wrap: [:block | self computeViewPropertyString: block].
 	
 	tips := OrderedCollection new: 2.
-	self cursor
-		returnValueFor: aContext
-		ifPresent: [:value | | valueString |
-			valueString := [value printStringLimitedTo: 100]
-				ifError: [:msg | '<error: {1}>' format: {msg}].
-			tips add: ('<b>Return value:</b> {1}' asTextFromHtml format: {valueString})].
+	
+	tips add: (self contextInfoToolTipFor: aContext).
 	
 	Preferences balloonHelpInMessageLists ifTrue:
 		[(self messageHelpForMethod: aContext homeMethod) ifNotNil: [:help |

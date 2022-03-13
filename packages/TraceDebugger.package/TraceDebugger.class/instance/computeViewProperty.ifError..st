@@ -5,5 +5,5 @@ computeViewProperty: aBlock ifError: errorBlock
 	self flag: #workaround. "The views should care about this."
 	
 	^ aBlock
-		on: Error, Warning, Halt
+		on: (Error, Warning, Halt), UnhandledError
 		do: [:ex | errorBlock cull: ex description]
