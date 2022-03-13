@@ -1,6 +1,8 @@
 examples
 exampleDrawingError
 	"
+	Debgu a drawing error in Morphic. Originally, this was used to demonstrate the bug that was fixed via Morphic-ct.1768.
+	
 	self exampleDrawingError
 	"
 
