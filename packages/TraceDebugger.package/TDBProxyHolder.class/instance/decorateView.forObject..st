@@ -3,10 +3,8 @@ decorateView: view forObject: anObject
 	"Decorate the opened view as a proxy model for anObject, if appropriate. This includes converting the model to a proxy model and adjusting the view optically."
 
 	(view respondsTo: #model) ifFalse:
-		[self flag: #hacked. "Retry with the topmost window, presuming that the sender has opened it right before."
-		self flag: #Morphic.
-		^ self
-			decorateView: (self currentWorld findA: SystemWindow)
+		[^ self
+			decorateView: (self assureView: view)
 			forObject: anObject].
 	
 	(thisContext objectClass: anObject) isTdbProxyClass ifFalse: [^ view].
