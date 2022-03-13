@@ -8,11 +8,9 @@ testDoStepIntoFromSenderFiltered
 			method: TDBTestLogic >> #plonk
 			arguments: #())
 		filter: [:context | context selector ~= #wiffy]
-		step: [:cursor | cursor doStepInto: (cursor context bottomContext
-			ifNil: [cursor context])]
-		assertions:
-			#((nil (willReallySend))
-			(wiffy2 (willReturn))
-			(plonk (willReallySend))
-			(ziffy (willReallySend))
-			(plonk (willReallySend willReturn isDead))).
+		stepsAndAssertions:
+			{#(doStepInto nil (willReallySend)).
+			#(doStepInto wiffy2 (willReturn)).
+			{[:cursor | cursor doStepInto: cursor context sender]. #wiffy2. Array new: 5 withAll: #willReturn}.
+			{[:cursor | cursor doStepInto: cursor context sender sender]. #wiffy2. Array new: 5 withAll: #willReturn}.
+			#(doStepInto plonk (willReallySend))}.

@@ -6,6 +6,6 @@ doStepInto: aContext
 		[((self context tdbIdentical: aContext)
 			ifTrue: [self step]
 			ifFalse:
-				[self flag: #todo. "Discuss this behavior. Maybe just #doSelect: here?"
-				self completeStep: (self basicCalleeOf: aContext) "just like stepOver:"])
+				["Differently than in the normal debugger, we do not perform an unexpected and expensive stepOver here but just select the calleee."
+				self doSelect: (self basicCalleeOf: aContext)])
 					ifNotNil: [self stepToSendOrReturn]]
