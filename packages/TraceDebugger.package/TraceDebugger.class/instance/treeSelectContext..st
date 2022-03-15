@@ -4,7 +4,7 @@ treeSelectContext: aContext
 	| context |
 	context := self cursor object: aContext.
 	
-	(self currentEvent shiftPressed and: [context notNil])
+	((self currentEvent respondsTo: #shiftPressed "drop events, sigh...") and: [self currentEvent shiftPressed] and: [context notNil])
 		ifFalse: [self basicSelectContext: context]
 		ifTrue:
 			["Select the sender at the time of the invocation of aContext instead."
