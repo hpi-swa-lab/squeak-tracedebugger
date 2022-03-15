@@ -16,8 +16,7 @@ testSpaceUsed
 	emptySpace := cursor spaceUsed.
 	self assert: emptyMemorySpace < 1000.
 	
-	cursor doStepForward:
-		[cursor stepUntil: [:context | context isDead]].
+	cursor doStepUntil: [:context | context isDead].
 	
 	self assert: cursor rootTrace memory spaceUsed - emptyMemorySpace > (20 * 4).
 	self assert: cursor rootTrace memory spaceUsed < 10000.
