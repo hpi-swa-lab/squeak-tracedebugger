@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"children",
-		"memory",
-		"context",
-		"timeInterval",
-		"maxTimeIndex" ],
-	"name" : "TDBTrace",
+		"parent" ],
+	"name" : "TDBChildTrace",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TDBTrace",
 	"type" : "normal" }

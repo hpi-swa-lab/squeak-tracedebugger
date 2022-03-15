@@ -1,4 +1,4 @@
-accessing
+accessing - descendants
 allDescendantsBreadthFirstDo: aBlock
 
 	self children

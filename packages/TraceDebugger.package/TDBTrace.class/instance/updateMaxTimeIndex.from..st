@@ -7,5 +7,3 @@ updateMaxTimeIndex: timeIndex from: aTrace
 	timeIndex > maxTimeIndex
 		ifFalse: [^ self].
 	maxTimeIndex := timeIndex.
-	self parent ifNotNil: [:theParent |
-		theParent updateMaxTimeIndex: maxTimeIndex from: self].

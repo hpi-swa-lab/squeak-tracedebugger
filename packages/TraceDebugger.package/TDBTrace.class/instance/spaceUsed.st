@@ -9,5 +9,4 @@ spaceUsed
 		+ (self originalContext isDead
 			ifTrue: [tally spaceForInstance: self originalContext depth: 1]
 			ifFalse: [0])
-		+ (tally spaceForInstance: tracesForContexts depth: 2)
 		+ (self children detectSum: [:child | child spaceUsed])

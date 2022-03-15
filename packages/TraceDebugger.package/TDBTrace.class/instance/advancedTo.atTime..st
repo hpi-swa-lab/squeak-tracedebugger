@@ -7,7 +7,4 @@ advancedTo: aContext atTime: timeIndex
 			[timeInterval := timeInterval start to: timeIndex.
 			^ self updateMaxTimeIndex: timeIndex from: self].
 	
-	self parent ifNotNil: [:parentTrace |
-		^ parentTrace advancedTo: aContext atTime: timeIndex].
-	
 	^ nil

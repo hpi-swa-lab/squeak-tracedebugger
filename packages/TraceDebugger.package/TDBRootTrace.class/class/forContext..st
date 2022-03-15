@@ -1,4 +1,4 @@
 instance creation
 forContext: aContext
 
-	^ TDBRootTrace forContext: aContext
+	^ self new context: aContext
