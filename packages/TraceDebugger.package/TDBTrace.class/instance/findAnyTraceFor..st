@@ -8,5 +8,4 @@ findAnyTraceFor: aContext
 		trace originalContext == aContext
 			ifTrue: [^ trace]].
 	
-	^ self parent ifNotNil: [:theParent |
-		theParent findAnyTraceFor: aContext]
+	^ nil

@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"advancedTo:atTime:" : "ct 3/15/2022 22:50",
+		"context:parent:timeIndex:" : "ct 1/24/2022 22:14",
+		"findAnyTraceFor:" : "ct 3/15/2022 22:04",
+		"isChild" : "ct 3/15/2022 22:08",
+		"noteNewDescendant:" : "ct 3/15/2022 22:00",
+		"parent" : "ct 11/30/2021 16:17",
+		"updateMaxTimeIndex:from:" : "ct 3/15/2022 22:51" } }
