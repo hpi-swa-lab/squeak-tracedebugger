@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1647381949082,
+  "lastUpdate": 1647383293726,
   "repoUrl": "https://github.com/LinqLover/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -7787,6 +7787,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 41.7612260356422",
             "extra": "{\"totalTime\":1589.6666666666667,\"preparationTime\":101.66666666666667,\"singleTimesToRun\":[1460.0,1468.0,1536.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ace4ace6535e8e70585ad2c89b4f7af197ee138d",
+          "message": "Merge pull request #67 from LinqLover/refactor/trace-hierarchy\n\nRefactoring: Split up TDBTrace into TDBChildTrace and TDBRootTrace\r\n\r\nPros:\r\n\r\n* disjunct state & behavior for different tree nodes\r\n* less space overhead for unused variables\r\n\r\nCons:\r\n\r\n* Performance assessment: This shouldn't actually be more inefficient, however some locally run benchmark suggested this (while in other runs no difference could be shown). Without a proper benchmarking system with a higher significance we cannot detect any slowdown here.",
+          "timestamp": "2022-03-15T23:15:56+01:00",
+          "tree_id": "511e84833416d59e60620594ca0404807a6efd57",
+          "url": "https://github.com/LinqLover/squeak-tracedebugger/commit/ace4ace6535e8e70585ad2c89b4f7af197ee138d"
+        },
+        "date": 1647383292646,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 6882,
+            "unit": "Milliseconds",
+            "range": "stdev: 270.2720851290418",
+            "extra": "{\"totalTime\":6882.0,\"preparationTime\":0.0,\"singleTimesToRun\":[6571.0,7015.0,7060.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 5600.333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 88.00189391901367",
+            "extra": "{\"totalTime\":5601.333333333333,\"preparationTime\":1.0,\"singleTimesToRun\":[5512.0,5688.0,5601.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 108.66666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 0.5773502691896258",
+            "extra": "{\"totalTime\":108.66666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[109.0,109.0,108.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2917,
+            "unit": "Milliseconds",
+            "range": "stdev: 211.53959440256097",
+            "extra": "{\"totalTime\":2917.0,\"preparationTime\":0.0,\"singleTimesToRun\":[2674.0,3017.0,3060.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 319.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 7.505553499465135",
+            "extra": "{\"totalTime\":319.3333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[315.0,328.0,315.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 13266.666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 1091.1816225236446",
+            "extra": "{\"totalTime\":13394.0,\"preparationTime\":127.33333333333333,\"singleTimesToRun\":[14520.0,12528.0,12752.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 920.6666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 14.011899704655802",
+            "extra": "{\"totalTime\":991.0,\"preparationTime\":70.33333333333333,\"singleTimesToRun\":[932.0,905.0,925.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1260.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 10.598742063723098",
+            "extra": "{\"totalTime\":1343.6666666666667,\"preparationTime\":83.0,\"singleTimesToRun\":[1259.0,1272.0,1251.0],\"postparationTime\":0.0}"
           }
         ]
       }
