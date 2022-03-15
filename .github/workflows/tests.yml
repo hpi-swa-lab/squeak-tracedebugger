@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Fix broken apt list
+        sudo perl -p -i -e 's#16\.04/prod xenial#18.04/prod bionic#' /etc/apt/sources.list.d/microsoft-prod.list{,.save}
       - id: smalltalkci
         uses: hpi-swa/setup-smalltalkCI@v1
         with:
