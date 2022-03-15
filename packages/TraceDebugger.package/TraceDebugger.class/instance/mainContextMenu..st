@@ -6,7 +6,7 @@ mainContextMenu: menu
 	context := self selectedContext.
 	
 	menu
-		add: 'spawn (o)' action: #spawn;
+		add: 'spawn (o)' action: #spawnContext;
 		balloonTextForLastItem: (context
 			ifNil: ['open a new window on the trace']
 			ifNotNil: ['open a new window on the selected portion of the trace']).

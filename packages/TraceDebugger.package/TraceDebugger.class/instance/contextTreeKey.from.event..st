@@ -1,11 +1,11 @@
 menus
 contextTreeKey: aCharacter from: requestor event: event
 
-	(event anyModifierKeyPressed or: [aCharacter = $ ]) ifFalse: [^ false].
+	(event anyModifierKeyPressed or: [aCharacter = $ ]) ifFalse: [^ false]. "allow for type-to-filter"
 	
 	^ aCharacter
 		caseOf:
-			{[$o] -> [self spawn].
+			{[$o] -> [self spawnContext].
 			[$ ] -> [self toggleBorderContext].
 			[$D] -> [self jumpToPresence].
 			[$w] -> [self jumpToSender].

@@ -1,6 +1,6 @@
 actions
-spawn: aContext
+spawn: aStringOrText
 
-	^ self copy
-		borderContexts: (self borderContexts copyWith: aContext);
-		open
+	^ self spawnContext model
+		editContents: aStringOrText;
+		containingWindow
