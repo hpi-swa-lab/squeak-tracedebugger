@@ -9,4 +9,6 @@ buildContextStackListWith: aBuilder
 		icon: #contextIconAt:;
 		helpItem: #contextToolTipAt:;
 		menu: #contextMenu:shifted:;
+		dragItem: #dragContextAt:;
+		dragType: #dragTypeForContextAt:;
 		yourself
