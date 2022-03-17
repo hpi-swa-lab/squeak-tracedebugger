@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "ct 3/15/2022 20:54",
 	"instvars" : [
 		"debugger",
 		"context" ],
-	"name" : "TDBTraceSurrogate",
+	"name" : "TDBTreeItem",
 	"pools" : [
 		 ],
 	"super" : "Object",

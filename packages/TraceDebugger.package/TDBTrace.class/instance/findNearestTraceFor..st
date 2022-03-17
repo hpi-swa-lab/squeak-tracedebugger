@@ -1,5 +1,5 @@
 private
-findAnyTraceFor: aContext
+findNearestTraceFor: aContext
 	"Search the entire tree for aContext in an ascending order."
 
 	self flag: #optimize. "Don't visit descendants multiple times!"
