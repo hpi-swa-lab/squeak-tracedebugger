@@ -1,6 +1,6 @@
 tests - ui
 testBuildDebugger
-	<timeout: 30 "seconds"> "updating many open debuggers might be costly"
+	<timeout: 45 "seconds"> "updating many open debuggers might be costly"
 
 	self
 		withMatrixOfPreferences: #(shouldReplaceInspectorsWithExplorers shouldShowContextStack shouldShowReturnValue extraDebuggerButtons)
