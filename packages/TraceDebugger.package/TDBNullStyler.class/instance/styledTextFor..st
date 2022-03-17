@@ -1,4 +1,0 @@
-accessing
-styledTextFor: aText
-
-	^ aText

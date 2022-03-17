@@ -5,20 +5,22 @@ contextInfoToolTipFor: aContext
 	originalContext := self cursor object: aContext atTime:
 		(self cursor minTimeIndexFor: aContext).
 	
-	styler := ((TextStyler for: #Smalltalk) ifNil: [TDBNullStyler]) new
+	styler := (TextStyler for: #Smalltalk) ifNotNil: [:stylerClass | stylerClass new
 		classOrMetaClass: (originalContext receiver perform: #class);
 		context: ((self cursor object: originalContext atTime:
 			(self cursor maxTimeIndexFor: originalContext))
 				flag: #(workaround shout) "Shout does not detect arguments correctly for a privRefresh'ed context, so we have parsed the entire context source here inefficiently. Another bug is that it does not detect any arguments for empty blocks. These issues need to be fixed upstream.";
 				yourself);
 		parseAMethod: false;
-		yourself.
+		yourself].
 	
 	^ Text streamContents: [:stream |
 		(self contextInfosFor: originalContext)
-			associations do: [:assoc |
-				stream nextPutAll:
-					(styler styledTextFor: assoc key asText).
+			associations do: [:assoc | | keyText |
+				keyText := assoc key asText.
+				styler ifNotNil:
+					[keyText := styler styledTextFor: keyText].
+				stream nextPutAll: keyText.
 				assoc key = #'^' ifFalse:
 					[stream nextPut: $:].
 				stream space.
