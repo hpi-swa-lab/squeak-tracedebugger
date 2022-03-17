@@ -1,6 +1,6 @@
 *TraceDebugger-UI-copying
 tdbWithoutShiftPressed
 
-	^ self copy
+	^ super tdbWithoutShiftPressed
 		instVarNamed: 'buttons' put: (self buttons bitClear: (2r0001 "shift" bitShift: MouseEvent numButtons));
 		yourself
