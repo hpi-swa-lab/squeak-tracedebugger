@@ -1,4 +1,5 @@
 private
 postpare: aBlock
 
-	^ aBlock valueAndStoreTimeToRunWithoutGC: [:duration | postparationTime := postparationTime + duration]
+	^ aBlock valueAndStoreTimeToRunWithoutGC: [:duration |
+		postparationTime := postparationTime + duration]

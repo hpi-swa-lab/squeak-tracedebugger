@@ -1,5 +1,6 @@
 benchmarks
 benchProxyImageForm
+	"Benchmark an operation that includes many sends to a TDBProxy (and thus many invocations of the retracing simulator)."
 
 	| morph bounds fullBounds |
 	self prepare:

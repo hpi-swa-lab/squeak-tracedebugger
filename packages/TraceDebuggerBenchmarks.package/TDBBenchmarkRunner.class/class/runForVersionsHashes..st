@@ -1,6 +1,6 @@
 bulk running
 runForVersionsHashes: versionHashes
-	"Run all benchmarks for each of the specified version hashes (aka commit SHAs) and export the results for each version in a separate file. You may check in these results into the github-action-benchmark- database for GitHub pages by passing these files to the run_local.ts script, see: https://github.com/benchmark-action/github-action-benchmark/pull/99"
+	"Run all benchmarks for each of the specified version hashes (aka commit SHAs) and export the results for each version in a separate file. You may check in these results into the github-action-benchmark-database for GitHub pages by passing these files to the run_local.ts script, see: https://github.com/benchmark-action/github-action-benchmark/pull/99"
 
 	| versions workingCopy benchmarksSnapshot |
 	workingCopy := (Smalltalk classNamed: #SquotWorkingCopy) registered

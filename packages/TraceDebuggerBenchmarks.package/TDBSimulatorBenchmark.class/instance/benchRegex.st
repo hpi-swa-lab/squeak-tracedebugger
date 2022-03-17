@@ -1,5 +1,6 @@
 benchmarks
 benchRegex
+	"Benchmark simulating a message-send-intensive operation."
 
 	| string |
 	self prepare:

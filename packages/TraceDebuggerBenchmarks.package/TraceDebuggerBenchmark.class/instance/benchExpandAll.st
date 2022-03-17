@@ -1,5 +1,6 @@
 benchmarks
 benchExpandAll
+	"Benchmark the expansion of all contexs in the tree."
 	<timeoutFactor: 3>
 
 	| item previousItem tree |

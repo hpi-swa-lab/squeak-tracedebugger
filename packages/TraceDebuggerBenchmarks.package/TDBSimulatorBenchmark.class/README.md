@@ -1,0 +1,1 @@
+I define benchmarks for different workloads that can be executed using the different simulators implemented in the TraceDebugger package.

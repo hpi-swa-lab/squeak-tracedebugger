@@ -1,0 +1,1 @@
+I define macro-benchmarks for evaluating several navigation workloads in a TraceDebugger.

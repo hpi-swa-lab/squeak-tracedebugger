@@ -1,5 +1,5 @@
 running
 tearDown
 
-	^ [((debugger "abandon" flag: #todo) ifNotNil: #containingWindow) ifNotNil: #abandon]
+	^ [((debugger abandon) ifNotNil: #containingWindow) ifNotNil: #abandon]
 		ensure: [super tearDown]

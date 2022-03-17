@@ -1,5 +1,6 @@
 historic data
 historicTimesToRun
+	"Answer all historic benchmark times from the CI-maintained GitHub repository database. See my class comment for further details."
 
 	| benchmarks data |
 	data := self historicData.
