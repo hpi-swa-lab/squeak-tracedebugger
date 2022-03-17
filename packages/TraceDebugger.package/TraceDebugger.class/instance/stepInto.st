@@ -1,4 +1,4 @@
-actions
+actions - stepping
 stepInto
 
 	self doStepForward:

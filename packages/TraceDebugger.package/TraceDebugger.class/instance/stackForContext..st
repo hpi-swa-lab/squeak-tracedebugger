@@ -3,6 +3,8 @@ stackForContext: aContext
 
 	| rootIndex stack |
 	stack := self cursor stackForContext: aContext.
+	
+	"Cut the stack to remove everything behind borderContexts"
 	self flag: #forLater. "Extract border contexts to cursor?"
 	rootIndex := stack findFirst: [:context | self borderContexts
 		ifEmpty: [false]

@@ -1,4 +1,4 @@
-private
+private - stepping
 doStepBackward: aBlock
 
 	^ self doStep:

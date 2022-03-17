@@ -7,6 +7,7 @@ buildInspectorsWith: aBuilder
 		wantsResizeHandles: true;
 		yourself.
 	parts := {self buildReceiverInspectorWith: aBuilder. self buildContextVariablesInspectorWith: aBuilder}.
+	"Flatten parts into panel to allow for arbitrary resizing."
 	panel children addAll: (parts withIndexCollect: [:part :index |
 		part children collect: [:spec | spec copy
 			frame: ((spec frame translateBy: index - 1 @ 0) scaleBy: parts size reciprocal @ 1);

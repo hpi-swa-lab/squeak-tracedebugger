@@ -7,7 +7,7 @@ guessTypeForName: aString
 		ifAbsent: [].
 	object := index
 		ifNil:
-			[index := (self receiver perform: #class) allInstVarNames
+			[index := (self selectedReceiver perform: #class) allInstVarNames
 				indexOf: aString
 				ifAbsent: [^ nil].
 			self receiver instVarAt: index]

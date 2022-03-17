@@ -1,4 +1,4 @@
-private
+private - constants
 contextVariablesInspectorClass
 
 	^ ContextVariablesInspector

@@ -1,6 +1,6 @@
 private - stepping
 basicStep
-	"Increment the time index and advance the trace as far as neccessary."
+	"Increment the time index and advance the trace as far as neccessary (aka lazy tracing)."
 
 	| trace |
 	trace := self trace.

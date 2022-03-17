@@ -1,5 +1,6 @@
 *TraceDebugger-UI-construction
 tdbAddUpdating: label target: target getState: getter setState: setter
+	"Add a pluggable menu item to the receiver. Label and getter/setter for the state can be evaluables like blocks. State can also be nil."
 
 	(getter respondsTo: #receiver) ifFalse: [
 		^ self tdbAddUpdating: label target: target getState: (getter ifNil: [[]] ifNotNil: [getter cull: target]) setState: setter].

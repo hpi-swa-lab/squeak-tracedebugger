@@ -1,4 +1,4 @@
-toolbuilder - constants
+toolbuilder - constants - color
 colorForHistory
 
 	^ self userInterfaceTheme colorForHistory ifNil:

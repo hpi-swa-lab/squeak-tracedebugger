@@ -1,4 +1,4 @@
-toolbuilder - menus
+toolbuilder
 contextMenu: aMenu shifted: shifted
 
 	^ self

@@ -8,6 +8,8 @@ context: aContext doNamedPrimitiveIn: aCompiledMethod for: rcvr withArgs: argume
 	
 	literal first
 		caseOf:
-			{[#MiscPrimitivePlugin] -> [^ aBlock value:
-				(self context: aContext primitiveFailTokenFor: nil "use image implementation")]}
+			{[#MiscPrimitivePlugin] ->
+				["Mostly optional primitives that read state."
+				^ aBlock value:
+					(self context: aContext primitiveFailTokenFor: nil "use image implementation")]}
 		otherwise: [].

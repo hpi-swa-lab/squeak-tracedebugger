@@ -1,4 +1,4 @@
-accessing
+accessing - descendants
 withAllDescendantsBreadthFirst
 
 	^ Generator on: [:stream |

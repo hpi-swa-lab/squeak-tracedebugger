@@ -1,7 +1,9 @@
 controlling
 context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: receiver args: arguments do: aBlock
+	"Before executing the primitive, remember any slots of the receiver that might be modified by the primitive. After executing the primitive successfully, record the old values in the memory."
 
 	| unarySelector oneArgSelector result |
+	"Identify record strategy"
 	primitiveIndex
 		caseOf:
 			{[39 "primitiveFloatAtPut"] -> [oneArgSelector := #record:fieldAt:oldValue:].
@@ -23,11 +25,9 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			[239 "primitiveFloatAtPut"] -> [oneArgSelector := #record:fieldAt:oldValue:]}
 		otherwise: [].
 	
-	"Fill cache for primitives that change state"
 	self flag: #todo. "Robustize primitives against missing arguments - return fail tokens"
-	self flag: #optimize. "Use unique primitiveFailToken instead of ifInMemory: closures and check for this token here instead of returning above"
 	
-	"Record slots before changing them"
+	"Apply record strategy"
 	unarySelector ifNotNil:
 		[| object oldValues |
 		object := arguments atLast: 2 ifAbsent: [receiver].
@@ -69,6 +69,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 				with: oldValue].
 		^ result].
 	
+	"No record strategy found, continue with next simulator"
 	^ super
 		context: aContext
 		doPrimitive: primitiveIndex

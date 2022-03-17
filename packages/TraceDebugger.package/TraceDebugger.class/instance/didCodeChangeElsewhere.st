@@ -12,4 +12,4 @@ didCodeChangeElsewhere
 	
 	^ currentCompiledMethod ~= aCompiledMethod
 		and: [aCompiledMethod last ~= 0 "either not yet installed"
-			or: [ currentCompiledMethod last = 0 "or these methods don't have source pointers"]]
+			or: [currentCompiledMethod last = 0 "or these methods don't have source pointers"]]

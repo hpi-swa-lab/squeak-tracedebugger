@@ -1,0 +1,1 @@
+I modify code simulation to emulate an earlier version of the state space (memory) that the code is accessing. To do this, I hook into different simulation capabilities that include any read access to state and redirect this read access so that an older version of the requested state is returned if available.

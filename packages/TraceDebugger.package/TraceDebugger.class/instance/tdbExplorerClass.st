@@ -1,4 +1,4 @@
-private
+private - constants
 tdbExplorerClass
 
 	^ TDBExplorer

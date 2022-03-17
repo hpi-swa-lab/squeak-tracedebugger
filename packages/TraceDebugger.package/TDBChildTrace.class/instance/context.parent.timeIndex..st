@@ -6,5 +6,3 @@ context: aContext parent: aTrace timeIndex: anInteger
 	memory := aTrace memory.
 	timeInterval := anInteger to: anInteger.
 	maxTimeIndex := anInteger.
-	
-	self defangUnhandledErrorIfAny.

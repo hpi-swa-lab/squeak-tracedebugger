@@ -1,4 +1,4 @@
-advancing
+updating
 advancedTo: aContext atTime: timeIndex
 
 	#optimized. "Copied from superclass to avoid super send"

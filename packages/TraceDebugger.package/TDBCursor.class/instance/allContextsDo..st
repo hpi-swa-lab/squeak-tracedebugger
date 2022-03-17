@@ -1,4 +1,4 @@
-enumerating
+enumerating contexts
 allContextsDo: aBlock
 
 	self rootTrace withAllDescendantsDo: [:trace |

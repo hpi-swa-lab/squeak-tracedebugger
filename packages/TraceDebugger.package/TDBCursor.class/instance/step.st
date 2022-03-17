@@ -1,6 +1,6 @@
 private - stepping
 step
-	"Do at least one step forward to the next visible context. Answer the new current context or nil if the execution has completed."
+	"Do at least one step forward to the next visible context. Answer the new current context or nil if the execution has been completed."
 
 	| context filter filtered method newMethod result |
 	result := self basicStep ifNil: [^ nil].

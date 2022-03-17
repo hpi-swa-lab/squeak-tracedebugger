@@ -1,8 +1,9 @@
 controlling
 context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: receiver args: originalArguments do: aBlock
+	"Redirect primitives that read any state. If the relevant object's slot is defined in the historic memory, use the recorded state from there instead of the current state for the object in  the image."
 
 	| arguments oneArgSelector unarySelector unaryPostSelector postResult |
-	"Resolve proxy arguments for the same memory by replacing them with the original receiver."
+	"Resolve proxy receiver/arguments for the same memory by replacing them with the original object. See TDBProxy>>#xxxtdbproxyForward: and senders."
 	arguments := nil.
 	originalArguments withIndexDo: [:argument :index |
 		((aContext objectClass: argument) isTdbProxyClass
@@ -11,7 +12,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 					at: index put: argument xxxtdbproxyObject]].
 	arguments ifNil: [arguments := originalArguments].
 	
-	self flag: #todo. "There might be much more primitives that access image state."
+	"Identify redirect strategy"
 	primitiveIndex
 		caseOf:
 			{[38 "primitiveFloatAt"] -> [oneArgSelector := #context:pushField:at:ifHit:].
@@ -31,17 +32,18 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			[210 "primitiveContextAt"] -> [oneArgSelector := #context:pushField:at:ifHit:].
 			[212 "primitiveContextSize"] -> [unarySelector := #context:pushContextSize:ifHit:].
 			[238 "primitiveFloatAt"] -> [oneArgSelector := #context:pushField:at:ifHit:].}
-		otherwise: [
-			(primitiveIndex >= 264 and: [primitiveIndex <=  519]) "primitiveLoadInstVar"
+		otherwise:
+			[(primitiveIndex >= 264 and: [primitiveIndex <=  519]) "primitiveLoadInstVar"
 				ifTrue: [self
 					context: aContext
 					pushInstVar: receiver
 					at: primitiveIndex - 264 + 1
 					ifHit: [:result | ^ result]]].
 	
-	"Look up cache for primitives that access state"
 	self flag: #todo. "Robustize primitives against missing arguments (return fail tokens)?"
-	self flag: #optimize. "Use unique primitiveFailToken instead of ifInMemory: closures and check for this token here instead of returning above"
+	self flag: #optimize. "Use unique primitiveFailToken instead of ifHit: closures and check for this token here instead of returning above. Would this be faster?"
+	
+	"Apply redirect strategy"
 	oneArgSelector ifNotNil:
 		[self
 			perform: oneArgSelector
@@ -56,6 +58,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			with: (arguments atLast: 1 ifAbsent: [receiver])
 			with: [:result | ^ result]].
 	
+	"No redirect required or no earlier state found in memory, continue with next simulator"
 	postResult := super
 		context: aContext
 		doPrimitive: primitiveIndex
@@ -64,6 +67,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 		args: arguments
 		do: aBlock.
 	
+	"Postpare redirect"
 	unaryPostSelector ifNotNil:
 		[postResult := self
 			perform: unaryPostSelector

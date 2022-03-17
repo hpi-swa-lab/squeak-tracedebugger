@@ -1,4 +1,4 @@
-enumerating
+enumerating contexts
 allContextClasses
 
 	| signatures |

@@ -1,4 +1,4 @@
 accessing
 methodClass
 
-	^ self method methodClass ifNil: [object objectClass: self receiver]
+	^ self method methodClass ifNil: [super methodClass]

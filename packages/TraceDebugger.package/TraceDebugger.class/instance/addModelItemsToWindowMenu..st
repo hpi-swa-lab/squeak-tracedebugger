@@ -1,4 +1,4 @@
-toolbuilder
+menus
 addModelItemsToWindowMenu: menu
 
 	super addModelItemsToWindowMenu: menu.

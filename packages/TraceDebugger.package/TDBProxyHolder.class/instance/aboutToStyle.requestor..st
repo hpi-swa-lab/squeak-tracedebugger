@@ -1,4 +1,4 @@
-morphic ui
+evaluating
 aboutToStyle: styler requestor: requestor
 
 	| result |

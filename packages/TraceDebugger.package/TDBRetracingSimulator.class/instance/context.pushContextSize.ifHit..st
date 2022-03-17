@@ -4,5 +4,5 @@ context: aContext pushContextSize: aContextObject ifHit: aBlock
 	^ self
 		context: aContext
 		simulatedContextSize: aContextObject
-		ifHit: [:result |
-			aBlock value: (aContext push: result)]
+		ifHit: [:value |
+			aBlock value: (aContext push: value)]

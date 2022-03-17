@@ -3,8 +3,9 @@ openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNi
 	"Open a notifier or a full debugger in response to an error, halt, or notify. Decorates that invocation with (1) recursive-error detection and (2) error logging."
 
 	| activeProcess |
-	Smalltalk isMorphic
-		ifFalse: [^ self fallbackDebugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
+	Smalltalk isMorphic ifFalse:
+		["Other UI frameworks are currently not supported!"
+		^ self fallbackDebugger openOn: aProcess context: aContext label: titleOrNil contents: aStringOrTextOrNil fullView: full].
 	
 	activeProcess := Processor activeProcess.
 	

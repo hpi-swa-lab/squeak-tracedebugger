@@ -1,4 +1,4 @@
-accessing
+accessing - descendants
 withAllDescendants
 
 	^ self withAllDescendantsBreadthFirst

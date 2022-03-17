@@ -1,4 +1,4 @@
-accessing
+private
 traceFor: aContext ifAbsent: absentBlock
 
 	^ self rootTrace

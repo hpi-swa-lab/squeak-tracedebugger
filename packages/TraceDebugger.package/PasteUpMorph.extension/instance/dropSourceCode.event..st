@@ -2,7 +2,7 @@
 dropSourceCode: anObject event: evt
 
 	| tool window |
-	self flag: #(override moveUpstream). "Preview for genericDropSourceCode.cs"
+	self flag: #(override moveUpstream). "Preview for genericDropSourceCode.cs. See: http://lists.squeakfoundation.org/pipermail/squeak-dev/2022-January/218665.html"
 	
 	(anObject isMethodReference and: [anObject isValid])
 		ifTrue: [^ self dropSourceCode: anObject compiledMethod event: evt].

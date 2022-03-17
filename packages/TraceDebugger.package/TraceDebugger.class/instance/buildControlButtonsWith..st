@@ -17,4 +17,4 @@ buildControlButtonsWith: builder
 		panelSpec children add: buttonSpec].
 
 	panelSpec layout: #horizontal.
-	^panelSpec
+	^ panelSpec

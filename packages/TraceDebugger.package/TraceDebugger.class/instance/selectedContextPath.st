@@ -1,4 +1,4 @@
-accessing
+accessing - context
 selectedContextPath
 
 	^ self selectedContext

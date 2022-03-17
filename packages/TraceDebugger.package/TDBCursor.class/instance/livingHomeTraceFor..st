@@ -1,4 +1,4 @@
-private - stepping
+private
 livingHomeTraceFor: aContext
 
 	| homeTrace |

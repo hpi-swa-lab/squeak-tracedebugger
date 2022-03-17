@@ -1,4 +1,4 @@
-enumerating
+enumerating contexts
 findContextForSignature: signature startingAtTime: timeIndex
 
 	^ self

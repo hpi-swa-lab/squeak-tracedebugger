@@ -8,14 +8,16 @@ buildContextTreeWith: aBuilder
 		getSelected: #treeSelectedContext;
 		setSelected: #treeSelectContext:;
 		getSelectedPath: #treeSelectedContextPath;
-		menu: #contextMenu:shifted:; 
-		doubleClick: #toggleBorderContext:;
+		
 		label: #contextLabelFor:;
 		icon: #contextIconFor:;
 		help: #contextToolTipFor:;
+		menu: #contextMenu:shifted:; 
+		doubleClick: #toggleBorderContext:;
 		keyPress: #contextTreeKey:from:event:;
 		dragItem: #dragContext:;
 		dragType: #dragTypeForContext:;
+		
 		hScrollBarPolicy: #whenNeeded;
 		columns: (self shouldShowReturnValue ifTrue:
 			[{[:listMorph | (listMorph filteredItems collect: [:item |

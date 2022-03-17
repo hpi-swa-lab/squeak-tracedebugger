@@ -1,4 +1,4 @@
-toolbuilder - constants
+toolbuilder - constants - color
 colorForDeadContext
 
 	^ self userInterfaceTheme colorForDeadContext ifNil:

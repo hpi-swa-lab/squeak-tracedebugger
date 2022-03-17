@@ -1,8 +1,9 @@
 private
 context: aContext cloneIntoTop: sourceObject
+	"We have copied sourceObject into aContext top using the VM. Modify all slots of the copy with the relevant states from the memory if sourceObject was recorded."
 
 	| copy copyClass size |
-	self flag: #rematerialization.
+	self flag: #rematerialization. "We're doing basically rematerialization here! At some point later we could extract and elevate this to its own concept. We also might want to use rematerialization to retrace unknown primitives or FFI calls correctly. See: #23"
 	
 	copy := aContext top.
 	copyClass := aContext objectClass: copy.
@@ -12,6 +13,7 @@ context: aContext cloneIntoTop: sourceObject
 		withArgs:
 			{#copyFrom:.
 			{copy}.
+			"address the relevant failure code"
 			(copyClass includesBehavior: CompiledCode)
 				ifTrue: [CompiledCode]
 				ifFalse: [Object]}.

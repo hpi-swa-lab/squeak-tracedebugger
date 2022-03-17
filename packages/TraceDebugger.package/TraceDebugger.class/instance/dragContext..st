@@ -1,4 +1,4 @@
 accessing - toolbuilder
 dragContext: aContext
 
-	^ TDBTraceSurrogate forDebugger: self context: aContext
+	^ TDBTreeItem forDebugger: self context: aContext

@@ -1,4 +1,4 @@
-accessing
+accessing - context
 childContextsFor: aContext
 
 	^ (childContexts ifNil: [childContexts := SimPluggableWeakKeyDictionary new

@@ -9,13 +9,15 @@ fieldListMenu: menu shifted: shifted
 		#(objectReferencesToSelection chaseSelectionPointers exploreSelectionPointers).
 	
 	"Dismiss not-yet-forwarded items."
-	fullMenu tdbRemoveAllSelectors: 
-		#(editGetterFor: editSetterFor:).
+	fullMenu tdbRemoveAllSelectors: #(editGetterFor:).
 	self flag: #todo. "Dispatch to #newCompilationCueFor:requestor: from InspectorField. See: inspector-compilercue.1.cs"
 	"menu items do: [:item |
-		(#(editGetterFor: editSetterFor:) includes: item selector)
+		(#(editGetterFor:) includes: item selector)
 			ifTrue:
 				[self assert: item arguments first == self inspector.
 				item arguments: (item arguments allButFirst copyWithFirst: self)]]."
+	
+	"Dismiss inappropiate field items."
+	fullMenu tdbRemoveAllSelectors: #(editSetterFor:). "Editing historic state is currently undefined, see #24."
 	
 	^ fullMenu

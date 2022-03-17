@@ -6,7 +6,7 @@ defangUnhandledErrorIfAny
 		and: [(context objectClass: context receiver) includesBehavior: UnhandledError])
 			ifFalse: [^ self].
 	
-	"Skip the rest of this method. The contract is that the cursor will detect invocations of this method during stepping. See TDBCursor >> #stepUntil:."
+	"Skip the rest of this method. The contract is that the cursor will detect invocations of this method during stepping. See TDBCursor >> #stepOverUnhandledError:from:until:."
 	context
 		push: context receiver;
 		jump: context endPC - context pc.

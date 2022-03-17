@@ -1,5 +1,6 @@
 accessing
 object: anObject atTime: timeIndex
+	"Answer a view on anObject at the specified time."
 
 	(UseProxiesAlways not and: [(self includesObject: anObject) not])
 		ifTrue: [^ anObject].

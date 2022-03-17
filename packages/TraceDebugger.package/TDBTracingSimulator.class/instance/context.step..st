@@ -1,5 +1,6 @@
 controlling
 context: aContext step: aBlock
+	"Wrap the next step of aContext with recording of the prior context state."
 
 	| oldPC result oldStack oldSize |
 	oldPC := aContext pc.

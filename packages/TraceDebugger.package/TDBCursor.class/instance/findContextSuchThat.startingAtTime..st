@@ -1,4 +1,4 @@
-enumerating
+enumerating contexts
 findContextSuchThat: aBlock startingAtTime: timeIndex
 
 	| filter |

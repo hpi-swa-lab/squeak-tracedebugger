@@ -1,4 +1,4 @@
-toolbuilder - constants
+toolbuilder - constants - layout
 extraCellGap
 	"Since BorderedMorph is currently not able to add the #cellGap between *two* fixed buttons rows at the same #topFraction, add that offset here explicitely."
 

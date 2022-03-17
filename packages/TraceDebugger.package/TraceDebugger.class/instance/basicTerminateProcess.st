@@ -1,4 +1,4 @@
-private
+private - process
 basicTerminateProcess
 
 	| theProcess processHasOtherViews |

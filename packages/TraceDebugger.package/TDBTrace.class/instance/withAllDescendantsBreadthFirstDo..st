@@ -1,4 +1,4 @@
-accessing
+accessing - descendants
 withAllDescendantsBreadthFirstDo: aBlock
 
 	aBlock value: self.

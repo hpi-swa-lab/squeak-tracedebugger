@@ -1,6 +1,6 @@
-private
+private - stepping
 basicSelectContext: aContext
-	"Select aContext without notifying the tree view, which is more expensive and thus handled separately."
+	"Select aContext without officially notifying the tree view, which is more expensive and thus handled separately."
 
 	| changed |
 	changed := (selectedContext tdbproxyYourself tdbIdentical: aContext tdbproxyYourself) not.

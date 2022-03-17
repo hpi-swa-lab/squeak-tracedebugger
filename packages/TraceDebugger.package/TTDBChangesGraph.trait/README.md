@@ -1,0 +1,1 @@
+I provide a declarative abstraction over the observer interface. See comment in #aspectDependencies.
