@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertObject:atSlot:hasSeries:" : "ct 11/19/2021 18:38",
+		"assertObject:atSlot:hasSeries:" : "ct 3/17/2022 19:44",
 		"classUnderTest" : "ct 11/18/2021 18:48",
 		"setUp" : "ct 11/19/2021 18:56",
 		"testObjects" : "ct 11/19/2021 18:51",

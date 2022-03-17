@@ -6,5 +6,5 @@ doStepForward: aBlock
 	outerTracingContext ifNotNil:
 		[^ aBlock value].
 	
-	outerTracingContext := thisContext home.
+	outerTracingContext := thisContext.
 	^ aBlock ensure: [outerTracingContext := nil]

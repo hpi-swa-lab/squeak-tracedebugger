@@ -2,6 +2,6 @@ updating
 update: aspect
 
 	aspect = #flash ifTrue:
-		[flashes addLast: thisContext sender home sender].
+		[flashes addLast: thisContext home sender home sender].
 	
 	^ super update: aspect

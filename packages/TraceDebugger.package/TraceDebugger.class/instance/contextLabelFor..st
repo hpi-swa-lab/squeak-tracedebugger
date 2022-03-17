@@ -12,7 +12,7 @@ contextLabelFor: aContext
 					, ([value printStringLimitedTo: 80]
 						ifError: [:msg | '<error: {1}' format: {msg}])]].
 	
-	(self cursor isContextAlive: aContext tdbproxyYourself) ifFalse:
+	(self cursor isContextAlive: aContext) ifFalse:
 		[label := label asText
 			addAttribute: (TextColor color: self colorForDeadContext);
 			yourself].

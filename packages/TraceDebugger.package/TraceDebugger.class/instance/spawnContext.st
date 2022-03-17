@@ -1,4 +1,4 @@
 actions
 spawnContext
 
-	^ self spawnContext: self selectedContext tdbproxyYourself
+	^ self spawnContext: self selectedContext

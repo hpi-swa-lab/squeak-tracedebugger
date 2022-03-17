@@ -9,4 +9,4 @@ pcRangeIn: aContext
 		rangeForPC: aContext pc
 		in: aContext method
 		contextIsActiveContext:
-			(aContext tdbIdentical: self interruptedContext tdbproxyYourself)
+			(aContext tdbIdentical: self interruptedContext)

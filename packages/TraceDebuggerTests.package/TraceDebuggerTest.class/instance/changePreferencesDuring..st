@@ -2,7 +2,7 @@ private
 changePreferencesDuring: aBlock
 
 	ContextVariablesInspector showStackVariables ifFalse:
-		[thisContext wrap: [:block |
+		[thisContext home wrap: [:block |
 			ContextVariablesInspector showStackVariables: true.
 			block ensure:
 				[ContextVariablesInspector showStackVariables: false]]].

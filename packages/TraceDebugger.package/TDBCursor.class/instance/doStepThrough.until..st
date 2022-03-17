@@ -9,8 +9,8 @@ doStepThrough: aContext until: aBlock
 		home := (self livingHomeTraceFor: aContext) contextAtTime: self timeIndex.
 		(((self livingHomeTraceFor: self context) contextAtTime: self timeIndex) tdbIdentical: home)
 			ifFalse: [self doStepThrough: aContext].
-		[(home := self object: home tdbproxyYourself) isDead not
-			and: [((context := self context) tdbIdentical: home tdbproxyYourself) ==> [home willReturn not]]
+		[(home := self object: home) isDead not
+			and: [((context := self context) tdbIdentical: home) ==> [home willReturn not]]
 			and: [(value := aBlock cull: context) == false]]
 				whileTrue:
 					[self doStepThrough: aContext].

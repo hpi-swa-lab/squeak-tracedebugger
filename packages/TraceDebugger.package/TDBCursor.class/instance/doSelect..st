@@ -10,9 +10,9 @@ doSelect: aContext
 	(self timeIndex
 		between: (minTime := self minTimeIndexFor: aContext)
 		and: (maxTime := self maxTimeIndexFor: aContext))
-			ifTrue: [^ self object: aContext tdbproxyYourself].
+			ifTrue: [^ self object: aContext].
 	
-	aContext tdbproxyYourself isDead
+	(self object: aContext atTime: self maxTimeIndex) isDead
 		ifFalse: [self
 			timeIndex: maxTime;
 			stepBackToSendOrReturn]
@@ -20,4 +20,4 @@ doSelect: aContext
 			timeIndex: minTime;
 			stepToSendOrReturn].
 	
-	^ self object: aContext tdbproxyYourself
+	^ self object: aContext

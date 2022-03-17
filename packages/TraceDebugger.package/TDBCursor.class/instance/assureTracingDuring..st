@@ -4,7 +4,7 @@ assureTracingDuring: aBlock
 
 	#installed == outerTracingContext ifFalse:
 		[| ctxt |
-		ctxt := thisContext.
+		ctxt := thisContext home.
 		self enableTracingDuring:
 			[outerTracingContext insertSender:
 				(thisContext sender cut: ctxt).

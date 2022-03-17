@@ -7,7 +7,7 @@ decorateView: view forObject: anObject
 			decorateView: (self assureView: view)
 			forObject: anObject].
 	
-	(thisContext objectClass: anObject) isTdbProxyClass ifFalse: [^ view].
+	(self isTdbProxy: anObject) ifFalse: [^ view].
 	
 	view model isTdbProxyHolder ifFalse:
 		[| newModel |

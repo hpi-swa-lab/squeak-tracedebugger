@@ -3,7 +3,7 @@ basicSelectContext: aContext
 	"Select aContext without officially notifying the tree view, which is more expensive and thus handled separately."
 
 	| changed |
-	changed := (selectedContext tdbproxyYourself tdbIdentical: aContext tdbproxyYourself) not.
+	changed := (selectedContext tdbIdentical: aContext) not.
 	selectedContext := aContext.
 	
 	"Update time index"

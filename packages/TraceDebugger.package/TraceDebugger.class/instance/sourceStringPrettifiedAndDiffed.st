@@ -5,7 +5,7 @@ sourceStringPrettifiedAndDiffed
 	class := self selectedClassOrMetaClass.
 	selector := self selectedMessageName.
 	(class isNil or: [selector isNil]) ifTrue: [^ 'missing'].
-	sourceString := (self selectedContext ifNil: [^ 'error']) debuggerMap sourceText tdbproxyYourself.
+	sourceString := (self selectedContext ifNil: [^ 'error']) debuggerMap sourceText. "<- changed!"
 	
 	self validateMessageSource: sourceString forSelector: selector inClass: class.
 	(#(#prettyPrint #prettyDiffs) 

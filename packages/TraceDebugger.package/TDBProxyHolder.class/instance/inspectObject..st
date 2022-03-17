@@ -1,7 +1,7 @@
 private
 inspectObject: anObject
 
-	(thisContext objectClass: anObject) isTdbProxyClass ifFalse:
+	(self isTdbProxy: anObject) ifFalse:
 		[^ self assureView: anObject inspect].
 	
 	^ self spawnModel: self tdbInspectorClass on: anObject
