@@ -1,0 +1,1 @@
+I evaluate all example methods that have been marked with the <tdbNotebook> pragma and validate all print-its that are stored in comments in these methods. Aka doctests. Experimental, low-fidelity prototype. Currently uses the debugger and exploits details about the bytecode structure instead of compiling all expressions against the notebook context.

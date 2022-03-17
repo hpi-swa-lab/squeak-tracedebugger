@@ -1,4 +1,4 @@
-*TraceDebuggerTests-UI-accessing
+*TraceDebuggerTests-Core-accessing
 selectedContents
 
 	| selection |
