@@ -1,0 +1,4 @@
+preferences
+extraDebuggerButtons
+
+	^ Preferences extraDebuggerButtons
