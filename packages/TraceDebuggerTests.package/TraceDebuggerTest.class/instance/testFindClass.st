@@ -8,18 +8,20 @@ testFindClass
 	debugger stepOver.
 	self should: debugger selectedContext willReturn.
 	
-	[debugger findClass]
-		valueSupplyingAnswer: {'*class*'. TDBTestLogic class}.
+	self shouldntFlash:
+		[[debugger findClass]
+			valueSupplyingAnswer: {'*class*'. TDBTestLogic class}].
 	selection := debugger selectedContext.
 	self assert: TDBTestLogic class >> #doPlonk equals: selection method.
-	self assert: (selection findContextSuchThat: [:ctxt | ctxt selector = #doPlonk]) notNil.
+	self deny: (selection findContextSuchThat: [:ctxt | ctxt selector = #doPlonk]) isNil.
 	
-	debugger findClassAgain.
+	self shouldFlash: [debugger findClassAgain].
 	self assert: selection equals: debugger selectedContext. "no more hit"
 	
 	
-	[debugger findClass]
-		valueSupplyingAnswer: {'*class*'. TDBTestLogic}.
+	self shouldntFlash:
+		[[debugger findClass]
+			valueSupplyingAnswer: {'*class*'. TDBTestLogic}].
 	#(plonk wiffy wiffy2 ziffy) do: [:selector |
 		self deny: selection equals: debugger selectedContext.
 		selection := debugger selectedContext.

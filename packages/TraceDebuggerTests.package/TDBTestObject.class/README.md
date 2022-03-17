@@ -1,0 +1,1 @@
+A simple state holder for testing object accessing.

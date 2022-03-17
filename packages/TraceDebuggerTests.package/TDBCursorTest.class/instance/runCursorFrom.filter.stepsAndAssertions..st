@@ -1,5 +1,10 @@
 running
 runCursorFrom: homeContext filter: filter stepsAndAssertions: stepsAndAssertions
+	"stepsAndAssertions:
+		#(...
+			(steppingSelectorOrBlock expectedContextSelector (expectedContextPredicate1 expectedContextPredicate2 ...))
+		...)
+	For each context check per tuple, the stepping selector will be sent to the cursor one more time."
 
 	| cursor homeClass |
 	homeClass := homeContext methodClass.
@@ -20,8 +25,7 @@ runCursorFrom: homeContext filter: filter stepsAndAssertions: stepsAndAssertions
 					contextsIn atEnd
 						ifFalse: [checksOut nextPut:
 							(contextsIn next
-								ifNil: [[:context | context tdbIdentical:
-									homeContext]]
+								ifNil: [[:context | context tdbIdentical: homeContext]]
 								ifNotNil: [:contextIn | [:context | context homeMethod tdbIdentical:
 									(contextIn isSymbol
 										ifTrue: [homeClass lookupSelector: contextIn]

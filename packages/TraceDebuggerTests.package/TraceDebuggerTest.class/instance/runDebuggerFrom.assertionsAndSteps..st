@@ -1,5 +1,20 @@
 running
 runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
+	"assertionsAndSteps:
+		#(assertions0
+		steps1
+		assertions1
+		...)
+			- assertions:
+				#(expectedContextSelector 'expected contents selection' expectedTree rcvrInspectorChecks ctxtInspectorChecks)
+				- expectedTree: Nested selectors.
+				- inspectorChecks:
+					#('field name 1' 'expected contents 1' 'field name 2' 'expected contents 2' ...)
+						- field name: name of existing inspector field or expression for a custom field
+			- steps:
+				#(steppingSelectorOrBlock1 steppingSelectorOrBlock2 ...)
+	Assertions and steps are performed in their read order.
+	"
 
 	| debugger process |
 	process := Process forContext: homeContext.
@@ -13,7 +28,7 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 			self should: debugger selectedContext selector = expected first.
 			
 			"check code pane"
-			self assert: (debugger selectedClassOrMetaClass newParser parseSelector: debugger contents asString lines first) = expected first.
+			self assert: expected first equals: (debugger selectedClassOrMetaClass newParser parseSelector: debugger contents asString lines first).
 			expected second ifNotNil: [:expectedSelection |
 				self assert: debugger selectedContents = expectedSelection].
 			

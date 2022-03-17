@@ -5,5 +5,6 @@ testBuildNotifier: messageText
 	debugger := self newDebuggerOn: [self fail: 'this should not be executed'] newProcess.
 	debugger messageText: messageText.
 	
-	self shouldntFail: [window := debugger buildNotifierWith: self toolBuilder].
-	self validateWindow: window.
+	self shouldntRaise: [window := debugger buildNotifierWith: self toolBuilder].
+	window := self validateWindow: window.
+	^ window

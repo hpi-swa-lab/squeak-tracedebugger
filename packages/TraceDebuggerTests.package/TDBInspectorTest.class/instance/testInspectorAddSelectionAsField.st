@@ -7,12 +7,11 @@ testInspectorAddSelectionAsField
 		griffle: 7;
 		yourself.
 	inspector := self classUnderTest on: object.
-	window := ToolBuilder open: inspector.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow: [ToolBuilder open: inspector].
 	
 	valuePane := window findDeepSubmorphThat: [:m | m knownName = #valuePane] ifAbsent: [self fail].
 	valuePane setText: '(plonk * griffle) squared'.
-	valuePane selectFrom: 2 to: 16.
+	valuePane selectFrom: 2 to: 16. "plonk * griffle"
 	inspector addSelectionAsField.
 	
 	self assert: #custom equals: inspector selectedField type.

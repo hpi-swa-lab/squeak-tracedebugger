@@ -2,8 +2,8 @@ tests - ui
 testTraceAndDebugBlock
 
 	| debugger window |
-	window := [TDBTestLogic new plonk] traceAndDebug.
-	self addTearDown: [window delete].
+	window := self newWindow:
+		[[TDBTestLogic new plonk] traceAndDebug].
 	debugger := window model.
 	
 	self assert: debugger selectedContext homeMethod = thisContext homeMethod.

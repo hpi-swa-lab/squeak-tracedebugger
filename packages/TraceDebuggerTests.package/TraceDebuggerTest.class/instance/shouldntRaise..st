@@ -1,5 +1,5 @@
 asserting
-shouldntFail: aBlock
+shouldntRaise: aBlock
 
 	^ self
 		shouldnt: aBlock

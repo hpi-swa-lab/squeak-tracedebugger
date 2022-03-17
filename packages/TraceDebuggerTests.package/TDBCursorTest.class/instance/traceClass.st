@@ -1,4 +1,4 @@
 accessing
 traceClass
 
-	^ TDBTrace
+	^ self classUnderTest traceClass

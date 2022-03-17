@@ -8,10 +8,10 @@ testInspector
 	self should: debugger selectedContext willReallyStore.
 	
 	"Spawn inspector"
-	window := debugger contextVariablesInspector
-		selectFieldNamed: #thisContext;
-		inspectSelection.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[debugger contextVariablesInspector
+			selectFieldNamed: #thisContext;
+			inspectSelection].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	snapshot selectFieldNamed: '[y]'.
@@ -26,18 +26,18 @@ testInspector
 	self assert: 'nil' equals: snapshot contents.
 	
 	"Spawn nested inspector"
-	window := snapshot
-		selectFieldNamed: 'sender';
-		inspectSelection.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[snapshot
+			selectFieldNamed: 'sender';
+			inspectSelection].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	snapshot selectFieldNamed: 'pc'.
 	self assert: '36' equals: snapshot contents.
 	
 	"Switch to explorer"
-	window := snapshot replaceInspectorWithExplorer.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[snapshot replaceInspectorWithExplorer].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	self assert: 36 equals: (snapshot evaluateExpression: 'pc' requestor: nil).

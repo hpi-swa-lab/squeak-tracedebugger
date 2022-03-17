@@ -1,7 +1,10 @@
 asserting - toolbuilder
 validateWindow: aToolBuilderSpec
+	"Crash & smoke tests for the Morphic UI"
 
 	| window |
+	Smalltalk isMorphic ifFalse: [self error: 'Cannot run these tests in MVC'].
+	
 	window := self toolBuilder build: aToolBuilderSpec.
 	
 	self assert: window isSystemWindow.
@@ -9,9 +12,9 @@ validateWindow: aToolBuilderSpec
 	self assert: window extent > 100 asPoint.
 	self deny: window label isEmptyOrNil.
 	
-	self shouldntFail: [window imageForm].
+	self shouldntRaise: [window imageForm].
 	
-	self shouldntFail: [| hand |
+	self shouldntRaise: [| hand |
 		(hand := HandMorph new)
 			sendEvent: (MouseEvent new
 				setType: #mouseOver
@@ -22,3 +25,4 @@ validateWindow: aToolBuilderSpec
 	
 	self validateBalloonsIn: window.
 	self validateMenusIn: window.
+	^ window

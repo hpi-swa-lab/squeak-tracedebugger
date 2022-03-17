@@ -1,4 +1,4 @@
-tests
+tests - trace
 testTraceContextFilter
 
 	| makeContext |

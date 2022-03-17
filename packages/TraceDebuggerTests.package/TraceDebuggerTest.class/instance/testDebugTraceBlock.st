@@ -2,8 +2,7 @@ tests - ui
 testDebugTraceBlock
 
 	| debugger window |
-	window := [TDBTestLogic new plonk] debugTrace.
-	self addTearDown: [window delete].
+	window := self newWindow: [[TDBTestLogic new plonk] debugTrace].
 	debugger := window model.
 	
 	self assert: debugger selectedContext homeMethod = thisContext homeMethod.

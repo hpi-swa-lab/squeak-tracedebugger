@@ -1,7 +1,7 @@
 snapshots
 checkSnapshots
 
-	snapshots keysAndValuesDo: [:timeIndex :snapshot | | shot snap |
+	snapshots keysAndValuesDo: [:timeIndex :snapshot | | snap shot |
 		snap := snapshot key.
 		shot := snapshot value.
 		self assert: shot equals:

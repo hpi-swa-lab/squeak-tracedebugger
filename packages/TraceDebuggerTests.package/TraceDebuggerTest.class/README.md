@@ -1,0 +1,1 @@
+Acceptance tests, UI tests & smoke tests for the TraceDebugger.

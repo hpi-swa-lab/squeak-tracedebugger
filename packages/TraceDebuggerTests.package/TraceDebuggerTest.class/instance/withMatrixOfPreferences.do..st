@@ -1,5 +1,6 @@
 running
 withMatrixOfPreferences: allPreferences do: aBlock
+	"Evaluate aBlock for each combination of enablements of allPreferences."
 
 	allPreferences tdbAllSubsetsDo: [:preferences |
 		self

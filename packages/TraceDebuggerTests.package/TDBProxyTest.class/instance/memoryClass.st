@@ -1,4 +1,4 @@
-accesing
+accessing
 memoryClass
 
 	^ TDBMemory

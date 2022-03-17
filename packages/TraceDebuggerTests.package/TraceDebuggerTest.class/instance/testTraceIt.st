@@ -5,8 +5,7 @@ testTraceIt
 	process := Process forBlock: [TDBTestLogic new plonk] runUntil: [:ctx | ctx selector = #plonk].
 	context := process suspendedContext.
 	squeakDebugger := self newSqueakDebuggerOn: process.
-	squeakWindow := squeakDebugger containingWindow.
-	self addTearDown: [squeakWindow delete].
+	squeakWindow := self newWindow: [squeakDebugger containingWindow].
 	self should: squeakWindow isInWorld.
 	
 	3 timesRepeat: [squeakDebugger stepInto].

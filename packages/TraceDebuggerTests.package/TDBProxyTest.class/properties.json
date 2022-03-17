@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"memory",
+		"object",
+		"proxy" ],
 	"name" : "TDBProxyTest",
 	"pools" : [
 		 ],

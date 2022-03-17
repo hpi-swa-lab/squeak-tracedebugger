@@ -3,7 +3,7 @@ validateMenu: menu
 
 	menu ifNil: [^ self].
 	
-	self shouldntFail: [menu imageForm].
+	self shouldntRaise: [menu imageForm].
 	self deny: menu items isEmpty.
 	
 	menu items do: [:item |

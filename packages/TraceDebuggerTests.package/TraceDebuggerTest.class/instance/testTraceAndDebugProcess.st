@@ -2,8 +2,8 @@ tests - ui
 testTraceAndDebugProcess
 
 	| debugger window |
-	window := [TDBTestLogic new plonk] newProcess traceAndDebug.
-	self addTearDown: [window delete].
+	window := self newWindow:
+		[[TDBTestLogic new plonk] newProcess traceAndDebug].
 	debugger := window model.
 	
 	self assert: debugger selectedContext selector = #newProcess.

@@ -1,4 +1,6 @@
 tests - ui
 testBuildNotifierWithMessage
 
-	^ self testBuildNotifier: 'plonk'
+	| window |
+	window := self testBuildNotifier: 'plonk'.
+	self assert: ((window allStringsAfter: nil) includes: 'plonk').

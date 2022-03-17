@@ -3,8 +3,7 @@ testDebugTraceProcess
 
 	| debugger window |
 	debugger := [TDBTestLogic new plonk] newProcess debugTrace.
-	window := debugger containingWindow.
-	self addTearDown: [window delete].
+	window := self newWindow: [debugger containingWindow].
 	
 	self assert: debugger selectedContext selector = #newProcess.
 	self deny: debugger isDisplayingHistory.

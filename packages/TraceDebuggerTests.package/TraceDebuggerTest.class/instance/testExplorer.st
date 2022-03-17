@@ -8,10 +8,10 @@ testExplorer
 	self should: debugger selectedContext willReallyStore.
 	
 	"Spawn explorer"
-	window := debugger contextVariablesInspector
-		selectFieldNamed: #thisContext;
-		inspectSelection.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[debugger contextVariablesInspector
+			selectFieldNamed: #thisContext;
+			inspectSelection].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	self assert: 29 equals: (snapshot evaluateExpression: 'pc' requestor: nil).
@@ -22,24 +22,23 @@ testExplorer
 	self assert: 29 equals: (snapshot evaluateExpression: 'pc' requestor: nil).
 	
 	"Spawn nested explorer"
-	window := snapshot exploreObject: (snapshot evaluateExpression: 'sender' requestor: nil).
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[snapshot exploreObject: (snapshot evaluateExpression: 'sender' requestor: nil)].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	self assert: self selector equals: (snapshot evaluateExpression: 'self selector' requestor: nil).
 	
 	"Switch to inspector"
-	window := snapshot inspectObject.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow: [snapshot inspectObject].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	self assert: self selector equals: (snapshot evaluateExpression: 'self selector' requestor: nil).
 	
 	"Switch to explorer"
-	window := snapshot
-		selectFieldNamed: 'sender';
-		exploreSelection.
-	window in: [:w | self addTearDown: [w delete]].
+	window := self newWindow:
+		[snapshot
+			selectFieldNamed: 'sender';
+			exploreSelection].
 	snapshot := window model.
 	self assert: (window label includesSubstring: 'snapshot').
 	self assert: #newProcess equals: (snapshot evaluateExpression: 'self selector' requestor: nil).

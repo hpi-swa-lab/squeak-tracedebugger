@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testTdbAllSubsetsDo" : "ct 3/11/2022 00:54" } }
+		"should:send:" : "ct 3/17/2022 13:45",
+		"testTdbAllSubsetsDo" : "ct 3/11/2022 00:54",
+		"testTdbTuplesDo" : "ct 3/17/2022 13:47" } }
