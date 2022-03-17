@@ -1,12 +1,18 @@
 running
 performNotebookTest
 
-	| home |
+	| process home |
+	self shouldntRaise: [self runNotebook].
+	self flag: #TestCoverage. "We run the notebook normally before because DebuggerMethodMap is not compatible with TestCoverage wrappers"
+	
 	self flag: #forLater. "Instead of the Debugger, invoke the Compiler with context-specific do-its."
 	
-	home := self notebookContext.
+	process := Process
+		forBlock: [self runNotebook] runUntil: [:ctx |
+			ctx isBottomContext not and: [ctx sender selector = #runNotebook]].
+	home := process suspendedContext.
 	debugger := self debuggerClass new
-		process: (Process forContext: home) context: home;
+		process: process context: home;
 		initializeFull;
 		yourself.
 	debugger stepOver.
