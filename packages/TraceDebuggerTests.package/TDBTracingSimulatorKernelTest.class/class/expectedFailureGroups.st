@@ -1,4 +1,4 @@
-accessing
+as yet unclassified
 expectedFailureGroups
 
 	| groups |
@@ -8,14 +8,6 @@ expectedFailureGroups
 		{#testAtPutOutOfBounds flag: #todo. "#50"}).
 	groups at: #DoubleWordArrayTest put: ((groups at: #DoubleWordArrayTest ifAbsent: [{}]) ,
 		{#testAtPutOutOfBounds flag: #todo. "#50"}).
-	
-	groups at: #ExceptionTests put: ((groups at: #ExceptionTests ifAbsent: [{}]) ,
-		{#testResumablePass flag: #todo.
-		#testSimpleIsNested flag: #todo}).
-	
-	groups at: #SimulationContextTest put: ((groups at: #SimulationContextTest ifAbsent: [{}]) ,
-		{#testDecustomize flag: #todo}).
-	
 	groups at: #WordArrayTest put: ((groups at: #WordArrayTest ifAbsent: [{}]) ,
 		{#testAtPutOutOfBounds flag: #todo. "#50"}).
 	

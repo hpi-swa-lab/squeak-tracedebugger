@@ -17,6 +17,8 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 			[105 "primitiveStringReplace"] ->
 				[self flag: #optimize.
 				^ self context: aContext primitiveFailTokenFor: nil "use image implementation"].
+			[117 "primitiveExternalCall"] ->
+				[self context: aContext doNamedPrimitiveIn: aCompiledMethod for: receiver withArgs: arguments ifHit: [:value | ^ value]].
 			[144 "primitiveShortAtPut"] -> [oneArgSelector := #record:fieldAt:oldValue:].
 			[145 "primitiveConstantFill"] -> [unarySelector := #record:oldFields:].
 			[166 "primitiveIntegerAtPut"] -> [oneArgSelector := #record:fieldAt:oldValue:].
@@ -29,10 +31,15 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	
 	"Apply record strategy"
 	unarySelector ifNotNil:
-		[| object oldValues |
+		[| object objectClass primitiveAt oldValues |
 		object := arguments atLast: 2 ifAbsent: [receiver].
+		primitiveAt := ((objectClass := aContext objectClass: object) includesBehavior: String)
+			ifTrue: [63 "primitiveStringAt"]
+			ifFalse: [(objectClass includesBehavior: FloatArray)
+				ifTrue: [238 "primitiveFloatAt"]
+				ifFalse: [61]].
 		oldValues := (1 to: (aContext objectSize: object)) collect: [:index |
-			self context: aContext readSlot: object at: index primitive: 60 "primitiveAt"].
+			self context: aContext readSlot: object at: index primitive: primitiveAt].
 		result := super
 			context: aContext
 			doPrimitive: primitiveIndex
