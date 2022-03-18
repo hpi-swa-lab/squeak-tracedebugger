@@ -26,7 +26,7 @@ jobs:
           name: image
       - run: |
           unzip Squeak*.zip
-          ./squeak.sh ./scripts/buildScreenshots.st
+          ./squeak.sh -headlesss ./scripts/buildScreenshots.st
           cp Squeak*.app/Contents/Resources/screenshots/ .
       - uses: actions/checkout@v3
         with:
