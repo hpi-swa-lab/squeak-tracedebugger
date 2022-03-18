@@ -6,7 +6,7 @@ TheWorldMainDockingBar instance closeAllWindows.
 	title := wizard findA: TextMorph.
 	title newContents: (('{1} - {2}' format: {title contents. TraceDebugger appName})
 		asText
-			addAllAttributes: (t contents attributesAt: 1);
+			addAllAttributes: (title contents attributesAt: 1);
 			yourself)].
 
 "Prepare world"
