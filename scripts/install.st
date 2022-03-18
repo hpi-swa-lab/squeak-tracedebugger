@@ -9,5 +9,6 @@ Transcript showln: ('Installing TraceDebugger from {1}... ' format: {workspacePa
 Metacello new
 	baseline: 'TraceDebugger';
 	repository: 'filetree://' , workspacePath , '/packages';
+	onConflictUseIncoming;
 	load: (Smalltalk globals at: #CIMCRequired ifAbsent: [#default]).
 Transcript showln: 'TraceDebugger was installed'.
