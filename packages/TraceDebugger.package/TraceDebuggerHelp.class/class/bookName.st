@@ -1,0 +1,4 @@
+accessing
+bookName 
+
+	^ TraceDebugger appName

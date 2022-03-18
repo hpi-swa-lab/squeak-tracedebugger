@@ -1,0 +1,4 @@
+actions
+showHelp
+
+	TraceDebuggerHelp openHelpBrowser.
