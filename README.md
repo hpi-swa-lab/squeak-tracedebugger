@@ -1,8 +1,9 @@
 # Trace Debugger
 
-[![Tests](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/tests.yml/badge.svg)](https://github.com/LinqLover/squeak-tracedebugger/actions)
+[![Tests](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/tests.yml/badge.svg)](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/LinqLover/squeak-tracedebugger/badge.svg?branch=main)](https://coveralls.io/github/LinqLover/squeak-tracedebugger)
 [![Benchmarks](https://img.shields.io/badge/-benchmarks-blue)](https://LinqLover.github.io/squeak-tracedebugger/dev/bench/)
+[![Release](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/release.yml/badge.svg)](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/release.yml)
 
 A lightweight and efficient back-in-time debugger for [Squeak](http://squeak.org/) to trace and retrace past method invocations and state changes.
 Powered by [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
@@ -16,7 +17,9 @@ Key features:
 - **Context filters** (by package, selector, receiver, ...)
 - **Snapshot inspectors/explorers** for objects during debugging
 
-![TraceDebugger](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true)
+<p align="center">
+<img src="https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true"></img>
+</p>
 
 <small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/release.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/LinqLover/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
 
