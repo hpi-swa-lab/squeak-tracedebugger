@@ -4,7 +4,6 @@ on: [push, workflow_dispatch]
 
 jobs:
   create-image:
-    if: github.event.pull_request.draft != true  # clean-IT
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
