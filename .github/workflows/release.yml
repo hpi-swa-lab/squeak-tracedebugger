@@ -1,0 +1,76 @@
+name: Release
+
+on: [push, workflow_dispatch]
+
+jobs:
+  create-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: LinqLover/create-image@master
+        id: create-image
+        with:
+          prepare-script: ./scripts/prepareImage.st
+      - uses: actions/upload-artifact@master
+        with:
+          name: image
+          path: ${{ steps.create-image.outputs.bundle-path }}
+
+  build-screenshots:
+    needs: create-image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@master
+        with:
+          name: image
+      - name: Build screenshots
+        run: |
+          unzip Squeak*.zip
+          ./squeak.sh -headless $(realpath ./scripts/buildScreenshots.st)
+          cp -r Squeak*.app/Contents/Resources/screenshots/ .
+      - uses: actions/upload-artifact@master
+        with:
+          name: screenshots
+          path: screenshots/
+  
+  upload-screenshots:
+    needs:
+      - build-screenshots
+      - release-image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - run: rm -rf screenshots/
+      - uses: actions/download-artifact@master
+        with:
+          name: screenshots
+          path: screenshots/
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: screenshots/
+          message: "Add screenshots for ${{ github.sha }}"
+
+  release-image:
+    needs: create-image
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d-%H%M%S')"
+      - uses: actions/download-artifact@master
+        with:
+          name: image
+      - run: mv Squeak*.zip TraceDebugger-${{ steps.date.outputs.date }}.zip
+      - uses: softprops/action-gh-release@v1
+        with:
+          tag_name: untagged-${{ steps.date.outputs.date }}
+          body: ${{ github.event.head_commit.message }}
+          files: TraceDebugger-*.zip
+          fail_on_unmatched_files: true
+          prerelease: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

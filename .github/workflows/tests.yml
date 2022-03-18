@@ -50,7 +50,7 @@ jobs:
           tool: customSmallerIsBetter
           output-file-path: ${{ runner.temp }}/benchmark-data.json
           auto-push: true
-          gh-pages-branch: gh-pages-benchmarks-2
+          gh-pages-branch: gh-pages
           comment-always: false
           fail-on-alert: false
           alert-threshold: "150%"
