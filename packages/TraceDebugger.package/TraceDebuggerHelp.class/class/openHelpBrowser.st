@@ -1,4 +1,4 @@
 instance creation
 openHelpBrowser
 
-	^ self edit: #introduction
+	^ self resizeWindow: (self edit: self defaultPage)

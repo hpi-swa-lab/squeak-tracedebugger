@@ -1,0 +1,1 @@
+This stub complements the intentions of TraceDebuggerHelpForEdit, that is, to edit a template page from the subclass and store the result in the superclass TraceDebuggerHelp.

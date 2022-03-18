@@ -1,0 +1,1 @@
+This subclass reveals the page templates from the superclass to make them editable. See the comment in super.

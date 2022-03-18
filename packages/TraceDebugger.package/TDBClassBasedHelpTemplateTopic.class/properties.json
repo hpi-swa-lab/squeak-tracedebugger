@@ -3,12 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Figures" ],
-	"commentStamp" : "ct 3/18/2022 21:07",
+		 ],
+	"commentStamp" : "ct 3/18/2022 21:09",
 	"instvars" : [
 		 ],
-	"name" : "TraceDebuggerHelp",
+	"name" : "TDBClassBasedHelpTemplateTopic",
 	"pools" : [
 		 ],
-	"super" : "CustomHelp",
+	"super" : "ClassBasedHelpTopic",
 	"type" : "normal" }
