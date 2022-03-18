@@ -1,7 +1,7 @@
 screenshots
 createScreenshot
 
-	self recorder writeTo: 'TraceDebugger.png' building: [:helper |
+	self recorder writeTo: 'screenshots/TraceDebugger.png' building: [:helper |
 		| window debugger splitter tree child cvp |
 		window := ['A' matchesRegex: '((?<=^)A)+'] traceAndDebug.
 		debugger := window model.
