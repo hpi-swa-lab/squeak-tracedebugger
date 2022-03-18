@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: LinqLover/create-image
+      - uses: LinqLover/create-image@master
         id: create-image
         with:
           prepare-script: ./scripts/prepareImage.st
