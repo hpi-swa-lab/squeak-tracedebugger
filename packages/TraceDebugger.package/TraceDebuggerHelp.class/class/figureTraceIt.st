@@ -9,6 +9,7 @@ figureTraceIt
 		yourself.
 	window := ToolBuilder build: debugger.
 	window extent: 500 @ 300.
+	window lookFocused.
 	button := window allMorphs detect: [:m | m isButton and: [m label = 'Trace It']].
 	button updateFillStylePressing: true hovering: false.
 	^ (window imageFormForRectangle: (((window fullBounds translateBy: window fullBounds origin negated) scaleBy: 1 @ 0.53) translateBy: window fullBounds origin))

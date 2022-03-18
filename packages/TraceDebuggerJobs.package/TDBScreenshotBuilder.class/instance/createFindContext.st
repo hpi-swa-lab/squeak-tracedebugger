@@ -12,4 +12,6 @@ createFindContext
 	
 		helper runModal: [debugger findContext] then:
 			[helper type: 'number' into: helper dialogWindow.
+			helper dialogWindow paneMorph extent:
+				(helper dialogWindow paneMorph extent * (1 @ 0.5)).
 			helper takeScreenshotOf: helper dialogWindow]]
