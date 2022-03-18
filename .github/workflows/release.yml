@@ -28,15 +28,11 @@ jobs:
         run: |
           unzip Squeak*.zip
           ./squeak.sh -headless $(realpath ./scripts/buildScreenshots.st)
-          echo Squeak*.app
-          echo Squeak*.app/Contents/Resources
-          ls Squeak*.app/Contents/Resources
-          echo Squeak*.app/Contents/Resources/screenshots/
-          ls Squeak*.app/Contents/Resources/screenshots/
+          cp -r Squeak*.app/Contents/Resources/screenshots/ .
       - uses: actions/upload-artifact@master
         with:
           name: screenshots
-          path: Squeak*.app/Contents/Resources/screenshots/
+          path: screenshots/
   
   upload-screenshots:
     #needs: release-image
