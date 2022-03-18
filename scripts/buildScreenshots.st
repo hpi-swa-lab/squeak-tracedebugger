@@ -12,10 +12,10 @@ Transcript showln: 'Loading screenshot jobs...'.
 Smalltalk globals at: #CIMCRequired put: 'TraceDebuggerJobs'.
 Smalltalk globals at: #CIPrepareImageDirectory put: (FileDirectory forFileName: Smalltalk documentPath).
 ((Smalltalk globals at: #CIPrepareImageDirectory) directoryEntry / 'install.st') readStream fileIn.
-Transcript showln: 'Done.'; showln.
+Transcript showln: 'Done.'; cr.
 
 Transcript showln: 'Creating screenshots...'.
 (Smalltalk classNamed: #TDBScreenshotBuilder) new createScreenshot.
-Transcript showln: 'Done.'; showln.
+Transcript showln: 'Done.'; cr.
 
 Smalltalk snapshot: false andQuitWithExitCode: 0.
