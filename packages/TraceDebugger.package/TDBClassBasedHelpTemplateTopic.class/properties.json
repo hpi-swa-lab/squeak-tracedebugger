@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI-Help",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 3/18/2022 21:09",
+	"instvars" : [
+		 ],
+	"name" : "TDBClassBasedHelpTemplateTopic",
+	"pools" : [
+		 ],
+	"super" : "ClassBasedHelpTopic",
+	"type" : "normal" }

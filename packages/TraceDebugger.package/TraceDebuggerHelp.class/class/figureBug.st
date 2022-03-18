@@ -1,0 +1,4 @@
+figures
+figureBug
+
+	^ MenuIcons smallDebugIcon

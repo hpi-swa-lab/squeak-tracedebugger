@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI-Help",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 3/18/2022 21:08",
+	"instvars" : [
+		 ],
+	"name" : "TraceDebuggerHelpForEdit",
+	"pools" : [
+		 ],
+	"super" : "TraceDebuggerHelp",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
 accessing
 pages
 
-	^ #(introduction)
+	^ #(introduction entryPoints structure basicNavigation advancedNavigation findingContexts contextFilters learnMore)

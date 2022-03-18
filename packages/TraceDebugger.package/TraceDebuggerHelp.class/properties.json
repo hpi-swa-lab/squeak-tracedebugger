@@ -1,10 +1,10 @@
 {
-	"category" : "TraceDebugger-UI",
+	"category" : "TraceDebugger-UI-Help",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
-	"commentStamp" : "",
+		"Figures" ],
+	"commentStamp" : "ct 3/18/2022 21:07",
 	"instvars" : [
 		 ],
 	"name" : "TraceDebuggerHelp",
