@@ -22,6 +22,7 @@ Key features:
 
 Read the [exposé](./docs/exposé.md) and the [product visions](./docs/product-visions.md) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
+There are many open interesting [issues](https://github.com/LinqLover/squeak-tracedebugger/issues) for future work.
 
 ## Installation
 
