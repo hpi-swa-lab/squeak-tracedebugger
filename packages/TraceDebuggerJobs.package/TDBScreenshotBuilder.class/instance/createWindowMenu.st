@@ -1,7 +1,7 @@
 screenshots
 createWindowMenu
 
-	self recorder writeTo: 'screenshots/editFilters.png' frame: [:bounds | bounds * (0.7 @ 0 rect: 1 @ 0.58)] building: [:helper |
+	self recorder writeTo: 'screenshots/windowMenu.png' frame: [:bounds | bounds * (0.7 @ 0 rect: 1 @ 0.64)] building: [:helper |
 		| window button |
 		helper worldColor: Color transparent.
 		[4 / 6] debugTrace.
