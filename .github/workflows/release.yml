@@ -35,7 +35,9 @@ jobs:
           path: screenshots/
   
   upload-screenshots:
-    needs: release-image
+    needs:
+      - build-screenshots
+      - release-image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
