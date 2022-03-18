@@ -5,6 +5,7 @@
 [![Benchmarks](https://img.shields.io/badge/-benchmarks-blue)](https://LinqLover.github.io/squeak-tracedebugger/dev/bench/)
 
 A lightweight and efficient back-in-time debugger for [Squeak](http://squeak.org/) to trace and retrace past method invocations and state changes.
+Powered by [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
 
 Key features:
 
@@ -17,34 +18,44 @@ Key features:
 
 ![TraceDebugger](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true)
 
+<small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/release.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/LinqLover/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
+
 Read the [exposé](./docs/exposé.md) and the [product visions](./docs/product-visions.md) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
 
 ## Installation
 
+We offer a pre-configured all-in-one image. Please go to the [releases section](https://github.com/LinqLover/squeak-tracedebugger/releases), download and extract the latest `TraceDebugger-*.zip` archive, and execute it.
+
+To install the TraceDebugger manually, evaluate the following in a workspace:
+
 ```smalltalk
 Metacello new
 	baseline: 'TraceDebugger';
 	repository: 'github://LinqLover/squeak-tracedebugger';
+	get;
 	load.
 ```
 
 You can also check out the repository via [Squot](https://github.com/hpi-swa/Squot) and install all dependencies manually.
 
+To install updates, evaluate the following:
+
+```smalltalk
+TraceDebugger selfUpdate.
+```
+
+(You can also do this via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
+
 ## Usage
 
-Debug an expression in the Trace Debugger:
+For a quick start, open a normal expression in a debugger and press the new <kbd>Trace it</kbd> button on the right. For a detailed manual on the TraceDebugger, please read the in-image help here:
 
 ```smalltalk
-TraceDebugger openOn: ['\w+' asRegex].
+TraceDebuggerHelp openHelpBrowser.
 ```
 
-Shortcut:
-```smalltalk
-[2 / 0] debugTrace.
-```
-
-For further examples, see the meta protocol `examples` of the `TraceDebugger` class.
+(Again, you can also open this help via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
 
 ## Architecture
 
@@ -64,7 +75,7 @@ This solution is organized as follows:
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebugger.package/">TraceDebugger</a></td>
-			<td>Tracing machinery and UI for the TraceDebugger. Integration into the base system..</td>
+			<td>Tracing machinery and UI for the TraceDebugger. Integration into the base system. Help contents.</td>
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebuggerTests.package/">TraceDebuggerTests</a></td>
