@@ -7,5 +7,5 @@ isContextAlive: aContext
 		between: (self minTimeIndexFor: aContext)
 		and: (self maxTimeIndexFor: aContext)"
 	
-	^ aContext tdbproxyYourself isDead not
+	^ (self object: aContext) isDead not
 	"See TDBTracingSimulator>>#context:activateMethod:withArgs:receiver:do:."
