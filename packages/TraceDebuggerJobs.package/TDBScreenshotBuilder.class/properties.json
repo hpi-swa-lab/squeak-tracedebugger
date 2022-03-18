@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerJobs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBScreenshotBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -3,6 +3,7 @@ buildContextTreeWith: aBuilder
 
 	^ aBuilder pluggableTreeSpec new
 		model: self;
+		name: #contextTree;
 		roots: #treeRootContexts;
 		getChildren: #treeChildContextsFor:;
 		getSelected: #treeSelectedContext;

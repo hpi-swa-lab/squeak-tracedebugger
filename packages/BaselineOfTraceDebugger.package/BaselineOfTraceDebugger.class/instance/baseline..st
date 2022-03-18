@@ -15,6 +15,10 @@ baseline: spec
 				spec loads: 'SimulationStudio-Support'];
 			project: 'SimulationStudio-Tests' copyFrom: 'SimulationStudio-Support' with: [
 				spec loads: #('SimulationStudio-Tests-Base' 'SimulationStudio-Support')];
+			baseline: 'SBE' with: [
+				spec
+					repository: 'github://hpi-swa-lab/SqueakByExample-english/SmalltalkSources';
+					loads: #'SBE-Extract'];
 			baseline: 'StatisticsWorkbench' with: [
 				spec
 					repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
@@ -26,7 +30,9 @@ baseline: spec
 			package: 'TraceDebuggerTests' with: [
 				spec requires: #('TraceDebugger' 'SimulationStudio-Tests')];
 			package: 'TraceDebuggerBenchmarks' with: [
-				spec requires: #('TraceDebugger' 'JSON' 'SimulationStudio-Support' 'StatisticsWorkbench')].
+				spec requires: #('TraceDebugger' 'JSON' 'SimulationStudio-Support' 'StatisticsWorkbench')];
+			package: 'TraceDebuggerJobs' with: [
+				spec requires: #('TraceDebugger' 'SBE')].
 		
 		"groups"
 		spec
