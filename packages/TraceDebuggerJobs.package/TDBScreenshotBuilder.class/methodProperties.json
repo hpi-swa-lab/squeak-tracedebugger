@@ -1,6 +1,8 @@
 {
 	"class" : {
-		 },
+		"createScreenshot:" : "ct 3/18/2022 21:29",
+		"createScreenshots" : "ct 3/18/2022 21:29",
+		"screenshotSelectors" : "ct 3/18/2022 21:29" },
 	"instance" : {
 		"createContextToolTip" : "ct 3/18/2022 18:34",
 		"createFindContext" : "ct 3/18/2022 20:32",

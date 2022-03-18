@@ -15,7 +15,7 @@ Smalltalk globals at: #CIPrepareImageDirectory put: (FileDirectory forFileName: 
 Transcript showln: 'Done.'; cr.
 
 Transcript showln: 'Creating screenshots...'.
-(Smalltalk classNamed: #TDBScreenshotBuilder) new createScreenshot.
+(Smalltalk classNamed: #TDBScreenshotBuilder) createScreenshots.
 Transcript showln: 'Done.'; cr.
 
 Smalltalk snapshot: false andQuitWithExitCode: 0.
