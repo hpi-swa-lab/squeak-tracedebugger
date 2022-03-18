@@ -20,6 +20,7 @@ addModelItemsToWindowMenu: menu
 		add: 'send feedback...' action: #sendFeedback;
 		balloonTextForLastItem: 'make the author happy by giving him some feedback'.
 	menu
+		add: 'edit preferences' action: #openPreferences;
 		add: 'show help' action: #showHelp.
 	menu
 		add: 'self-update' action: #doSelfUpdate;
