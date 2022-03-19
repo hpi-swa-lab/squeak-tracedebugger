@@ -1,8 +1,8 @@
 enumerating contexts
-allContextClasses
+allContextClassesBelow: aContext
 
 	| signatures |
 	signatures := Set new.
-	self rootTrace withAllDescendantsDo: [:trace |
+	(self traceFor: aContext) withAllDescendantsDo: [:trace |
 		signatures add: (trace contextAtTime: self timeIndex) methodClass].
 	^ signatures
