@@ -1,0 +1,4 @@
+accessing
+shouldShowExceptionContexts
+
+	^ self class shouldShowExceptionContexts

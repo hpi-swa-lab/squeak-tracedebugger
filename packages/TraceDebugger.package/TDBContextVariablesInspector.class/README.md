@@ -1,0 +1,1 @@
+I tweak ContextVariablesInspector with further special features.

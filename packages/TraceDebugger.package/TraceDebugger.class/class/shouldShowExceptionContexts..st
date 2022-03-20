@@ -1,0 +1,4 @@
+preferences
+shouldShowExceptionContexts: aBoolean
+
+	^ TDBContextVariablesInspector shouldShowExceptionContexts: aBoolean

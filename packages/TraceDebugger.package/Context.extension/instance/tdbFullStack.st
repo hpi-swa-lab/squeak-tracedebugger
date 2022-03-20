@@ -1,4 +1,4 @@
-*TraceDebugger-UI-accessing
+*TraceDebugger-Core-accessing
 tdbFullStack
 
 	^ Array streamContents: [:stream |

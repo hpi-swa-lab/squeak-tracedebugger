@@ -1,4 +1,4 @@
 private - constants
 contextVariablesInspectorClass
 
-	^ ContextVariablesInspector
+	^ TDBContextVariablesInspector

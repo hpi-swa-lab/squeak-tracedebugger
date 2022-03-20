@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ShouldShowExceptionContexts" ],
+	"commentStamp" : "ct 3/20/2022 01:28",
+	"instvars" : [
+		 ],
+	"name" : "TDBContextVariablesInspector",
+	"pools" : [
+		 ],
+	"super" : "ContextVariablesInspector",
+	"type" : "normal" }
