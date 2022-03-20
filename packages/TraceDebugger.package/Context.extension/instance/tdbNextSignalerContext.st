@@ -2,7 +2,9 @@
 tdbNextSignalerContext
 
 	| ctx |
-	ctx := self.
-	[ctx tdbIsSignalerContext ifTrue: [^ ctx].
-	(ctx := ctx sender) isNil] whileFalse.
-	^ nil
+	ctx := self sender.
+	[ctx
+		ifNil: [^ nil];
+		tdbIsSignalerContext]
+			whileFalse: [ctx := ctx sender].
+	^ ctx

@@ -4,6 +4,6 @@ tdbSignalerContexts
 	| ctx |
 	ctx := self.
 	^ Array streamContents: [:stream |
-		[ctx := ctx sender tdbNextSignalerContext]
+		[ctx := ctx tdbNextSignalerContext]
 			whileNotNil:
 				[stream nextPut: ctx]]
