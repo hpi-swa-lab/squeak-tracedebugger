@@ -1,11 +1,13 @@
 *TraceDebugger-UI
 trace
 
-	| currentBounds process context oldInspectors traceDebugger window postBuild |
+	| currentBounds label process context oldInspectors traceDebugger window postBuild |
 	self okToChange ifFalse: [^ self changed: #flash].
 	
 	"Save current state"
-	currentBounds := ToolBuilder default class getBoundsForWindow: self containingWindow.
+	self containingWindow in: [:oldWindow |
+		currentBounds := ToolBuilder default class getBoundsForWindow: oldWindow.
+		label := self labelString ifNil: [oldWindow label]].
 	
 	"Close first because MVC fiddles around with processes."
 	process := self interruptedProcess.
@@ -37,7 +39,7 @@ trace
 				newInspector changed: #editString with: contents]]].
 	
 	"Open"
-	window := traceDebugger openFull: true label: self labelString.
+	window := traceDebugger openFull: true label: label.
 	"---- In MVC, the lines after this will not be executed ---"
 	ToolBuilder default class setBoundsForWindow: window to: currentBounds.
 	

@@ -1,9 +1,9 @@
 running
-newSqueakDebuggerOn: aProcess
+newSqueakDebuggerOn: aProcess label: label
 
 	^ Debugger
 		openOn: aProcess
 		context: aProcess suspendedContext
-		label: nil
+		label: label
 		contents: nil
 		fullView: true
