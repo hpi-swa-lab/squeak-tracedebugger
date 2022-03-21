@@ -16,7 +16,7 @@ decorateView: view forObject: anObject
 			ifFalse: [^ self decorateView: (ToolBuilder open: newModel) forObject: anObject]
 			ifTrue: [view tdbReplaceModelDeeply: newModel]].
 	
-	view setLabel: ('{1} [snapshot @ {2}]' format: {view label. anObject xxxtdbproxyTimeIndex}).
+	view setLabel: ('[snapshot @ {2}] {1}' format: {view label. anObject xxxtdbproxyTimeIndex}).
 	(view respondsTo: #setWindowColor:) ifTrue:
 		[view setWindowColor: self debugger colorForHistory].
 	
