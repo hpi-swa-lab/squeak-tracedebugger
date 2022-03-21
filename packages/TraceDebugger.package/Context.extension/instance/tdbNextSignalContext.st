@@ -1,10 +1,10 @@
 *TraceDebugger-Core-accessing
-tdbNextSignalerContext
+tdbNextSignalContext
 
 	| ctx |
 	ctx := self sender.
 	[ctx
 		ifNil: [^ nil];
-		tdbIsSignalerContext]
+		tdbIsSignalContext]
 			whileFalse: [ctx := ctx sender].
 	^ ctx

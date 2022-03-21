@@ -32,7 +32,7 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 			expected second ifNotNil: [:expectedSelection |
 				self assert: debugger selectedContents = expectedSelection].
 			
-			"check inspectors"
+			"check inspector objects"
 			self should: (debugger contextVariablesInspector object tdbIdentical: debugger selectedContext).
 			self should: (debugger receiverInspector object tdbIdentical: debugger selectedContext receiver).
 			
@@ -44,31 +44,39 @@ runDebuggerFrom: homeContext assertionsAndSteps: assertionsAndSteps
 				nodeCheck := [:expectedNode :actualNode | | expectedSelector expectedChildren actualChildren |
 					expectedSelector := expectedNode first.
 					expectedChildren := expectedNode allButFirst.
-					actualChildren := debugger childContextsFor: actualNode.
-					self assert: expectedChildren size equals: actualChildren size.
-					expectedChildren with: actualChildren do: [:expectedChild :actualChild |
-						nodeCheck 
-							value: expectedChild
-							value: actualChild]].
+					expectedChildren = #(...) ifFalse:
+						[actualChildren := debugger childContextsFor: actualNode.
+						self assert: expectedChildren size equals: actualChildren size.
+						expectedChildren with: actualChildren do: [:expectedChild :actualChild |
+							nodeCheck 
+								value: expectedChild
+								value: actualChild]]].
 				expectedTree ifNotNil:
 					[nodeCheck value: expectedTree value: roots first]].
 			
-			"check inspectors"
+			"check inspector fields"
 			(expected at: 4 ifAbsent: []) ifNotNil: [:expectedValues |
 				(expectedValues forceTo: 2 paddingWith: nil)
 					with: {debugger receiverInspector. debugger contextVariablesInspector}
 					do: [:expectedInspectorValues :inspector |
-						expectedInspectorValues pairsDo: [:key :expectedValue | | contents |
-							contents := inspector fields
-								detect: [:field | field name = key]
-								ifFound: [:field | inspector
-									selectField: field;
-									contents]
-								ifNone: [(inspector newCustomField
-									setGetterFor: inspector to: key ifFail: [self fail];
-									getValueFor: inspector) printString].
-							self assert: (contents in: [:actualValue |
-								expectedValue match: actualValue])]]].
+						expectedInspectorValues ifNotNil:
+							[expectedInspectorValues pairsDo: [:key :expectedValue | | contents |
+								contents := inspector fields
+									detect: [:field | field name = key]
+									ifFound: [:field | inspector
+										selectField: field;
+										contents]
+									ifNone: [(inspector newCustomField
+										setGetterFor: inspector to: key ifFail: [self fail];
+										getValueFor: inspector) printString].
+								self assert: (contents in: [:actualValue |
+									expectedValue match: actualValue])]]]].
+			
+			"check window title"
+			(expected at: 5 ifAbsent: []) in: [:expectedTitle |
+				expectedTitle
+					ifNotNil: [self assert: (expectedTitle match: debugger labelString)]
+					ifNil: [self deny: ('*error*' match: debugger labelString asLowercase)]].
 			
 			"step"
 			steps ifNotNil: [steps do: [:step | step value: debugger]]].

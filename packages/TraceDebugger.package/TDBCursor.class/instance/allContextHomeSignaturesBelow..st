@@ -3,6 +3,6 @@ allContextHomeSignaturesBelow: aContext
 
 	| signatures |
 	signatures := Set new.
-	(self traceFor: aContext) withAllDescendantsDo: [:trace |
-		signatures add: (trace contextAtTime: self timeIndex) home tdbSignature].
+	self allContextsBelow: aContext do: [:context |
+		signatures add: context home tdbSignature].
 	^ signatures

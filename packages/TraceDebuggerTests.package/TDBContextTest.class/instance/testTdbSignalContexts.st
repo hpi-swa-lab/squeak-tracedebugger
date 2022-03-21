@@ -1,12 +1,12 @@
 testing
-testTdbSignalerContexts
+testTdbSignalContexts
 
 	| context exception signaler signalers |
-	self assert: self simpleContext tdbSignalerContexts isEmpty.
+	self assert: self simpleContext tdbSignalContexts isEmpty.
 	
 	exception := Exception new.
 	context := self contextWithSignaler: exception.
-	signalers := context tdbSignalerContexts.
+	signalers := context tdbSignalContexts.
 	self assert: 1 equals: signalers size.
 	signaler := signalers first.
 	self assert: #signal equals: signaler selector.
