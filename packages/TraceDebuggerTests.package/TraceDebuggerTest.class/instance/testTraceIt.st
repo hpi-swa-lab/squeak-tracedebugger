@@ -4,9 +4,10 @@ testTraceIt
 	| process context squeakDebugger squeakWindow debugger window |
 	process := Process forBlock: [TDBTestLogic new plonk] runUntil: [:ctx | ctx selector = #plonk].
 	context := process suspendedContext.
-	squeakDebugger := self newSqueakDebuggerOn: process.
+	squeakDebugger := self newSqueakDebuggerOn: process label: 'xyz'.
 	squeakWindow := self newWindow: [squeakDebugger containingWindow].
 	self should: squeakWindow isInWorld.
+	self assert: (squeakWindow label includesSubstring: 'xyz').
 	
 	3 timesRepeat: [squeakDebugger stepInto].
 	self should: squeakDebugger interruptedContext selector = #wiffy2.

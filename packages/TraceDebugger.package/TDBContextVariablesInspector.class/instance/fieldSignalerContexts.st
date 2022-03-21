@@ -3,5 +3,5 @@ fieldSignalerContexts
 	
 	^ (self newFieldForType: #list key: #signalerContexts)
 		name: 'signaler contexts'; emphasizeName;
-		valueGetter: [:ctxt | ctxt tdbSignalerContexts collect: #sender];
+		valueGetter: [:ctxt | ctxt tdbSignalerContexts];
 		yourself

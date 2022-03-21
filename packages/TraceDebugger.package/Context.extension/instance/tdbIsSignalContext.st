@@ -1,4 +1,4 @@
 *TraceDebugger-Core-accessing
-tdbIsSignalerContext
+tdbIsSignalContext
 
 	^ self methodClass tdbIsExceptionClass and: [self selector = #signal]

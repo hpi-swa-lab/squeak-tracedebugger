@@ -3,6 +3,6 @@ allContextClassesBelow: aContext
 
 	| signatures |
 	signatures := Set new.
-	(self traceFor: aContext) withAllDescendantsDo: [:trace |
-		signatures add: (trace contextAtTime: self timeIndex) methodClass].
+	self allContextsBelow: aContext do: [:context |
+		signatures add: context methodClass].
 	^ signatures

@@ -1,4 +1,4 @@
 as yet unclassified
 signalError
 
-	self error
+	^ self error

@@ -9,7 +9,7 @@ streamBaseFieldsOn: aStream
 	self shouldShowExceptionContexts ifTrue:
 		[self object nextHandlerContext
 			ifNotNil: [aStream nextPut: self fieldHandlerContexts].
-		self object tdbNextSignalerContext
+		self object tdbNextSignalContext
 			ifNotNil: [aStream nextPut: self fieldSignalerContexts]].
 	
 	aStream nextPut: self fieldAllTempVars.

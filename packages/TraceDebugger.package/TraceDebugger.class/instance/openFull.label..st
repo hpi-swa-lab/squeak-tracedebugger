@@ -1,5 +1,5 @@
 toolbuilder - opening
-openFull: aBoolean label: aString
+openFull: aBoolean label: aStringOrNil
 	"Create, schedule and answer a debugger with the given label."
 
 	| builder |
@@ -10,8 +10,5 @@ openFull: aBoolean label: aString
 			ifFalse: [self process runUntil: [:context | self interruptedContext tdbIdentical: context]].
 		
 	builder := ToolBuilder default.
-	^ builder
-		open: (self buildFull: aBoolean with: builder)
-		label: (aString isEmptyOrNil
-			ifFalse: ['{1}: {2}' format: {self labelString. aString}]
-			ifTrue: [self labelString])
+	originalLabel := aStringOrNil.
+	^ builder open: (self buildFull: aBoolean with: builder)
