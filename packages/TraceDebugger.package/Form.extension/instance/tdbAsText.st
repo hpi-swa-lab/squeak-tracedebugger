@@ -1,9 +1,7 @@
 *TraceDebugger-UI-converting
 tdbAsText
 
-	^ Character startOfHeader asString asText
-		addAttribute:
-			(self copy
-				offset: 0;
-				asTextAnchor);
-		yourself
+	^ Character startOfHeader asString tdbAsTextWithAttribute:
+		(self copy
+			offset: 0;
+			asTextAnchor)
