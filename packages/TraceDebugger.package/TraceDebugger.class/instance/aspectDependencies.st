@@ -16,6 +16,7 @@ aspectDependencies
 		at: #contentsSelection put: #(pcRange);
 		at: #contextStack put: #(interruptedContext rootContexts);
 		at: #cursorPosition put: #(cursor contextFilter);
+		at: #inspectors put: #(cursorPosition);
 		at: #interruptedContext put: #(cursorPosition);
 		at: #hasContextSelected put: #(selectedContext);
 		at: #isDisplayingHistory put: #(cursorPosition);
