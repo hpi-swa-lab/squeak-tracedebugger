@@ -1,7 +1,7 @@
 updating
 aspectDependencies
 
-	^ Dictionary new
+	^ OrderedDictionary new
 		"CodeHolder"
 		at: #annotation put: #(currentCompiledMethod);
 		at: #contents put: #(currentCompiledMethod);
