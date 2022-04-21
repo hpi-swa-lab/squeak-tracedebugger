@@ -12,7 +12,7 @@ Our research question is: How can we improve program comprehension by leveraging
 
 To investigate this question, we are devising the following steps to build upon the current TraceDebugger:
 
-1. Design a query language and implement a (sufficiently efficient) interpreter for it to access the historic memory of a program trace. To implement the interpreter, create a symbolic SIMD executor for state queries by using [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
+1. Design a query language and implement a (sufficiently efficient) interpreter for it to access the historic memory of a program trace. To implement the interpreter, create a symbolic executor for state queries against a time range by using [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
 2. Build views on relevant slices of the historic memory to explore prior states and side effects.
 3. Integrate state-related stepping operators into the trace debugger to accelerate common navigation tasks.
 
@@ -21,3 +21,31 @@ To investigate this question, we are devising the following steps to build upon 
 - Research related work.
 - Assemble and organize scenarios for state-based views and queries.
 - Implement a prototype for the historic memory interpreter.
+
+## Related work
+
+- [The slice navigator: focused debugging with interactive dynamic slicing](https://ieeexplore.ieee.org/abstract/document/7789398/) (A Treffer, M Uflacker) [Java]
+  - uses dynamic slicing to display previous and next steps (in an omniscient post-mortem debugger)
+  - support short-term memory, highlight relevant statements, support trace navigation
+  - different kinds of dependencies
+  - methods: byte code instrumentation, relational database for program trace
+- [Object-centric debugging](https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/6227167/&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=4967583570287376109&ei=3nVgYuDYAcLZmQHc1ovQAg&scisig=AAGBfm2m32boa2G6iCnWAJZnjZrkEwql-w) (J Ressia, A Bergel, O Nierstrasz) [Pharo]
+  - breakpoints related to state (read, write) and interactions (call, creation); no back-in-time debugging
+  - methods: source code instrumentation
+- [Dynamic object flow analysis](https://scholar.google.com/scholar_url?url=https://boristheses.unibe.ch/1032/&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=17812052905336040217&ei=xV5hYrj0MIOEmgH1zZjACQ&scisig=AAGBfm2kqihhcn365gRCgBP2v5wwEA1lyg) (A Lienhard) [Smalltalk]
+  - recording of object flow through program execution; side effect graph
+  - methods: modifications to vm (memory model) for program tracing
+- [PathObjects. Revealing Object Interactions to Assist Developers in Program Comprehension](https://github.com/leoschweizer/PathObjects-Thesis) (L Schweizer) [Squeak]
+  - navigable object communication diagrams
+  - like PathView, only applicable to re-runnable, deterministic tests
+  - methods: method wrappers, object pointer analysis
+- [Taking an object-centric view on dynamic information with object flow analysis](https://scholar.google.com/scholar_url?url=https://www.sciencedirect.com/science/article/pii/S1477842408000201&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=3882397383465186274&ei=snJgYvH4DZWMy9YPt8OamA0&scisig=AAGBfm0c0LZtO6oqrXrUF_WhOd_1_zLD4A) (A Lienhard, S Ducasse, T Gırba - Computer Languages, Systems & Structures, 2009) [Smalltalk]
+  - graph visualization of object flows at different granularity levels
+  - methods: inject object wrappers via source code instrumentation
+- [Dynamic query-based debugging](https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/3-540-48743-3_7&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=13994638883591411977&ei=jYdgYq19j5uYAaaKoIgH&scisig=AAGBfm3eSpoaPotaEwgSXNzoBhBtQ7vtPQ) (R Lencevicius, U Hölzle, AK Singh) [Java]
+  - tooling for monitoring constraints; no program tracing
+  - methods: code instrumentation, incremental reevaluation
+- [JavaDD: a Declarative Debugger for Java](https://cse.buffalo.edu/tech-reports/2006-07.pdf) (HZ Girgis, B Jayaraman) [Java]
+  - query language for OO events and execution history
+  - prepared query catalogue
+- [Expositor](https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5021.pdf) [Khoo2013] (C): Debugging framework for time-travel debugging and script queries, based on efficient execution trace. User interaction model: Incremental filtering and detail querying from original trace. No GUI or views
