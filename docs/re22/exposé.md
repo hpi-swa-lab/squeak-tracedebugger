@@ -2,18 +2,18 @@
 
 ## Context
 
-In the Programming Experience Seminar in winter semester 2021/22, the first version of the [TraceDebugger](https://github.com/LinqLover/squeak-tracedebugger) has been developed that consists of a lightweight and efficient program tracing engine and a call tree-based time-travel debugging UI. With this tool, many debugging scenarios can already be accomplished more conveniently than with traditional present-only debuggers.
+In the Programming Experience Seminar in winter semester 2021/22, the first version of the [TraceDebugger](https://github.com/LinqLover/squeak-tracedebugger) has been developed that provides a lightweight and efficient program tracing engine and a call tree-based time-travel debugging UI. With this tool, many debugging scenarios can already be accomplished more conveniently or efficiently than with traditional present-only debuggers.
 
-Still, debugging remains a mainly behavior-centric technique, and debuggers exclusively provide code-centric views on the program execution. This contradicts a large set of debugging questions that focus on the program state, for instance, when programmers are following the Whyline interaction model to trace back an infection chain. In particular, to encounter information overload caused by the implementation details of a large or unfamiliar codebase, state-centric views on the program trace could support programmers in reverse-engineering, exploring, and troubleshooting software systems.
+Still, the debugging workflow remains mainly behavior-centric, and debuggers provide code-centric views only on the program execution. This contradicts a large set of debugging questions that focus on the program state, for instance, when programmers are following the Whyline interaction model to trace back an infection chain. In particular, to encounter information overload caused by the implementation details of a large or unfamiliar codebase, state-centric views on the program trace could support programmers in reverse-engineering, exploring, and troubleshooting software systems.
 
 ## Goals
 
 Our research question is: How can we improve program comprehension by leveraging object traces?
 
-To investigate this question, we are devising the following steps to build upon the current TraceDebugger:
+To investigate this question, we are devising the following steps to build upon the current version of the TraceDebugger:
 
-1. Design a query language and implement a (sufficiently efficient) interpreter for it to access the historic memory of a program trace. To implement the interpreter, create a symbolic executor for state queries against a time range by using [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
-2. Build views on relevant slices of the historic memory to explore prior states and side effects.
+1. Design a query language and implement a (sufficiently efficient) interpreter to access the historic memory of a program trace. To implement the interpreter, create a symbolic executor for state queries against a time range by using [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
+2. Build views on relevant slices of the historic memory with that users can explore prior states and side effects without diving into the underlying code base.
 3. Integrate state-related stepping operators into the trace debugger to accelerate common navigation tasks.
 
 ## Next steps
