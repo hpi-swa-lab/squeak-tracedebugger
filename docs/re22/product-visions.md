@@ -21,7 +21,7 @@ However, the focus of the new state-centric views is on the **system outsider** 
 ### Explore Morphic construction/rendering/event handling
 
 - **Roles:**
-  - System expert: visualize/assure and manipulate existing mental model, good overall knowledge of the static system
+  - System expert: visualize/assure and manipulate existing mental model, has good overall knowledge of the static system
   - System learner: understand the entire process; construct mental model from connections between single artifacts
   - (System outsider: efficiently look up the cause of a particular detail, needs guidance throughout system)
 - **Goal:** Explore the construction/toolbuilding process, the rendering/drawing process of a complex morph, or the relevant event handlers for a `MorphicEvent`. Associate the causes in the implementation with their effects to the widget/canvas.
@@ -39,11 +39,11 @@ However, the focus of the new state-centric views is on the **system outsider** 
   - from the submorphs list of a widget, navigate to the context frame that added this submorph
   - provide means to jump to the relevant stack frame for a selected state
   - from a visual state displayed in the TraceDebugger(‘s inspectors), directly step to the next or previous changed state
-  - update spawned inspectors during stepping
+  - update spawned inspectors during stepping (non-snapshot inspectors)
 
 ### Debug Morphic rendering
 
-*(different intentions, but similar problems to [Explore Morphic construction/rendering/event handling](#explore-morphic-constructionrenderingevent-handling)*
+*(different intentions, but similar problems to [Explore Morphic construction/rendering/event handling](#explore-morphic-constructionrenderingevent-handling)*)
 
 - **Roles:**
   - System expert: efficiently navigate to the cause of a particular detail, good overall knowledge of the static system
@@ -112,4 +112,104 @@ However, the focus of the new state-centric views is on the **system outsider** 
   - Cannot query state changes efficiently – need to step through many details to find out where stream position was changed again after reaching the end of stream.
 - **Possible solutions:**
   - type an expression into a TraceDebugger‘s inspector and directly step to the next or previous change of its value
-  - update spawned inspectors during stepping
+  - update spawned inspectors during stepping (non-snapshot inspectors)
+
+## Features
+
+### History Explorer
+
+- custom state query (e.g., `self imageForm`)
+
+- navigable overview of all historic states of object
+
+  - navigation through context list and/or slider (maybe fish-eye slider)
+  - how to select subinterval of axis (lifecycle of context frame)?
+  - other axes? (raw time index, context searches)
+
+- display the historic states side-by-side with the causing context frame
+
+  - list or compressed tree of contexts
+    - compression: only senders with multiple callees, do not repeat receiver
+
+- jump to the relevant stack frame for a selected state
+
+- synchronize time index with spawning debugger? how to display connection?
+
+  - Vivide-style connector lines?
+  - tool window semantics (bring windows to front together)?
+  - modal window (no multitasking)
+
+- different representations
+
+  - printString/text
+  - `#explorerContents`
+  - list (for collections)
+  - screenshot (for morphs and forms)
+  - custom representations
+  - diagram (numeric values)
+  - diffs?
+
+- entrypoints
+
+  - standalone tool
+
+    ```smalltalk
+    m := PluggableSystemWindow basicNew.
+    [m initialize] traceAndExplore: [m imageForm].
+    ```
+
+  - TDB inspector/explorer fields
+
+  - TDB inspector/explorer/code pane selected expression
+
+  - explore history of traced objects in world: regular inspector/explorer fields; morphic halos (cf. `rememberProvenance`)
+
+- decompose state
+
+  - interactive substates (explorer items, list items, form sections)
+  - spawn new history explorer for substate
+  - step to next or previous change of substate
+  - blame: attach tooltips to substate to indicate their latest changing context frame
+    - or select substate and highlight relevant contexts (slicing)
+  - or highlight changes from latest step
+
+- filters
+
+  - motivation: invariant are not always maintained (during pseudo-atomic operation like `#atNewIndex:put:`)
+  - context filters
+    - e.g., filter out everything inside package P, inside method `#m` 
+    - reuse context tree filters: only consider non-excluded timeindexes
+  - state filters
+    - ignore errors
+    - custom criteria (e.g., `> 0`, `#isValid`, …)
+
+### Debugger navigation
+
+- state-centric stepping operations
+  - step to the next change/removal or previous change/addition of inspector field or selected expression
+- state-related context search
+  - find all time indexes that change selected state
+  - custom context predicates (invariant expressions)
+    - refer to return value/arguments/method of contexts
+    - design API
+      - evaluate expression against current receiver?
+      - how to refer to return value?
+  - stateful search (#56)
+    - highlight all hits
+    - navigate forward/backward
+- attach query results (certain states) to tree?
+
+### Inspector/explorer improvements
+
+- non-snapshot mode ([#30#:~:text=TDBProxyForCursor](https://github.com/LinqLover/squeak-tracedebugger/issues/30#:~:text=TDBProxyForCursor))
+  - automatically sync with spawning debugger‘s time index
+  - how to display connection?
+    - see considerations for history explorer
+  - how to toggle snapshot mode?
+    - separate tools?
+    - checkbox?
+- blame: attach tooltips to substate to indicate their latest changing context frame
+- highlight changes from latest step
+- state-centric stepping operations for non-shapshot tools
+- explore history of object/substate
+
