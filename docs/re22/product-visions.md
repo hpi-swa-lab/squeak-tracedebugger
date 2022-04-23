@@ -213,3 +213,34 @@ However, the focus of the new state-centric views is on the **system outsider** 
 - state-centric stepping operations for non-shapshot tools
 - explore history of object/substate
 
+## Wireframes
+
+### History Explorer
+
+#### Explorer
+
+![image](https://user-images.githubusercontent.com/38782922/164892616-c75c7054-e625-4337-bde2-cc93105e6fa5.png)
+
+#### Screenshot (`ToolBuilder build: (Inspector on: #(1 2 3))`)
+
+![image](https://user-images.githubusercontent.com/38782922/164892626-a1b0c56c-adf6-4a2a-843b-fa888b7b3c87.png)
+
+#### List
+
+![image](https://user-images.githubusercontent.com/38782922/164892649-90480160-1dd6-4d95-872c-beba314f22ed.png)
+
+#### Diagram (line chart)
+
+![image](https://user-images.githubusercontent.com/38782922/164892662-1bf97c75-1ef6-4819-b2ca-96a11f3b32d5.png)
+
+#### Diagram (color chart)
+
+![image](https://user-images.githubusercontent.com/38782922/164892667-7592fc2a-7873-49e4-a882-897c4e323d10.png)
+
+#### TraceDebugger extensions
+
+![image](https://user-images.githubusercontent.com/38782922/164892680-7969ab07-901f-48f1-97ab-50da16e5e000.png)
+
+#### Morphic halo extensions
+
+![image](https://user-images.githubusercontent.com/38782922/164892686-7935ed7f-5199-462e-947c-4c13508bb0a9.png)
