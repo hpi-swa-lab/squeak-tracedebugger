@@ -16,11 +16,17 @@ To investigate this question, we are devising the following steps to build upon 
 2. Build views on relevant slices of the historic memory with that users can explore prior states and side effects without diving into the underlying code base.
 3. Integrate state-related stepping operators into the trace debugger to accelerate common navigation tasks.
 
+## Challenges
+
+- **Evaluation of state queries:** Implementing a sufficiently efficient simulator for state queries will be challenging. We plan to introduce SIMD semantics for all state-related instructions (primitives, assignments, …) to process all historic versions of state in parallel and fork the execution for each divergence in the control flow (jumps, different method dispatch, failing primitives). Side effects can be caught by using sandboxes.
+- **Retracing of visual primitives:** Currently, retracing capabilities for BitBlt primitives are missing. We will need to implement temporary rematerialization of affected instances to explore the historic states of `Form`s (see [#50:~:text=TDBRetracingSimulator](https://github.com/LinqLover/squeak-tracedebugger/issues/50#:~:text=tdbretracingsimulator)).
+- **Tool window semantics in Squeak Morphic:** As we intend to provide multiple heterogenous views on the same data (program trace), a shared cursor state between multiple windows might be helpful (see [product visions](./product-visions.md)). However, semantics for non-modal tool windows do not exist in Squeak Morphic today (even though some concepts exist in other solutions, such as the Connectors package or Vivide connectors). Deciding on a proper interaction model for cross-window synchronization and implementing the required UI changes might be challenging.
+
 ## Next steps
 
-- Research related work.
-- Assemble and organize scenarios for state-based views and queries.
-- Implement a prototype for the historic memory interpreter.
+- [ ] Research related work.
+- [x] Assemble and organize scenarios for state-based views and queries.
+- [ ] Implement a prototype for the historic memory interpreter.
 
 ## Related work
 
