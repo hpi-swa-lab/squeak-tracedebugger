@@ -9,7 +9,7 @@ As the general use cases of debugging and system exploration remain the same, we
 > | **System expert**| knowledge of larger parts of a system and its underlying architecture | maintaining or extending a system | uses the debugger to find the cause of a bug or to understand a particular aspect of the system (e.g., to extend it) | Despite good knowledge of the system, debugging single aspects is difficult, especially if there are no fine-grained tests available. In iterative control flows, understanding of temporal-causal relationships requires intensive short-time memory. | speed up debugging through the code base to find points of interest more efficiently |
 > | **System learner** | newbie to a system/slightly advanced knowledge | improve understanding of the code base | uses the debugger to travel through the code base and understand interconnections between parts of the system | In systems with many actors and callbacks, navigation through the code base is difficult. | improve overview in the debugger of different parts of the system and their interconnections |
 > | **System outsider** | no or very limited knowledge of the system | look up a particular implementation detail/fix a particular bug | uses the debugger for dynamic program slicing | Irrelevant actors and methods are hard to ignore. | focus on particular aspects and bugs while minimizing distraction by other system parts |
-> 
+>
 > **Note:** *Domain* knowledge is required in any case, *system* refers to the specific implementation of the domain.
 
 However, the focus of the new state-centric views is on the **system outsider** and the **system learner** which can benefit particularly well from behavior-agnostic means of representation and navigation to shorten the process of system understanding.
@@ -116,22 +116,24 @@ However, the focus of the new state-centric views is on the **system outsider** 
 
 ## Features
 
+*Ranking: The list of features and wireframes presented here is more for inspiration than for our backlog. MVP properties that will be addressed first are highlighted with a star (⭐).*
+
 ### History Explorer
 
-- custom state query (e.g., `self imageForm`)
+- custom state query (e.g., `self imageForm`) ⭐
 
 - navigable overview of all historic states of object
 
-  - navigation through context list and/or slider (maybe fish-eye slider)
+  - navigation through context list (⭐) and/or slider (maybe fish-eye slider)
   - how to select subinterval of axis (lifecycle of context frame)?
   - other axes? (raw time index, context searches)
 
-- display the historic states side-by-side with the causing context frame
+- display the historic states side-by-side with the causing context frame ⭐
 
   - list or compressed tree of contexts
     - compression: only senders with multiple callees, do not repeat receiver
 
-- jump to the relevant stack frame for a selected state
+- jump to the relevant stack frame for a selected state ⭐
 
 - synchronize time index with spawning debugger? how to display connection?
 
@@ -141,24 +143,24 @@ However, the focus of the new state-centric views is on the **system outsider** 
 
 - different representations
 
-  - printString/text
-  - `#explorerContents`
+  - printString/text ⭐
+  - `#explorerContents` ⭐
   - list (for collections)
-  - screenshot (for morphs and forms)
+  - screenshot (for morphs and forms) ⭐
   - custom representations
   - diagram (numeric values)
   - diffs?
 
 - entrypoints
 
-  - standalone tool
+  - standalone tool ⭐
 
     ```smalltalk
     m := PluggableSystemWindow basicNew.
     [m initialize] traceAndExplore: [m imageForm].
     ```
 
-  - TDB inspector/explorer fields
+  - TDB inspector/explorer fields ⭐
 
   - TDB inspector/explorer/code pane selected expression
 
@@ -166,10 +168,10 @@ However, the focus of the new state-centric views is on the **system outsider** 
 
 - decompose state
 
-  - interactive substates (explorer items, list items, form sections)
-  - spawn new history explorer for substate
-  - step to next or previous change of substate
-  - blame: attach tooltips to substate to indicate their latest changing context frame
+  - interactive substates (explorer items ⭐, list items, form sections)
+  - spawn new history explorer for substate ⭐
+  - step to next or previous change of substate ⭐
+  - blame: attach tooltips to substate to indicate their latest changing context frame ⭐
     - or select substate and highlight relevant contexts (slicing)
   - or highlight changes from latest step
 
@@ -177,15 +179,15 @@ However, the focus of the new state-centric views is on the **system outsider** 
 
   - motivation: invariant are not always maintained (during pseudo-atomic operation like `#atNewIndex:put:`)
   - context filters
-    - e.g., filter out everything inside package P, inside method `#m` 
-    - reuse context tree filters: only consider non-excluded timeindexes
+    - e.g., filter out everything inside package P, inside method `#m`
+    - reuse context tree filters: only consider non-excluded timeindexes ⭐
   - state filters
-    - ignore errors
+    - ignore errors ⭐
     - custom criteria (e.g., `> 0`, `#isValid`, …)
 
 ### Debugger navigation
 
-- state-centric stepping operations
+- state-centric stepping operations ⭐
   - step to the next change/removal or previous change/addition of inspector field or selected expression
 - state-related context search
   - find all time indexes that change selected state
@@ -211,17 +213,17 @@ However, the focus of the new state-centric views is on the **system outsider** 
 - blame: attach tooltips to substate to indicate their latest changing context frame
 - highlight changes from latest step
 - state-centric stepping operations for non-shapshot tools
-- explore history of object/substate
+- explore history of object/substate ⭐
 
 ## Wireframes
 
 ### History Explorer
 
-#### Explorer
+#### Explorer ⭐
 
 ![image](https://user-images.githubusercontent.com/38782922/164892616-c75c7054-e625-4337-bde2-cc93105e6fa5.png)
 
-#### Screenshot (`ToolBuilder build: (Inspector on: #(1 2 3))`)
+#### Screenshot (`ToolBuilder build: (Inspector on: #(1 2 3))`) ⭐
 
 ![image](https://user-images.githubusercontent.com/38782922/164892626-a1b0c56c-adf6-4a2a-843b-fa888b7b3c87.png)
 
@@ -237,7 +239,7 @@ However, the focus of the new state-centric views is on the **system outsider** 
 
 ![image](https://user-images.githubusercontent.com/38782922/164892667-7592fc2a-7873-49e4-a882-897c4e323d10.png)
 
-#### TraceDebugger extensions
+#### TraceDebugger extensions ⭐
 
 ![image](https://user-images.githubusercontent.com/38782922/164892680-7969ab07-901f-48f1-97ab-50da16e5e000.png)
 
