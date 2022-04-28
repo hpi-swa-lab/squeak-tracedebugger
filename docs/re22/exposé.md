@@ -42,6 +42,10 @@ To investigate this question, we are devising the following steps to build upon 
 - [Object-centric debugging](https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/abstract/document/6227167/&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=4967583570287376109&ei=3nVgYuDYAcLZmQHc1ovQAg&scisig=AAGBfm2m32boa2G6iCnWAJZnjZrkEwql-w) (J Ressia, A Bergel, O Nierstrasz) [Pharo]
   - breakpoints related to state (read, write) and interactions (call, creation); no back-in-time debugging
   - methods: source code instrumentation
+- [Debugging by lastChange](https://www.semanticscholar.org/paper/Debugging-by-lastChange-Mirghasemi-Barton/04310540e8ca1d905b35fa3f2230e28721b23746) (S Mirghasemi, JJ Barton, C Petitpierre) [JavaScript]
+  - reevaluate program to trace relevant side effects
+  - produce querypoints
+  - methods: step-wise execution to querypoints
 - [Dynamic object flow analysis](https://scholar.google.com/scholar_url?url=https://boristheses.unibe.ch/1032/&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=17812052905336040217&ei=xV5hYrj0MIOEmgH1zZjACQ&scisig=AAGBfm2kqihhcn365gRCgBP2v5wwEA1lyg) (A Lienhard) [Smalltalk]
   - recording of object flow through program execution; side effect graph
   - methods: modifications to vm (memory model) for program tracing
@@ -55,7 +59,17 @@ To investigate this question, we are devising the following steps to build upon 
 - [Dynamic query-based debugging](https://scholar.google.com/scholar_url?url=https://link.springer.com/chapter/10.1007/3-540-48743-3_7&hl=de&sa=T&oi=gsb&ct=res&cd=0&d=13994638883591411977&ei=jYdgYq19j5uYAaaKoIgH&scisig=AAGBfm3eSpoaPotaEwgSXNzoBhBtQ7vtPQ) (R Lencevicius, U Hölzle, AK Singh) [Java]
   - tooling for monitoring constraints; no program tracing
   - methods: code instrumentation, incremental reevaluation
+- [Snapshot query-based debugging](https://www.researchgate.net/publication/4071313_Snapshot_query-based_debugging) (A Potanin, J Noble, R Biddle)
+  - query language for analyzing object graphs in memory snaphots (stats, filtering, …)
+  - paper does not explore the potential of snapshot-crossing queries
 - [JavaDD: a Declarative Debugger for Java](https://cse.buffalo.edu/tech-reports/2006-07.pdf) (HZ Girgis, B Jayaraman) [Java]
   - query language for OO events and execution history
   - prepared query catalogue
+- [Declarative and Visual Debugging in Eclipse](https://dl.acm.org/doi/10.1145/1328279.1328286) (Jive) (JK Czyz, B Jayaraman) [Java]
+  - queries and views against program trace (sequence diagram, object diagram)
+  - [declarative queries](https://cse.buffalo.edu/jive/tutorials/declarative_debugging.html) for historic events (assignments, method called/returned, instantiations, …)
+  - methods: incremental snapshots (few space, but no efficient random access)
 - [Expositor](https://www.cs.tufts.edu/~jfoster/papers/cs-tr-5021.pdf) [Khoo2013] (C): Debugging framework for time-travel debugging and script queries, based on efficient execution trace. User interaction model: Incremental filtering and detail querying from original trace. No GUI or views
+- [Temporal Data Model for Program Debugging.](https://scholar.google.com/scholar_url?url=https://citeseerx.ist.psu.edu/viewdoc/download%3Fdoi%3D10.1.1.414.7433%26rep%3Drep1%26type%3Dpdf&hl=de&sa=T&oi=gsb-ggp&ct=res&cd=0&d=10814817483712336660&ei=abRqYu-ED4b0mgGbvZC4BA&scisig=AAGBfm3VPel93CDENQ1carXGjPxZPA0e8w) (D Lessa, B Jayaraman, J Chomicki)
+  - interval-based storage model of traced program state
+  - point-based query interface based on SQL/TP (time-point extension for SQL); no range queries
