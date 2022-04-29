@@ -9,7 +9,7 @@ findContext
 		initialSelection:
 			(self nextFindSignature
 				ifNil: [self selectedContext
-					ifNotNil: [:context | self cursor contextSignatureFor: self context]]).
+					ifNotNil: [:context | self cursor contextSignatureFor: context]]).
 	signature ifNil: [^ self].
 	
 	self nextFindSignature: signature.

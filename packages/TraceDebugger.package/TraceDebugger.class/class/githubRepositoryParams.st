@@ -2,4 +2,4 @@ app - self-updating
 githubRepositoryParams
 	"{owner. name. directory}"
 
-	^ {'LinqLover'. 'squeak-tracedebugger'. 'packages'}
+	^ {'hpi-swa-lab'. 'squeak-tracedebugger'. 'packages'}
