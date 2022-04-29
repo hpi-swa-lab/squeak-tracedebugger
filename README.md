@@ -1,9 +1,9 @@
 # Trace Debugger
 
-[![Tests](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/tests.yml/badge.svg)](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/tests.yml)
-[![Coverage Status](https://coveralls.io/repos/github/LinqLover/squeak-tracedebugger/badge.svg?branch=main)](https://coveralls.io/github/LinqLover/squeak-tracedebugger)
-[![Benchmarks](https://img.shields.io/badge/-benchmarks-blue)](https://LinqLover.github.io/squeak-tracedebugger/dev/bench/)
-[![Build](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/build.yml/badge.svg)](https://github.com/LinqLover/squeak-tracedebugger/actions/workflows/build.yml)
+[![Tests](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/tests.yml/badge.svg)](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/hpi-swa-lab/squeak-tracedebugger/badge.svg?branch=main)](https://coveralls.io/github/hpi-swa-lab/squeak-tracedebugger)
+[![Benchmarks](https://img.shields.io/badge/-benchmarks-blue)](https://hpi-swa-lab.github.io/squeak-tracedebugger/dev/bench/)
+[![Build](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/build.yml/badge.svg)](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/build.yml)
 
 A lightweight and efficient back-in-time debugger for [Squeak](http://squeak.org/) to trace and retrace past method invocations and state changes.
 Powered by [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
@@ -18,25 +18,25 @@ Key features:
 - **Snapshot inspectors/explorers** for objects during debugging
 
 <p align="center">
-<img src="https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true"></img>
+<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true"></img>
 </p>
 
-<small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/build.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/LinqLover/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
+<small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/build.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/hpi-swa-lab/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
 
 Read the [exposé](./docs/exposé.md) and the [product visions](./docs/product-visions.md) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
-There are many open interesting [issues](https://github.com/LinqLover/squeak-tracedebugger/issues) for future work.
+There are many open interesting [issues](https://github.com/hpi-swa-lab/squeak-tracedebugger/issues) for future work.
 
 ## Installation
 
-We offer a pre-configured all-in-one image. Please go to the [releases section](https://github.com/LinqLover/squeak-tracedebugger/releases), download and extract the latest `TraceDebugger-*.zip` archive, and execute it.
+We offer a pre-configured all-in-one image. Please go to the [releases section](https://github.com/hpi-swa-lab/squeak-tracedebugger/releases), download and extract the latest `TraceDebugger-*.zip` archive, and execute it.
 
 To install the TraceDebugger manually, evaluate the following in a workspace:
 
 ```smalltalk
 Metacello new
 	baseline: 'TraceDebugger';
-	repository: 'github://LinqLover/squeak-tracedebugger';
+	repository: 'github://hpi-swa-lab/squeak-tracedebugger';
 	get;
 	load.
 ```
@@ -49,7 +49,7 @@ To install updates, evaluate the following:
 TraceDebugger selfUpdate.
 ```
 
-(You can also do this via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
+(You can also do this via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
 
 ## Usage
 
@@ -59,7 +59,7 @@ For a quick start, open a normal expression in a debugger and press the new <kbd
 TraceDebuggerHelp openHelpBrowser.
 ```
 
-(Again, you can also open this help via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/LinqLover/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
+(Again, you can also open this help via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
 
 ## Architecture
 
