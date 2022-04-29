@@ -6,10 +6,22 @@ exampleWorldCyclesFor: aDuration
 	self exampleWorldCyclesFor: 5 seconds
 	"
 
-	| button |
+	| button recording |
 	button := SimpleButtonMorph new
-		target: [Project current world tdbCycleFor: aDuration];
-		actionSelector: #traceAndDebug;
-		label: ('recorld world (for {1})' format: {aDuration});
+		actionSelector: #value;
+		label: ('record world (for {1})' format: {aDuration});
 		yourself.
+	recording := false.
+	button target:
+		[| priorLabel world |
+		recording ifTrue: [^ Processor terminateActive].
+		recording := true.
+		priorLabel := button label.
+		button label: 'recording... (click to stop)'.
+		world := Project current world.
+		world doOneCycleNow.
+		[[world tdbCycleFor: aDuration] traceAndDebug]
+			ensure:
+				[recording := false.
+				button label: priorLabel]].
 	^ button openInHand
