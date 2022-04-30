@@ -1,0 +1,28 @@
+{
+	"class" : {
+		"initialize" : "ct 4/30/2022 17:24",
+		"memory:intervals:rawValues:" : "ct 4/30/2022 20:04" },
+	"instance" : {
+		"associationAtTime:ifAbsent:" : "ct 4/30/2022 20:00",
+		"atTime:" : "ct 4/30/2022 17:33",
+		"atTime:ifAbsent:" : "ct 4/30/2022 20:01",
+		"atTimes:" : "ct 4/30/2022 17:23",
+		"coalesce" : "ct 4/30/2022 19:09",
+		"coalesce:" : "ct 4/30/2022 20:01",
+		"coalesceEqually" : "ct 4/30/2022 19:09",
+		"coalescedEqually" : "ct 4/30/2022 19:09",
+		"collect:" : "ct 4/30/2022 20:17",
+		"errorKeyNotFound:" : "ct 4/30/2022 17:33",
+		"explorerContents" : "ct 4/30/2022 20:08",
+		"intervals" : "ct 4/30/2022 17:45",
+		"intervalsAndRawValuesCollect:" : "ct 4/30/2022 20:07",
+		"intervalsAndRawValuesDo:" : "ct 4/30/2022 20:23",
+		"postCopy" : "ct 4/30/2022 19:56",
+		"printOn:" : "ct 4/30/2022 20:24",
+		"setMemory:intervals:rawValues:" : "ct 4/30/2022 19:55",
+		"size" : "ct 4/30/2022 19:24",
+		"timesAndValues" : "ct 4/30/2022 20:05",
+		"timesAndValuesCollect:" : "ct 4/30/2022 20:09",
+		"timesAndValuesDo:" : "ct 4/30/2022 20:10",
+		"values" : "ct 4/30/2022 20:10",
+		"with:collect:" : "ct 4/30/2022 18:37" } }

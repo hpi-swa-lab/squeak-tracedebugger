@@ -1,4 +1,4 @@
-accessing
+accessing - views
 object: anObject atTime: timeIndex
 	"Answer a view on anObject at the specified time."
 
