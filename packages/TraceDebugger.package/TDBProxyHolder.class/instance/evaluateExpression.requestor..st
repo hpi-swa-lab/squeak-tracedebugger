@@ -1,6 +1,6 @@
 evaluating
 evaluateExpression: aStringOrText requestor: requestor
-	"Overridden to provide access to instance variables. Default #evaluate:in:to:environment:notifying:ifFail:logged: uses a mirror primitive which reveals the instance variables of the TDBProxy receiver instead."
+	"Overridden to provide access to instance variables. Default #evaluate:in:to:environment:notifying:ifFail:logged: uses a mirror primitive which reveals the instance variables of the TDBProxy receiver instead. Note: Evaluation will be simulated because Compiler>>#evaluateCue:ifFail: sends #withArgs:executeMethod: to the cue receiver. This is required to access instance variables of the proxied receiver."
 
 	| compilationCue |
 	compilationCue := self newCompilationCueFor: aStringOrText requestor: requestor.
