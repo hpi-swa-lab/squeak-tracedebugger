@@ -15,10 +15,10 @@ debugExpression: aStringOrText requestor: requestor
 	helperProcess := compilationCue context
 		ifNil:
 			[self assert: compiledMethod selector = #DoIt.
-			Process forMethod: compiledMethod receiver: compilationCue receiver]
+			Process forMethod: compiledMethod receiver: compilationCue receiver tdbproxyYourself]
 		ifNotNil:
 			[self assert: compiledMethod selector = #DoItIn:.
-			Process forMethod: compiledMethod receiver: compilationCue receiver arguments: {compilationCue context}].
+			Process forMethod: compiledMethod receiver: compilationCue receiver tdbproxyYourself arguments: {compilationCue context tdbproxyYourself}].
 	(compilationCue receiver in: [:rcvr |
 		thisContext isSimulationContext ifTrue: [thisContext simulator]]) ifNotNil: [:simulator |
 			helperProcess suspendedContext
