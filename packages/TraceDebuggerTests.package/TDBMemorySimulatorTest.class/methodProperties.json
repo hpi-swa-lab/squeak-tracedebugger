@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"shouldInheritSelectors" : "ct 5/10/2022 21:58" },
+	"instance" : {
+		"classUnderTest" : "ct 5/10/2022 21:50",
+		"memoryClass" : "ct 5/10/2022 21:50",
+		"newSimulator" : "ct 5/10/2022 21:54",
+		"setUp" : "ct 5/10/2022 21:54",
+		"testIsolatePrimitives" : "ct 5/10/2022 22:04",
+		"testIsolateState" : "ct 5/10/2022 22:03",
+		"testNoIsolatePrimitives" : "ct 5/10/2022 22:09",
+		"testNoIsolateState" : "ct 5/10/2022 22:09" } }

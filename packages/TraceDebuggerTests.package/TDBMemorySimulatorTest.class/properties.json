@@ -6,9 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "TDBRetracingSimulatorTest",
+		"memory",
+		"simulator",
+		"object" ],
+	"name" : "TDBMemorySimulatorTest",
 	"pools" : [
 		 ],
-	"super" : "TDBMemorySimulatorTest",
+	"super" : "TestCase",
 	"type" : "normal" }
