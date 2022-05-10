@@ -1,4 +1,4 @@
-as yet unclassified
+signaling
 signalForException: anException
 
 	^ self new
