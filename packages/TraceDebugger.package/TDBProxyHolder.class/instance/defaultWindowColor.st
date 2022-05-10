@@ -1,4 +1,4 @@
 forwarding - window
 defaultWindowColor
 
-	^ self debugger colorForHistory
+	^ (self debugger ifNil: [^ super defaultWindowColor]) colorForHistory
