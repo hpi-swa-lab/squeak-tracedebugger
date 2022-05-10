@@ -6,6 +6,7 @@
 		"context:send:to:with:lookupIn:do:" : "ct 5/2/2022 22:24",
 		"context:simulatedObject:basicAt:ifHit:" : "ct 5/2/2022 22:29",
 		"context:simulatedObject:instVarAt:ifHit:" : "ct 5/2/2022 22:27",
+		"initialize" : "ct 5/10/2022 23:30",
 		"memory" : "ct 5/2/2022 13:53",
 		"memory:" : "ct 5/2/2022 13:53",
 		"timeIndex" : "ct 5/2/2022 13:53",
