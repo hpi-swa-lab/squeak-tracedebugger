@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "ct 3/17/2022 14:36",
 	"instvars" : [
-		 ],
+		"memory",
+		"timeIndex" ],
 	"name" : "TDBRetracingSimulator",
 	"pools" : [
 		 ],

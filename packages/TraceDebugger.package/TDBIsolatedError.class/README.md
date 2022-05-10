@@ -1,0 +1,1 @@
+I wrap an exception that have been raised from the code that has been executed inside an isolated memory simulator. See TDBMemorySimulator>>#evaluate:on:do: for more information.

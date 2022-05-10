@@ -1,1 +1,1 @@
-I am the base class for all simulators for the TraceDebugger which access a certain version of the TDBMemory.
+I am the base class for all simulators for the TraceDebugger that add certain customizations to state controlling. I provide generalized hooks to subclasses for controlling read/write accesses to state and a pragma interface for implementing and enabling single primitives on demand. Via #shouldIsolate:, clients/subclasses can enable isolation so that all side effects made by the code under simulation will remain local to the simulator.

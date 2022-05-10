@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 5/10/2022 22:35",
+	"instvars" : [
+		"exception" ],
+	"name" : "TDBIsolatedError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

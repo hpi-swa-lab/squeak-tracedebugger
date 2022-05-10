@@ -1,0 +1,4 @@
+testing
+hasPrimitives
+
+	^ primitives notEmpty

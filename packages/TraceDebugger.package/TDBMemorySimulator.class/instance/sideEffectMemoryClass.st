@@ -1,0 +1,4 @@
+private
+sideEffectMemoryClass
+
+	^ TDBMemory

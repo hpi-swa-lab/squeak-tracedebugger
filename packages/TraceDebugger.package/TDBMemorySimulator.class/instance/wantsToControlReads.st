@@ -1,0 +1,4 @@
+testing
+wantsToControlReads
+
+	^ self shouldIsolate
