@@ -69,7 +69,9 @@ However, the focus of the new state-centric views is on the **system outsider** 
   - (System learner: understand the entire process)
   - System outsider: nearly zero prior knowledge about the system
 - **Goal:** Understand the reason for an `AssertionFailure` signaled from `#doLayoutAgain`.
-- **Example:** Layouting of an etoys script morph (see EToys-ct.403 and ["Etoys car example.1.cs"](https://github.com/hpi-swa-lab/squeak/issues/60#issuecomment-694497128))
+- **Example:**
+  - Layouting of an etoys script morph (see EToys-ct.403 and ["Etoys car example.1.cs"](https://github.com/hpi-swa-lab/squeak/issues/60#issuecomment-694497128))
+  - Layouting of the morphic world menu (`World invokeWorldMenu: self currentEvent`)
 - **Problems:**
   1. Narrowing down when the property `#doLayoutAgain` is added to the morph requires a costly binary search that adds significant information overload through irrelevant implementation details (that need to be stepped through or filtered out first).
   2. The binary search does not guarantee that the property has not been removed and re-added again, which would even require a linear search.
