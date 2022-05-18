@@ -9,7 +9,8 @@ findClass
 		title: 'Context class?'
 		initialSelection:
 			(self nextFindClass
-				ifNil: [self cursor contextClassFor: self selectedContext]).
+				ifNil: [self selectedContext
+					ifNotNil: [:context | self cursor contextClassFor: context]]).
 	class ifNil: [^ self].
 	
 	self nextFindClass: class.

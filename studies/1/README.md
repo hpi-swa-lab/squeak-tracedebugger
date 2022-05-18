@@ -18,7 +18,7 @@ Conducted in 2022-02 with 2 participants.
 
 ### Preparation
 
-- hand out image with pre-installed TraceDebugger and source code modifications ([`bbba076`](https://github.com/LinqLover/squeak-tracedebugger/releases/tag/study-1))
+- hand out image with pre-installed TraceDebugger and source code modifications ([`bbba076`](https://github.com/hpi-swa-lab/squeak-tracedebugger/releases/tag/study-1))
 - allow participants to go through Preference Wizard
 
 ### Short intro

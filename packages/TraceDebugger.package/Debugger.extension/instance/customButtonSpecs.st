@@ -5,9 +5,9 @@ customButtonSpecs
 	| list |
 	list := #(('Proceed'	proceed				'Close the debugger and proceed.'	interruptedProcessShouldResume)
 		('Restart'		restart				'Reset this context to its start.')
-		('Into'			stepInto				'step Into message sends'	interruptedProcessIsActive)
-		('Over'			stepOver				'step Over message sends'	interruptedProcessIsActive)
-		('Through'		stepThrough		'step into a block'			interruptedProcessIsActive)
+		('Into'			stepInto				'step Into message sends'	interruptedProcessIsReady)
+		('Over'			stepOver				'step Over message sends'	interruptedProcessIsReady)
+		('Through'		stepThrough		'step into a block'			interruptedProcessIsReady)
 		('Full Stack'		showFullStack			'show full stack')
 		('Where'		showWhere				'select current pc range')
 		('Trace It'		trace				'switch to a TraceDebugger') "<- TraceDebugger").
