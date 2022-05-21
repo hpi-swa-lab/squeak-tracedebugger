@@ -23,7 +23,7 @@ Key features:
 
 <small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/build.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/hpi-swa-lab/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
 
-Read the [exposé](./docs/exposé.md) and the [product visions](./docs/product-visions.md) for more details about the aims and USPs of this project.
+Read the [exposé and the product visions](./docs/) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
 There are many open interesting [issues](https://github.com/hpi-swa-lab/squeak-tracedebugger/issues) for future work.
 
