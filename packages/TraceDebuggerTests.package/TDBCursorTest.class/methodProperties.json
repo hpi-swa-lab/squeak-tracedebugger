@@ -36,6 +36,7 @@
 		"testTraceContextFilter" : "ct 2/20/2022 19:39",
 		"testTraceFor:contextFilter:like:" : "ct 3/15/2022 23:59",
 		"testTraceFor:like:" : "ct 2/20/2022 19:39",
+		"testTraceForBlock" : "ct 5/25/2022 22:03",
 		"testTraceNonLocalReturn" : "ct 2/20/2022 19:36",
 		"testTraceSimple" : "ct 2/20/2022 19:36",
 		"traceClass" : "ct 3/17/2022 00:50" } }
