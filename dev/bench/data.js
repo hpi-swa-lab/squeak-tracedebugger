@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1653512460672,
+  "lastUpdate": 1653513242523,
   "repoUrl": "https://github.com/hpi-swa-lab/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -12347,6 +12347,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 41.968241961432376",
             "extra": "{\"totalTime\":2010.0,\"preparationTime\":118.66666666666667,\"singleTimesToRun\":[1924.0,1844.0,1906.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "33bd37a4ad106c6253aebc31a36c295444739e53",
+          "message": "help: fix link to second entry point",
+          "timestamp": "2022-05-25T23:04:09+02:00",
+          "tree_id": "121d0efd74cb5c1ddfbe41d24f4e3144772cf993",
+          "url": "https://github.com/hpi-swa-lab/squeak-tracedebugger/commit/33bd37a4ad106c6253aebc31a36c295444739e53"
+        },
+        "date": 1653513241715,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 7144,
+            "unit": "Milliseconds",
+            "range": "stdev: 77.58221445666526",
+            "extra": "{\"totalTime\":7144.0,\"preparationTime\":0.0,\"singleTimesToRun\":[7059.0,7162.0,7211.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 5084.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 25.69695182961071",
+            "extra": "{\"totalTime\":5085.666666666667,\"preparationTime\":1.0,\"singleTimesToRun\":[5099.0,5100.0,5055.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 105,
+            "unit": "Milliseconds",
+            "range": "stdev: 2.0",
+            "extra": "{\"totalTime\":105.0,\"preparationTime\":0.0,\"singleTimesToRun\":[103.0,105.0,107.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2681.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 42.39496825489239",
+            "extra": "{\"totalTime\":2681.3333333333335,\"preparationTime\":0.0,\"singleTimesToRun\":[2720.0,2688.0,2636.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 290.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 1.5275252316519468",
+            "extra": "{\"totalTime\":290.6666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[289.0,292.0,291.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 23076,
+            "unit": "Milliseconds",
+            "range": "stdev: 1332.0033783740942",
+            "extra": "{\"totalTime\":23209.333333333332,\"preparationTime\":133.33333333333334,\"singleTimesToRun\":[24612.0,22377.0,22239.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 1202.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 27.15388247255507",
+            "extra": "{\"totalTime\":1276.0,\"preparationTime\":73.66666666666667,\"singleTimesToRun\":[1231.0,1199.0,1177.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1275.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 41.13797920818831",
+            "extra": "{\"totalTime\":1367.0,\"preparationTime\":91.66666666666667,\"singleTimesToRun\":[1239.0,1267.0,1320.0],\"postparationTime\":0.0}"
           }
         ]
       }
