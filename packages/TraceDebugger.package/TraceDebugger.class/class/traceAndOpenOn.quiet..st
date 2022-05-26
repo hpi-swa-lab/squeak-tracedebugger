@@ -4,8 +4,8 @@ traceAndOpenOn: aProcess quiet: quiet
 
 	| debugger result |
 	quiet ifFalse:
-		[^ Project uiManager informUser: ('Tracing {1}...' format: {aProcess}) during:
-			[self traceAndOpenOn: aProcess quiet: true]].
+		[Project uiManager informUser: ('Tracing {1}...' format: {aProcess}) during:
+			[^ self traceAndOpenOn: aProcess quiet: true]].
 	
 	debugger := self newOn: aProcess.
 	[[debugger doStepForward:
