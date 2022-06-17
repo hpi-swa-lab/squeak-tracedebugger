@@ -10,11 +10,11 @@ context: aContext primitive: receiver constantFill: value do: aBlock
 		ifTrue: [64 "primitiveStringAtPut"]
 		ifFalse: [61 "primitiveAtPut"].
 	1 to: (aContext objectSize: receiver) do: [:index |
-		self context: aContext primitive: receiver at: index put: value do:
+		(self context: aContext simulatedObject: receiver basicAt: index tryPut: value) ifFalse:
 			[result := "aContext receiver:" receiver tryPrimitive: primitiveAtPut withArgs: {index. value}.
 			(aContext isPrimFailToken: result) ifTrue:
 				[index = 1 ifTrue: [^ result].
 				self error: 'primitive failed half-way']]].
 	self flag: #workaround. "Context >> #receiver:tryPrimitive:withArgs: is broken at the moment"
 	
-	^ aContext
+	^ aContext push: value

@@ -10,4 +10,4 @@ setUp
 		plonk: 1;
 		griffle: 2;
 		yourself.
-	memory object: object priorTo: 4 instVarAt: 2 put: 3.
+	memory object: object priorTo: 4 instVarAt: 2 "griffle" put: 3.
