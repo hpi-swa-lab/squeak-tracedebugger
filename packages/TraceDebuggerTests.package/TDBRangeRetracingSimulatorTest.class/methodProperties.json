@@ -18,6 +18,8 @@
 		"memorySliceClass" : "ct 6/1/2022 13:01",
 		"newSimulator" : "ct 5/26/2022 15:40",
 		"testAutomaticCoalescion" : "ct 5/26/2022 19:03",
+		"testBitBlt1" : "ct 6/17/2022 19:08",
+		"testBitBlt2" : "ct 6/17/2022 19:08",
 		"testCloneObject" : "ct 5/31/2022 18:49",
 		"testCombineArgumentsCollect" : "ct 6/2/2022 10:28",
 		"testDebugForks" : "ct 6/2/2022 10:27",

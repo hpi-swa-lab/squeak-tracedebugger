@@ -11,6 +11,7 @@
 		"context:isVector:" : "ct 5/28/2022 22:48",
 		"context:jump:if:do:" : "ct 5/28/2022 21:21",
 		"context:okToStore:inBits:" : "ct 6/2/2022 13:54",
+		"context:primitiveBitBlt:method:receiver:arguments:do:" : "ct 6/3/2022 00:35",
 		"context:pushReceiverVariable:do:" : "ct 6/2/2022 10:41",
 		"context:return:from:do:" : "ct 5/30/2022 14:49",
 		"context:runPrimitive:method:receiver:args:" : "ct 6/1/2022 11:57",
