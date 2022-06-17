@@ -2,6 +2,9 @@ private - object access
 context: aContext simulatedObject: anObject basicAt: index tryPut: value
 
 	| oldValue |
+	index > 0 ifFalse: [^ false].
+	index > (aContext objectSize: anObject) ifTrue: [^ false].
+	
 	oldValue := lastPrimitive
 		ifNil: [aContext object: anObject basicAt: index]
 		ifNotNil: [:primitiveIndex |
