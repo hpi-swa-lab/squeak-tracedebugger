@@ -7,7 +7,7 @@
 		"context:doPrimitive:method:receiver:args:do:" : "ct 5/12/2022 13:43",
 		"context:doSingleRelease:" : "ct 1/12/2022 01:42",
 		"context:simulatedObject:basicAt:tryPut:" : "ct 6/17/2022 19:06",
-		"context:simulatedObject:instVarAt:tryPut:" : "ct 5/10/2022 19:43",
+		"context:simulatedObject:instVarAt:tryPut:" : "ct 6/17/2022 19:28",
 		"context:step:" : "ct 3/16/2022 20:49",
 		"memory" : "ct 5/2/2022 13:53",
 		"memory:" : "ct 5/2/2022 13:53",
