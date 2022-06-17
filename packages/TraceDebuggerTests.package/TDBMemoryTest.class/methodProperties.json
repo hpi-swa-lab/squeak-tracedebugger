@@ -2,12 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"assertObject:atSlot:hasSeries:" : "ct 3/17/2022 19:44",
+		"assertIn:object:atSlot:hasValues:" : "ct 6/17/2022 18:03",
+		"assertObject:atSlot:hasValues:" : "ct 6/17/2022 18:03",
 		"classUnderTest" : "ct 11/18/2021 18:48",
 		"setUp" : "ct 11/19/2021 18:56",
-		"testObjects" : "ct 11/19/2021 18:51",
+		"testCopy" : "ct 6/17/2022 18:05",
+		"testObjects" : "ct 5/26/2022 14:31",
 		"testProxy" : "ct 12/2/2021 01:22",
-		"testRuns" : "ct 1/9/2022 23:47",
-		"testSlots" : "ct 11/19/2021 18:48",
+		"testRuns" : "ct 5/26/2022 14:32",
+		"testSlots" : "ct 5/26/2022 14:32",
 		"testSymbol" : "ct 2/21/2022 20:09",
-		"testTimeRange" : "ct 11/19/2021 18:43" } }
+		"testTimeRange" : "ct 5/28/2022 22:13" } }
