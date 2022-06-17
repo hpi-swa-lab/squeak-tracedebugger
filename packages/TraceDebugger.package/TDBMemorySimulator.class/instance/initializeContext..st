@@ -1,6 +1,6 @@
 controlling
 initializeContext: aContext
-	<tdbRequiredIf: #wantsToControlReads>
+	<tdbRequiredIf: #shouldIsolate>
 
 	| result |
 	result := super initializeContext: aContext.

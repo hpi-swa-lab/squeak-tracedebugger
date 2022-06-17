@@ -18,4 +18,4 @@ shouldIsolate: aBoolean
 			self flag: #todo "Use efficient data structure for side effects (no runs)"].
 	
 	changed ifTrue:
-		[self initializePragmas].
+		[self initializeAllPrimitives].

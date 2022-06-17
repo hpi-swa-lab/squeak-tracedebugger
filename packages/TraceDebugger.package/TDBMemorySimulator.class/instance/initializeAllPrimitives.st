@@ -1,5 +1,5 @@
 initialize-release
-initializePragmas
+initializeAllPrimitives
 
 	self initializePragmaPrimitives.
 	self initializePrimitives.

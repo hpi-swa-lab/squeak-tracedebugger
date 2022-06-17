@@ -2,7 +2,6 @@ controlling
 context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: receiver args: arguments do: aBlock
 
 	| result |
-	lastPrimitive := primitiveIndex.
 	result := super
 		context: aContext
 		doPrimitive: primitiveIndex
@@ -10,7 +9,6 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 		receiver: receiver
 		args: arguments
 		do: aBlock.
-	lastPrimitive := nil.
 	
 	((primitiveIndex >= 200 and: [primitiveIndex <= 209]) and: [(aContext isPrimFailToken: result) not]) ifTrue:
 		["closure primitive"

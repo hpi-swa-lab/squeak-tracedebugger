@@ -26,27 +26,34 @@ context: aContext primitiveClone: receiver do: aBlock
 				ifFalse: [Object]}.
 	self flag: #workaround. "Context >> #receiver:tryPrimitive:withArgs: is broken at the moment"
 	(aContext isPrimFailToken: copy)
-		ifTrue: [self error: 'Could not copy object'].
+		ifTrue: [^ self context: aContext primitiveFailTokenFor: copy].
+	
+	self addOwnObject: copy.
+	
+	self wantsToControlReads
+		ifTrue:
+			[1 to: copyClass instSize do: [:index |
+				self context: aContext simulatedObject: receiver instVarAt: index ifHit: [:value |
+					aContext
+						object: copy
+						instVarAt: index
+						put: value]]].
 	
 	size := copyClass == Context
 		ifTrue: [receiver stackPtr]
 		ifFalse: [aContext objectSize: receiver].
 	1 to: size do: [:index |
 		self context: aContext simulatedObject: receiver basicAt: index ifHit: [:value |
-			(copyClass includesBehavior: String)
-				ifTrue:
-					[result := "aContext
-						receiver:" copy
-						tryPrimitive: 64 "primitiveStringAtPut"
-						withArgs: {index. value}.
-					(aContext isPrimFailToken: result)
-						ifTrue: [self error: 'Could not copy string']]
-				ifFalse:
-					[aContext
-						object: copy
-						basicAt: index
-						put: value]]].
-	
-	self addOwnObject: copy.
+			result := aContext
+				doPrimitive:
+					(((copyClass includesBehavior: String) and: [(aContext objectClass: value) includesBehavior: Character])
+						ifTrue: [64 "primitiveStringAtPut"]
+						ifFalse: [61 "primitiveAtPut"])
+				method: aContext method
+				receiver: copy
+				args: {index. value}.
+			(aContext isPrimFailToken: result)
+				ifTrue: [^ result]
+				ifFalse: [result pop]]].
 	
 	^ aContext
