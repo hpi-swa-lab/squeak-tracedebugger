@@ -1,0 +1,4 @@
+accessing
+xxxtdbproxyTimeIndices
+
+	^ timeIndex

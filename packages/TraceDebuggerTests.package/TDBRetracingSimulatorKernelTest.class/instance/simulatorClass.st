@@ -1,4 +1,4 @@
 accessing
 simulatorClass
 
-	^ TDBRetracingSimulator
+	^ self subclassResponsibility

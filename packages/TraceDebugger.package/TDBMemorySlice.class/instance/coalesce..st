@@ -1,5 +1,6 @@
 private
 coalesce: equalBlock
+	"Evaluate equalBlock with each overlapping pair of the receiver's raw values. If the block answers true for a pair, replace the second one with the first one. See also #basicCondense: for preserving all values in a nested slice."
 
 	| coalescedIntervals coalescedRawValues lastInterval lastRawValue index |
 	coalescedIntervals := nil.
@@ -7,9 +8,12 @@ coalesce: equalBlock
 	lastRawValue := Object new.
 	index := 0.
 	intervals with: rawValues do: [:interval :value |
-		(((equalBlock value: lastRawValue value: value)
-			and: [lastInterval isNil or: [lastInterval stop + 1 = interval start]])
-				or: [interval isEmpty])
+		(lastInterval notNil
+			and:
+				[interval isEmpty
+					or:
+						[lastInterval stop + 1 = interval start
+							and: [equalBlock value: lastRawValue value: value]]])
 			ifTrue:
 				[coalescedIntervals ifNil:
 					[coalescedIntervals := (Array new: intervals size) writeStream.

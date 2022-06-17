@@ -1,4 +1,5 @@
 accessing
 timesAndValues
 
-	^ self timesAndValuesCollect: [:timeIndex :value | timeIndex -> value]
+	^ (self timesAndValuesCollect: [:timeIndex :value | timeIndex -> value])
+		as: OrderedDictionary

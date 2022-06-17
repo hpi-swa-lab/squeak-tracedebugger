@@ -4,7 +4,7 @@ setUp
 	super setUp.
 	
 	memory := self memoryClass new.
-	simulator := self simulatorClass forMemory: memory atTime: 0.
+	simulator := self newSimulator.
 	
 	(testSelector isSymbol not and: [testSelector key = self className])
 		ifTrue:

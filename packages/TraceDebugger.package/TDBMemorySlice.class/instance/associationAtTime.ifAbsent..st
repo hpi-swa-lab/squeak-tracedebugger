@@ -1,20 +1,13 @@
 accessing
 associationAtTime: timeIndex ifAbsent: aBlock
+	"Answer an association (interval -> value) containing the requested timeIndex. The value may be a transparent view (TDBRangeProxy).
+	If the timeIndex is not found, answer the result of evaluating aBlock."
 
 	| index interval |
-	self flag: #optimize. "inline binary search"
-	index := intervals
-		findBinaryIndex: [:eachInterval |
-			| start |
-			(start := eachInterval start) > timeIndex
-				ifTrue: [timeIndex - start]
-				ifFalse:
-					[| stop |
-					(stop := eachInterval stop) < timeIndex
-						ifTrue: [timeIndex - stop]
-						ifFalse:
-							[interval := eachInterval.
-							0]]]
-		ifNone: [:left :right | ^ aBlock value].
-	(interval includes: timeIndex) ifFalse: [^ aBlock value].
-	^ interval -> (rawValues at: index)
+	index := self scanForTime: timeIndex.
+	index = 0 ifTrue: [^ aBlock value].
+	^ (interval := intervals at: index) ->
+		((rawValues at: index)
+			tdbInMemory: memory
+			atTimes: interval
+			withSideEffects: (sideEffects at: index))

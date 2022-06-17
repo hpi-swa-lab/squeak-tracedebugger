@@ -4,10 +4,9 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 3/17/2022 14:36",
+	"commentStamp" : "ct 6/3/2022 17:43",
 	"instvars" : [
-		"memory",
-		"timeIndex" ],
+		"memory" ],
 	"name" : "TDBRetracingSimulator",
 	"pools" : [
 		 ],

@@ -1,0 +1,17 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"PrimitiveHandlers" ],
+	"commentStamp" : "ct 6/17/2022 21:59",
+	"instvars" : [
+		"timeIndices",
+		"allVectors",
+		"contextCopies",
+		"primitiveNumArgs" ],
+	"name" : "TDBRangeRetracingSimulator",
+	"pools" : [
+		 ],
+	"super" : "TDBRetracingSimulator",
+	"type" : "normal" }

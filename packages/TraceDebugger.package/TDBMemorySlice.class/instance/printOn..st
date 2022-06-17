@@ -4,11 +4,12 @@ printOn: aStream
 	super printOn: aStream.
 	
 	aStream nextPut: $(.
-	self intervalsAndRawValuesDo: [:interval :rawValue |
+	self timesAndRawValuesDo: [:times :rawValue |
 		aStream
-			print: interval;
+			print: times;
 			nextPutAll: ' -> ';
 			print: rawValue.
 		aStream space].
-	aStream position: aStream position - 1.
+	self times ifNotEmpty:
+		[aStream position: aStream position - 1].
 	aStream nextPut: $).

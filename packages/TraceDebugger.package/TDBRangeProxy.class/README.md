@@ -1,0 +1,3 @@
+I represent an earlier state of a traced object at a given time range that has been recorded in a memory. Just as my superclass, I act as a transparent proxy, forward all messages using a TDBRangeRetracingSimulator to emulate the virtual historic state, and answer a new range proxy for each complex return value that. However, if retracing a forwarded message frays out when it accesses further states that vary within the time range, a TDBRetracingFrayOut error is signaled.
+
+I also carry along some side effects that were captured while retrieving the proxy from a retracing simulator and transforming it, and that will be passed on to any derived proxies.

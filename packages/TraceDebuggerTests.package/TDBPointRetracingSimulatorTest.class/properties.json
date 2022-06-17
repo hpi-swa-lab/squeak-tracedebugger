@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBPointRetracingSimulatorTest",
+	"pools" : [
+		 ],
+	"super" : "TDBRetracingSimulatorTest",
+	"type" : "normal" }

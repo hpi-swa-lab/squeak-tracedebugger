@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 6/17/2022 18:07",
+	"instvars" : [
+		"sideEffects" ],
+	"name" : "TDBRangeProxy",
+	"pools" : [
+		 ],
+	"super" : "TDBProxy",
+	"type" : "normal" }

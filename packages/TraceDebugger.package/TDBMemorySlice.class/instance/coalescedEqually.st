@@ -1,4 +1,4 @@
-accessing
+copying
 coalescedEqually
 
 	^ self copy coalesceEqually

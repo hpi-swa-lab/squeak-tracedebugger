@@ -1,0 +1,9 @@
+{
+	"class" : {
+		"forMemory:atTime:" : "ct 5/12/2022 12:22" },
+	"instance" : {
+		"context:simulatedObject:basicAt:ifHit:" : "ct 5/12/2022 12:22",
+		"context:simulatedObject:instVarAt:ifHit:" : "ct 5/12/2022 12:23",
+		"contextPushRetracingTimeIndex:" : "ct 5/29/2022 01:43",
+		"timeIndex" : "ct 5/12/2022 12:22",
+		"timeIndex:" : "ct 5/28/2022 19:24" } }

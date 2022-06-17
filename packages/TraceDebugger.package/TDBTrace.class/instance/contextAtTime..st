@@ -1,4 +1,4 @@
 accessing
 contextAtTime: timeIndex
  
-	^ self object: context atTime: timeIndex
+	^ self memory object: context atTime: timeIndex

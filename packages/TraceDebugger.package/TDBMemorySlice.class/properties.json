@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		"Mirror" ],
-	"commentStamp" : "",
+	"commentStamp" : "ct 6/3/2022 19:50",
 	"instvars" : [
 		"memory",
 		"intervals",
-		"rawValues" ],
+		"rawValues",
+		"sideEffects" ],
 	"name" : "TDBMemorySlice",
 	"pools" : [
 		 ],

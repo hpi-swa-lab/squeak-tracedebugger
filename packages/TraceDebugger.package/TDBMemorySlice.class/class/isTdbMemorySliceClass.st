@@ -1,0 +1,4 @@
+testing
+isTdbMemorySliceClass
+
+	^ true

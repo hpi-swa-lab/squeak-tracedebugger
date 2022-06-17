@@ -1,0 +1,17 @@
+{
+	"category" : "TraceDebuggerTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"memory",
+		"object",
+		"sideEffects",
+		"slice" ],
+	"name" : "TDBMemorySliceTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
