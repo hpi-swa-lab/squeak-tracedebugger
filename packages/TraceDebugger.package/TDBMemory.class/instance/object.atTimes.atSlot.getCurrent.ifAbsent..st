@@ -12,16 +12,16 @@ object: anObject atTimes: timeIndices atSlot: slot getCurrent: currentBlock ifAb
 	
 	intervals := (Array new: runs size + 1) writeStream.
 	rawValues := (Array new: runs size + 1) writeStream.
-	lastTimeIndex := timeIndices min - 1.
+	lastTimeIndex := timeIndices first - 1.
 	1 to: runs size do: [:index |
 		| run |
 		run := runs at: index.
-		(nextTimeIndex := run first) >= timeIndices min ifTrue:
-			[lastTimeIndex + 1 <= timeIndices max ifTrue:
-				[intervals nextPut: ((lastTimeIndex + 1 max: timeIndices min) to: (lastTimeIndex := nextTimeIndex min: timeIndices max)).
+		(nextTimeIndex := run first) >= timeIndices first ifTrue:
+			[lastTimeIndex + 1 <= timeIndices last ifTrue:
+				[intervals nextPut: ((lastTimeIndex + 1 max: timeIndices first) to: (lastTimeIndex := nextTimeIndex min: timeIndices last)).
 				rawValues nextPut: run second]]].
-	lastTimeIndex < timeIndices max ifTrue:
-		[intervals nextPut: (lastTimeIndex + 1 to: timeIndices max).
+	lastTimeIndex < timeIndices last ifTrue:
+		[intervals nextPut: (lastTimeIndex + 1 to: timeIndices last).
 		rawValues nextPut: currentBlock value].
 	
 	^ TDBMemorySlice
