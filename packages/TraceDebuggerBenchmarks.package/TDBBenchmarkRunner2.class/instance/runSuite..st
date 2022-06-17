@@ -3,7 +3,7 @@ runSuite: suite
 	"Run asynchronously because of the way the benchmark runner handles errors currently. See BenchmarkRunner>>#runBenchmark:inSuite:."
 
 	| process |
-	process := [runner runSuite: suite] fork.
+	process := [[runner runSuite: suite] on: Error do: [Processor activeProcess suspend]] fork.
 	
 	"Catch errors."
 	[1 second wait.
