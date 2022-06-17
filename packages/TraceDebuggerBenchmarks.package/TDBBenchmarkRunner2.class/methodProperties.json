@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"logErrorIn:" : "ct 6/17/2022 23:23",
-		"runSuite:" : "ct 6/18/2022 01:02",
+		"logErrorIn:" : "ct 6/18/2022 01:41",
+		"runSuite:" : "ct 6/18/2022 01:43",
 		"setUp" : "ct 6/17/2022 23:33",
 		"test" : "ct 6/17/2022 23:19" } }
