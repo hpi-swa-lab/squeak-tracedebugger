@@ -32,7 +32,7 @@ baseline: spec
 			package: 'TraceDebuggerTests' with: [
 				spec requires: #('TraceDebugger' 'SimulationStudio-Tests')];
 			package: 'TraceDebuggerBenchmarks' with: [
-				spec requires: #('TraceDebugger' 'TraceDebuggerTests' 'Benchmark' 'SimulationStudio-Support' 'StatisticsWorkbench')];
+				spec requires: #('TraceDebugger' 'Benchmark' 'SimulationStudio-Support' 'StatisticsWorkbench')];
 			package: 'TraceDebuggerJobs' with: [
 				spec requires: #('TraceDebugger' 'SBE')].
 		

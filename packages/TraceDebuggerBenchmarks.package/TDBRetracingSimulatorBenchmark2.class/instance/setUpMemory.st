@@ -3,7 +3,7 @@ setUpMemory
 
 	super setUpMemory.
 	
-	object := TDBTestObject new
+	object := TDBBenchmarkTestObject new
 		plonk: 1;
 		griffle: 2;
 		yourself.
