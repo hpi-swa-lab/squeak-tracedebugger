@@ -16,7 +16,7 @@ noCoalesceCopyAtTimes: timeInterval
 	1 to: intervals size do: [:index |
 		| interval |
 		interval := intervals at: index.
-		(nextTimeIndex := interval last) >= timeInterval min ifTrue:
+		(nextTimeIndex := interval last) >= timeInterval first ifTrue:
 			[lastTimeIndex + 1 <= timeInterval max ifTrue:
 				[newIntervals nextPut: ((lastTimeIndex + 1 max: timeInterval min) to: (lastTimeIndex := nextTimeIndex min: timeInterval max)).
 				newValues nextPut: (rawValues at: index).

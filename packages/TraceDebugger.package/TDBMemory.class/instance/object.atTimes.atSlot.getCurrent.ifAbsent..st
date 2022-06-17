@@ -4,7 +4,7 @@ object: anObject atTimes: timeIndices atSlot: slot getCurrent: currentBlock ifAb
 	| runs intervals lastTimeIndex rawValues nextTimeIndex |
 	timeIndices isInterval
 		ifFalse: [^ self error: 'timeIndices must be an interval'].
-	timeIndices min >= 0
+	timeIndices first >= 0
 		ifFalse: [^ self error: 'all timeIndices must be positive'].
 	
 	runs := (values at: anObject ifAbsent: [^ absentBlock value])
