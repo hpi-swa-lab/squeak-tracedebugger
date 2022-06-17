@@ -5,5 +5,7 @@ context: aContext primitiveNew: receiver do: aBlock
 
 	| result |
 	result := aBlock value.
+	(aContext isPrimFailToken: result) ifTrue: [^ result].
+	
 	self addOwnObject: result top.
 	^ result
