@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1655564213376,
+  "lastUpdate": 1655570598493,
   "repoUrl": "https://github.com/hpi-swa-lab/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -12827,6 +12827,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 161.07865573480967",
             "extra": "{\"totalTime\":2023.3333333333333,\"preparationTime\":109.0,\"singleTimesToRun\":[1985.0,1730.0,2028.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7c4b6135504c415cf50c8bbeb92967cb79209785",
+          "message": "Merge pull request #78 from hpi-swa-lab/feat/historic-state-queries\n\nThe PR implements range retracing queries for #20.\r\n\r\nNew protocols:\r\n\r\n* TDBCursor >> #object:collect:, TDBMemory >> #object:[atTimes:]collect:, TDBMemory >> #object:atTimes:(instVar|field)At:getCurrentifAbsent:\r\n* TDBCursor >> #contextAtTime:\r\n* See examples for range queries on the class side of TDBRangeRetracingSimulator.\r\n\r\nBreaking changes:\r\n\r\n* All messages sent to proxies will be executed isolated from the rest of the image from now. Any side effects are only visible by sending further messages to the result or by using a common #in: block.\r\n\r\nOverview of technical changes to the engine:\r\n\r\n* Extract read/write-related logic from single simulators to TDBMemorySimulator and add generalized hooks for state control\r\n* Add isolation mechanism to memory simulator\r\n* Add TDBRangeRetracingSimulator for vectorized/forkable execution of range queires and push down conventional retracing from TDBRetracingSimulator to TDBPointRetracingSimulator\r\n* Add TDBMemorySlice as the data structure for internal retracing vectors and the result of range queries\r\n* Add TDBRangeProxy and TDBRetracingFrayOut error for accessingly parts of range queries results transparently\r\n* Add retracing and retracing support for BitBlt (9fcb943)\r\n* Add new benchmarks using BenchmarkRunner and smoke-test them on CI\r\n\r\nFind more details in 1cdb827 and fdd5478.",
+          "timestamp": "2022-06-18T18:26:37+02:00",
+          "tree_id": "7bb4e010a039fcb8ff86607cfb7a4d1b68261275",
+          "url": "https://github.com/hpi-swa-lab/squeak-tracedebugger/commit/7c4b6135504c415cf50c8bbeb92967cb79209785"
+        },
+        "date": 1655570596808,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 8980.666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 89.51163797704372",
+            "extra": "{\"totalTime\":8980.666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[8931.0,9084.0,8927.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 26992.333333333332,
+            "unit": "Milliseconds",
+            "range": "stdev: 146.1243762461737",
+            "extra": "{\"totalTime\":26993.333333333332,\"preparationTime\":1.0,\"singleTimesToRun\":[26834.0,27122.0,27021.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 137,
+            "unit": "Milliseconds",
+            "range": "stdev: 2.6457513110645907",
+            "extra": "{\"totalTime\":137.0,\"preparationTime\":0.0,\"singleTimesToRun\":[135.0,140.0,136.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2777,
+            "unit": "Milliseconds",
+            "range": "stdev: 59.732738092272314",
+            "extra": "{\"totalTime\":2777.0,\"preparationTime\":0.0,\"singleTimesToRun\":[2733.0,2753.0,2845.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 295,
+            "unit": "Milliseconds",
+            "range": "stdev: 7.0",
+            "extra": "{\"totalTime\":295.0,\"preparationTime\":0.0,\"singleTimesToRun\":[288.0,295.0,302.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 53425.666666666664,
+            "unit": "Milliseconds",
+            "range": "stdev: 382.7692951809658",
+            "extra": "{\"totalTime\":53596.0,\"preparationTime\":170.33333333333334,\"singleTimesToRun\":[53661.0,52984.0,53632.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 2623,
+            "unit": "Milliseconds",
+            "range": "stdev: 23.515952032609693",
+            "extra": "{\"totalTime\":2707.6666666666665,\"preparationTime\":84.66666666666667,\"singleTimesToRun\":[2639.0,2596.0,2634.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1394.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 33.94603560555096",
+            "extra": "{\"totalTime\":1480.3333333333333,\"preparationTime\":86.0,\"singleTimesToRun\":[1431.0,1364.0,1388.0],\"postparationTime\":0.0}"
           }
         ]
       }
