@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-math functions
+*TraceDebuggerBenchmarks-Base-math functions
 tdbSampleVariance
 
 	| avg |

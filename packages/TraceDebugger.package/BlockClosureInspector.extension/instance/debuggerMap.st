@@ -1,4 +1,4 @@
-*TraceDebugger-private-override
+*TraceDebugger-UI-private-override
 debuggerMap
 
 	self flag: #workaround.

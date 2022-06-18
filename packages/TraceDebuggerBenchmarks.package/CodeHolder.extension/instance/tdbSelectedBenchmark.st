@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbSelectedBenchmark
 
 	^ (self selectedClass ifNil: [^ nil])
