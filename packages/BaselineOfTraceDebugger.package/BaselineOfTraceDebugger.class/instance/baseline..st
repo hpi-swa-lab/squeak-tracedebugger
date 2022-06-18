@@ -22,8 +22,7 @@ baseline: spec
 					repository: 'github://hpi-swa-lab/SqueakByExample-english/SmalltalkSources';
 					loads: #'SBE-Extract'];
 			baseline: 'StatisticsWorkbench' with: [
-				spec
-					repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
+				spec repository: 'github://hpi-swa-teaching/StatisticsWorkbench:dev/packages'].
 		
 		"packages"
 		spec
@@ -32,13 +31,15 @@ baseline: spec
 			package: 'TraceDebuggerTests' with: [
 				spec requires: #('TraceDebugger' 'SimulationStudio-Tests')];
 			package: 'TraceDebuggerBenchmarks' with: [
-				spec requires: #('TraceDebugger' 'Benchmark' 'SimulationStudio-Support' 'StatisticsWorkbench')];
+				spec requires: #('TraceDebugger' 'Benchmark' 'SimulationStudio-Support' "'StatisticsWorkbench'" "optional dependency of gen1 benchmarks")];
 			package: 'TraceDebuggerJobs' with: [
 				spec requires: #('TraceDebugger' 'SBE')].
 		
 		"groups"
 		spec
 			group: #default with: #(full);
+			group: #benchmarks with: #('TraceDebuggerBenchmarks');
 			group: #full with: #('TraceDebugger' 'TraceDebuggerTests' 'TraceDebuggerBenchmarks');
+			group: #fullBenchmarks with: #(full 'StatisticsWorkbench' "with optional dependencies");
 			group: #minimal with: #('TraceDebugger');
 			group: #tests with: #('TraceDebuggerTests')].
