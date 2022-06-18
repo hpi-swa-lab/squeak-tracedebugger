@@ -28,12 +28,12 @@ context: aContext primitiveBitBlt: primitiveName method: aCompiledMethod receive
 	self flag: #todo. "Materialize halftoneForm and other variables from BitBlt, too?"
 	
 	
-	"2)Rematerialize the receiver and the form parameters into a copy"
+	"2) Rematerialize the receiver and the form parameters into a copy"
 	self flag: #rematerialization.
 	
 	"Shallow copy BitBlt receiver"
 	result := self context: aContext primitiveClone: receiver do:
-		[aContext push: (aContext simObjectClone: receiver)].
+		[aContext push: (aContext simObjectShallowCopy: receiver)].
 	(aContext isPrimFailToken: result)
 		ifTrue: [^ result].
 	receiverCopy := result pop.

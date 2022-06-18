@@ -12,13 +12,13 @@ context: aContext primitiveBitBltCopyForm: aForm into: aBitBlt setter: setter
 	
 	"Clone aForm"
 	result := self context: aContext primitiveClone: aForm do:
-		[aContext push: (aContext simObjectClone: aForm)].
+		[aContext push: (aContext simObjectShallowCopy: aForm)].
 	(aContext isPrimFailToken: result)
 		ifTrue: [^ self context: aContext primitiveFailTokenFor: result].
 	formCopy := result pop.
 	
 	"Clone aForm's bits"
-	bitsCopy := aContext simObjectClone: bits.
+	bitsCopy := aContext simObjectShallowCopy: bits.
 	"Do not copy variables/fields of the bitmap. Note: Earlier changes to the bitmap are ignored here! This is for performance considerations. The BitBlt simulation will never use the virtual memory."
 	self addOwnObject: bitsCopy.
 	
