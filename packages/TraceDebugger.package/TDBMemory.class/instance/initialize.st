@@ -8,4 +8,4 @@ initialize
 		equalBlock: [:first :second | Mirror object: first eqeq: second];
 		hashBlock: [:object | Mirror simObjectIdentityHash: object];
 		yourself.
-	maxTimeIndex := 0.
+	maxTimeIndex := -1.

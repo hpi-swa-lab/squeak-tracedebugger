@@ -1,0 +1,17 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Mirror" ],
+	"commentStamp" : "ct 6/3/2022 19:50",
+	"instvars" : [
+		"memory",
+		"intervals",
+		"rawValues",
+		"sideEffects" ],
+	"name" : "TDBMemorySlice",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

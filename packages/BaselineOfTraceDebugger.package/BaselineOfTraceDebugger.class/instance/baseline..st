@@ -5,8 +5,10 @@ baseline: spec
 	spec for: #common do: [
 		"dependencies"
 		spec
-			package: 'JSON' with: [
-				spec repository: 'https://www.squeaksource.com/PostgresV3'];
+			package: 'Benchmark' with: [
+				spec
+					file: 'Benchmark-tfel.38';
+					repository: 'https://www.hpi.uni-potsdam.de/hirschfeld/squeaksource/BenchmarkRunner/'];
 			baseline: 'SimulationStudio' with: [
 				spec
 					repository: 'github://LinqLover/SimulationStudio/packages';
@@ -30,7 +32,7 @@ baseline: spec
 			package: 'TraceDebuggerTests' with: [
 				spec requires: #('TraceDebugger' 'SimulationStudio-Tests')];
 			package: 'TraceDebuggerBenchmarks' with: [
-				spec requires: #('TraceDebugger' 'JSON' 'SimulationStudio-Support' 'StatisticsWorkbench')];
+				spec requires: #('TraceDebugger' 'Benchmark' 'SimulationStudio-Support' 'StatisticsWorkbench')];
 			package: 'TraceDebuggerJobs' with: [
 				spec requires: #('TraceDebugger' 'SBE')].
 		

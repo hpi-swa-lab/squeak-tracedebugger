@@ -1,4 +1,4 @@
 support
 exploreMemory
 
-	self cursor rootTrace memory explore.
+	self cursor memory explore.

@@ -6,4 +6,6 @@ receiver
 		atTime: timeIndex
 		instVarAt: 6 "receiver"
 		ifAbsent: [object receiver])
-			 tdbInMemory: memory atTime: timeIndex
+			tdbInMemory: memory
+			atTime: timeIndex
+			withSideEffects: sideEffects

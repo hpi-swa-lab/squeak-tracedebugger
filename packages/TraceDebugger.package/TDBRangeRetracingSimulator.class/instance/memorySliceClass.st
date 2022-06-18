@@ -1,0 +1,4 @@
+private
+memorySliceClass
+
+	^ TDBMemorySlice

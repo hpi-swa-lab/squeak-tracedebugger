@@ -1,0 +1,1 @@
+I am signaled when a message sent to a TDBRangeProxy frays out as it reads further states that vary within the proxy's time range.

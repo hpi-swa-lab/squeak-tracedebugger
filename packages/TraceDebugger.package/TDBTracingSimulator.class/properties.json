@@ -4,9 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 3/17/2022 14:27",
+	"commentStamp" : "ct 6/3/2022 17:34",
 	"instvars" : [
-		 ],
+		"memory",
+		"timeIndex" ],
 	"name" : "TDBTracingSimulator",
 	"pools" : [
 		 ],

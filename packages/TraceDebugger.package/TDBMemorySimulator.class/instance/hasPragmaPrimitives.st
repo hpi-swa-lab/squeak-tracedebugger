@@ -1,0 +1,4 @@
+testing
+hasPragmaPrimitives
+
+	^ pragmaPrimitives notEmpty

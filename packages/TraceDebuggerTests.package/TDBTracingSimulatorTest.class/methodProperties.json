@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"classUnderTest" : "ct 1/20/2022 23:58",
-		"memoryClass" : "ct 1/20/2022 23:57",
-		"setUp" : "ct 1/20/2022 23:57",
-		"testSimpleSend" : "ct 1/21/2022 00:06" } }
+		"newSimulator" : "ct 5/10/2022 22:01",
+		"testNoIsolatePrimitives" : "ct 5/26/2022 15:45",
+		"testNoIsolateState" : "ct 5/26/2022 15:45",
+		"testSimpleSend" : "ct 5/10/2022 21:59" } }

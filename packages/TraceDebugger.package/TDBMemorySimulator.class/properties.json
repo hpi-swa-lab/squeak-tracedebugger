@@ -4,10 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 3/17/2022 14:27",
+	"commentStamp" : "ct 6/3/2022 19:07",
 	"instvars" : [
-		"memory",
-		"timeIndex" ],
+		"sideEffects",
+		"ownObjects",
+		"lastPrimitive",
+		"primitives",
+		"pragmaPrimitives" ],
 	"name" : "TDBMemorySimulator",
 	"pools" : [
 		 ],

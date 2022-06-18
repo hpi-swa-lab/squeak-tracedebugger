@@ -11,4 +11,4 @@ test
 	trace := self classUnderTest forContext: context.
 	
 	self assert: (trace contextAtTime: 0) = context.
-	self assert: (trace object: self atTime: 0) = self.
+	self assert: (trace memory object: self atTime: 0) = self.

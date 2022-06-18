@@ -9,17 +9,17 @@ testSpaceUsed
 		method: TDBTestLogic >> #plonk
 		arguments: #()).
 	
-	emptyMemorySpace := cursor rootTrace memory spaceUsed.
+	emptyMemorySpace := cursor memory spaceUsed.
 	self assert: emptyMemorySpace < 1000.
-	emptyTraceSpace := cursor rootTrace memory spaceUsed.
+	emptyTraceSpace := cursor memory spaceUsed.
 	self assert: emptyTraceSpace < 1000.
 	emptySpace := cursor spaceUsed.
 	self assert: emptyMemorySpace < 1000.
 	
 	cursor doStepUntil: [:context | context isDead].
 	
-	self assert: cursor rootTrace memory spaceUsed - emptyMemorySpace > (20 * 4).
-	self assert: cursor rootTrace memory spaceUsed < 10000.
+	self assert: cursor memory spaceUsed - emptyMemorySpace > (20 * 4).
+	self assert: cursor memory spaceUsed < 10000.
 	self assert: cursor rootTrace spaceUsed - emptyTraceSpace > (20 * 4).
 	self assert: cursor spaceUsed > emptySpace.
 	self assert: cursor rootTrace spaceUsed < 100000.

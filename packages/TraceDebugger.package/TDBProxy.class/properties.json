@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 3/17/2022 14:29",
+	"commentStamp" : "ct 6/18/2022 15:58",
 	"instvars" : [
 		"object",
 		"memory",
-		"timeIndex" ],
+		"timeIndex",
+		"sideEffects" ],
 	"name" : "TDBProxy",
 	"pools" : [
 		 ],

@@ -1,0 +1,6 @@
+benchmarks
+setUpBenchReceiverVariableFork2
+
+	memory object: object priorTo: 1 instVarAt: 1 put: object.
+	memory object: object priorTo: 2 instVarAt: 1 put: object copy.
+	object plonk: object copy.

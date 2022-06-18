@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Core-Fixtures",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"plonk",
+		"griffle" ],
+	"name" : "TDBBenchmarkTestObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

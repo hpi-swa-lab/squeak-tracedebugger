@@ -3,7 +3,7 @@ performNotebookTest
 
 	| process home |
 	self shouldntRaise: [self runNotebook].
-	self flag: #TestCoverage. "We run the notebook normally before because DebuggerMethodMap is not compatible with TestCoverage wrappers"
+	self flag: #TestCoverage. "We run the notebook normally before because DebuggerMethodMap is not compatible with TestCoverage wrappers (critical sections)."
 	
 	self flag: #forLater. "Instead of the Debugger, invoke the Compiler with context-specific do-its."
 	

@@ -1,0 +1,10 @@
+tests
+testIsolateState
+
+	simulator shouldIsolate: true.
+	
+	self assert: 2 equals:
+		(simulator evaluate:
+			[object plonk: 2.
+			object plonk]).
+	self assert: 1 equals: object plonk.

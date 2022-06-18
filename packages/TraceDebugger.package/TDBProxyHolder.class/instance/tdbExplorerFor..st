@@ -1,6 +1,6 @@
 private
-tdbExplorerFor: anInspector
+tdbExplorerFor: anExplorer
 
 	^ self tdbExplorerClass
-		forModel: anInspector
+		forModel: anExplorer
 		debugger: self debugger

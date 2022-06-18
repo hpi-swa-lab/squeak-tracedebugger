@@ -14,7 +14,9 @@
 		"debugExpression:requestor:" : "ct 4/30/2022 21:36",
 		"debugger" : "ct 3/10/2022 16:58",
 		"debugger:" : "ct 3/10/2022 16:59",
-		"decorateView:forObject:" : "ct 3/19/2022 21:20",
+		"decorateView:forObject:" : "ct 5/10/2022 19:02",
+		"defaultWindowColor" : "ct 5/11/2022 00:10",
+		"displayBox" : "ct 5/10/2022 18:42",
 		"doItContext" : "ct 2/17/2022 20:55",
 		"doItReceiver" : "ct 2/17/2022 20:55",
 		"evaluateExpression:requestor:" : "ct 4/30/2022 15:43",
@@ -40,9 +42,10 @@
 		"selectedClassOrMetaClass" : "ct 2/17/2022 21:40",
 		"spawnModel:on:" : "ct 3/10/2022 22:41",
 		"tdbExplorerClass" : "ct 2/17/2022 21:02",
-		"tdbExplorerFor:" : "ct 2/21/2022 20:44",
+		"tdbExplorerFor:" : "ct 5/10/2022 18:33",
 		"tdbInspectorClass" : "ct 2/17/2022 21:02",
 		"tdbInspectorFor:" : "ct 2/21/2022 20:45",
 		"update:" : "ct 2/17/2022 20:51",
 		"update:with:" : "ct 2/17/2022 20:52",
-		"wantsAutocompletion" : "ct 2/17/2022 21:03" } }
+		"wantsAutocompletion" : "ct 2/17/2022 21:03",
+		"windowColorToUse" : "ct 5/10/2022 19:02" } }

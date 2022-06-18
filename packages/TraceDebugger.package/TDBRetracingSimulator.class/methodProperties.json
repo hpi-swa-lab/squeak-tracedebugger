@@ -1,20 +1,16 @@
 {
 	"class" : {
-		 },
+		"forMemory:atTime:" : "ct 5/12/2022 12:22",
+		"forMemory:atTimes:" : "ct 5/12/2022 12:30" },
 	"instance" : {
-		"context:cloneIntoTop:" : "ct 3/16/2022 21:22",
-		"context:doNamedPrimitiveIn:for:withArgs:ifHit:" : "ct 3/17/2022 19:12",
-		"context:doPrimitive:method:receiver:args:do:" : "ct 3/16/2022 21:10",
-		"context:pushContextSize:ifHit:" : "ct 3/16/2022 21:16",
-		"context:pushField:at:ifHit:" : "ct 3/16/2022 21:16",
-		"context:pushInstVar:at:ifHit:" : "ct 1/21/2022 01:38",
-		"context:pushLiteralVariable:do:" : "ct 11/13/2021 00:44",
-		"context:pushReceiverVariable:do:" : "ct 11/13/2021 00:44",
-		"context:pushRemoteTemp:inVectorAt:do:" : "ct 11/13/2021 00:44",
-		"context:send:to:with:lookupIn:do:" : "ct 3/16/2022 21:10",
-		"context:simulatedContextSize:ifHit:" : "ct 1/22/2022 15:41",
-		"context:simulatedObject:basicAt:" : "ct 3/16/2022 21:13",
-		"context:simulatedObject:basicAt:ifHit:" : "ct 1/22/2022 15:41",
-		"context:simulatedObject:instVarAt:" : "ct 3/16/2022 21:13",
-		"context:simulatedObject:instVarAt:ifHit:" : "ct 3/16/2022 21:15",
-		"valueIndex" : "ct 11/12/2021 23:34" } }
+		"context:doPrimitive:method:receiver:args:do:" : "ct 5/28/2022 19:22",
+		"context:primitiveTraceDebugger:receiver:arguments:" : "ct 6/1/2022 18:56",
+		"context:send:to:with:lookupIn:do:" : "ct 5/2/2022 22:24",
+		"contextForceRetracingFork:arguments:" : "ct 6/1/2022 18:56",
+		"contextPushRetracingTimeIndex:" : "ct 6/1/2022 18:56",
+		"initialize" : "ct 5/10/2022 23:30",
+		"memory" : "ct 5/2/2022 13:53",
+		"memory:" : "ct 5/2/2022 13:53",
+		"sideEffects" : "ct 6/18/2022 16:00",
+		"sideEffects:" : "ct 6/18/2022 16:00",
+		"wantsToControlReads" : "ct 5/10/2022 21:18" } }

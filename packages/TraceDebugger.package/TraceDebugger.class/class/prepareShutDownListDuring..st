@@ -11,6 +11,13 @@ prepareShutDownListDuring: aBlock
 				addToShutDownList: EventSensor after: ScorePlayer;
 				addToStartUpList: EventSensor after: Cursor]].
 	
+	"thisContext wrap: [:block |
+		""Optimization.""
+		Smalltalk removeFromStartUpList: Project.
+		block ensure:
+			[Smalltalk addToStartUpList: Project after: SecurityManager.
+			Project current restoreDisplay]]."
+	
 	thisContext wrap: [:block | | previous |
 		"Optimization."
 		previous := Form compressOnSnapshot.
