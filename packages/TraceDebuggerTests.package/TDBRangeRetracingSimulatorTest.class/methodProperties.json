@@ -30,6 +30,7 @@
 		"testMaintainSlices" : "ct 6/2/2022 18:05",
 		"testMessageSend" : "ct 5/27/2022 15:18",
 		"testNonLocalReturn" : "ct 5/27/2022 16:14",
+		"testPrimitive118" : "ct 6/18/2022 15:40",
 		"testPrimitiveStringReplace" : "ct 5/31/2022 20:11",
 		"testReadYourOwnWrites" : "ct 5/26/2022 15:38",
 		"testSIMDBinary" : "ct 5/27/2022 15:26",
@@ -41,4 +42,5 @@
 		"testSimpleSend" : "ct 6/2/2022 10:27",
 		"testTdbRetracingDoFork" : "ct 6/2/2022 15:11",
 		"testTdbRetracingTimeIndex" : "ct 6/1/2022 16:45",
+		"testUnknownPrimitive" : "ct 6/18/2022 15:48",
 		"vectorFromSpec:" : "ct 6/1/2022 13:03" } }

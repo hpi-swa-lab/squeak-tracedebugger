@@ -3,6 +3,7 @@ context: aContext combineArguments: arguments collect: aBlock
 	"Evaluate aBlock with the arguments array and answer the result. If at least one argument is a vector, aBlock will be evaluated for each combination of time intervals, and the result will be a new vector if necessary."
 
 	| result |
+	self flag: #optimize. "Whereever we send this to test whether any argument is a vector, we might be able to use a simple loop instead."
 	result := arguments size
 		caseOf:
 			{[0] -> [^ aBlock value: arguments].
