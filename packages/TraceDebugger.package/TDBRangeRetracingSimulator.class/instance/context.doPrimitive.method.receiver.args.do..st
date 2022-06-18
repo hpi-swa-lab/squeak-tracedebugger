@@ -13,7 +13,6 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	arguments ifNil: [arguments := originalArguments].
 	
 	self flag: #todo. "Handle missing arguments gracefully"
-	self flag: #todo. "Handle remaining primitives - should we fork for all vectors on spec?"
 	self flag: #optimize. "Do not combine unused arguments (e.g., for mirror primitives)"
 	self flag: #optimize. "Array lookup for primitives?"
 	
