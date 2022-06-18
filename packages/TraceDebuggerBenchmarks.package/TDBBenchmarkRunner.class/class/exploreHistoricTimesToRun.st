@@ -4,14 +4,14 @@ exploreHistoricTimesToRun
 
 	| datas diagram container |
 	datas := self historicTimesToRun associations collect: [:benchmarkAndTimes |
-		(SWDataLabeled
+		((Smalltalk classNamed: #SWDataLabeled)
 			fromXValues: (benchmarkAndTimes value keys "collect: #asUnixTime")
 			versusYValues: (benchmarkAndTimes value values collect: #asMilliSeconds))
 				dataName: benchmarkAndTimes key shortPrintString;
 				dimensionNames: {"'Time'" 'Commit'. 'Milliseconds'};
 				yourself].
 	
-	diagram := SWDiagram new visualizeAll: datas with: SWScatterPlot.
+	diagram := (Smalltalk classNamed: #SWDiagram) new visualizeAll: datas with: (Smalltalk classNamed: #SWScatterPlot).
 	
 	container := Morph new
 		color: Color white;
