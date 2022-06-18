@@ -1,5 +1,6 @@
 screenshotting
 createScreenshots
+	"Build and save all screenshots and handle any errors. Answer a collection of all errors."
 
 	| errors |
 	errors := OrderedCollection new.
@@ -14,4 +15,4 @@ createScreenshots
 				Transcript showln: (String streamContents: [:stream | ex printVerboseOn: stream])].
 		Transcript cr].
 	
-	^ errors isEmpty
+	^ errors
