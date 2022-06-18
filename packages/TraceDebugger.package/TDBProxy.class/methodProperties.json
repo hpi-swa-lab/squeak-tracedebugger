@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"for:inMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:02",
+		"instVarMappingFrom:" : "ct 6/18/2022 20:43",
 		"isTdbProxyClass" : "ct 3/12/2022 17:03",
 		"newInstanceFrom:variable:size:map:" : "ct 6/18/2022 19:53" },
 	"instance" : {
