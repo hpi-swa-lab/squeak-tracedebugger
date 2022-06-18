@@ -4,9 +4,9 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 6/17/2022 18:07",
+	"commentStamp" : "ct 6/18/2022 15:58",
 	"instvars" : [
-		"sideEffects" ],
+		 ],
 	"name" : "TDBRangeProxy",
 	"pools" : [
 		 ],

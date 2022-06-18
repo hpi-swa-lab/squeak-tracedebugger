@@ -6,10 +6,11 @@
 	"instance" : {
 		"includesObject:" : "ct 1/22/2022 21:50",
 		"initialize" : "ct 6/3/2022 17:09",
-		"object:atTime:" : "ct 6/3/2022 19:08",
+		"object:atTime:" : "ct 6/18/2022 16:08",
 		"object:atTime:atSlot:ifAbsent:" : "ct 5/12/2022 16:00",
 		"object:atTime:fieldAt:ifAbsent:" : "ct 1/21/2022 02:08",
 		"object:atTime:instVarAt:ifAbsent:" : "ct 12/30/2021 23:16",
+		"object:atTime:withSideEffects:" : "ct 6/18/2022 16:02",
 		"object:atTimes:atSlot:getCurrent:ifAbsent:" : "ct 6/18/2022 00:10",
 		"object:atTimes:collect:" : "ct 6/3/2022 17:23",
 		"object:atTimes:fieldAt:getCurrent:ifAbsent:" : "ct 5/12/2022 13:39",

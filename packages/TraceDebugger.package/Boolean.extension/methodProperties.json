@@ -2,5 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asTdbProxyInMemory:atTime:" : "ct 12/30/2021 23:09",
+		"asTdbProxyInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:13",
 		"asTdbRangeProxyInMemory:atTimes:withSideEffects:" : "ct 5/14/2022 22:33" } }
