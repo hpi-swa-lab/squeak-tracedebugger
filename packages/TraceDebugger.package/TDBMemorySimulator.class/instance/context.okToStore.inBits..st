@@ -5,8 +5,12 @@ context: aContext okToStore: value inBits: bitsClass
 	(self systemNavigation allBehaviors select: #isBits) contents.
 	"
 
+	| valueClass |
 	bitsClass isVariable ifFalse: [^ false].
-	(aContext objectClass: value) == SmallInteger ifFalse: [^ false].
+	(valueClass := aContext objectClass: value) == SmallInteger ifFalse:
+		[^ true "lastPrimitive = 64" "primitiveStringAtPut"
+			and: [valueClass includesBehavior: Character]
+			and: [bitsClass == ByteString ==> [value isOctetCharacter]]].
 	value >= 0 ifFalse: [^ false].
 	value < (2 ** (8 * bitsClass elementSize)) ifFalse: [^ false].
 	^ true

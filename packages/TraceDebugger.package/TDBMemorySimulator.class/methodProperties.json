@@ -5,7 +5,7 @@
 		"addOwnObject:" : "ct 5/2/2022 19:35",
 		"basicEvaluate:" : "ct 5/10/2022 11:24",
 		"context:doPrimitive:method:receiver:args:do:" : "ct 5/14/2022 19:19",
-		"context:okToStore:inBits:" : "ct 6/1/2022 12:07",
+		"context:okToStore:inBits:" : "ct 6/19/2022 21:55",
 		"context:popIntoRemoteTemp:inVectorAt:do:" : "ct 5/10/2022 20:09",
 		"context:primitive:at:do:" : "ct 5/10/2022 20:11",
 		"context:primitive:at:put:do:" : "ct 5/10/2022 20:55",

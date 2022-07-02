@@ -12,24 +12,28 @@ context: aContext doWritePrimitive: primitiveIndex method: aCompiledMethod recei
 		| primitiveArgValue |
 		primitiveArgValue := arguments atLast: 1.
 		(self context: aContext isVector: primitiveArgValue) ifTrue:
-			["Element value is a vector, emulate #'invalid argument' checks here."
-			| okToStore |
-			primitiveArgValue := primitiveArgValue atTimes: timeIndices.
-			okToStore := primitiveArgValue rawCollect: [:eachValue |
-				self context: aContext okToStore: eachValue inBits: receiverClass].
-			okToStore hasSingleValue ifFalse:
-				["The primitive would fail for some points in time. Fork."
-				^ self fork: aContext for: okToStore withTimesCollect: [:eachContext :eachOkToStore :times |
-					self
-						context: eachContext
-						runPrimitive: primitiveIndex
-						method: aCompiledMethod
-						receiver: receiver
-						args: (arguments allButLast copyWith: (primitiveArgValue atTimes: times))]].
-			"The primitive will behave constantly for the vector."
-			okToStore rawValues first ifTrue:
-				["As we cannot store vectors in bits classes, make sure to emulate the primitive only to store the value in sideEffects."
-				ownObjects removeKey: primitiveReceiver ifAbsent: []]]].
+			[primitiveArgValue := primitiveArgValue atTimes: timeIndices.
+			primitiveArgValue hasSingleValue
+				ifTrue:
+					[primitiveArgValue := arguments atLast: 1 put: primitiveArgValue rawValues first]
+				ifFalse:
+					["Element value is a vector, trigger #'invalid argument' checks from here."
+					| okToStore |
+					okToStore := primitiveArgValue rawCollect: [:eachValue |
+						self context: aContext okToStore: eachValue inBits: receiverClass].
+					okToStore hasSingleValue ifFalse:
+						["The primitive would fail for some points in time. Fork."
+						^ self fork: aContext for: okToStore withTimesCollect: [:eachContext :eachOkToStore :times |
+							self
+								context: eachContext
+								runPrimitive: primitiveIndex
+								method: aCompiledMethod
+								receiver: receiver
+								args: (arguments allButLast copyWith: (primitiveArgValue atTimes: times))]].
+					"The primitive will behave constantly for the vector."
+					okToStore rawValues first ifTrue:
+						["As we cannot store vectors in bits classes, make sure to emulate the primitive only to store the value in sideEffects."
+						ownObjects removeKey: primitiveReceiver ifAbsent: []]]]].
 	
 	(self context: aContext isVector: primitiveReceiver) ifTrue:
 		[primitiveReceiver := primitiveReceiver atTimes: timeIndices.
