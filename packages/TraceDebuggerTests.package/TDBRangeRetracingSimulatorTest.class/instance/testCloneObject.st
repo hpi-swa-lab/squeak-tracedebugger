@@ -8,21 +8,21 @@ testCloneObject
 	
 	"No vectors"
 	self
-		assertQuery: [array at: 1 put: 1; copy]
-			value: {1. 0. 0};
-		assertQuery: [array copy at: 1 put: 1; yourself]
-			value: {1. 0. 0};
-		assertQuery: [byteArray at: 1 put: 1; copy]
-			value: #[1 0 0];
-		assertQuery: [byteArray copy at: 1 put: 1; yourself]
-			value: #[1 0 0].
+		assertQuery: [array at: 1 put: 10; copy]
+			value: {10. 0. 0};
+		assertQuery: [array copy at: 1 put: 10; yourself]
+			value: {10. 0. 0};
+		assertQuery: [byteArray at: 1 put: 10; copy]
+			value: #[10 0 0];
+		assertQuery: [byteArray copy at: 1 put: 10; yourself]
+			value: #[10 0 0].
 	
 	self
-		assertQuery: [array at: 1 put: thisContext tdbRetracingTimeIndex; copy]
-			values: {{1. 0. 0}. {2. 0. 0}. {3. 0. 0}};
-		assertQuery: [array copy at: 1 put: thisContext tdbRetracingTimeIndex; copy]
-			values: {{1. 0. 0}. {2. 0. 0}. {3. 0. 0}};
-		assertQuery: [byteArray at: 1 put: thisContext tdbRetracingTimeIndex; copy]
-			values: {#[1 0 0]. #[2 0 0]. #[3 0 0]};
-		assertQuery: [byteArray copy at: 1 put: thisContext tdbRetracingTimeIndex; copy]
-			values: {#[1 0 0]. #[2 0 0]. #[3 0 0]}.
+		assertQuery: [array at: 1 put: thisContext tdbRetracingTimeIndex * 10; copy]
+			values: {{10. 0. 0}. {20. 0. 0}. {30. 0. 0}};
+		assertQuery: [array copy at: 1 put: thisContext tdbRetracingTimeIndex * 10; copy]
+			values: {{10. 0. 0}. {20. 0. 0}. {30. 0. 0}};
+		assertQuery: [byteArray at: 1 put: thisContext tdbRetracingTimeIndex * 10; copy]
+			values: {#[10 0 0]. #[20 0 0]. #[30 0 0]};
+		assertQuery: [byteArray copy at: 1 put: thisContext tdbRetracingTimeIndex * 10; copy]
+			values: {#[10 0 0]. #[20 0 0]. #[30 0 0]}.

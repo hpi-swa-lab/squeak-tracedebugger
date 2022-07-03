@@ -4,7 +4,7 @@ context: aContext primitiveClone: receiver do: aBlock
 	<tdbRequiredIf: #wantsToControlReads>
 	<tdbRequiredIf: #shouldIsolate>
 
-	| result copy copyClass size |
+	| result copy copyClass size previousPrimitive |
 	result := aBlock value.
 	(aContext isPrimFailToken: result) ifTrue: [^ result].
 	self assert: result == aContext.
@@ -42,7 +42,9 @@ context: aContext primitiveClone: receiver do: aBlock
 	size := copyClass tdbIsContextClass
 		ifTrue: [copy stackPtr]
 		ifFalse: [aContext objectSize: copy].
-	1 to: size do: [:index |
+	previousPrimitive := lastPrimitive.
+	lastPrimitive := 60 "primitiveAt".
+	[1 to: size do: [:index |
 		self context: aContext simulatedObject: receiver basicAt: index ifHit: [:value |
 			result := aContext
 				doPrimitive:
@@ -54,6 +56,7 @@ context: aContext primitiveClone: receiver do: aBlock
 				args: {index. value}.
 			(aContext isPrimFailToken: result)
 				ifTrue: [^ result]
-				ifFalse: [result pop]]].
+				ifFalse: [result pop]]]]
+		ensure: [lastPrimitive := previousPrimitive].
 	
 	^ aContext
