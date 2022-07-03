@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1656807680894,
+  "lastUpdate": 1656874877487,
   "repoUrl": "https://github.com/hpi-swa-lab/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -13707,6 +13707,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 57.41950887982237",
             "extra": "{\"totalTime\":1979.0,\"preparationTime\":130.0,\"singleTimesToRun\":[1785.0,1866.0,1896.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "56fb02f8f298a53501d057fc2194886663e3f30f",
+          "message": "cursor/trace: add context tree slices with compaction support\n\nAlso includes new printing selectors on Context and new enumerating extension SequenceableCollection>>#tdbSequentiallyGroupBy:gather: as well as rough tests for most of this.",
+          "timestamp": "2022-07-03T20:41:46+02:00",
+          "tree_id": "d3c7dcc775a4d03099d506893a883e428f2279ae",
+          "url": "https://github.com/hpi-swa-lab/squeak-tracedebugger/commit/56fb02f8f298a53501d057fc2194886663e3f30f"
+        },
+        "date": 1656874875197,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 9625.333333333334,
+            "unit": "Milliseconds",
+            "range": "stdev: 143.7718099396865",
+            "extra": "{\"totalTime\":9625.333333333334,\"preparationTime\":0.0,\"singleTimesToRun\":[9721.0,9460.0,9695.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 38055.333333333336,
+            "unit": "Milliseconds",
+            "range": "stdev: 269.17714117906326",
+            "extra": "{\"totalTime\":38056.333333333336,\"preparationTime\":1.0,\"singleTimesToRun\":[37761.0,38289.0,38116.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 186.66666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 31.533051443419385",
+            "extra": "{\"totalTime\":186.66666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[221.0,159.0,180.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 3458.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 146.37736619209042",
+            "extra": "{\"totalTime\":3458.3333333333335,\"preparationTime\":0.0,\"singleTimesToRun\":[3393.0,3626.0,3356.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 389.6666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 41.54916766113773",
+            "extra": "{\"totalTime\":389.6666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[430.0,347.0,392.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 72934,
+            "unit": "Milliseconds",
+            "range": "stdev: 703.7755323965163",
+            "extra": "{\"totalTime\":73128.66666666667,\"preparationTime\":194.66666666666666,\"singleTimesToRun\":[72164.0,73544.0,73094.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 3545.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 234.41274140569521",
+            "extra": "{\"totalTime\":3690.0,\"preparationTime\":144.66666666666666,\"singleTimesToRun\":[3816.0,3412.0,3408.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1810,
+            "unit": "Milliseconds",
+            "range": "stdev: 10.14889156509222",
+            "extra": "{\"totalTime\":1910.3333333333333,\"preparationTime\":100.33333333333333,\"singleTimesToRun\":[1799.0,1812.0,1819.0],\"postparationTime\":0.0}"
           }
         ]
       }
