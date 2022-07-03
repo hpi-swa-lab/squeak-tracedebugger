@@ -1,0 +1,4 @@
+accessing - state
+representationMode
+
+	^ representationMode

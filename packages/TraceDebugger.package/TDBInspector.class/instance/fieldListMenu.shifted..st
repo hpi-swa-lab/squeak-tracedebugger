@@ -4,6 +4,7 @@ fieldListMenu: menu shifted: shifted
 	| fullMenu |
 	fullMenu := self inspector fieldListMenu: menu shifted: shifted.
 	
+	
 	"Dismiss items related to pointers. The semantics of these operations would be unclear when the object is referenced in the trace or historic memory."
 	fullMenu tdbRemoveAllSelectors: 
 		#(objectReferencesToSelection chaseSelectionPointers exploreSelectionPointers).
@@ -19,5 +20,13 @@ fieldListMenu: menu shifted: shifted
 	
 	"Dismiss inappropiate field items."
 	fullMenu tdbRemoveAllSelectors: #(editSetterFor:). "Editing historic state is currently undefined, see #24."
+	
+	
+	"Add new items."
+	fullMenu tdbInsertBeforeFirstLine:
+		[fullMenu
+			add: 'explore field history' action: #exploreFieldHistory;
+			add: 'explore value history' action: #exploreValueHistory].
+	
 	
 	^ fullMenu
