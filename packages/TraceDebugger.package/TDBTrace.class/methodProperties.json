@@ -16,6 +16,8 @@
 		"enableSimulatorDuring:" : "ct 3/15/2022 23:44",
 		"findNearestTraceFor:" : "ct 3/15/2022 23:31",
 		"initialize" : "ct 1/24/2022 22:14",
+		"makeTreeSliceForTimeStream:contractPaths:" : "ct 7/3/2022 18:27",
+		"makeTreeSliceForTimes:contractPaths:" : "ct 7/3/2022 15:38",
 		"maxTimeIndex" : "ct 1/24/2022 22:20",
 		"memory" : "ct 11/18/2021 18:48",
 		"minTimeIndex" : "ct 11/21/2021 01:45",
