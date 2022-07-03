@@ -102,6 +102,17 @@ context: aContext doWritePrimitive: primitiveIndex method: aCompiledMethod recei
 					yourself)
 			do: aBlock].
 	
+	(primitiveIndex = 148 "primitiveClone" and: [(aContext objectClass: receiver) tdbIsContextClass]) ifTrue:
+		["Context instances may have a variable size. As the memory simulator cannot handle a vector size, fork for each size."
+		self context: aContext simulatedObject: receiver instVarAt: 3 "stackp" ifHit: [:stackp |
+			(self context: aContext isVector: stackp) ifTrue:
+				[^ self fork: aContext for: stackp collect: [:eachContext :eachStackp |
+					eachContext
+						doPrimitive: primitiveIndex
+						method: aCompiledMethod
+						receiver: receiver
+						args: arguments]]]].
+	
 	^ super
 		context: aContext
 		doPrimitive: primitiveIndex

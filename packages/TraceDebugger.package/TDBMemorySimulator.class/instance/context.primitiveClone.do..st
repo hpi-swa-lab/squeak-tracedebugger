@@ -39,9 +39,9 @@ context: aContext primitiveClone: receiver do: aBlock
 						instVarAt: index
 						put: value]]].
 	
-	size := copyClass == Context
-		ifTrue: [receiver stackPtr]
-		ifFalse: [aContext objectSize: receiver].
+	size := copyClass tdbIsContextClass
+		ifTrue: [copy stackPtr]
+		ifFalse: [aContext objectSize: copy].
 	1 to: size do: [:index |
 		self context: aContext simulatedObject: receiver basicAt: index ifHit: [:value |
 			result := aContext

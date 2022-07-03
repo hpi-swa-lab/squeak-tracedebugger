@@ -16,6 +16,17 @@ context: aContext doReadPrimitive: primitiveIndex method: aCompiledMethod receiv
 			args: receiverAndArgs allButFirst
 			do: aBlock].
 	
+	((primitiveIndex = 60 "primitiveAt" or: [primitiveIndex = 210 "primitiveContextAt"])
+		and: [(aContext objectClass: receiver) tdbIsContextClass])
+			ifTrue:
+				["Context instances may have a variable size. We must not fetch entire vectors from the memory for each argument which could be higher than the current receiver size, causing an out-of-bound read from [getCurrent:] in #context:simulatedObject:basicAt:ifHit:."
+				^ self fork: aContext for: receiverAndArgs collect: [:eachContext :eachReceiverAndArgs |
+					eachContext
+						doPrimitive: primitiveIndex
+						method: aCompiledMethod
+						receiver: eachReceiverAndArgs first
+						args: eachReceiverAndArgs allButFirst]].
+	
 	"Run primitive for each combination. Avoid costly forks at this point but only store the result of each call."
 	resultOrFailTokens := receiverAndArgs rawCollect: [:eachReceiverAndArgs |
 		| result |

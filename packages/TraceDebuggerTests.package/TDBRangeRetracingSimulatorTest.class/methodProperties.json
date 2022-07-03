@@ -22,6 +22,7 @@
 		"testBitBlt2" : "ct 6/17/2022 19:08",
 		"testCloneObject" : "ct 5/31/2022 18:49",
 		"testCombineArgumentsCollect" : "ct 6/2/2022 10:28",
+		"testContextPrimitives" : "ct 7/3/2022 01:30",
 		"testDebugForks" : "ct 6/2/2022 10:27",
 		"testError" : "ct 6/2/2022 10:41",
 		"testIsolateState" : "ct 5/26/2022 15:45",
