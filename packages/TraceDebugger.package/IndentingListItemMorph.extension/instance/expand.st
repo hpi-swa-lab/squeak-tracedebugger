@@ -16,7 +16,9 @@ expand
 
 	newChildren := container 
 		addSubmorphsAfter: self 
-		fromCollection: (c tdbproxyYourself collect: [:ea | c in: [:p | ea]])
+		fromCollection: (c tdbproxyYourself "<-- TraceDebugger (for exploring TDBMemorySlices)"
+			flag: #proxyHacks;
+			collect: [:ea | c in: [:p | ea]])
 		allowSorting: true.
 
 	firstChild := newChildren first.
