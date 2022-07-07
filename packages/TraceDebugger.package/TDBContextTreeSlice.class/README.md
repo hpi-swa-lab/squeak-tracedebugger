@@ -1,0 +1,3 @@
+I contain a slice of the context tree from a TDBCursor. My nodes support contraction, i.e., instead of a single key, I have a entire path of keys. If I am the leaf of a context slice, my last key will be a time index.
+
+NOTE that the contexts in my path are bare Context instances, i.e., other than the results of TDBCursor>>#context et al., they are not wrapped in proxies. This is a YAGNI decision and may be revised in the future. Use something like "aCursor object: aContext atTime: (aCursor traceFor: aContext) maxTimeIndex" for working with the historic context state.

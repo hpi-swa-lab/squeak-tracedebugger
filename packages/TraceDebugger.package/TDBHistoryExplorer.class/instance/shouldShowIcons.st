@@ -1,0 +1,4 @@
+testing
+shouldShowIcons
+
+	^ Preferences visualExplorer

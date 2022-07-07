@@ -1,0 +1,4 @@
+testing
+hasError
+
+	^ error notNil

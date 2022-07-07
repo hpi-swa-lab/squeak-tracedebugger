@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"error",
+		"result" ],
+	"name" : "TDBMaybeResult",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

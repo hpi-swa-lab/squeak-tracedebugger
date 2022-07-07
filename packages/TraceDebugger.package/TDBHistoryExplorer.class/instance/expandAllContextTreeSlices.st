@@ -1,0 +1,4 @@
+private
+expandAllContextTreeSlices
+
+	^ self expandAllContextTreeSlicesAround: []
