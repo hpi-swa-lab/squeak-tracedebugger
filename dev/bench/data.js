@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1657213051290,
+  "lastUpdate": 1657214276076,
   "repoUrl": "https://github.com/hpi-swa-lab/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -14107,6 +14107,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 30.105370506494907",
             "extra": "{\"totalTime\":1508.6666666666667,\"preparationTime\":81.33333333333333,\"singleTimesToRun\":[1403.0,1461.0,1418.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38782922+LinqLover@users.noreply.github.com",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f881a345b1a64b293c0d3fd5d6a7e03410715dcb",
+          "message": "Merge pull request #85 from hpi-swa-lab/retracing-fixes\n\nFixes to retracing infrastructure:\r\n\r\n* range retracing: fix variable assignment to vector (f5e013e)\r\n\r\nIf an assignment side effect is performed on a vector, fork like we already do it for write primitives. Add a test for the situation.\r\n\r\n* range retracing tests: refactor assertions and improve failure messages (a828604)\r\n\r\nUse of transcript is a workaround for [Squeak] Improve expressiveness of failing #assert:equals: etc. hpi-swa/smalltalkCI#478.\r\n\r\n* retracing: improve printString of retracing simulator (80f8d18)\r\n\r\n* range retracing: simplify #runSimulated:... (a84029c)",
+          "timestamp": "2022-07-07T19:00:36+02:00",
+          "tree_id": "be260d65e7ee6eef6af936da422e64d534d85e05",
+          "url": "https://github.com/hpi-swa-lab/squeak-tracedebugger/commit/f881a345b1a64b293c0d3fd5d6a7e03410715dcb"
+        },
+        "date": 1657214273694,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 8797.333333333334,
+            "unit": "Milliseconds",
+            "range": "stdev: 137.15076862100824",
+            "extra": "{\"totalTime\":8797.333333333334,\"preparationTime\":0.0,\"singleTimesToRun\":[8645.0,8911.0,8836.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 32776,
+            "unit": "Milliseconds",
+            "range": "stdev: 230.36275740666068",
+            "extra": "{\"totalTime\":32777.0,\"preparationTime\":1.0,\"singleTimesToRun\":[32994.0,32799.0,32535.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 144.66666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 4.725815626252609",
+            "extra": "{\"totalTime\":144.66666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[141.0,150.0,143.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 3086.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 86.03100216394863",
+            "extra": "{\"totalTime\":3086.6666666666665,\"preparationTime\":0.0,\"singleTimesToRun\":[3036.0,3038.0,3186.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 337.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 6.110100926607787",
+            "extra": "{\"totalTime\":337.3333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[332.0,344.0,336.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 64590,
+            "unit": "Milliseconds",
+            "range": "stdev: 83.46855695410099",
+            "extra": "{\"totalTime\":64781.333333333336,\"preparationTime\":191.33333333333334,\"singleTimesToRun\":[64608.0,64499.0,64663.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 3053,
+            "unit": "Milliseconds",
+            "range": "stdev: 169.413694841946",
+            "extra": "{\"totalTime\":3142.3333333333335,\"preparationTime\":89.33333333333333,\"singleTimesToRun\":[2969.0,2942.0,3248.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1617.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 47.47982027486344",
+            "extra": "{\"totalTime\":1710.0,\"preparationTime\":92.66666666666667,\"singleTimesToRun\":[1564.0,1655.0,1633.0],\"postparationTime\":0.0}"
           }
         ]
       }
