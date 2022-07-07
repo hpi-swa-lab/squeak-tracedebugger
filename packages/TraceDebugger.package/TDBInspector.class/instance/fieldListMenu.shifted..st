@@ -25,8 +25,8 @@ fieldListMenu: menu shifted: shifted
 	"Add new items."
 	fullMenu tdbInsertBeforeFirstLine:
 		[fullMenu
-			add: 'explore field history' action: #exploreFieldHistory;
-			add: 'explore value history' action: #exploreValueHistory].
+			add: 'explore value history' action: #exploreValueHistory;
+			add: 'explore field history' action: #exploreFieldHistory].
 	
 	
 	^ fullMenu

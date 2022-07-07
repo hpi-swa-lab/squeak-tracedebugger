@@ -11,10 +11,8 @@ mainSliceContextMenu: menu
 				ifFalse:
 					[menu
 						add: 'inspect snapshot (i)' action: #inspectSnapshot;
-						add: 'explore snapshot (I)' action: #exploreSnapshot]
-				ifTrue:
-					[menu
-						add: 'debug snapshot' action: #debugSnapshot]].
+						add: 'explore snapshot (I)' action: #exploreSnapshot].
+			menu add: 'debug snapshot' action: #debugSnapshot].
 	
 		menu addLine].
 	

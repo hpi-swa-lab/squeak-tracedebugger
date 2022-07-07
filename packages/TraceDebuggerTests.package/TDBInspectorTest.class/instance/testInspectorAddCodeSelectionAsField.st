@@ -1,5 +1,5 @@
 tests
-testInspectorAddSelectionAsField
+testInspectorAddCodeSelectionAsField
 
 	| object inspector valuePane window |
 	object := TDBTestObject new
@@ -12,7 +12,7 @@ testInspectorAddSelectionAsField
 	valuePane := window findDeepSubmorphThat: [:m | m knownName = #valuePane] ifAbsent: [self fail].
 	valuePane setText: '(plonk * griffle) squared'.
 	valuePane selectFrom: 2 to: 16. "plonk * griffle"
-	inspector addSelectionAsField.
+	inspector addCodeSelectionAsField.
 	
 	self assert: #custom equals: inspector selectedField type.
 	self assert: '42' equals: valuePane text asString.
