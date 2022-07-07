@@ -8,13 +8,6 @@ context: aContext send: selector super: superFlag numArgs: numArgs do: aBlock
 	numArgs to: 1 by: -1 do: [:i | arguments at: i put: aContext pop].
 	thisReceiver := aContext pop.
 	
-	"Resolve proxy receiver for the same memory by replacing them with the original receiver. See TDBProxy>>#xxxtdbproxyForward: and senders."
-	((aContext objectClass: thisReceiver) isTdbProxyClass
-		and: [thisReceiver xxxtdbproxyMemory == memory
-			and: [thisReceiver xxxtdbproxyTimeIndex = timeIndices]])
-				ifTrue:
-					[thisReceiver := thisReceiver xxxtdbproxyObject].
-	
 	lookupClass := self context: aContext combineArguments: {thisReceiver} collect: [:eachReceiver |
 		aContext objectClass: eachReceiver first].
 	(self context: aContext isVector: lookupClass) ifTrue:

@@ -6,10 +6,9 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	arguments := nil.
 	originalArguments withIndexDo: [:argument :index |
 		((aContext objectClass: argument) isTdbProxyClass
-			and: [argument xxxtdbproxyMemory == memory
-				and: [argument xxxtdbproxyTimeIndex = self timeIndex]])
-					ifTrue: [(arguments ifNil: [arguments := originalArguments copy])
-						at: index put: argument xxxtdbproxyObject]].
+			and: [argument xxxtdbproxyMemory == memory])
+				ifTrue: [(arguments ifNil: [arguments := originalArguments copy])
+					at: index put: argument xxxtdbproxyObject]].
 	arguments ifNil: [arguments := originalArguments].
 	
 	^ super
