@@ -35,6 +35,7 @@
 		"context:sendSpecial:numArgs:do:" : "ct 5/28/2022 22:42",
 		"context:simulatedObject:basicAt:ifHit:" : "ct 6/3/2022 18:09",
 		"context:simulatedObject:instVarAt:ifHit:" : "ct 6/3/2022 18:09",
+		"context:simulatedObject:instVarAt:put:do:" : "ct 7/5/2022 10:39",
 		"contextCopies" : "ct 5/26/2022 17:56",
 		"contextCopies:" : "ct 5/26/2022 17:57",
 		"contextForceRetracingFork:arguments:" : "ct 6/1/2022 16:49",
