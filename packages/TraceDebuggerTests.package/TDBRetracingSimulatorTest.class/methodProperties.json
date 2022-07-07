@@ -4,8 +4,10 @@
 	"instance" : {
 		"newSimulator" : "ct 5/10/2022 21:54",
 		"testContextPrimitives" : "ct 7/3/2022 01:53",
+		"testForeignProxy" : "ct 7/7/2022 15:35",
 		"testIsolatePrimitives" : "ct 5/26/2022 16:01",
 		"testIsolateState" : "ct 5/26/2022 16:03",
+		"testOwnProxy" : "ct 7/7/2022 15:33",
 		"testPrimitive118" : "ct 6/18/2022 15:40",
 		"testPrimitiveExecuteMethod" : "ct 7/7/2022 16:54",
 		"testReadYourOwnWrites" : "ct 5/10/2022 21:46",
