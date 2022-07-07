@@ -7,10 +7,12 @@
 		"context:primitiveTraceDebugger:receiver:arguments:" : "ct 6/1/2022 18:56",
 		"context:send:to:with:lookupIn:do:" : "ct 5/2/2022 22:24",
 		"contextForceRetracingFork:arguments:" : "ct 6/1/2022 18:56",
-		"contextPushRetracingTimeIndex:" : "ct 6/1/2022 18:56",
+		"contextPushRetracingTimeIndex:" : "ct 7/5/2022 16:45",
 		"initialize" : "ct 5/10/2022 23:30",
 		"memory" : "ct 5/2/2022 13:53",
 		"memory:" : "ct 5/2/2022 13:53",
+		"printOn:" : "ct 7/5/2022 16:45",
 		"sideEffects" : "ct 6/18/2022 16:00",
 		"sideEffects:" : "ct 6/18/2022 16:00",
+		"timeIndex" : "ct 7/5/2022 16:44",
 		"wantsToControlReads" : "ct 5/10/2022 21:18" } }
