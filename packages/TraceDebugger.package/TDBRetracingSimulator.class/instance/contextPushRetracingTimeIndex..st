@@ -1,5 +1,4 @@
 primitives
 contextPushRetracingTimeIndex: aContext
-	"See Context>>#tdbRetracingTimeIndex."
 
-	^ self subclassResponsibility
+	^ aContext push: self timeIndex
