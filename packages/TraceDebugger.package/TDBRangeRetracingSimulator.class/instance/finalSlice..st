@@ -1,5 +1,5 @@
 private
-finalSlice: finalSlice withTimeIndicesWithin: fullTimeIndices
+finalSlice: finalSlice
 
 	| allTimeIndices finalTimeIndices |
 	"allVectors ifNotEmpty: [Smalltalk garbageCollect]."
@@ -8,10 +8,11 @@ finalSlice: finalSlice withTimeIndicesWithin: fullTimeIndices
 	
 	allTimeIndices := (allVectors copyWith: finalSlice) gather:
 		[:slice |
-			slice intervals gather:
-				[:interval |
-					{interval start clampLow: fullTimeIndices first high: fullTimeIndices max.
-					(interval stop clampLow: fullTimeIndices first high: fullTimeIndices max) + 1}]].
+			(slice intervals
+				reject: [:interval | interval last < timeIndices first or: [interval first > timeIndices last]])
+				gather: [:interval |
+					{interval start clampLow: timeIndices first high: timeIndices max.
+					(interval stop clampLow: timeIndices first high: timeIndices max) + 1}]].
 	allTimeIndices ifEmpty: [^ finalSlice].
 	
 	finalTimeIndices := (allTimeIndices withoutDuplicates sorted

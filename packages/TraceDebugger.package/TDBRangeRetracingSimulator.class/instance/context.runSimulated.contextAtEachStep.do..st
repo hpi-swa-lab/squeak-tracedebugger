@@ -4,7 +4,7 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 	Other than in normal interpretation, Context>>#step may also answer a vector instead of a normal context here when the execution is forked. Once this happens, we maintain and advance a slice of parallel contexts.
 	Optimized for performance over readability. Watch the beautiful bytecode."
 
-	| home current ensure complete result results debugIndex fullTimeIndices newSideEffects |
+	| home current ensure complete result results debugIndex newSideEffects |
 	"*** 1. INITIALIZATION ***"
 	home := thisContext home sender.
 	current := aBlock asContext.
@@ -13,7 +13,6 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 	
 	results := complete := nil.
 	newSideEffects := Dictionary new.
-	fullTimeIndices := timeIndices.
 	
 	"Insert outer context denoting the end of the simulation."
 	ensure := (ensure := current) insertEnsure:
@@ -52,7 +51,7 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 				["The execution has not forked, assure results is a slice anyway."
 				result isTdbMemorySlice
 					ifTrue: [result]
-					ifFalse: [self memorySliceClass memory: memory intervals: {fullTimeIndices} rawValues: {result}]]
+					ifFalse: [self memorySliceClass memory: memory intervals: {timeIndices} rawValues: {result}]]
 			ifNotNil:
 				[results := results withKeysSorted: [:interval | interval first] ascending.
 				self memorySliceClass memory: memory intervals: results keys rawValues: results values].
@@ -63,7 +62,7 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 		newSideEffects := results species memory: memory intervals: newSideEffects keys rawValues: newSideEffects values.
 		
 		"Assure all time indices of the produced slices are still present as separate groups in the results slice."
-		results := self finalSlice: results withTimeIndicesWithin: fullTimeIndices.
+		results := self finalSlice: results.
 		
 		"Add new side effects to the results slice."
 		 results setSideEffects: "align time indices"
@@ -89,7 +88,7 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 	"*** 2. EXECUTION ***"
 	"Run the simulation. Stop execution on time, don't expose simulation details to caller."
 	[debugIndex := debugIndex + 1.
-	"self haltIf: debugIndex = 3241".
+	"self haltIf: debugIndex = 1235."
 	
 	"Is the context about to return to/through to ensure context?"
 	current isTdbMemorySlice
@@ -133,7 +132,7 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 		[current := complete removeFirst.
 		results := Dictionary new].
 	newSideEffects
-		at: (complete ifNil: [fullTimeIndices] ifNotNil: [complete first])
+		at: (complete ifNil: [timeIndices] ifNotNil: [complete first])
 		put: current simulator sideEffects.
 	"Continue with the execution in the previous context."
 	current := (aContext decustomize: current) copyTo: ensure sender.
