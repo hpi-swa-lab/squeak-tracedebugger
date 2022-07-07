@@ -4,5 +4,5 @@ testPrimitiveExecuteMethod
 	| proxy |
 	proxy := memory object: object atTimes: (0 to: 4) withSideEffects: nil.
 	self
-		assert: SmallInteger
+		assert: TDBTestObject
 		equals: (proxy perform: #class).
