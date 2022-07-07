@@ -10,6 +10,6 @@ doStepOver: aContext
 			ifTrue:
 				[self step ifNil: [^ self].
 				((self context tdbIdentical: aContext) not
-					and: [aContext in: [:ctx | self context hasSender: ctx]])
+					and: [self context hasSender: aContext tdbproxyYourself])
 						ifTrue: [self completeStep: self context]].
 		self stepToSendOrReturn].
