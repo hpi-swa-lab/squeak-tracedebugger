@@ -9,4 +9,4 @@ testAtTimeIfAbsent
 	self assert: #absent equals: (slice atTime: 0 ifAbsent: [#absent]).
 	self assert: #absent equals: (slice atTime: 7 ifAbsent: [#absent]).
 	
-	self assert: 4 equals: (slice atTime: 4 ifAbsent: [self fail]) xxxtdbproxyTimeIndex.
+	self assert: #(4) equals: (slice atTime: 4 ifAbsent: [self fail]) xxxtdbproxyTimeIndex asOrderedCollection asArray.

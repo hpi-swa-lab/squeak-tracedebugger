@@ -9,4 +9,4 @@ testAtTime
 	self shouldRaiseError: [slice atTime: 0].
 	self shouldRaiseError: [slice atTime: 7].
 	
-	self assert: 4 equals: (slice atTime: 4) xxxtdbproxyTimeIndex.
+	self assert: #(4) equals: (slice atTime: 4) xxxtdbproxyTimeIndex asOrderedCollection asArray.
