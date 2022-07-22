@@ -3,11 +3,13 @@
 		"catch:during:" : "ct 6/19/2022 21:13",
 		"error:result:" : "ct 6/19/2022 21:14" },
 	"instance" : {
+		"=" : "ct 7/5/2022 16:22",
 		"assureResult" : "ct 7/2/2022 12:42",
 		"error" : "ct 6/19/2022 21:14",
 		"error:" : "ct 6/19/2022 21:14",
 		"errorOrResult" : "ct 6/19/2022 21:14",
 		"hasError" : "ct 7/1/2022 19:52",
+		"hash" : "ct 7/5/2022 16:23",
 		"iconOrThumbnailOfSize:" : "ct 6/19/2022 23:04",
 		"ifError:ifResult:" : "ct 6/19/2022 21:26",
 		"printOn:" : "ct 6/19/2022 21:24",
