@@ -6,7 +6,8 @@ testPrimitiveStringAtPut
 	
 	string := 'aaa' copy.
 	simulator evaluate:
-		[self shouldRaiseError: [string at: 1 put: self].
+		[self shouldRaiseError: [string at: self put: 1].
+		self shouldRaiseError: [string at: 1 put: self].
 		string at: 2 put: (#($x $X) at: thisContext tdbRetracingTimeIndex) asciiValue.
 		string at: 3 put: (#($y $Y) at: thisContext tdbRetracingTimeIndex).
 		self assert: (#('axy' 'aXY') at: thisContext tdbRetracingTimeIndex) allButFirst equals: string allButFirst].

@@ -17,6 +17,11 @@ testPrimitiveInstVarAt
 	self assert:
 		(simulator evaluate:
 			[self
+				executeShould: [object instVarAt: self put: 2]
+				inScopeOf: Error]).
+	self assert:
+		(simulator evaluate:
+			[self
 				executeShould: [object instVarAt: 0 put: 2]
 				inScopeOf: Error]).
 	self assert:

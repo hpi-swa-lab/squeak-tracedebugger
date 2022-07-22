@@ -5,6 +5,7 @@ context: aContext simulatedObject: anObject instVarAt: index tryPut: value
 	sideEffects ifNil: [^ false].
 	(self hasOwnObject: anObject) ifTrue: [^ false].
 	
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
 	index > 0 ifFalse: [^ false].
 	index > (instSize := (aContext objectClass: anObject) instSize) ifTrue:
 		["Mimick the memory layout of the VM which stores fields after instance variables. See: MirrorPrimitiveTests>>#testMirrorInstVarAt.
