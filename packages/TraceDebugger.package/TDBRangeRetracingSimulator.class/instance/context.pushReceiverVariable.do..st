@@ -1,6 +1,5 @@
 instruction processing
 context: aContext pushReceiverVariable: offset do: aBlock
-	<tdbRequiredIf: #wantsToControlReads>
 
 	| receiver |
 	receiver := aContext receiver.

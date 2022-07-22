@@ -2,6 +2,7 @@ private - object access
 context: aContext simulatedObject: anObject basicAt: index tryPut: value
 
 	| oldValue |
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
 	index > 0 ifFalse: [^ false].
 	index > (aContext objectSize: anObject) ifTrue: [^ false].
 	

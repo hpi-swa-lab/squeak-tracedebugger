@@ -2,6 +2,7 @@ private - object access
 context: aContext simulatedObject: anObject instVarAt: index ifHit: aBlock
 
 	| result |
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
 	index > 0 ifFalse: [^ nil].
 	
 	"1.) Look up value in sideEffects"
