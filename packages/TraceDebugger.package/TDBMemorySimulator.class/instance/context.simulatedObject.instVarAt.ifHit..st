@@ -4,6 +4,7 @@ context: aContext simulatedObject: anObject instVarAt: index ifHit: aBlock
 	| result |
 	sideEffects ifNil: [^ nil].
 	
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
 	index > 0 ifFalse: [^ nil].
 	
 	result := sideEffects
