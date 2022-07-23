@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classUnderTest" : "ct 7/23/2022 14:50",
+		"makeTreeSlice:" : "ct 7/23/2022 15:13",
+		"setUp" : "ct 7/23/2022 15:23",
+		"testAllLeaves" : "ct 7/23/2022 15:31",
+		"testAllLeavesSatisfying" : "ct 7/23/2022 15:37",
+		"testAtPath" : "ct 7/23/2022 15:23",
+		"testBottomContext" : "ct 7/23/2022 15:23",
+		"testLeaf" : "ct 7/23/2022 15:26",
+		"testTestSelectors" : "ct 7/23/2022 15:40" } }
