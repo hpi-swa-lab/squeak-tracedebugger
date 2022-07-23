@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"asTdbProxyHolderFor:" : "ct 3/10/2022 22:39",
+		"isTdbIsolatedError" : "ct 7/21/2022 17:23",
 		"isTdbMemorySlice" : "ct 5/12/2022 20:38",
 		"isTdbProxyHolder" : "ct 3/10/2022 22:39",
 		"tdbHalt" : "ct 3/19/2022 21:02",

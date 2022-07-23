@@ -1,4 +1,6 @@
 evaluating
 exploreIt: aStringOrText result: anObject
 
-	^ self spawn: anObject
+	^ self
+		spawnMemorySlice: anObject
+		expression: aStringOrText

@@ -1,5 +1,5 @@
 actions
-spawn: aMemorySlice
+spawnMemorySlice: aMemorySlice
 
 	| timesAndValues newSlice newExplorer |
 	"Convert the slice into a new slice with a TDBRangeProxy for each value. Any follow-up range queries in the new explorer will treat the slice as a vector and resolve it automatically. Make sure not to nest slices."
@@ -15,6 +15,5 @@ spawn: aMemorySlice
 	newExplorer := self class
 		forCursor: self cursor
 		object: newSlice.
-	self flag: #todo. "beautify labelString after spawn?"
 	newExplorer context: self context.
 	^ newExplorer open

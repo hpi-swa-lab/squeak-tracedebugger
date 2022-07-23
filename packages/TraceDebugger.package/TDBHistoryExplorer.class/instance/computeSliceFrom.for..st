@@ -7,8 +7,9 @@ computeSliceFrom: aStringOrText for: requestor
 		requestor: requestor
 		ifFail: [^ false].
 	
-	memorySlice := self cursor object: self object collect: [:ea |
-		TDBMaybeResult catch: Error, Warning, Halt during: [block value: ea]].
+	memorySlice := Cursor wait showWhile:
+		[self cursor object: self object collect: [:ea |
+			TDBMaybeResult catch: self commonErrors during: [block value: ea]]].
 	self changed: #memorySlice.
 	
 	^ true

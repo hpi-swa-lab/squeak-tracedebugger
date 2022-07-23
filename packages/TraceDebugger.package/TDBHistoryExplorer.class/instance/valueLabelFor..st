@@ -1,5 +1,5 @@
-accessing - toolbuilder
+labels & details
 valueLabelFor: value
 
-	^ [value printString] on: Error, Warning, Halt do: [:ex |
-		'<printString error: {1}>' format: {ex}]
+	^ [value printString] on: self commonErrors do: [:ex |
+		self errorText: 'printString error' exception: ex]

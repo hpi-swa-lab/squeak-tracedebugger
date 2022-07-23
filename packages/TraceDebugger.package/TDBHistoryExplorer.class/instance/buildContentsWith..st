@@ -9,13 +9,13 @@ buildContentsWith: builder
 			[specs
 				add:
 					((self buildContextTreeWith: builder)
-						frame:
+						layoutFrame:
 							(LayoutFrame fullFrame
 								rightFraction: self contextTreeWidthFraction
 								yourself);
 						yourself);
 				add:
-					((self buildValuePaneWith: builder)
+					((self buildDetailsWith: builder)
 						frame:
 							(LayoutFrame fullFrame
 								leftFraction: self contextTreeWidthFraction;

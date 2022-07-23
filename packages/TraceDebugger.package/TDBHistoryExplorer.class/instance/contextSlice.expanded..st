@@ -11,3 +11,4 @@ contextSlice: aContextSlice expanded: aBoolean
 			self contextSlice: child expanded: false]].
 	
 	self changed: #contextSliceLabelFor: with: aContextSlice.
+	self changed: #detailsText.

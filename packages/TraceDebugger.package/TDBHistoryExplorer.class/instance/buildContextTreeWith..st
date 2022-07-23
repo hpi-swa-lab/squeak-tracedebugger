@@ -11,7 +11,6 @@ buildContextTreeWith: builder
 		setSelected: #selectContextSlice:;
 		
 		label: #contextSliceLabelFor:;
-		icon: #contextSliceIconFor:;
 		help: #contextSliceToolTipFor:;
 		menu: #contextSliceMenu:shifted:;
 		keyPress: #contextSliceKey:from:event:;

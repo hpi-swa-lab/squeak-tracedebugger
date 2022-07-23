@@ -1,5 +1,4 @@
 actions
 debug
 
-	self cursor debugAtTime:
-		self selectedContextSlice maxTimeIndex.
+	^ self debug: self selectedContextSlice

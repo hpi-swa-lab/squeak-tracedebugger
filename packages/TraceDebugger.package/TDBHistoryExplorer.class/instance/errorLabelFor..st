@@ -1,7 +1,4 @@
-accessing - toolbuilder
+labels & details - errors
 errorLabelFor: anException
 
-	^ ('<error: {1}>' format: {anException})
-		asText
-			addAllAttributes: {TextEmphasis italic};
-			yourself
+	^ self errorText: #error exception: anException

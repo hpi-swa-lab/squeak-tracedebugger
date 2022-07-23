@@ -14,7 +14,7 @@ contextLabelFor: aContext
 	
 	aContext tdbIsSignalContext ifTrue:
 		[label := label asText
-			addAllAttributes: (self attributesForStyle: self styleForSignalContext);
+			addAllAttributes: (self tdbAttributesForStyle: self styleForSignalContext);
 			yourself].
 	
 	(self cursor isContextAlive: aContext)
@@ -34,7 +34,7 @@ contextLabelFor: aContext
 							otherwise: []].
 			contextStyle ifNil: [contextStyle := self styleForDeadContext]].
 	label := label asText
-		addAllAttributes: (self attributesForStyle: contextStyle);
+		addAllAttributes: (self tdbAttributesForStyle: contextStyle);
 		yourself.
 	
 	^ label

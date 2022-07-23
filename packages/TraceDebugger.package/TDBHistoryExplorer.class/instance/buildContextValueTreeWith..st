@@ -4,10 +4,14 @@ buildContextValueTreeWith: builder
 	^ (self buildContextTreeWith: builder)
 		name: #contextValueTree;
 		
+		"icon:"getIconSelector: #contextSliceIconFor:;
 		columns:
-			{[:listMorph | (listMorph filteredItems collect: [:item |
-				item preferredWidthOfColumn: 1]) max].
-			[:listMorph | (listMorph filteredItems collect: [:item |
-				item preferredWidthOfColumn: 2]) max]};
+			((1 to: 2) collect: [:index |
+				[:listMorph |
+					| items |
+					items := listMorph filteredItems.
+					self shouldShrinkColumns ifTrue:
+						[items := items select: [:item | self isDisplayedAsLeaf: item complexContents item]].
+					(items collect: [:item | item preferredWidthOfColumn: index]) max]]);
 		
 		yourself

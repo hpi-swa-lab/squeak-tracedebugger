@@ -1,4 +1,6 @@
 actions
 spawn
 
-	^ self spawn: (self memorySlice collect: [:ea | ea errorOrResult])
+	^ self
+		spawnMemorySlice: (self memorySlice collect: [:ea | ea errorOrResult])
+		expression: self expression

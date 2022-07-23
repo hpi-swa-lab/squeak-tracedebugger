@@ -1,4 +1,4 @@
-accessing - toolbuilder
+labels & details
 contextLabelFor: aContextSlice
 
 	^ (self contextLabelCompactionStrategyMap at: self contextLabelCompactionStrategy)

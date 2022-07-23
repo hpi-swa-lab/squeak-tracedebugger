@@ -1,4 +1,4 @@
 accessing - state
 allRepresentationModes
 
-	^ #(list string)
+	^ #(list details)

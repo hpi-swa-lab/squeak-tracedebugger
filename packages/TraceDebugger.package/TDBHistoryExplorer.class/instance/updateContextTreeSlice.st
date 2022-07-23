@@ -11,4 +11,5 @@ updateContextTreeSlice
 	
 	expanded removeAll.
 	self expandAllContextTreeSlicesAround:
-		[self changed: #contextTreeSlice].
+		[selectedContextSlice := nil.
+		self changed: #contextTreeSlice].

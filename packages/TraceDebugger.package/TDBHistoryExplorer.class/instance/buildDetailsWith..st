@@ -1,8 +1,8 @@
 toolbuilder
-buildValuesWith: builder
+buildDetailsWith: builder
 
 	^ builder pluggableTextSpec new
 		model: self;
-		getText: #valueString;
+		getText: #detailsText;
 		frame: LayoutFrame fullFrame;
 		yourself

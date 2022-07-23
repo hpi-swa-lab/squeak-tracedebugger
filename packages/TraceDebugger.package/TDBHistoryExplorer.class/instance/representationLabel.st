@@ -1,4 +1,4 @@
 accessing - toolbuilder
 representationLabel
 
-	^ self representationMode asString
+	^ self representationLabelFor: self representationMode
