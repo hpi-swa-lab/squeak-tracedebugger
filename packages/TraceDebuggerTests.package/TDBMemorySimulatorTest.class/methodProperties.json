@@ -13,8 +13,8 @@
 		"testIsolateState" : "ct 5/10/2022 22:03",
 		"testNoIsolatePrimitives" : "ct 5/10/2022 22:09",
 		"testNoIsolateState" : "ct 5/10/2022 22:09",
-		"testPrimitiveAt" : "ct 5/31/2022 17:27",
+		"testPrimitiveAt" : "ct 7/22/2022 20:13",
 		"testPrimitiveConstantFill" : "ct 5/31/2022 19:46",
-		"testPrimitiveInstVarAt" : "ct 6/17/2022 18:24",
-		"testPrimitiveStringAtPut" : "ct 7/2/2022 23:34",
+		"testPrimitiveInstVarAt" : "ct 7/22/2022 20:13",
+		"testPrimitiveStringAtPut" : "ct 7/22/2022 20:12",
 		"testPrimitiveStringReplace" : "ct 5/31/2022 19:46" } }

@@ -5,6 +5,7 @@ context: aContext simulatedObject: anObject basicAt: index tryPut: value
 	sideEffects ifNil: [^ false].
 	(self hasOwnObject: anObject) ifTrue: [^ false].
 	
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
 	index > 0 ifFalse: [^ false].
 	index > (aContext objectSize: anObject) ifTrue: [^ false].
 	((objectClass := aContext objectClass: anObject) isBits
