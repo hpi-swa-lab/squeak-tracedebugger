@@ -38,6 +38,7 @@
 		"testPrimitiveStringReplace" : "ct 5/31/2022 20:11",
 		"testReadYourOwnWrites" : "ct 5/26/2022 15:38",
 		"testSIMDBinary" : "ct 5/27/2022 15:26",
+		"testSIMDNewVector" : "ct 7/24/2022 01:46",
 		"testSIMDUnary" : "ct 5/27/2022 15:27",
 		"testSideEffectBinary" : "ct 5/31/2022 18:16",
 		"testSideEffectInstanceVariable" : "ct 5/31/2022 15:11",
