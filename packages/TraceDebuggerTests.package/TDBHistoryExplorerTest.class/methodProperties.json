@@ -26,6 +26,8 @@
 		"testContextSliceTreeFrayOut" : "ct 7/21/2022 15:43",
 		"testContextSliceTreePrintStringError" : "ct 7/21/2022 15:50",
 		"testContextSliceTreePrintStringErrorInFrayOut" : "ct 7/22/2022 14:50",
+		"testDebug" : "ct 7/7/2022 20:27",
+		"testDebugSnapshot" : "ct 7/7/2022 20:37",
 		"testDetails" : "ct 7/22/2022 18:24",
 		"testDetailsFrayOut" : "ct 7/22/2022 18:24",
 		"testDetailsFrayOutInParents" : "ct 7/22/2022 18:24",
