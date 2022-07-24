@@ -27,6 +27,7 @@
 		"testRawWithTimesCollect" : "ct 6/2/2022 13:55",
 		"testRawWithTimesGather" : "ct 6/2/2022 13:56",
 		"testSize" : "ct 5/28/2022 15:28",
+		"testSpaceUsed" : "ct 7/24/2022 20:14",
 		"testTimesAndRawValues" : "ct 6/2/2022 11:55",
 		"testTimesAndRawValuesCollect" : "ct 6/2/2022 13:16",
 		"testTimesAndRawValuesDo" : "ct 6/2/2022 13:16",
