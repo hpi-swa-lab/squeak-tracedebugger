@@ -3,9 +3,8 @@ context: aContext primitiveNew: receiver do: aBlock
 	<simPrimitive: 70>
 	<tdbRequiredIf: #shouldIsolate>
 
-	| result |
-	result := aBlock value.
-	(aContext isPrimFailToken: result) ifTrue: [^ result].
-	
-	self addOwnObject: result top.
-	^ result
+	^ self
+		context: aContext
+		primitiveNew: receiver
+		withArg: nil
+		do: aBlock

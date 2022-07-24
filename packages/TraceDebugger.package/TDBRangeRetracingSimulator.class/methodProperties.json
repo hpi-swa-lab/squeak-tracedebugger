@@ -20,7 +20,7 @@
 		"initializePrimitiveHandlers" : "ct 6/1/2022 11:41" },
 	"instance" : {
 		"context:combineArguments:collect:" : "ct 6/18/2022 15:29",
-		"context:doPrimitive:method:receiver:args:do:" : "ct 6/18/2022 15:53",
+		"context:doPrimitive:method:receiver:args:do:" : "ct 7/23/2022 23:56",
 		"context:doReadPrimitive:method:receiver:args:do:" : "ct 7/21/2022 15:28",
 		"context:doWritePrimitive:method:receiver:args:do:" : "ct 7/3/2022 01:40",
 		"context:isVector:" : "ct 5/28/2022 22:48",
@@ -43,7 +43,7 @@
 		"contextForceRetracingFork:for:" : "ct 6/1/2022 18:32",
 		"contextPushRetracingTimeIndex:" : "ct 6/3/2022 18:09",
 		"evaluate:on:do:" : "ct 6/2/2022 13:57",
-		"finalSlice:" : "ct 7/5/2022 17:47",
+		"finalSlice:" : "ct 7/24/2022 15:43",
 		"fork" : "ct 6/1/2022 11:52",
 		"fork:atTimes:" : "ct 6/1/2022 11:53",
 		"fork:for:collect:" : "ct 6/2/2022 13:56",

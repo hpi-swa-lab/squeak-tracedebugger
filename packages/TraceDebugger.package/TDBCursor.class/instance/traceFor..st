@@ -1,4 +1,4 @@
 private
 traceFor: aContext
 
-	^ self rootTrace traceForContext: aContext
+	^ self rootTrace traceForContext: aContext tdbproxyYourself

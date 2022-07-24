@@ -2,5 +2,5 @@ private
 traceFor: aContext ifAbsent: absentBlock
 
 	^ self rootTrace
-		traceForContext: aContext
+		traceForContext: aContext tdbproxyYourself
 		ifAbsent: absentBlock
