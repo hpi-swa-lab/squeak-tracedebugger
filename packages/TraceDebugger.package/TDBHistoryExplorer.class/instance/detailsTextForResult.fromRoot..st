@@ -9,9 +9,7 @@ detailsTextForResult: aMaybeResult fromRoot: rootContextSlice
 				do: [:ex | self errorText: 'error text fray out' frayOut: ex]]
 		ifFalse:
 			[[aMaybeResult result in: [:resultValue |
-				[| value |
-				value := self prepareRetracedValue: resultValue.
-				self detailsTextForValue: value]
+				[self detailsTextForValue: resultValue]
 					on: self commonErrors
 					do: [:ex | self errorText: 'display error' exception: ex]]]
 				on: TDBRetracingFrayOut do: [:ex |

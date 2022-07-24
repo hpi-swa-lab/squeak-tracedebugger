@@ -37,11 +37,7 @@ detailsTextForFrayOut: aFrayOutError fromRoot: rootContextSlice
 			fromRoot: frayRootContextSlice
 			on: stream
 			getText: [:contextSlice |
-				| value |
-				value := frayMemorySlice rangeValueAtTime: contextSlice maxTimeIndex.
-				[value in: [:resultValue | self prepareRetracedValue: resultValue]]
-					on: self commonErrors do: [:ex |
-						self errorText: 'display error' exception: ex]]
+				frayMemorySlice rangeValueAtTime: contextSlice maxTimeIndex]
 			selectAction: [:contextSlice |
 				self withSnapshotAtTime: contextSlice maxTimeIndex do: [:snapshot |
 					self auxiliaryInspector inspectObject: snapshot]]]
