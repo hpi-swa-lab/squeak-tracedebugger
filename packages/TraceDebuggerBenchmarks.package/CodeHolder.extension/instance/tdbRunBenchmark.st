@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbRunBenchmark
 
 	self tdbSelectedBenchmark

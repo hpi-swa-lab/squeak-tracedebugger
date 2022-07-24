@@ -1,7 +1,7 @@
 tests
 testSimpleSend
 
-	| timeZero oldPlonk newPlonk simulator |
+	| timeZero oldPlonk newPlonk |
 	timeZero := 10.
 	oldPlonk := object plonk.
 	newPlonk := 3.

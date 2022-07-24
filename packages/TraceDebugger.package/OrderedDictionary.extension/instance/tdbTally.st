@@ -1,4 +1,4 @@
-*TraceDebugger-Core-accessing
+*TraceDebugger-Core-Support-accessing
 tdbTally
 
 	^ tally

@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbBenchmarksMessageListMenu: aMenu
 	<messageListMenu>
 	(self selectedClass isTdbBenchmarkClass

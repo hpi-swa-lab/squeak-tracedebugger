@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbBenchmarkClassListMenu: aMenu
 	<classListMenu>
 	self tdbHasBenchmarkClassSelected ifFalse: [^ aMenu].

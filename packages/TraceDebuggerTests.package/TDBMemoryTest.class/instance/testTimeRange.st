@@ -2,18 +2,14 @@ tests - private
 testTimeRange
 
 	"negative time indices not allowed"
-	self
-		should:
-			[memory object: object atTime: -1 atSlot: #plonk ifAbsent: [#nurp]]
-		raise: Error.
+	self shouldRaiseError:
+		[memory object: object atTime: -1 atSlot: #plonk ifAbsent: [#nurp]].
 	
 	memory object: object priorTo: 2 atSlot: #plonk put: #wiffy.
 	
 	"historic memory is sealed"
-	self
-		should:
-			[memory object: object priorTo: 1 atSlot: #plonk put: #ziffy]
-		raise: Error.
+	self shouldRaiseError:
+		[memory object: object priorTo: 1 atSlot: #plonk put: #ziffy].
 	
 	"prior to entry"
 	self

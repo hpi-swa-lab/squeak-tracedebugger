@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-testing
+*TraceDebuggerBenchmarks-Base-testing
 isTdbBenchmarkClass
 
 	^ false

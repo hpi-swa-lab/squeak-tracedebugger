@@ -4,19 +4,9 @@ expectedFailureGroups
 	| groups |
 	groups := super expectedFailureGroups.
 	
-	groups at: #DoubleByteArrayTest put: ((groups at: #DoubleByteArrayTest ifAbsent: [{}]) ,
-		{#testAtPutOutOfBounds flag: #todo. "#50"}).
-	groups at: #DoubleWordArrayTest put: ((groups at: #DoubleWordArrayTest ifAbsent: [{}]) ,
-		{#testAtPutOutOfBounds flag: #todo. "#50"}).
-	
 	groups at: #ExceptionTests put: ((groups at: #ExceptionTests ifAbsent: [{}]) ,
-		{#testResumablePass flag: #todo.
+		{#testDoubleOuterDoubleResumeTest flag: #todo. "Might have something todo with that TDBTracingSimulator ignores the complex internal structure of stack variables, see TDBTracingSimulator>>#context:step:."
+		#testResumablePass flag: #todo.
 		#testSimpleIsNested flag: #todo}).
-	
-	groups at: #SimulationContextTest put: ((groups at: #SimulationContextTest ifAbsent: [{}]) ,
-		{#testDecustomize flag: #todo}).
-	
-	groups at: #WordArrayTest put: ((groups at: #WordArrayTest ifAbsent: [{}]) ,
-		{#testAtPutOutOfBounds flag: #todo. "#50"}).
 	
 	^ groups

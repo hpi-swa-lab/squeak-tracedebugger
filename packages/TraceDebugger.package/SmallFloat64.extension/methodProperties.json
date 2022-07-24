@@ -2,5 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"asTdbProxyInMemory:atTime:" : "ct 1/22/2022 21:24",
-		"tdbInMemory:atTime:" : "ct 1/22/2022 21:50" } }
+		"asTdbProxyInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:11",
+		"asTdbRangeProxyInMemory:atTimes:withSideEffects:" : "ct 6/3/2022 12:47",
+		"tdbInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:27",
+		"tdbInMemory:atTimes:withSideEffects:" : "ct 6/3/2022 12:49" } }

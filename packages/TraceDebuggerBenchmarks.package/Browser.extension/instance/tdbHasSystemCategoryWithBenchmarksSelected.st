@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbHasSystemCategoryWithBenchmarksSelected
 
 	^ (systemOrganizer listAtCategoryNamed: (self selectedSystemCategory ifNil: [^ false]))

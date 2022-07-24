@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core-Support",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 6/3/2022 17:44",
+	"instvars" : [
+		"timeIndex" ],
+	"name" : "TDBPointRetracingSimulator",
+	"pools" : [
+		 ],
+	"super" : "TDBRetracingSimulator",
+	"type" : "normal" }

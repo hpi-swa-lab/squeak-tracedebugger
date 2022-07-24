@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerTests-Core-Fixtures",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBVariableTestObject",
+	"pools" : [
+		 ],
+	"super" : "TDBTestObject",
+	"type" : "variable" }

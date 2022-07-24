@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBPointRetracingSimulatorBenchmark2",
+	"pools" : [
+		 ],
+	"super" : "TDBRetracingSimulatorBenchmark2",
+	"type" : "normal" }

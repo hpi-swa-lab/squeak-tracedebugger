@@ -1,4 +1,4 @@
-*TraceDebuggerBenchmarks-menus
+*TraceDebuggerBenchmarks-Base-menus
 tdbBenchmarkSystemCategoryMenu: aMenu
 	<systemCategoryMenu>
 	self tdbHasSystemCategoryWithBenchmarksSelected ifFalse: [^ aMenu].

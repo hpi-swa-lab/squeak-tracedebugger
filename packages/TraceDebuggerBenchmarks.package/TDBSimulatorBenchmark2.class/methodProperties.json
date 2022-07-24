@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"isAbstract" : "ct 5/28/2022 16:52" },
+	"instance" : {
+		"benchConstant" : "ct 5/28/2022 16:55",
+		"benchCopyReplaceFrom" : "ct 6/3/2022 01:00",
+		"benchFactorial" : "ct 6/2/2022 17:50",
+		"memoryClass" : "ct 5/28/2022 16:54",
+		"newSimulator" : "ct 5/28/2022 16:57",
+		"setUp" : "ct 5/28/2022 17:16",
+		"setUpMemory" : "ct 5/28/2022 17:16",
+		"simulatorClass" : "ct 5/28/2022 16:52",
+		"verifyConstant:" : "ct 5/28/2022 16:53",
+		"verifyFactorial:" : "ct 5/28/2022 17:14" } }

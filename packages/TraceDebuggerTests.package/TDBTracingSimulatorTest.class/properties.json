@@ -1,15 +1,14 @@
 {
-	"category" : "TraceDebuggerTests-Core",
+	"category" : "TraceDebuggerTests-Core-Support",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"memory",
-		"object" ],
+		 ],
 	"name" : "TDBTracingSimulatorTest",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "TDBMemorySimulatorTest",
 	"type" : "normal" }

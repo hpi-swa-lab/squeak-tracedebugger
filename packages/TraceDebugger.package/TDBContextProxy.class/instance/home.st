@@ -2,4 +2,6 @@ accessing
 home
 
 	^ object home
-		 tdbInMemory: memory atTime: timeIndex
+		tdbInMemory: memory
+		atTime: timeIndex
+		withSideEffects: sideEffects

@@ -20,7 +20,7 @@ exampleWorldCyclesFor: aDuration
 		button label: 'recording... (click to stop)'.
 		world := Project current world.
 		world doOneCycleNow.
-		[[world tdbCycleFor: aDuration] traceAndDebug]
+		[self traceAndOpenForBlock: [world tdbCycleFor: aDuration] quiet: true]
 			ensure:
 				[recording := false.
 				button label: priorLabel]].

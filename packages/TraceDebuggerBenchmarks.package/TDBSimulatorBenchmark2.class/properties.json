@@ -1,0 +1,15 @@
+{
+	"category" : "TraceDebuggerBenchmarks-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"memory",
+		"simulator" ],
+	"name" : "TDBSimulatorBenchmark2",
+	"pools" : [
+		 ],
+	"super" : "Benchmark",
+	"type" : "normal" }

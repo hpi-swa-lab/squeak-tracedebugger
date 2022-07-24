@@ -11,4 +11,4 @@ setUp
 	memory object: object priorTo: 2 instVarAt: 1 put: 3.
 	memory object: object priorTo: 3 instVarAt: 1 put: 4.
 	memory object: object priorTo: 3 instVarAt: 2 put: 5.
-	proxy := self classUnderTest for: object inMemory: memory atTime: 1.
+	proxy := self newProxy.

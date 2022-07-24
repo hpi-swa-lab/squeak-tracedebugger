@@ -1,1 +1,3 @@
-I modify code simulation to emulate an earlier version of the state space (memory) that the code is accessing. To do this, I hook into different simulation capabilities that include any read access to state and redirect this read access so that an older version of the requested state is returned if available.
+I modify code simulation to emulate an earlier version of the state (memory) that the code is accessing. To do this, subclasses can overwrite the read state hooks from my superclass and redirect read accesses so that an older version of the requested state is returned if available. Furthermore, I enable isolated execution (see #initialize), and I provide a small #TraceDebugger primitive module to the executed code.
+
+I am the abstract superclass for retracing. My reference implementation can be found in the TDBpointRetracingSimulator subclass. On my class side, clients can find a factory facades for different retracers.

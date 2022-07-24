@@ -9,4 +9,10 @@ context: aContext send: selector to: originalReceiver with: arguments lookupIn: 
 				[receiver := originalReceiver xxxtdbproxyObject.
 				lookupClass := aContext objectClass: receiver].
 	
-	^ super context: aContext send: selector to: receiver with: arguments lookupIn: (lookupClass ifNil: [originalLookupClass]) do: aBlock
+	^ super
+		context: aContext
+		send: selector
+		to: receiver
+		with: arguments
+		lookupIn: (lookupClass ifNil: [originalLookupClass])
+		do: aBlock

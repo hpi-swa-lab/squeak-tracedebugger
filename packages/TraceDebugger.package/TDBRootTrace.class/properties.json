@@ -1,10 +1,10 @@
 {
-	"category" : "TraceDebugger-Core",
+	"category" : "TraceDebugger-Core-Support",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 3/15/2022 23:23",
+	"commentStamp" : "ct 6/15/2022 11:43",
 	"instvars" : [
 		"tracesForContexts" ],
 	"name" : "TDBRootTrace",

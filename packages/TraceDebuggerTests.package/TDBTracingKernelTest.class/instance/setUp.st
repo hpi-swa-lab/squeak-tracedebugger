@@ -9,4 +9,4 @@ setUp
 	limitFactor := 1.
 	simulator nextSimulator: limit.
 	
-	snapshots := Dictionary new.
+	snapshots := OrderedDictionary new.
