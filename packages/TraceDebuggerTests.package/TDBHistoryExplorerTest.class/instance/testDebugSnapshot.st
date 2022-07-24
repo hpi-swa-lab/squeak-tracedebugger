@@ -6,9 +6,10 @@ testDebugSnapshot
 	
 	explorer selectContextSlice: (self contextSliceAtPath: #(1 2 1)).
 	self newWindow:
-		[(debugger := TDBExperimentalDebugRetracingWarning suppressDuring:
-			[explorer debugSnapshot])
-				containingWindow].
+		[(debugger := self useStandardTooolSetDuring:
+			[TDBExperimentalDebugRetracingWarning suppressDuring:
+				[explorer debugSnapshot]])
+					containingWindow].
 	
 	self assert: debugger selectedContext isSimulationContext.
 	debugger stepOver.
