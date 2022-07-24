@@ -1,11 +1,12 @@
 {
 	"class" : {
-		 },
+		"tdbIsBehaviorClass" : "ct 7/24/2022 18:27" },
 	"instance" : {
 		"asTdbProxyInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:13",
 		"asTdbRangeProxyInMemory:atTimes:withSideEffects:" : "ct 5/14/2022 22:33",
 		"isTdbMemorySliceClass" : "ct 5/12/2022 13:02",
 		"isTdbProxyClass" : "ct 3/12/2022 17:03",
+		"tdbIsBehaviorClass" : "ct 7/24/2022 18:27",
 		"tdbIsContextClass" : "ct 7/3/2022 01:38",
 		"tdbIsExceptionClass" : "ct 3/19/2022 20:40",
 		"tdbIsFloatArrayClass" : "ct 5/30/2022 15:05",
