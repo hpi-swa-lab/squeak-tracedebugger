@@ -26,6 +26,6 @@ debugExpression: aStringOrText requestor: requestor
 				becomeForward: (simulator tdbproxyYourself customize: helperProcess suspendedContext)
 				copyHash: true].
 		
-	helperProcess
+	^ helperProcess
 		runUntil: [:context | context method == compiledMethod];
-		debugWithTitle: 'Debug retracing (experimental)'.
+		debugWithTitle: 'Debug retracing (experimental)'
