@@ -1,5 +1,6 @@
 tests - details
 testDetailsWithImageForm
+	<timeout: 10 "seconds">
 
 	| text |
 	text := self setUpCursorWithMorph.
