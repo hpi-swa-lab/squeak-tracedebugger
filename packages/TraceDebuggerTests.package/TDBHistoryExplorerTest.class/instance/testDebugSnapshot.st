@@ -5,7 +5,10 @@ testDebugSnapshot
 	self newExplorer: [cursor exploreHistory: logic expression: '{yin}'].
 	
 	explorer selectContextSlice: (self contextSliceAtPath: #(1 2 1)).
-	self newWindow: [(debugger := explorer debugSnapshot) containingWindow].
+	self newWindow:
+		[(debugger := TDBExperimentalDebugRetracingWarning suppressDuring:
+			[explorer debugSnapshot])
+				containingWindow].
 	
 	self assert: debugger selectedContext isSimulationContext.
 	debugger stepOver.
