@@ -11,7 +11,7 @@ context: aContext primitiveNew: receiver withArg: sizeRequested do: aBlock
 			ifTrue:
 				["Handle insufficient memory on the simulator side. Otherwise, all GC preparation (#flushDependents etc.) would be run in the simulation, which is way too slow. This mimics the behavior of Behavior>>#handleFailingBasicNew[:]."
 				| bytesRequested |
-				(aContext objectClass: receiver) tdbIsBehaviorClass ifFalse:
+				(aContext objectClass: receiver) isMeta ifFalse:
 					[^ self context: aContext primitiveFailTokenFor: #'bad receiver'].
 				bytesRequested := sizeRequested
 					ifNil: [1048576]
