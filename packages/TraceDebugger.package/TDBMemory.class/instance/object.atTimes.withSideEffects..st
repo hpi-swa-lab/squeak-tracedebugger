@@ -6,7 +6,7 @@ object: anObject atTimes: timeIndices withSideEffects: sideEffects
 		ifFalse: [^ self error: 'all timeIndices must be positive'].
 	(UseProxiesAlways not
 		and: [(self includesObject: anObject) not]
-		and: [(sideEffects includesObject: anObject) no])
+		and: [(sideEffects includesObject: anObject) not])
 			ifTrue: [^ anObject].
 	
 	self flag: #optimize. "If anObject is not registered in the receiver, or if timeIndex is not in the past, we could answer anObject itself. However, always answering a proxy gives us an excellent opportunity for crash-testing proxies as often as possible."
