@@ -1,0 +1,27 @@
+{
+	"category" : "TraceDebugger-UI",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TTDBChangesGraph classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"cursor",
+		"object",
+		"context",
+		"expression",
+		"representationMode",
+		"memorySlice",
+		"contextTreeSlice",
+		"selectedContextSlice",
+		"expanded",
+		"contextLabelCompactionStrategy",
+		"contractPaths",
+		"shouldShrinkColumns" ],
+	"name" : "TDBHistoryExplorer",
+	"pools" : [
+		 ],
+	"super" : "StringHolder",
+	"traitcomposition" : "TTDBChangesGraph",
+	"type" : "normal" }

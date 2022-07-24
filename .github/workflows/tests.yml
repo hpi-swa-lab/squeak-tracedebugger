@@ -1,6 +1,6 @@
 name: Tests & Benchmarks
 
-on: [push, workflow_dispatch]
+on: [push]
 
 env:
   SMALLTALK_IMAGE: Squeak64-Trunk

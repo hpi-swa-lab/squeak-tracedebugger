@@ -1,4 +1,4 @@
-testing
+tests
 testTdbFullStack
 
 	| context process semaphore stack |

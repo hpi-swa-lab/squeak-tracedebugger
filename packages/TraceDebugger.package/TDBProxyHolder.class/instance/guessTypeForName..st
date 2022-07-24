@@ -5,4 +5,4 @@ guessTypeForName: aString
 	index := self objectClass
 		instVarIndexFor: aString asString
 		ifAbsent: [^ nil].
-	^ (self doItReceiver instVarAt: index) class
+	^ (self doItReceiver instVarAt: index) perform: #class

@@ -1,0 +1,17 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 7/23/2022 15:44",
+	"instvars" : [
+		"contextTreeSlice",
+		"compact",
+		"relativeToParent",
+		"root" ],
+	"name" : "TDBContextTreeSlicePrinter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

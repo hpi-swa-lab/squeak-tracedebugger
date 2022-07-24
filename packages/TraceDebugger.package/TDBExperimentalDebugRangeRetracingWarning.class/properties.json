@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBExperimentalDebugRangeRetracingWarning",
+	"pools" : [
+		 ],
+	"super" : "TDBExperimentalWarning",
+	"type" : "normal" }

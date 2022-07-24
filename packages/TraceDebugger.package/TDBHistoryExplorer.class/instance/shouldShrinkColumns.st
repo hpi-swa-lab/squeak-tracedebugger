@@ -1,0 +1,4 @@
+accessing - state
+shouldShrinkColumns
+
+	^ shouldShrinkColumns
