@@ -1,6 +1,6 @@
 controlling
 context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: receiver args: originalArguments do: aBlock
-	"Redirect primitives that read any state. If the relevant object's slot is defined in the historic memory, use the recorded state from there instead of the current state for the object in  the image."
+	"Redirect primitives that read any state. If the relevant object's slot is defined in the historic memory, use the recorded state from there instead of the current state for the object in the image."
 
 	| arguments receiverAndArgs |
 	"Resolve proxy receiver/arguments for the same memory by replacing them with the original object. See TDBProxy>>#xxxtdbproxyForward: and senders."
@@ -17,7 +17,11 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	self flag: #optimize. "Array lookup for primitives?"
 	
 	(PrimitiveHandlers at: primitiveIndex) ifNotNil: [:handler |
-		^ self perform: handler withArguments: {aContext. primitiveIndex. aCompiledMethod. receiver. arguments. aBlock}].
+		| result |
+		lastPrimitive := primitiveIndex.
+		result := self perform: handler withArguments: {aContext. primitiveIndex. aCompiledMethod. receiver. arguments. aBlock}.
+		lastPrimitive := nil.
+		^ result].
 	
 	receiverAndArgs := self
 		context: aContext
