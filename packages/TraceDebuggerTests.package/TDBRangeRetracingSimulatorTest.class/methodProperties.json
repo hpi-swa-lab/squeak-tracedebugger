@@ -44,7 +44,7 @@
 		"testSideEffectBinary" : "ct 5/31/2022 18:16",
 		"testSideEffectInstanceVariable" : "ct 5/31/2022 15:11",
 		"testSideEffectTertiary" : "ct 5/31/2022 18:11",
-		"testSideEffects" : "ct 7/5/2022 10:08",
+		"testSideEffects" : "ct 7/24/2022 20:47",
 		"testSimpleSend" : "ct 6/2/2022 10:27",
 		"testTdbRetracingDoFork" : "ct 7/24/2022 16:47",
 		"testTdbRetracingTimeIndex" : "ct 6/1/2022 16:45",
