@@ -1,5 +1,5 @@
 benchmarks
 verifyBenchJumpFork0: result
 
-	self flag: #gc.
+	self flag: #rangeRetracingGC.
 	^ result coalesceEqually values = #(true)

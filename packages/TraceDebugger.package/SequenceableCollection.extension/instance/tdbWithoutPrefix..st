@@ -1,4 +1,4 @@
-*TraceDebugger-UI-copying
+*TraceDebugger-Core-copying
 tdbWithoutPrefix: prefix
 
 	(self beginsWith: prefix)

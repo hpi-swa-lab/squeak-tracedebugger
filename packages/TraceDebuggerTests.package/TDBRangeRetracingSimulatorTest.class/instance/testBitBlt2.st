@@ -11,7 +11,7 @@ testBitBlt2
 		object: morph
 		collect: [:ea | [ea imageForm] ifError: []])
 			values.
-	#(nil 1 1 1 1 1 2 3) with: screenshots do: [:expected :eachScreenshot |
+	#(nil 1 1 1 1 1 1 2 3) with: screenshots do: [:expected :eachScreenshot |
 		expected
 			ifNil: [self assert: eachScreenshot isNil]
 			ifNotNil: [self assert: expected equals: eachScreenshot colorsUsed size]].

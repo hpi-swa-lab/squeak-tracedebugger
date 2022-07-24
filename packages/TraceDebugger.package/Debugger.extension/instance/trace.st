@@ -3,6 +3,15 @@ trace
 
 	| currentBounds label process context oldInspectors traceDebugger window postBuild |
 	self okToChange ifFalse: [^ self changed: #flash].
+	"Check for unsupported SimulationContext (#68)"
+	context := self selectedContext.
+	((context isMemberOf: Context) not ==>
+		[| semanticsDisplay |
+		semanticsDisplay := context isSimulatorContext
+			ifTrue: [context simulator]
+			ifFalse: [context].
+		Project uiManager confirm: ('The debugged process has custom execution semantics that cannot be maintained during tracing:\\{1}\\Trace it anyway?' withCRs asText format: {semanticsDisplay asString tdbAsTextWithAttribute: (TextIndent tabs: 1)}) title: 'Trace It'])
+			ifFalse: [^ self].
 	
 	"Save current state"
 	self containingWindow in: [:oldWindow |
@@ -12,7 +21,6 @@ trace
 	"Close first because MVC fiddles around with processes."
 	process := self interruptedProcess.
 	interruptedProcess := nil. "Before delete, so release doesn't terminate it"
-	context := self selectedContext.
 	oldInspectors := #(receiverInspector contextVariablesInspector)
 		collect: [:path | path -> (path value: self)]
 		as: Dictionary.

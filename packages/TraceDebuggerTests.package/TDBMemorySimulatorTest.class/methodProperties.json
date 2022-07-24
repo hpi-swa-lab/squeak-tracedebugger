@@ -16,5 +16,6 @@
 		"testPrimitiveAt" : "ct 7/22/2022 20:13",
 		"testPrimitiveConstantFill" : "ct 5/31/2022 19:46",
 		"testPrimitiveInstVarAt" : "ct 7/22/2022 20:13",
+		"testPrimitiveNew" : "ct 7/24/2022 17:31",
 		"testPrimitiveStringAtPut" : "ct 7/22/2022 20:12",
 		"testPrimitiveStringReplace" : "ct 5/31/2022 19:46" } }

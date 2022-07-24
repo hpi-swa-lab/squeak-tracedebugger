@@ -56,8 +56,9 @@ context: aContext doReadPrimitive: primitiveIndex method: aCompiledMethod receiv
 						(isSlice
 							ifFalse: [resultOrFailToken first]
 							ifTrue:
-								[(resultOrFailToken rawCollect: [:array | array first])
-									rawGather: [:each | each]])]
+								[allVectors add:
+									((resultOrFailToken rawCollect: [:array | array first])
+										rawGather: [:each | each])])]
 				ifNotNil:
 					[(eachContext
 						activateMethod: aCompiledMethod

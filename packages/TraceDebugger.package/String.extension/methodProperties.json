@@ -5,5 +5,6 @@
 		"asTdbProxyInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:10",
 		"asTdbRangeProxyInMemory:atTimes:withSideEffects:" : "ct 6/3/2022 12:50",
 		"tdbAsTextWithAttribute:" : "ct 3/21/2022 19:07",
+		"tdbAsTimesStringBasedOn:" : "ct 7/22/2022 00:24",
 		"tdbInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:27",
 		"tdbInMemory:atTimes:withSideEffects:" : "ct 6/3/2022 12:50" } }

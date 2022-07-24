@@ -1,4 +1,4 @@
-intialize-release
+initialize-release
 xxxtdbproxyObject: anObject memory: aMemory timeIndices: aCollection sideEffects: anotherMemory
 
 	object := anObject.

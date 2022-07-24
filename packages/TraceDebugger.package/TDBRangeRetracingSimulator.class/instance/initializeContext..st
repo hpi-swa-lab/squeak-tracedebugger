@@ -16,6 +16,8 @@ initializeContext: aContext
 						('[@ {1}] {2}' format: {eachTimeIndices. eachContext}) -> eachContext])
 							as: OrderedDictionary)
 				title: 'Choose fork to debug'.
+			chosenContext ifNil:
+				[^ Model new tdbAbortRequest].
 			^ aContext
 				becomeForward: (customizeContext receiver customize: chosenContext)
 				copyHash: true]].

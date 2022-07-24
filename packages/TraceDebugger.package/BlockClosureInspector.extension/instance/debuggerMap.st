@@ -3,4 +3,4 @@ debuggerMap
 
 	self flag: #workaround.
 	
-	^ debuggerMap ifNil: [debuggerMap := self object tdbproxyYourself "<-- !" method debuggerMap]
+	^ debuggerMap ifNil: [debuggerMap := self object tdbproxyYourself "<-- TraceDebugger (here for performance)" method debuggerMap]

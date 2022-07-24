@@ -1,0 +1,1 @@
+I represent the result of a query that has maybe failed.

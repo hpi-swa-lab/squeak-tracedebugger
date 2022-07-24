@@ -1,0 +1,4 @@
+accessing - state
+shouldContractPaths
+
+	^ contractPaths

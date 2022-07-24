@@ -9,4 +9,4 @@ testMaintainSlices
 	[self assertQuery: [{thisContext tdbRetracingTimeIndex}. nil] values: {nil}]
 		on: TestFailure
 		do: [:ex |
-			self flag: #gc. "See comment in #finalSlice:withTimeIndicesWithin:."]
+			self flag: #rangeRetracingGC. "See comment in #finalSlice:withTimeIndicesWithin:."]

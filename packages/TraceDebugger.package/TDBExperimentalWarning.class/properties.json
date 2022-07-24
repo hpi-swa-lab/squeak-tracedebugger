@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 7/3/2022 22:05",
+	"instvars" : [
+		 ],
+	"name" : "TDBExperimentalWarning",
+	"pools" : [
+		 ],
+	"super" : "Warning",
+	"type" : "normal" }
