@@ -5,12 +5,13 @@ buildContextValueTreeWith: builder
 		name: #contextValueTree;
 		
 		"icon:"getIconSelector: #contextSliceIconFor:;
+		update: #contextSliceLabelFor:; "update icons"
 		columns:
 			((1 to: 2) collect: [:index |
 				[:listMorph |
 					| items |
 					items := listMorph filteredItems.
-					self shouldShrinkColumns ifTrue:
+					(self shouldShrinkColumns and: [index = 1]) ifTrue:
 						[items := items select: [:item | self isDisplayedAsLeaf: item complexContents item]].
 					(items collect: [:item | item preferredWidthOfColumn: index]) max]]);
 		
