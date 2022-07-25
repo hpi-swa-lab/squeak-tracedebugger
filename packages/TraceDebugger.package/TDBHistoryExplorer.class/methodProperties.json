@@ -1,6 +1,11 @@
 {
 	"class" : {
 		"cursorClass" : "ct 7/24/2022 22:51",
+		"exampleDrawing" : "ct 7/25/2022 00:14",
+		"exampleDrawingError" : "ct 7/25/2022 00:14",
+		"exampleMorphConstruction" : "ct 7/25/2022 00:14",
+		"exampleRegex" : "ct 7/25/2022 00:14",
+		"exampleShout" : "ct 7/25/2022 00:14",
 		"forBlock:" : "ct 7/24/2022 22:52",
 		"forBlock:expression:" : "ct 7/24/2022 22:52",
 		"forBlock:object:" : "ct 7/24/2022 22:52",
