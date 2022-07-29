@@ -60,7 +60,7 @@ jobs:
       - run: |
           npm install -g nodegit@v0.28.0-alpha.18  # https://github.com/nodegit/nodegit/issues/1840
           npm link nodegit
-      - if: ${{ steps.commit.outputs.committed == 'true' }}
+      - if: ${{ steps.commit.outputs.committed == 'true' }}  # no changes -> no commit -> no comment
         name: Create commit comment for screenshot diff
         uses: actions/github-script@v6
         with:
