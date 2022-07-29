@@ -75,8 +75,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               commit_sha: context.sha,
-              body: `
-                ## Changed Screenshots
+              body: `## Changed Screenshots
 
                 This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${context.repo.html_url}/commit/${commit.sha()}` : screenshotBuilderUrl}):
 
