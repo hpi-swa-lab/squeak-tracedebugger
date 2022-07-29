@@ -79,7 +79,7 @@ jobs:
               commit_sha: context.sha,
               body: `## Changed Screenshots
 
-              This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl}):
+              This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl})${{ steps.commit.outputs.pushed && ' against the default branch' || '' }}:
 
               ${patches
                 .map(patch =>
