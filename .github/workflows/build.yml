@@ -58,13 +58,13 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const commit = await github.repos.getCommit({
+            const commit = await github.rest.repos.getCommit({
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: context.steps.commit.outputs.commit_long_sha
             })
             const changedFiles = commit.data.files
-            await github.repos.createCommitComment({
+            await github.rest.repos.createCommitComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               commit_sha: context.sha,
