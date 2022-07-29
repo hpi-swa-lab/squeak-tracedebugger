@@ -69,18 +69,18 @@ jobs:
             const repo = await nodegit.Repository.open('.')
             const commit = await repo.getCommit('${{ steps.commit.outputs.commit_long_sha }}')
             const patches = (await Promise.all((await commit.getDiff()).map(diff => diff.patches()))).flatMap(patch => patch)
-            const screenshotBuilderUrl = `${context.repo.html_url}/tree/HEAD/packages/TraceDebuggerJobs.package/TDBScreenshotBuilder.class`
-            const genericScreenshotUrl = `${context.repo.html_url}/tree/gh-pages`
+            const screenshotBuilderUrl = `${{ github.server_url }}/${{ github.repository }}/tree/HEAD/packages/TraceDebuggerJobs.package/TDBScreenshotBuilder.class`
+            const genericScreenshotUrl = `${{ github.server_url }}/${{ github.repository }}/tree/gh-pages`
             await github.rest.repos.createCommitComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               commit_sha: context.sha,
               body: `## Changed Screenshots
 
-                This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${context.repo.html_url}/commit/${commit.sha()}` : screenshotBuilderUrl}):
+                This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl}):
 
                 ${patches.map(patch => `
-                  - [${patch.newFile().path()} (${patch.status()})](${${{ steps.commit.outputs.pushed }} ? `${context.repo.html_url}/commits/${commit.sha()}/files/${patch.newFile().path()}#diff-${patch.newFile().id()}` : `${genericScreenshotUrl}/${patch.newFile().path()}`})
+                  - [${patch.newFile().path()} (${patch.status()})](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commits/${commit.sha()}/files/${patch.newFile().path()}#diff-${patch.newFile().id()}` : `${genericScreenshotUrl}/${patch.newFile().path()}`})
                 `).join('\n')}
               `
             })
