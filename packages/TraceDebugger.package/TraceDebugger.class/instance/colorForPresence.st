@@ -1,4 +1,4 @@
 toolbuilder - constants - color
 colorForPresence
 
-	^ Color red
+	^ Color green
