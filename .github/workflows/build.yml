@@ -77,12 +77,17 @@ jobs:
               commit_sha: context.sha,
               body: `## Changed Screenshots
 
-                This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl}):
+              This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl}):
 
-                ${patches.map(patch => `
-                  - [${patch.newFile().path()}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commits/${commit.sha()}/files/${patch.newFile().path()}#diff-${patch.newFile().id()}` : `${genericScreenshotUrl}/${patch.newFile().path()}`})
-                `).join('\n')}
-              `
+              ${patches
+                .map(patch =>
+                  `- [${patch.newFile().path()}](${
+                    ${{ steps.commit.outputs.pushed }}
+                      ? `${{ github.server_url }}/${{ github.repository }}/commits/${commit.sha()}/files/${patch.newFile().path()}#diff-${patch.newFile().id()}`
+                      : `${genericScreenshotUrl}/${patch.newFile().path()}`
+                  })`)
+                .join('\n')}
+              `,
             })
 
   release-image:
