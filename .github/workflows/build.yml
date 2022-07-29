@@ -55,11 +55,13 @@ jobs:
           message: "Add screenshots for ${{ github.sha }}"
           push: ${{ github.ref == 'refs/heads/main' }}
       - uses: actions/setup-node@v3
+        if: ${{ steps.commit.outputs.committed == 'true' }}  # only required for commit comment below
         with:
           node-version: 16
       - run: |
           npm install -g nodegit@v0.28.0-alpha.18  # https://github.com/nodegit/nodegit/issues/1840
           npm link nodegit
+        if: ${{ steps.commit.outputs.committed == 'true' }}  # only required for commit comment below
       - if: ${{ steps.commit.outputs.committed == 'true' }}  # no changes -> no commit -> no comment
         name: Create commit comment for screenshot diff
         uses: actions/github-script@v6
