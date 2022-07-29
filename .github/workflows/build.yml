@@ -68,7 +68,7 @@ jobs:
             const nodegit = require('nodegit')
             const repo = await nodegit.Repository.open('.')
             const commit = await repo.getCommit('${{ steps.commit.outputs.commit_long_sha }}')
-            const patches = (await (await commit.getDiff()).patches()).flatMap(patch => patch)
+            const patches = (await Promise.all((await commit.getDiff()).map(diff => diff.patches()))).flatMap(patch => patch)
             const screenshotBuilderUrl = `${context.repo.html_url}/tree/HEAD/packages/TraceDebuggerJobs.package/TDBScreenshotBuilder.class`
             const genericScreenshotUrl = `${context.repo.html_url}/tree/gh-pages`
             await github.rest.repos.createCommitComment({
