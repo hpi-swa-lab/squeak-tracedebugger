@@ -9,4 +9,4 @@ exampleDrawing
 	morph
 		cornerStyle: #rounded;
 		cornerRadius: 5.
-	^ self openForBlock: [morph imageForm]
+	^ self openDetailsForBlock: [morph imageForm]

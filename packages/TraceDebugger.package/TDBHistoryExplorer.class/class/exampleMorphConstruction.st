@@ -5,5 +5,5 @@ exampleMorphConstruction
 	"
 
 	^ self
-		openForBlock: [WatchMorph new]
+		openDetailsForBlock: [WatchMorph new]
 		expression: 'self imageForm'

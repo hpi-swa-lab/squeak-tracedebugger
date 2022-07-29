@@ -20,4 +20,6 @@ exampleDrawingError
 		yourself.
 	morph center: owner center.
 	
-	^ self openForBlock: [owner imageForm] expression: 'self copy: self relativeRectangle'
+	^ self
+		openDetailsForBlock: [owner imageForm]
+		expression: 'self copy: self relativeRectangle'

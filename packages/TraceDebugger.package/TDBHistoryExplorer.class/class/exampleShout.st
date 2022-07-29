@@ -7,7 +7,7 @@ exampleShout
 
 	| debugger firstExplorer secondExplorer |
 	firstExplorer := (self
-		openForBlock:
+		openDetailsForBlock:
 			[(TextStyler for: #Smalltalk) new
 				parseAMethod: true;
 				styledTextFor:
@@ -17,7 +17,6 @@ exampleShout
 	^ self inform: (''Carpe {1}!'' format: {x})' asText]
 		expression: 'self copy')
 			model.
-	firstExplorer representationMode: #details.
 	firstExplorer selectContextSlice: firstExplorer rootContextSlices last lastLeaf.
 	
 	debugger := firstExplorer debug model.
