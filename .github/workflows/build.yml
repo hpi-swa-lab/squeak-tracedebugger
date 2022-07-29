@@ -62,7 +62,7 @@ jobs:
             const commit = await github.rest.repos.getCommit({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              sha: ${{ steps.commit.outputs.commit_long_sha }}
+              sha: '${{ steps.commit.outputs.commit_long_sha }}'
             })
             const changedFiles = commit.data.files
             const screenshotBuilderUrl = `${context.repo.html_url}/tree/HEAD/packages/TraceDebuggerJobs.package/TDBScreenshotBuilder.class`
