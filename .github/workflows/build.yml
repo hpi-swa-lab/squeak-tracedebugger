@@ -57,7 +57,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install -g nodegit
+      - run: npm install -g nodegit@v0.28.0-alpha.18  # https://github.com/nodegit/nodegit/issues/1840
       - if: ${{ steps.commit.outputs.committed == 'true' }}
         name: Create commit comment for screenshot diff
         uses: actions/github-script@v6
