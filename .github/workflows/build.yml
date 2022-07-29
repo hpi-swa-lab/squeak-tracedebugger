@@ -55,6 +55,7 @@ jobs:
           add: screenshots/
           message: "Add screenshots for ${{ github.sha }}"
       - if: ${{ steps.commit.outputs.committed == 'true' }}
+        name: Create commit comment for screenshot diff
         uses: actions/github-script@v6
         with:
           script: |
