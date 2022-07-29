@@ -74,8 +74,9 @@ jobs:
                 This commit caused [a change of ${changedFiles.length} ${changedFiles.length === 1 ? 'screenshot' : 'screenshots'}](${context.repo.html_url}/commits/${commit.sha}):
 
                 ${changedFiles.map(file => `
-                  - [${file.filename}](${context.repo.html_url}/commits/${commit.sha}/files/${file.filename})#diff-${file.sha})
+                  - [${file.filename}](${context.repo.html_url}/commits/${commit.sha}/files/${file.filename}#diff-${file.sha})
                 `).join('\n')}
+              `
             })
 
   release-image:
