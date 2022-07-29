@@ -19,6 +19,7 @@
 	"instance" : {
 		"aboutToStyle:requestor:" : "ct 6/18/2022 23:33",
 		"acceptContents:" : "ct 6/19/2022 00:03",
+		"addModelItemsToWindowMenu:" : "ct 7/29/2022 15:42",
 		"allRepresentationModes" : "ct 7/22/2022 20:23",
 		"aspectDependencies" : "ct 7/22/2022 20:27",
 		"auxiliaryInspector" : "ct 7/2/2022 00:20",
@@ -90,6 +91,9 @@
 		"expandAllContextTreeSlicesAround:" : "ct 7/1/2022 23:36",
 		"exploreIt:result:" : "ct 7/7/2022 20:52",
 		"exploreSnapshot" : "ct 7/2/2022 00:20",
+		"exportAsAnimatedGIF" : "ct 7/29/2022 15:44",
+		"exportAsAnimatedGIFNamed:" : "ct 7/29/2022 15:46",
+		"exportAsAnimatedGIFOn:" : "ct 7/29/2022 16:10",
 		"expression" : "ct 6/18/2022 23:24",
 		"expression:" : "ct 6/19/2022 00:04",
 		"expression:requestor:" : "ct 6/19/2022 00:07",
