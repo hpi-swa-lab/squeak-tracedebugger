@@ -33,7 +33,7 @@ jobs:
         with:
           name: screenshots
           path: screenshots/
-  
+
   upload-screenshots:
     needs:
       - build-screenshots
@@ -49,10 +49,34 @@ jobs:
           name: screenshots
           path: screenshots/
       - uses: EndBug/add-and-commit@v9
+        id: commit
         with:
           default_author: github_actions
           add: screenshots/
           message: "Add screenshots for ${{ github.sha }}"
+      - if: ${{ steps.commit.outputs.committed }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const commit = await github.repos.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.steps.commit.outputs.commit_long_sha
+            })
+            const changedFiles = commit.data.files
+            await github.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: `
+                ## Changed Screenshots
+
+                This commit caused [a change of ${changedFiles.length} ${changedFiles.length === 1 ? 'screenshot' : 'screenshots'}](${context.repo.html_url}/commits/${commit.sha}):
+
+                ${changedFiles.map(file => `
+                  - [${file.filename}](${context.repo.html_url}/commits/${commit.sha}/files/${file.filename})#diff-${file.sha})
+                `).join('\n')}
+            })
 
   release-image:
     needs: create-image
