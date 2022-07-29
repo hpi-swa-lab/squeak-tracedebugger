@@ -80,7 +80,7 @@ jobs:
 
   release-image:
     needs: create-image
-    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    #if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - id: date
@@ -89,12 +89,12 @@ jobs:
         with:
           name: image
       - run: mv Squeak*.zip TraceDebugger-${{ steps.date.outputs.date }}.zip
-      - uses: softprops/action-gh-release@v1
-        with:
-          tag_name: untagged-${{ steps.date.outputs.date }}
-          body: ${{ github.event.head_commit.message }}
-          files: TraceDebugger-*.zip
-          fail_on_unmatched_files: true
-          prerelease: true
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      #- uses: softprops/action-gh-release@v1
+      #  with:
+      #    tag_name: untagged-${{ steps.date.outputs.date }}
+      #    body: ${{ github.event.head_commit.message }}
+      #    files: TraceDebugger-*.zip
+      #    fail_on_unmatched_files: true
+      #    prerelease: true
+      #  env:
+      #    GITHUB_TOKEN: ${{ github.token }}
