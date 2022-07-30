@@ -1,5 +1,6 @@
 labels & details
 contextLabelFor: aContextSlice
 
-	^ (self contextLabelCompactionStrategyMap at: self contextLabelCompactionStrategy)
-		value: aContextSlice
+	| labelSelector |
+	labelSelector := (self contextLabelCompactionStrategyMap at: self contextLabelCompactionStrategy) first.
+	^ labelSelector value: aContextSlice

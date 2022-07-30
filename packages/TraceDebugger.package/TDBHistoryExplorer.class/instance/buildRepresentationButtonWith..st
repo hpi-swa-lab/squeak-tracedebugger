@@ -6,4 +6,5 @@ buildRepresentationButtonWith: builder
 		label: #representationLabel;
 		style: #menuButton;
 		action: #offerRepresentationMenu;
+		help: 'choose a representation mode for the displayed history';
 		yourself
