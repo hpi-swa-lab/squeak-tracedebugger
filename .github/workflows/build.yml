@@ -71,7 +71,7 @@ jobs:
           script: |
             const nodegit = require('nodegit')
             const crypto = require('crypto')
-            const diffId(diffFile) => crypto.createHash('sha256').update(diffFile.path()).digest('hex')
+            const diffId = (diffFile) => crypto.createHash('sha256').update(diffFile.path()).digest('hex')
 
             const repo = await nodegit.Repository.open('.')
             const commit = await repo.getCommit('${{ steps.commit.outputs.commit_long_sha }}')
