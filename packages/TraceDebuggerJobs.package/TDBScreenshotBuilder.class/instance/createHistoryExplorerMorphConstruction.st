@@ -10,6 +10,12 @@ createHistoryExplorerMorphConstruction
 			Time class methodDict at: #now put: [thisContext return: (Time hour: 11 minute: 5 second: 42)] method.
 			block ensure:
 				[Time class methodDict at: #now put: oldNow]].
+		"pin printString"
+		thisContext wrap: [:block |
+			self assert: (WatchMorph methodDict includesKey: #printOn:) not.
+			WatchMorph methodDict at: #printOn: put: [:stream | thisContext return: (stream nextPutAll: 'a WatchMorph(4034574)')] method.
+			block ensure:
+				[WatchMorph methodDict removeKey: #printOn:]].
 		
 		window := TDBHistoryExplorer exampleMorphConstruction.
 		window extent: 586 @ 600.
