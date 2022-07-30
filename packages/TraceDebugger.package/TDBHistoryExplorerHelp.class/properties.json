@@ -2,15 +2,13 @@
 	"category" : "TraceDebugger-UI-Help",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "TTDBHelpForEdit classTrait",
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 7/31/2022 00:56",
+	"commentStamp" : "ct 7/31/2022 00:57",
 	"instvars" : [
 		 ],
-	"name" : "TraceDebuggerHelpForEdit",
+	"name" : "TDBHistoryExplorerHelp",
 	"pools" : [
 		 ],
 	"super" : "TraceDebuggerHelp",
-	"traitcomposition" : "TTDBHelpForEdit",
 	"type" : "normal" }

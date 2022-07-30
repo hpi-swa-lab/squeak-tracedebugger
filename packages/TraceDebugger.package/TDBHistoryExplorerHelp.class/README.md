@@ -1,0 +1,1 @@
+I am the help book for the TraceDebugger's history explorer.

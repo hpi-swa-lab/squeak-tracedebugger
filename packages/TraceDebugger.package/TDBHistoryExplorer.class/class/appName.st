@@ -1,0 +1,4 @@
+accessing
+appName
+
+	^ 'History Explorer'

@@ -5,12 +5,12 @@
 	"classtraitcomposition" : "TTDBHelpForEdit classTrait",
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 7/31/2022 00:56",
+	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "TraceDebuggerHelpForEdit",
+	"name" : "TDBHistoryExplorerHelpForEdit",
 	"pools" : [
 		 ],
-	"super" : "TraceDebuggerHelp",
+	"super" : "TDBHistoryExplorerHelp",
 	"traitcomposition" : "TTDBHelpForEdit",
 	"type" : "normal" }
