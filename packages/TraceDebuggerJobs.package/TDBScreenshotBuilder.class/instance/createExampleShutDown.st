@@ -4,7 +4,6 @@ createExampleShutDown
 
 	self recorder writeTo: 'screenshots/exampleShutDown.png' building: [:helper |
 		| window debugger tree splitter |
-		helper worldColor: Color transparent.
 		[TraceDebugger exampleShutDown] valueSuppressingMessages: #('*shutDown/startUp*').
 		window := helper foregroundWindow.
 		window extent: 564 @ 1538.

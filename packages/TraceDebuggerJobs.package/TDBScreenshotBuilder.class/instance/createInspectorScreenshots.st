@@ -3,7 +3,6 @@ createInspectorScreenshots
 
 	self recorder writeInto: 'screenshots' recordSeries: [:recorder :helper |
 		| window debugger rip |
-		helper worldColor: Color transparent.
 		window := [2 / 3] traceAndDebug.
 		debugger := window model.
 	
