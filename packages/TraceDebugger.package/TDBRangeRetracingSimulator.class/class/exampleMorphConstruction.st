@@ -1,5 +1,6 @@
 examples
 exampleMorphConstruction
+	"See also TDBHistoryExplorer exampleMorphConstruction."
 
 	| cursor morph screenshots text |
 	cursor := TDBCursor traceForBlock: [morph := WatchMorph new].

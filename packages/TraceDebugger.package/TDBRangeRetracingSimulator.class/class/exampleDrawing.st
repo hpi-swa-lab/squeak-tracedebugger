@@ -1,5 +1,6 @@
 examples
 exampleDrawing
+	"See also TDBHistoryExplorer exampleDrawing."
 
 	| cursor screenshot screenshots text |
 	cursor := TDBCursor traceForBlock: [screenshot := WatchMorph new imageForm].
