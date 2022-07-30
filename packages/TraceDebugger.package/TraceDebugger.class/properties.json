@@ -4,6 +4,7 @@
 		 ],
 	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
+		"BroadcastingPreferenceChanges",
 		"ShouldReplaceInspectorsWithExplorers",
 		"ShouldShowContextStack",
 		"ShouldShowContextTree",
