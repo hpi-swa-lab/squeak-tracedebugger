@@ -14,6 +14,7 @@ createHistoryExplorerMorphConstruction
 		window := TDBHistoryExplorer exampleMorphConstruction.
 		window extent: 586 @ 600.
 		explorer := window model.
+		explorer contextLabelTruncation: #(2 0).
 		
 		vSplitter := window allMorphs detect: [:m |
 			(m isKindOf: ProportionalSplitterMorph) and: [m splitsTopAndBottom]].
