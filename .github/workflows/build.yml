@@ -53,7 +53,7 @@ jobs:
           default_author: github_actions
           add: screenshots/
           message: "Add screenshots for ${{ github.sha }}"
-          push: true  #${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/main' }}
       - uses: actions/setup-node@v3
         if: ${{ steps.commit.outputs.committed == 'true' }}  # only required for commit comment below
         with:
