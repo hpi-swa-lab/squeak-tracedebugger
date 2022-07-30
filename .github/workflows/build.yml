@@ -59,8 +59,10 @@ jobs:
         with:
           node-version: 16
       - run: |
-          npm install -g nodegit@v0.28.0-alpha.18  # https://github.com/nodegit/nodegit/issues/1840
-          npm link nodegit
+          npm install -g \
+            nodegit@v0.28.0-alpha.18 `#https://github.com/nodegit/nodegit/issues/1840` \
+            crypto
+          npm link nodegit crypto
         if: ${{ steps.commit.outputs.committed == 'true' }}  # only required for commit comment below
       - if: ${{ steps.commit.outputs.committed == 'true' }}  # no changes -> no commit -> no comment
         name: Create commit comment for screenshot diff
@@ -68,25 +70,31 @@ jobs:
         with:
           script: |
             const nodegit = require('nodegit')
+            const crypto = require('crypto')
+            const diffId(diffFile) => crypto.createHash('sha256').update(diffFile.path()).digest('hex')
+
             const repo = await nodegit.Repository.open('.')
             const commit = await repo.getCommit('${{ steps.commit.outputs.commit_long_sha }}')
             const patches = (await Promise.all((await commit.getDiff()).map(diff => diff.patches()))).flatMap(patch => patch)
+            const files = patches.map(patch => patch.newFile() ?? patch.oldFile())
+
             const screenshotBuilderUrl = `${{ github.server_url }}/${{ github.repository }}/tree/HEAD/packages/TraceDebuggerJobs.package/TDBScreenshotBuilder.class`
             const genericScreenshotUrl = `${{ github.server_url }}/${{ github.repository }}/tree/gh-pages`
+
             await github.rest.repos.createCommitComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               commit_sha: context.sha,
               body: `## Changed Screenshots
 
-              This commit caused [a change of ${patches.length} ${patches.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl})${{ steps.commit.outputs.pushed && ' against the default branch' || '' }}:
+              This commit caused [a change of ${files.length} ${files.length === 1 ? 'screenshot' : 'screenshots'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : screenshotBuilderUrl})${{ steps.commit.outputs.pushed && ' against the default branch' || '' }}:
 
-              ${patches
-                .map(patch =>
-                  `- [${patch.newFile().path()}](${
+              ${files
+                .map(file =>
+                  `- [${file.path()}](${
                     ${{ steps.commit.outputs.pushed }}
-                      ? `${{ github.server_url }}/${{ github.repository }}/commits/${commit.sha()}/files/${patch.newFile().path()}#diff-${patch.newFile().id()}`
-                      : `${genericScreenshotUrl}/${patch.newFile().path()}`
+                      ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}#diff-${diffId(file)}`
+                      : `${genericScreenshotUrl}/${file.path()}`
                   })`)
                 .join('\n')}
               `,
