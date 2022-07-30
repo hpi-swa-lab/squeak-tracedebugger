@@ -1,9 +1,11 @@
 {
 	"class" : {
 		"appName" : "ct 11/20/2021 19:48",
-		"changed:" : "ct 2/19/2022 01:25",
+		"changed:" : "ct 7/30/2022 17:15",
+		"cleanUp" : "ct 7/30/2022 17:14",
 		"cursorClass" : "ct 11/18/2021 18:05",
 		"defaultFeedbackText" : "ct 3/12/2022 17:48",
+		"doNotBroadcastPreferenceChangesDuring:" : "ct 7/30/2022 17:13",
 		"exampleCoroutines1" : "ct 12/30/2021 17:26",
 		"exampleCoroutines2" : "ct 2/9/2022 01:56",
 		"exampleCoroutines3" : "ct 2/9/2022 01:58",
@@ -24,6 +26,7 @@
 		"githubNewIssueUrl" : "ct 5/26/2021 23:52",
 		"githubNewIssueUrlWithBody:" : "ct 5/26/2021 23:52",
 		"githubRepositoryParams" : "ct 4/29/2022 18:25",
+		"initialize" : "ct 7/30/2022 17:14",
 		"latestTimeStamp" : "ct 3/12/2022 17:48",
 		"newOn:" : "ct 11/20/2021 19:39",
 		"newOn:context:" : "ct 1/9/2022 23:31",
