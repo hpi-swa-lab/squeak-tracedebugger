@@ -1,6 +1,6 @@
 tests - details
 testDetailsWithForm
-	<timeout: 10 "seconds">
+	<timeout: 30 "seconds">
 
 	| text relevantText |
 	text := self setUpCursorWithForm.

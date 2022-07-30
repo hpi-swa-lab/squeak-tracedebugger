@@ -1,7 +1,9 @@
 {
 	"class" : {
 		"doPlonk" : "ct 11/21/2021 00:48",
-		"doYinYang" : "ct 7/7/2022 19:29" },
+		"doYinYang" : "ct 7/7/2022 19:29",
+		"doYinYangIndirect" : "ct 7/30/2022 16:34",
+		"doYinYangYourself" : "ct 7/30/2022 16:33" },
 	"instance" : {
 		"braffle" : "ct 3/13/2022 01:29",
 		"braffle:" : "ct 3/13/2022 01:27",

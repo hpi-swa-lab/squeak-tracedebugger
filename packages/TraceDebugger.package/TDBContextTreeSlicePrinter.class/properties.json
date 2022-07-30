@@ -9,7 +9,9 @@
 		"contextTreeSlice",
 		"compact",
 		"relativeToParent",
-		"root" ],
+		"root",
+		"truncateLeft",
+		"truncateRight" ],
 	"name" : "TDBContextTreeSlicePrinter",
 	"pools" : [
 		 ],
