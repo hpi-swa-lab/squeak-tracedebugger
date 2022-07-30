@@ -1,7 +1,10 @@
 tests - building
 testTruncatePath
 
-	| path |
+	| path nonRoot |
+	nonRoot := self contextTreeSliceClass new.
+	nonRoot parent: nonRoot.
+	
 	path := #(1 2 3 4 5).
 	#((0 0 (1 2 3 4 5))
 	(1 0 (1 '...'))
@@ -20,6 +23,7 @@ testTruncatePath
 		tdbTuplesDo: [:left :right :expected |
 			| truncated |
 			truncated := self classUnderTest new
+				contextTreeSlice: nonRoot;
 				truncateLeft: left;
 				truncateRight: right;
 				truncatePath: path.

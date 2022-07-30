@@ -2,6 +2,9 @@ building
 truncatePath: path
 
 	| left remaining right |
+	self contextTreeSlice isRoot ifTrue:
+		[^ path last: 1].
+	
 	remaining := path.
 	left := right := #().
 	self truncateLeft > 0 ifTrue:

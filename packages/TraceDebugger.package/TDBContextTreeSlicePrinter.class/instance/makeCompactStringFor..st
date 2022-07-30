@@ -3,8 +3,6 @@ makeCompactStringFor: originalPath
 
 	| index path prefixClassString previousClassString |
 	path := originalPath.
-	self contextTreeSlice isRoot ifTrue:
-		[path := path last: 1].
 	
 	prefixClassString := self contextTreeSlice parent ifNotNil: [:parent |
 		self flag: #discuss. "Should we compare with the last parent path segment instead?"
