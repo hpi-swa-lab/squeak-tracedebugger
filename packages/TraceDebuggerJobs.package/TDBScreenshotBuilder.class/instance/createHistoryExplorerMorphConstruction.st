@@ -1,8 +1,16 @@
 screenshots
 createHistoryExplorerMorphConstruction
 
-	self recorder writeTo: 'screenshots/historyExplorerList.png' building: [:helper |
+	self recorder writeTo: 'screenshots/exampleMorphConstruction.png' building: [:helper |
 		| window explorer tree contextSlice hSplitter vSplitter |
+		"pin time"
+		thisContext wrap: [:block |
+			| oldNow |
+			oldNow := Time class methodDict at: #now.
+			Time class methodDict at: #now put: [thisContext return: (Time hour: 11 minute: 5 second: 42)] method.
+			block ensure:
+				[Time class methodDict at: #now put: oldNow]].
+		
 		window := TDBHistoryExplorer exampleMorphConstruction.
 		window extent: 586 @ 600.
 		explorer := window model.

@@ -1,7 +1,7 @@
 screenshots
 createHistoryExplorerList
 
-	self recorder writeTo: 'screenshots/historyExplorerList.png' building: [:helper |
+	self recorder writeTo: 'screenshots/HistoryExplorer.png' building: [:helper |
 		| window explorer tree contextSlice |
 		window := TDBHistoryExplorer exampleRegex.
 		window height: 500.
