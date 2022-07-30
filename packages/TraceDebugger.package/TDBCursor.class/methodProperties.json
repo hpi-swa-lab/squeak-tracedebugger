@@ -60,6 +60,7 @@
 		"exploreHistory:expression:" : "ct 7/2/2022 00:50",
 		"findContextForClass:startingAtTime:" : "ct 2/3/2022 16:59",
 		"findContextForSignature:startingAtTime:" : "ct 2/3/2022 16:59",
+		"findContextSuchThat:" : "ct 7/31/2022 01:25",
 		"findContextSuchThat:startingAtTime:" : "ct 2/20/2022 21:02",
 		"initialize" : "ct 2/19/2022 16:50",
 		"isContextAlive:" : "ct 3/19/2022 21:29",
