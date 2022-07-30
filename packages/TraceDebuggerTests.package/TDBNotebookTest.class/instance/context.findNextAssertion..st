@@ -1,12 +1,11 @@
 private
-findNextAssertion: assertionBlock
+context: aContext findNextAssertion: assertionBlock
 	"Find the next assertion in the notebook. If the previous assertion has been reached, evaluate assertionBlock against it."
 
 	| position matcher |
-	position := debugger selectedContext isDead
-		ifFalse:
-			[debugger selectedContext willReturn ifTrue: [^ self].
-			debugger normalizedContentsSelection last]
+	aContext isDead ifTrue: [^ self].
+	position := (aContext isDead or: [aContext willReturn])
+		ifFalse: [debugger normalizedContentsSelection last]
 		ifTrue: [Float infinity].
 	nextAssertionPosition ifNotNil:
 		[position < nextAssertionPosition ifTrue:
@@ -14,7 +13,7 @@ findNextAssertion: assertionBlock
 		
 		assertionBlock value: nextAssertionString].
 	
-	debugger selectedContext isDead ifFalse:
+	position isInfinite ifFalse:
 		[matcher := '"([^"]*)"' asRegex.
 		matcher
 			matchesIn: (debugger contents allButFirst: position)

@@ -1,15 +1,19 @@
 {
 	"class" : {
+		"forClass:selector:" : "ct 7/30/2022 22:56",
 		"packagesUnderTest" : "ct 3/16/2022 15:52",
 		"shouldInheritSelectors" : "ct 3/16/2022 15:55",
-		"testSelectors" : "ct 3/16/2022 15:56" },
+		"testSelectorForClass:selector:" : "ct 7/30/2022 22:55",
+		"testSelectors" : "ct 7/30/2022 22:56" },
 	"instance" : {
+		"assert:matches:" : "ct 7/30/2022 23:12",
+		"context:findNextAssertion:" : "ct 7/30/2022 22:51",
 		"debuggerClass" : "ct 3/16/2022 15:59",
-		"findNextAssertion:" : "ct 3/17/2022 13:36",
 		"notebookContext" : "ct 3/16/2022 17:01",
-		"performNotebookTest" : "ct 6/18/2022 15:54",
+		"performNotebookTest" : "ct 7/30/2022 23:03",
 		"performTest" : "ct 3/16/2022 15:34",
 		"printOn:" : "ct 3/16/2022 15:48",
 		"runNotebook" : "ct 3/17/2022 16:19",
+		"setUp" : "ct 7/30/2022 23:03",
 		"timeoutForSetUp" : "ct 3/16/2022 17:06",
 		"timeoutForTest" : "ct 3/16/2022 17:06" } }

@@ -9,7 +9,7 @@ performNotebookTest
 	
 	process := Process
 		forBlock: [self runNotebook] runUntil: [:ctx |
-			ctx isBottomContext not and: [ctx sender selector = #runNotebook]].
+			ctx isBottomContext not and: [ctx sender selector = #runNotebook] and: [ctx sender willReturn]].
 	home := process suspendedContext.
 	debugger := self debuggerClass new
 		process: process context: home;
@@ -20,13 +20,20 @@ performNotebookTest
 	[home isDead] whileFalse:
 		[| context top |
 		context := debugger selectedContext.
-		context willReallySend ifTrue:
-			["complete step but do not yet pop"
-			debugger resetContext:
-				(context := debugger interruptedProcess completeStep: context)].
-		top := context top.
-		debugger stepOver.
+		context willReallySend
+			ifFalse:
+				[debugger stepOver.
+				top := context top]
+			ifTrue:
+				["complete step but do not yet pop"
+				debugger resetContext:
+					(context := debugger interruptedProcess completeStep: context).
+				top := context top.
+				context willReallySend ifFalse:
+					[debugger stepOver]].
 		
-		self findNextAssertion: [:assertion |
-			self assert: assertion equals: top printString]].
+		self context: home findNextAssertion: [:assertion |
+			self assert: assertion matches: top printString]].
+	
 	self should: nextAssertionString isNil.
+	self should: assertions notEmpty.
