@@ -10,10 +10,11 @@ printDetailsTextForLeaves: contextSliceLeaves fromRoot: rootContextSlice on: aTe
 					[selectBlock value: contextSlice])
 			do:
 				[aTextStream nextPutAll:
-					(contextSlice newPrinter
-						compact: true;
-						root: rootContextSlice;
-						makeString)].
+					(contextSlice pathStringDo: [:printer |
+						printer
+							compact: true;
+							root: rootContextSlice.
+						self applyContextLabelTruncationTo: printer])].
 		aTextStream
 			nextPutAll: ' (';
 			withAttribute:

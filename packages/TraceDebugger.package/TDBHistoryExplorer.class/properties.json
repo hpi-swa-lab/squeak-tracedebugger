@@ -18,7 +18,8 @@
 		"expanded",
 		"contextLabelCompactionStrategy",
 		"contractPaths",
-		"shouldShrinkColumns" ],
+		"shouldShrinkColumns",
+		"contextLabelTruncation" ],
 	"name" : "TDBHistoryExplorer",
 	"pools" : [
 		 ],
