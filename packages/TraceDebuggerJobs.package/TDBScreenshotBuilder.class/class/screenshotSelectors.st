@@ -1,5 +1,6 @@
 accessing
 screenshotSelectors
 
-	^ self selectors select: [:each |
-		(each beginsWith: 'create') and: [each isUnary]]
+	^ (self selectors select: [:each |
+		(each beginsWith: 'create') and: [each isUnary]])
+			sorted
