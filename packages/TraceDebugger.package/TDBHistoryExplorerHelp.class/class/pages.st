@@ -1,4 +1,4 @@
 accessing
 pages
 
-	^ #(introduction entryPoints structure)
+	^ #(introduction entryPoints structure more)

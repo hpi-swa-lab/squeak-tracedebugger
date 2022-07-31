@@ -29,8 +29,12 @@ In the yellow-button menu of the list, you can inspect or explore a snapshot of 
 
 On the left side, you can find a reduced context tree that only contains all contexts that are responsible for any change of the explored expression. By default, this tree is displayed in a compact form. You can alternate the tree display from the yellow-button menu under compact labels. Fiddling around with these options is a great way to understand the tree display.
 
-<#figureHistoryExplorerCompactionMenu>!
-]style[(9 47 29 9 9 49 11 184 9 135 4 16 8 2 10 2 10 5 8 190 5 125 4 14 7 125 4 27 7 144 5 13 111 35 7 74 4 69 7 55 7 4 7 32 18 52 5 130 12 220 14 94 29)b,,I1,,b,,b,,i,,c118000000,,i,,i,,i,,i,,iI1b,I1,I1b,iI1b,I1b,I1,iI1,I1,iI1,I1,,b,,I1,bI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,bI1,I1,I1i,I1,!' readStream nextChunkText)
+Note that each inner node in the tree can be collapsed or expanded and only shows a value from the slice on its own when it is collapsed. When you select an expanded node while in details mode, the details pane displays all values from all leaves within the selected node.
+
+<#figureHistoryExplorerCompactionMenu>
+
+A note on fray outs: Even if the results of a query contains of multiple values, it is possible that the representation (e.g., the printString) of some values varies within the associated time range of the value. In this case, the history explorer will display a fray out error for the relevant items. In the details mode, all frayed out elements will be displayed on top of each other. See exampleDrawing for an example.!
+]style[(9 47 29 9 9 49 11 184 9 135 4 16 8 2 10 2 10 5 8 190 5 125 4 14 7 125 4 27 7 144 5 13 111 35 7 74 4 69 7 55 7 4 7 32 18 52 5 130 12 220 14 368 30 11 9 372 14 16)b,,I1,,b,,b,,i,,c116000000,,i,,i,,i,,i,,iI1b,I1,I1b,iI1b,I1b,I1,iI1,I1,iI1,I1,,b,,I1,bI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,iI1,I1,bI1,I1,I1i,I1,,I1,I1i,I1,Rcode:// TDBHistoryExplorer class >> #exampleDrawing;,I1!' readStream nextChunkText)
 			key: #basicStructure;
 			shouldStyle: false;
 			yourself
