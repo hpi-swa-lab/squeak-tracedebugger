@@ -2,7 +2,7 @@ accessing - toolbuilder
 detailsText
 
 	| slice text |
-	slice := self selectedContextSlice ifNil: [^ nil].
+	slice := self selectedContextSlice ifNil: [^ self emptyDetailsText].
 	text := self showWaitAfter: 500 milliSeconds during:
 		[self
 			resultForContextSlice: slice

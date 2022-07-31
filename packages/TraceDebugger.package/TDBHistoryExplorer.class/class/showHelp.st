@@ -1,0 +1,4 @@
+accessing
+showHelp
+
+	TDBHistoryExplorerHelp openHelpBrowser.

@@ -20,7 +20,7 @@ exportAsAnimatedGIFOn: aStream
 	writer := GIFReadWriter on: aStream.
 	writer loopCount: 150.
 	font := TextStyle defaultFont.
-	madeBy := 'Made with {1}' format: {TraceDebugger appName}.
+	madeBy := 'Made with {1}' format: {self traceDebuggerClass appName}.
 	index := 0.
 	timesAndForms
 		do: [:timeAndForm |
