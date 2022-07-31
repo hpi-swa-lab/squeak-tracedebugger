@@ -14,7 +14,7 @@ debug: aBlock
 	sideEffect := sideEffects ifNotNil: [sideEffects at: index].
 	value := rawValues at: index.
 	
-	simulator := TDBRetracingSimulator forMemory: memory atTimes: interval.
+	simulator := self retracingSimulatorClass forMemory: memory atTimes: interval.
 	sideEffect ifNotNil:
 		[simulator sideEffects: sideEffect].
 	self flag: #hacked. "better than #isDoIt below would be a #runUntil: argument"

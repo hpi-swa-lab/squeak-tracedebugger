@@ -11,7 +11,8 @@ addCodeSelectionAsField
 		lineSelectAndEmptyCheck: [^ self changed: #flash];
 		selection.
 	
-	self inspector addCustomField: (self
-		createCustomFieldFor: expression
-		requestor: editor
-		orCancel: [^ self]).
+	self inspector addCustomField:
+		(self
+			createCustomFieldFor: expression
+			requestor: editor
+			orCancel: [^ self]).

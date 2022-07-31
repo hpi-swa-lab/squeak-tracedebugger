@@ -1,4 +1,4 @@
 forwarding - window
 defaultWindowColor
 
-	^ (self debugger ifNil: [TraceDebugger basicNew]) colorForHistory
+	^ (self debugger ifNil: [self traceDebuggerClass basicNew]) colorForHistory

@@ -1,1 +1,1 @@
-I am signaled when a message sent to a TDBRangeProxy frays out as it reads further states that vary within the proxy's time range.
+I am signaled when a message sent to a TDBRangeProxy frays out as it reads further states that vary within the proxy's time range. Clients may react on this error by either displaying an error or displaying the entire range of answers instead of a single value.

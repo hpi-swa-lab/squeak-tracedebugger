@@ -1,6 +1,6 @@
 primitives
 context: aContext primitiveBitBltCopyForm: aForm into: aBitBlt setter: setter
-	"Copy aForm into aBitBlt by using the specified setter symbol. Answer the copied form's bitmap."
+	"Copy aForm into aBitBlt by using the specified setter symbol using the read/write hooks. Answer the copied form's bitmap."
 
 	| bits bitsCopy formCopy result |
 	(self context: aContext simulatedObject: aForm instVarAt: 1 "bits" ifHit: [:value |

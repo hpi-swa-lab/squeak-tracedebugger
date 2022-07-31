@@ -10,6 +10,7 @@ context: aContext primitiveExternalCall: receiver method: aCompiledMethod withAr
 	pluginName := literal first.
 	primitiveName := literal second.
 	
+	"Dispatch to registered pragma primitives."
 	^ pragmaPrimitives
 		at: pluginName
 		ifPresent: [:block | block valueWithEnoughArguments: {aContext. primitiveName. receiver. aCompiledMethod. arguments. aBlock}]

@@ -1,5 +1,6 @@
 private
 object: anObject priorTo: timeIndex atSlot: slot put: value
+	"Store the value for anObject at the slot prior to the specified time index."
 
 	| priorTimeIndex |
 	timeIndex >= maxTimeIndex

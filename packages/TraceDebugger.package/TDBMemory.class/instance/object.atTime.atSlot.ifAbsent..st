@@ -1,12 +1,13 @@
 private
-object: anObject atTime: timeIndex atSlot: slot ifAbsent: aBlock
+object: anObject atTime: timeIndex atSlot: slot ifAbsent: absentBlock
+	"Answer the value at the slot in anObject at the requested timeIndex, or the result of evaluating absentBlock if no such value is present."
 
 	| run runs |
 	timeIndex >= 0
 		ifFalse: [^ self error: 'timeIndex must be positive: ' , timeIndex].
 	
-	runs := (values at: anObject ifAbsent: [^ aBlock value])
-		at: slot ifAbsent: [^ aBlock value].
+	runs := (values at: anObject ifAbsent: [^ absentBlock value])
+		at: slot ifAbsent: [^ absentBlock value].
 	
 	self flag: #optimize. "Inline. Use interpolation search (#findDelta:)?"
 	run := runs
@@ -15,5 +16,5 @@ object: anObject atTime: timeIndex atSlot: slot ifAbsent: aBlock
 			left
 				ifNil: [runs first]
 				ifNotNil:
-					[right ifNil: [^ aBlock value]]].
+					[right ifNil: [^ absentBlock value]]].
 	^ run second

@@ -1,0 +1,1 @@
+The abstract superclass for many test cases in the TraceDebugger. Provides some convenience utilities such as #wrapTest:.

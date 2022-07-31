@@ -5,7 +5,7 @@
 	"classtraitcomposition" : "TTDBChangesGraph classTrait",
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "ct 7/31/2022 20:16",
 	"instvars" : [
 		"cursor",
 		"object",

@@ -2,7 +2,7 @@
 	"class" : {
 		"forMemory:atTime:" : "ct 5/12/2022 12:22" },
 	"instance" : {
-		"context:simulatedObject:basicAt:ifHit:" : "ct 7/22/2022 20:14",
-		"context:simulatedObject:instVarAt:ifHit:" : "ct 7/22/2022 20:14",
+		"context:simulatedObject:basicAt:ifHit:" : "ct 7/31/2022 21:28",
+		"context:simulatedObject:instVarAt:ifHit:" : "ct 7/31/2022 21:28",
 		"timeIndex" : "ct 5/12/2022 12:22",
 		"timeIndex:" : "ct 5/28/2022 19:24" } }

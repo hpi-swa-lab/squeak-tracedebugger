@@ -1,4 +1,4 @@
-private - constants
+private
 traceDebuggerClass
 
 	^ TraceDebugger

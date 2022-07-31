@@ -1,1 +1,1 @@
-I am responsible for generating a printString for the path of a TDBContextTreeSlice. I am a method object with and provide several configuration options.
+I am responsible for generating a printString for the path of a TDBContextTreeSlice. I am a method object and provide several configuration options.

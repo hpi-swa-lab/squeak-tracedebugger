@@ -1,1 +1,1 @@
-I represent a single tree item that has been detached from a TraceDebugger. My sole purpose is to provide a browsable representation so that users can drag out contexts out of a call tree to spawn a new TraceDebugger. See TraceDebugger>>#dragContext:.
+I represent a single tree item that has been detached from a TraceDebugger. My sole purpose is to provide a #browse-able representation so that users can drag out contexts out of a call tree to spawn a new TraceDebugger. See TraceDebugger>>#dragContext:.

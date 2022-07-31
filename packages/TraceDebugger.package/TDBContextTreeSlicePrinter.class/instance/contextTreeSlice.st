@@ -1,5 +1,5 @@
 accessing
 contextTreeSlice
-	"The TDBContextTreeSlice to print."
+	"The TDBContextTreeSlice instance to print."
 
 	^ contextTreeSlice

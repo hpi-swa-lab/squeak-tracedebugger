@@ -2,7 +2,7 @@ printing
 printMultilineOn: aStream level: level
 
 	level timesRepeat: [aStream nextPut: Character tab].
-	aStream print: self path.
+	aStream print: self path asArray.
 	self hasChildren ifTrue:
 		[aStream
 			nextPut: $:;

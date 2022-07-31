@@ -1,5 +1,6 @@
 private
 object: anObject atTimes: timeIndices atSlot: slot getCurrent: currentBlock ifAbsent: absentBlock
+	"Answer a TDBMemorySlice of all the values at the slot in anObject within the requested timeIndices. The latest element for the slice may be retrieved from evaluating currentBlock. If the slot for the object is not present in the receiver, answer the reesult of evaluating absentBlock."
 
 	| runs intervals lastTimeIndex rawValues nextTimeIndex |
 	timeIndices isInterval

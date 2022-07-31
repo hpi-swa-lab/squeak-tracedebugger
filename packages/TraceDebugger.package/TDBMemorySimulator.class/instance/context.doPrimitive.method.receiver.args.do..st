@@ -18,6 +18,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 					lastPrimitive := nil.
 					^ aContext push: value]].
 	
+	"Dispatch to registered primitives."
 	result := (primitives
 		at: primitiveIndex
 		ifAbsent: [])

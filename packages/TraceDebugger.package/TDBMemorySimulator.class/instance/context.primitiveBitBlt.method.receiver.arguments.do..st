@@ -59,7 +59,7 @@ context: aContext primitiveBitBlt: primitiveName method: aCompiledMethod receive
 		ifTrue: [^ result].
 	
 	
-	"4) Read out the resulting destForm from the copied BitBlt instance and install it in the virtual memory for the original destForm"
+	"4) Read out the resulting destForm from the copied BitBlt instance and use the write hooks to install it in the original destForm"
 	(self context: aContext simulatedObject: destForm instVarAt: 1 "bits" tryPut: destBitsCopy)
 		ifFalse: [aContext object: destForm instVarAt: 1 put: destBitsCopy].
 	

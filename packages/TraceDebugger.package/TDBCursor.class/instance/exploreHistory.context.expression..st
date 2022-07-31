@@ -1,11 +1,11 @@
 *TraceDebugger-UI-support
-exploreHistory: anObject context: aContext expression: aString
+exploreHistory: anObject context: aContext expression: aStringOrNil
 
 	| historyExplorer |
 	historyExplorer := TDBHistoryExplorer
 		forCursor: self
 		object: anObject tdbproxyYourself.
 	historyExplorer context: aContext.
-	aString ifNotNil:
-		[historyExplorer expression: aString].
+	aStringOrNil ifNotNil:
+		[historyExplorer expression: aStringOrNil].
 	^ historyExplorer open

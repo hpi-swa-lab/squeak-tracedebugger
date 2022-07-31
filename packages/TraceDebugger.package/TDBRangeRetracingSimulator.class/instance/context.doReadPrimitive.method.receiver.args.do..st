@@ -27,7 +27,7 @@ context: aContext doReadPrimitive: primitiveIndex method: aCompiledMethod receiv
 						receiver: eachReceiverAndArgs first
 						args: eachReceiverAndArgs allButFirst]].
 	
-	"Run primitive for each combination. Avoid costly forks at this point but only store the result of each call."
+	"Run primitive for each combination. Avoid costly forks for failing primitives at this point but only store the result of each call."
 	resultOrFailTokens := receiverAndArgs rawCollect: [:eachReceiverAndArgs |
 		| result |
 		result := super
@@ -41,11 +41,11 @@ context: aContext doReadPrimitive: primitiveIndex method: aCompiledMethod receiv
 			ifFalse: [{aContext pop. nil}]
 			ifTrue: [{nil. result}]].
 	
-	"Fold subsequential successes/fail tokens."
+	"Fold subsequential successes/fail tokens into nested slices."
 	resultOrFailTokens := resultOrFailTokens rawCondense: [:a :b |
 		a second == nil = (b second == nil)].
 	
-	"Now we can create a reasonable number of forks. Reapply the effect of each primitive call to one fork. Instead of overwriting #send:to:with:lookupIn:, too, we handle primitive failures here already."
+	"Now we can create a minimal number of forks for failed/passed primitive calls. Reapply the effect of each primitive call to one fork. Instead of overwriting #send:to:with:lookupIn:, too, we handle primitive failures here already."
 	^ self fork: aContext for: resultOrFailTokens collect: [:eachContext :resultOrFailToken |
 		| isSlice |
 		((isSlice := resultOrFailToken isTdbMemorySlice)

@@ -1,6 +1,6 @@
 enumerating
 pointsCollect: aBlock
-	"Same semantics as #collect:, but evaluates aBlock for every single point in time instead of range retracing. Likely slower. Kept for documentary reasons only."
+	"Same semantics as #collect:, but evaluates aBlock for every single point in time instead of range retracing. Very likely significantly slower. Kept for documentary reasons only."
 
 	^ self species
 		memory: memory

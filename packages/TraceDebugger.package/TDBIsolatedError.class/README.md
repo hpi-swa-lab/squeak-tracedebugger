@@ -1,1 +1,1 @@
-I wrap an exception that have been raised from the code that has been executed inside an isolated memory simulator. See TDBMemorySimulator>>#evaluate:on:do: for more information.
+I wrap an exception that have been raised from the code that has been executed inside an isolated memory simulator, e.g. during a message send to a TDBProxy. See TDBMemorySimulator>>#evaluate:on:do: for more information.

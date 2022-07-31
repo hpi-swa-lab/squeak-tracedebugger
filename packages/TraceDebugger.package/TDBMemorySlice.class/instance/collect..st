@@ -11,7 +11,7 @@ collect: aBlock
 		rawValues:
 			(rawValues with: intervals collect: [:value :interval |
 				| simulator |
-				simulator := TDBRetracingSimulator forMemory: memory atTimes: interval.
+				simulator := self retracingSimulatorClass forMemory: memory atTimes: interval.
 				sideEffects ifNotNil:
 					[(sideEffects at: (index := index + 1)) ifNotNil: [:thisSideEffects |
 						simulator sideEffects: thisSideEffects]].

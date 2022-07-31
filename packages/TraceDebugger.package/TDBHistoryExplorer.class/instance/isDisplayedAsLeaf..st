@@ -1,4 +1,4 @@
-private
+accessing - state
 isDisplayedAsLeaf: aContextSlice
 
 	^ (self childContextSlicesFor: aContextSlice) isEmpty

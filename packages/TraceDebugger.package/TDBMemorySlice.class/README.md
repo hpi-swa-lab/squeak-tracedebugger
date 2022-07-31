@@ -1,4 +1,4 @@
-I represent a time-dependent value that was returned or derived from a TDBMemory. My instances are created when requesting time-dependent values from a memory (#object:atTimes:...) and can be transformed (#collect:) into further instances. Each instance may also carry along some side effects that were captured during transforming.
+I represent a time-dependent value that was returned or derived from a TDBMemory. My instances are created when requesting time-dependent values from a memory (#object:atTimes:...) and can be transformed (#collect:) into further instances. Each instance may also carry along some isolated side effects that were captured during transforming.
 
 To meet the typical workload of memories, I am implemented as a sparse data structure just like TDBMemory. By TDBRangeRetracingSimulator, I am also used for vectorized execution.
 

@@ -1,5 +1,7 @@
 private - object access
 context: aContext simulatedObject: anObject basicAt: index tryPut: value
+	"Try to write the value at the index-th field of anObject. Answer true if the value was written or false if the implementors is not interested in performing this write operation. In the latter case, the sender will have to use the default strategy to perfom the write operation.
+	This implementation ensures isolation if enabled. Hook for subclasses."
 
 	| objectClass |
 	sideEffects ifNil: [^ false].

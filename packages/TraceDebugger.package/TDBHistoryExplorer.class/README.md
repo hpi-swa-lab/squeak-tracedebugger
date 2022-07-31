@@ -1,0 +1,5 @@
+I am a tool in the TraceDebugger ecosystem that allows for the state-centric exploration of objects in a program trace. Concretely, I take an object in the context of a program trace and a query for accessing a relevant portion of state from the object, and display a slice of the program trace with all historic results of the query. My class side provides an opening protocol and a list of usage examples. See the help for further usage instructions.
+
+I offer multiple representation modes, support for Autocompletion, different compaction options for the context slice tree, means for printing/inspecting/debugging results, spawning new history explorers, can alternate the text for nodes based on their expanded/collapsed state, handle fray out errors, produce animated GIF export and more.
+
+Internally, all my communication to the tracing engine goes through the cursor. All my magic happens in #updateMemorySlice and #updateContextTreeSlice. Besides the cursor, the object and the query (represented  by an expression and a do-it context), the rest of my state refers to the variable presentation of the results.

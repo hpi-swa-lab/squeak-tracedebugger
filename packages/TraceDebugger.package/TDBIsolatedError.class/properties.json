@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 5/10/2022 22:35",
+	"commentStamp" : "ct 7/31/2022 17:10",
 	"instvars" : [
 		"exception" ],
 	"name" : "TDBIsolatedError",

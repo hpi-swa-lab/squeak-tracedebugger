@@ -1,5 +1,6 @@
 labels & details
 detailsTextForFrayOut: aFrayOutError fromRoot: rootContextSlice
+	"Construct a new context tree slice similar to #updateContextTreeSlice and display all the results."
 
 	| frayMemorySlice frayTimes frayTreeSlice contextSliceLeaves frayRootContextSlice |
 	frayMemorySlice := aFrayOutError slice.

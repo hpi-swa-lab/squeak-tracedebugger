@@ -1,5 +1,6 @@
 controlling
 context: aContext doWritePrimitive: primitiveIndex method: aCompiledMethod receiver: receiver args: arguments do: aBlock
+	"Essentially vector checks for receiver and arguments, edge case handling, and optimizations. Contains unrolled code for greater performance."
 
 	| numArgs receiverClass primitiveArgIndex primitiveReceiver |
 	numArgs := primitiveNumArgs at: primitiveIndex.

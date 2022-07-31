@@ -1,10 +1,12 @@
 private - object access
 context: aContext simulatedObject: anObject instVarAt: index ifHit: aBlock
+	"Try to read the index-th instance variable of anObject. If found, answer the result of evaluating aBlock with the variable value. Otherwise, the sender will have to use the default strategy to read the variable.
+	This implementation ensures isolation if enabled. Hook for subclasses."
 
 	| result |
 	sideEffects ifNil: [^ nil].
 	
-	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ false].
+	(aContext objectClass: index) tdbIsIntegerClass ifFalse: [^ nil].
 	index > 0 ifFalse: [^ nil].
 	
 	result := sideEffects

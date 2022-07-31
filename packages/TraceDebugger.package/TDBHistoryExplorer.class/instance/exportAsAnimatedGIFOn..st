@@ -30,18 +30,22 @@ exportAsAnimatedGIFOn: aStream
 			index := index + 1.
 			
 			canvas := FormCanvas extent: extent + (0 @ (2 + 20)) depth: 8.
+			"progress bars"
 			canvas fillRectangle: (0 @ 0 extent: extent x * (index / timesAndForms size) @ 2) color: Color yellow.
 			canvas fillRectangle: (0 @ 2 extent: extent x * (time / cursor maxTimeIndex) @ 2) color: Color white.
+			"label"
 			canvas
 				drawString: ('{2}' format: {time. (self cursor contextAtTime: time) asString})
 				at: 0 @ (2 + 2)
 				font: font
 				color: Color white.
 			
+			"the form"
 			canvas
 				drawImage: form as8BitColorForm
 				at: offset @ (2 + 2 + 20).
 			
+			"watermark"
 			canvas
 				drawString: madeBy
 				at: canvas extent - ((font widthOfString: madeBy) @ font height) "right bottom aligned"

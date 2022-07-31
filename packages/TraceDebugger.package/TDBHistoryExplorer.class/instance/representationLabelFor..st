@@ -1,4 +1,4 @@
-private
+accessing - toolbuilder
 representationLabelFor: aSymbol
 
 	^ aSymbol asString

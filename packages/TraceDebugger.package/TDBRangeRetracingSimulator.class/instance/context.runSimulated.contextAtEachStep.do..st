@@ -2,7 +2,7 @@ controlling
 context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simulateBlock
 	"Copied from SimulationContext>>#runSimulated:contextAtEachStep: and customized for vector semantics. Answer a TDBMemorySlice with the simulated values of aBlock.
 	Other than in normal interpretation, Context>>#step may also answer a vector instead of a normal context here when the execution is forked. Once this happens, we maintain and advance a slice of parallel contexts.
-	Optimized for performance over readability. Watch the beautiful bytecode."
+	Optimized for performance over readability. The bytecode makes heavy use of inlining and contains a lot of unrolled code to reduce the total number of message sends."
 
 	| home current ensure complete result results debugIndex newSideEffects |
 	"*** 1. INITIALIZATION ***"

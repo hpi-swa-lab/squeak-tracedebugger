@@ -16,6 +16,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 	self flag: #optimize. "Do not combine unused arguments (e.g., for mirror primitives)"
 	self flag: #optimize. "Array lookup for primitives?"
 	
+	"Dispatch to registered primitive handlers."
 	(PrimitiveHandlers at: primitiveIndex) ifNotNil: [:handler |
 		| result |
 		lastPrimitive := primitiveIndex.
@@ -23,6 +24,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 		lastPrimitive := nil.
 		^ result].
 	
+	"For all unknown primitives, fork if there are multiple vector combinations of the receiver and the arguments."
 	receiverAndArgs := self
 		context: aContext
 		combineArguments: (arguments copyWithFirst: receiver)

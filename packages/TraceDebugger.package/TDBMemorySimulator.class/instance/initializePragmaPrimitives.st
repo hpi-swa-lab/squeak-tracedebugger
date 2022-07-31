@@ -18,7 +18,7 @@ initializePragmaPrimitives
 				self context: context primitiveFailTokenFor: nil]].
 		
 	self shouldIsolate ifTrue:
-		[self flag: #todo. "Support further plugins here, e.g., B2DPlugin and BitBlt"
+		[self flag: #todo. "Support further plugins here, e.g., B2DPlugin"
 		pragmaPrimitives
 			at: #CroquetPlugin put: [:context :primitiveName :receiver :compiledMethod :arguments :doBlock |
 				"allowed"

@@ -1,5 +1,6 @@
 support
 spaceUsed
+	"Answer the number of bytes occupied by the receiver."
 
 	| tally space |
 	tally := SpaceTally new.

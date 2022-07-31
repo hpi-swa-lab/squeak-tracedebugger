@@ -1,7 +1,7 @@
 labels & details
 detailsTextForValue: value
 
-	self flag: #rangeRetracingForkAccess. "We would want to use non-local returns here which would send #aboutToReturn:through: which is currently not supported during range retracing."
+	self flag: #rangeRetracingForkAccess. "We would want to use non-local returns here which would send #aboutToReturn:through: which is currently not supported during range retracing. See #90."
 	
 	^ [true
 		caseOf:

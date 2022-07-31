@@ -20,7 +20,7 @@ makeCompactStringFor: originalPath
 	^ (path
 		tdbSequentiallyGroupBy: [:context |
 			context = #'...'
-				ifTrue: [previousClassString]
+				ifTrue: [previousClassString] "i.e., remember the current group beyond the ellipsis"
 				ifFalse: [previousClassString := context tdbClassString]]
 		gather: [:classString :contexts |
 			((self relativeToParent and: [(index := index + 1) = 1 and: [prefixClassString = classString]])

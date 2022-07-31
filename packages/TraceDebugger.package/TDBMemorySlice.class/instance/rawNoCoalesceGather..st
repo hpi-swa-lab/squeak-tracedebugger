@@ -1,6 +1,6 @@
 enumerating - raw values
 rawNoCoalesceGather: aBlock
-	"Just like #rawGather:, but maintain the time inidices of the receiver and do not coalesce the resulting slice."
+	"Just like #rawGather:, but maintain the time indices of the receiver and do not coalesce the resulting slice."
 
 	| newIntervals newValue newValues newSideEffects index newSideEffect |
 	newIntervals := (Array new: intervals size) writeStream.

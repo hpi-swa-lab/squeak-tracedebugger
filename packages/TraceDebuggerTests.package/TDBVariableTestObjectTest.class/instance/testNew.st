@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testNew
 
 	object := self classUnderTest new: 3.

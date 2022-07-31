@@ -1,5 +1,6 @@
 building
 findPathIfShort: aBlock
+	"Answer the full path from the context tree slice up to the specified root, including the path of the original slice. If the path only consists of a timeIndex, answer the result of evaluating aBlock."
 
 	| displayPath |
 	displayPath := self root = #parent

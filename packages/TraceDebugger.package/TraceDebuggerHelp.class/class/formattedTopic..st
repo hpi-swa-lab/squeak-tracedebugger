@@ -1,7 +1,7 @@
 private
 formattedTopic: aHelpTopic
 
-	"format with figures"
+	"resolve figures"
 	aHelpTopic contents:
 		(self figures inject: aHelpTopic contents into: [:contents :figureSelector |
 			contents
