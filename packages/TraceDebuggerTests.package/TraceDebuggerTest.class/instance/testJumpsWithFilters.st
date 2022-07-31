@@ -18,5 +18,5 @@ testJumpsWithFilters
 	
 	debugger contextFilter excludeSelector: #ziffy.
 	
-	debugger jumpToPresence.
+	debugger jumpToPresent.
 	self assert: self selector equals: debugger selectedContext selector.

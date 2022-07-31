@@ -7,7 +7,7 @@ contextTreeKey: aCharacter from: requestor event: event
 		caseOf:
 			{[$o] -> [self spawnContext].
 			[$ ] -> [self toggleBorderContext].
-			[$D] -> [self jumpToPresence].
+			[$D] -> [self jumpToPresent].
 			[$w] -> [self jumpToSender].
 			[$s] -> [self jumpToCallee].
 			

@@ -3,4 +3,4 @@ defaultWindowColor
 
 	^ self isDisplayingHistory
 		ifTrue: [self colorForHistory]
-		ifFalse: [self colorForPresence]
+		ifFalse: [self colorForPresent]

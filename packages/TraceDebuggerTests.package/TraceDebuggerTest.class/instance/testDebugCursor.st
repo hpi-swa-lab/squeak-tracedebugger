@@ -10,5 +10,5 @@ testDebugCursor
 	self assert: debugger selectedContext homeMethod = thisContext homeMethod.
 	self assert: debugger isDisplayingHistory.
 	
-	debugger jumpToPresence.
+	debugger jumpToPresent.
 	self deny: debugger canProceed.

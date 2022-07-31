@@ -22,5 +22,5 @@ testJumps
 	debugger jumpToCallee.
 	self assert: #wiffy2 equals: debugger selectedContext selector.
 	
-	debugger jumpToPresence.
+	debugger jumpToPresent.
 	self assert: #ziffy equals: debugger selectedContext selector.

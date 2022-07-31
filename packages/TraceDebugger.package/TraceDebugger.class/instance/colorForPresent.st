@@ -1,5 +1,5 @@
 toolbuilder - constants - color
-colorForPresence
+colorForPresent
 
-	^ self userInterfaceTheme colorForPresence ifNil:
+	^ self userInterfaceTheme colorForPresent ifNil:
 		[self class fallbackDebugger new defaultWindowColor]

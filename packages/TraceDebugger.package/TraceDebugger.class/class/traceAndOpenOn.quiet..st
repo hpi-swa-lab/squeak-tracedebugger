@@ -13,6 +13,6 @@ traceAndOpenOn: aProcess quiet: quiet
 			doStepUntil: [aProcess isTerminated];
 			timeIndex: 0;
 			doRestart]]
-		ifCurtailed: [debugger jumpToPresence]]
+		ifCurtailed: [debugger jumpToPresent]]
 			ensure: [result := debugger open].
 	^ result

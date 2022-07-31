@@ -17,7 +17,7 @@ mainContextMenu: menu
 			setState: [self toggleBorderContext: context];
 			balloonTextForLastItem: 'control whether the displayed trace will be clipped beyond this context'].
 	menu addList:
-		#(('jump to presence (D)' jumpToPresence 'jump to the currently active context')).
+		#(('jump to present (D)' #jumpToPresent 'jump to the currently active context')).
 	context ifNotNil:
 		[menu addList:
 			#(('jump to sender (w)' jumpToSender 'jump to the context that has activated this context')

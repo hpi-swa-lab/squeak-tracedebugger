@@ -3,7 +3,7 @@ themeProperties
 
 	^ super themeProperties ,
 		#((colorForHistory 'Colors' 'Window color to indicate history mode.')
-		(colorForPresence 'Colors' 'Window color to indicate presence mode.')
+		(#colorForPresent 'Colors' 'Window color to indicate present mode.')
 		
 		(styleForAliveContext 'Styles' 'Text style of alive contexts ({color[. emphasis]}).')
 		(styleForDeadContext 'Styles' 'Text style of dead contexts ({color[. emphasis]}).')
