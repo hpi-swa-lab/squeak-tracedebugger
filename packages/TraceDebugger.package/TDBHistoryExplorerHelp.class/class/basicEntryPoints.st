@@ -16,7 +16,7 @@ There are two entry points to the history explorer:
 
 Alternatively, you can enter any expression into the inspector''s code pane and select "explore expression history" from the yellow button menu.
 
-Tip: These items are also available from any spawned snapshot inspector (see Structure).
+Tip: These items are also available from any spawned snapshot inspector/explorer (see Structure).
 
 2. Record and explore an object history using the opening protocol of TDBHistoryExplorer:
 
@@ -30,8 +30,8 @@ TDBHistoryExplorer
 	expression: ''self copy''.
 
 For more inspiration, browse all invocation examples.!
-]style[(12 2 56 30 221 29 223 9 7 36 31 18 1 2 20 13 4 1 6 4 1 1 1 4 3 1 1 1 4 1 4 5 3 1 1 1 4 1 4 5 3 1 1 1 4 1 6 5 8 3 11 1 11 2 23 31)b,,a0,a0b,a0,I1,a0,a0u,a0,a0b,a0,Rcode://
-ToolSet browseClass: TDBHistoryExplorer class category: ''opening'';,,a0,I1,c000000122I1,I1,c000122000I1,I1,c000000122I1,I1,c122000000I1,c000122000I1,I1,c000000122I1,I1,c122000000I1,I1,c000000122I1,I1,c000000122I1,I1,c000000122I1,I1,c122000000I1,I1,c000000122I1,I1,c000000122I1,I1,c000000122I1,I1,c122000000I1,I1,c000000122I1,I1,c000000122I1,I1,c000000122I1,I1,c000000122I1,I1,c122000122nI1,I1,,Rcode://
+]style[(12 2 56 30 221 29 232 9 7 36 31 18 1 2 20 13 4 1 6 4 1 1 1 4 3 1 1 1 4 1 4 5 3 1 1 1 4 1 4 5 3 1 1 1 4 1 6 5 8 3 11 1 11 2 23 31)b,,a0,a0b,a0,I1,a0,a0u,a0,a0b,a0,Rcode://
+ToolSet browseClass: TDBHistoryExplorer class category: ''opening'';,,a0,I1,c000000121I1,I1,c000121000I1,I1,c000000121I1,I1,c121000000I1,c000121000I1,I1,c000000121I1,I1,c121000000I1,I1,c000000121I1,I1,c000000121I1,I1,c000000121I1,I1,c121000000I1,I1,c000000121I1,I1,c000000121I1,I1,c000000121I1,I1,c121000000I1,I1,c000000121I1,I1,c000000121I1,I1,c000000121I1,I1,c000000121I1,I1,c121000121nI1,I1,,Rcode://
 ToolSet browseClass: TDBHistoryExplorer class category: ''examples'';!' readStream nextChunkText)
 			key: #basicEntryPoints;
 			shouldStyle: false;
