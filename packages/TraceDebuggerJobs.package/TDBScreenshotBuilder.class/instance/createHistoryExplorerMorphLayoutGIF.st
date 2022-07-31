@@ -1,4 +1,4 @@
-screenshots
+screenshots - history explorer
 createHistoryExplorerMorphLayoutGIF
 
 	| explorer window |

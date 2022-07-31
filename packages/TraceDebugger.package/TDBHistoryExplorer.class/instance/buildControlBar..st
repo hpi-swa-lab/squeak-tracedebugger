@@ -5,6 +5,7 @@ buildControlBar: builder
 	spawnButton := self buildSpawnButtonWith: builder.
 	buttonOffset := (((self allRepresentationModes collect: [:mode | self representationLabelFor: mode]) copyWith: spawnButton label) collect: [:label | (Preferences standardButtonFont widthOfString: label)]) max * (3 / 2).
 	^ builder pluggablePanelSpec new
+		name: #controlBar;
 		children:
 			(OrderedCollection new
 				add: ((self buildCodePaneWith: builder)

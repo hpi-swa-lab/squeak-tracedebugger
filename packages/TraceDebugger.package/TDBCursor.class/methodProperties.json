@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"coroutines" : "ct 3/14/2022 00:22",
+		"exampleScriptingAPIs" : "ct 7/31/2022 01:25",
 		"exampleStepping" : "ct 7/31/2022 00:43",
 		"examples" : "ct 3/16/2022 17:08",
 		"forContext:" : "ct 12/1/2021 00:44",
@@ -60,6 +61,7 @@
 		"exploreHistory:expression:" : "ct 7/2/2022 00:50",
 		"findContextForClass:startingAtTime:" : "ct 2/3/2022 16:59",
 		"findContextForSignature:startingAtTime:" : "ct 2/3/2022 16:59",
+		"findContextSuchThat:" : "ct 7/31/2022 01:25",
 		"findContextSuchThat:startingAtTime:" : "ct 2/20/2022 21:02",
 		"initialize" : "ct 2/19/2022 16:50",
 		"isContextAlive:" : "ct 3/19/2022 21:29",

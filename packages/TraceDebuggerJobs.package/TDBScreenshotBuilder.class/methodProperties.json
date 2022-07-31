@@ -2,14 +2,16 @@
 	"class" : {
 		"createScreenshot:" : "ct 3/18/2022 21:29",
 		"createScreenshots" : "ct 6/18/2022 02:33",
-		"screenshotSelectors" : "ct 3/18/2022 21:29" },
+		"screenshotSelectors" : "ct 7/31/2022 02:37" },
 	"instance" : {
 		"createContextToolTip" : "ct 7/30/2022 16:38",
 		"createExampleShutDown" : "ct 7/30/2022 16:38",
+		"createExploreFieldHistory" : "ct 7/31/2022 02:18",
 		"createFindContext" : "ct 7/30/2022 16:38",
 		"createHistoryExplorerList" : "ct 7/29/2022 20:20",
 		"createHistoryExplorerMorphConstruction" : "ct 7/31/2022 00:50",
 		"createHistoryExplorerMorphLayoutGIF" : "ct 7/29/2022 20:09",
+		"createHistoryExplorerScreenshots" : "ct 7/31/2022 02:58",
 		"createInspectorScreenshots" : "ct 7/30/2022 16:38",
 		"createScreenshot" : "ct 7/30/2022 16:37",
 		"createSpawnContext" : "ct 7/30/2022 16:38",

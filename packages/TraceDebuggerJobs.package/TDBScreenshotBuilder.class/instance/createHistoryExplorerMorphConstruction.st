@@ -1,4 +1,4 @@
-screenshots
+screenshots - history explorer
 createHistoryExplorerMorphConstruction
 
 	self recorder writeTo: 'screenshots/exampleMorphConstruction.png' building: [:helper |

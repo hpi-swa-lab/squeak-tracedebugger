@@ -1,4 +1,4 @@
-screenshots
+screenshots - history explorer
 createHistoryExplorerList
 
 	self recorder writeTo: 'screenshots/HistoryExplorer.png' building: [:helper |

@@ -1,0 +1,1 @@
+To be used in the subclass of a CustomHelp class. The subclass reveals the page templates from the superclass to make them editable.

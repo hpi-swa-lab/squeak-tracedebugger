@@ -1,4 +1,5 @@
 accessing
 screenshotSelectors
 
-	^ self allMethodsInCategory: 'screenshots'
+	^ self selectors select: [:each |
+		(each beginsWith: 'create') and: [each isUnary]]
