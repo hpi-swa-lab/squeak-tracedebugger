@@ -12,7 +12,7 @@ To learn more about the project and further plans about the protoype, please vis
 
 https://github.com/hpi-swa-lab/squeak-tracedebugger
 
-In particular, there are many open issues:
+In particular, there are many open issues for further ideas, bugs etc.:
 
 https://github.com/hpi-swa-lab/squeak-tracedebugger/issues
 
@@ -21,7 +21,7 @@ To dive into the implementation details, in addition to the package overview on 
 If you have any feedback or ideas, please let me know and drop an issue!! You can also do this directly via the window menu of the trace debugger. By the way, it is also possible from there to update your installed version or perform some special process-related operations. Last not least, you can also check out some experimental preferences from there.
 
 <#figureWindowMenu>!
-]style[(10 109 51 45 1 58 143 1 3 13 1 4 9 374 4)a0b,a0,Rhttps://github.com/hpi-swa-lab/squeak-tracedebugger;I1,a0,,Rhttps://github.com/hpi-swa-lab/squeak-tracedebugger/issues;I1,a0,LTraceDebugger Comment;,,LTraceDebugger Comment;,a0,,LTDBCursor Comment;,a0,!' readStream nextChunkText)
+]style[(10 109 51 74 1 58 143 1 3 13 1 4 9 374 4)a0b,a0,Rhttps://github.com/hpi-swa-lab/squeak-tracedebugger;I1,a0,,Rhttps://github.com/hpi-swa-lab/squeak-tracedebugger/issues;I1,a0,LTraceDebugger Comment;,,LTraceDebugger Comment;,a0,,LTDBCursor Comment;,a0,!' readStream nextChunkText)
 			key: #basicLearnMore;
 			shouldStyle: false;
 			yourself

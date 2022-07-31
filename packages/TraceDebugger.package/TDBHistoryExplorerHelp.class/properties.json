@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI-Help",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 7/31/2022 00:57",
+	"instvars" : [
+		 ],
+	"name" : "TDBHistoryExplorerHelp",
+	"pools" : [
+		 ],
+	"super" : "TraceDebuggerHelp",
+	"type" : "normal" }

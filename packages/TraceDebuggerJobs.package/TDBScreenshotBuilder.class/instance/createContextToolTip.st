@@ -3,7 +3,6 @@ createContextToolTip
 
 	self recorder writeTo: 'screenshots/contextToolTip.png' frame: [:bounds | bounds * (0.03 @ 0.1 rect: 0.7 @ 0.32)] building: [:helper |
 		| window debugger splitter tree child |
-		helper worldColor: Color transparent.
 		[4 / 6] debugTrace.
 		window := helper foregroundWindow.
 		debugger := window model.

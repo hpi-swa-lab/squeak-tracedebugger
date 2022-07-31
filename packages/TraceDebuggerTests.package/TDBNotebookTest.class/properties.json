@@ -8,7 +8,8 @@
 	"instvars" : [
 		"debugger",
 		"nextAssertionPosition",
-		"nextAssertionString" ],
+		"nextAssertionString",
+		"assertions" ],
 	"name" : "TDBNotebookTest",
 	"pools" : [
 		 ],

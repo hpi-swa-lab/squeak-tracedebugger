@@ -1,4 +1,4 @@
 printing
 compactPathString
 
-	^ self compactPathString: false
+	^ self compactPathString: false do: [:printer |]

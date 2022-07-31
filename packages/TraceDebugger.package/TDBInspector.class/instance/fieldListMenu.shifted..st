@@ -26,7 +26,9 @@ fieldListMenu: menu shifted: shifted
 	fullMenu tdbInsertBeforeFirstLine:
 		[fullMenu
 			add: 'explore value history' action: #exploreValueHistory;
-			add: 'explore field history' action: #exploreFieldHistory].
+			balloonTextForLastItem: 'open a window on the history of the current value';
+			add: 'explore field history' action: #exploreFieldHistory;
+			balloonTextForLastItem: 'open a window on the history of the selected field'].
 	
 	
 	^ fullMenu

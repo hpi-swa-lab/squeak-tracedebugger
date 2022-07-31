@@ -9,7 +9,7 @@ aspectDependencies
 		"model"
 		at: #buildContents put: #(buildContextValueTreeWith: representationMode);
 		at: #buildContextValueTreeWith: put: #(shouldShrinkColumns);
-		at: #contextSliceLabelFor: put: #(contextLabelCompactionStrategy);
+		at: #contextSliceLabelFor: put: #(contextLabelCompactionStrategy contextLabelTruncation);
 		at: #detailsText put: #(selectedContextSlice);
 		at: #representationLabel put: #(representationMode);
 		at: #rootContextSlices put: #(contextTreeSlice);

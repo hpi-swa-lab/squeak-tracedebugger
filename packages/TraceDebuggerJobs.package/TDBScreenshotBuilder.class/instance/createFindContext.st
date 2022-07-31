@@ -3,7 +3,6 @@ createFindContext
 
 	self recorder writeTo: 'screenshots/findContext.png'building: [:helper |
 		| window debugger |
-		helper worldColor: Color transparent.
 		[4 / 6] debugTrace.
 		window := helper foregroundWindow.
 		debugger := window model.

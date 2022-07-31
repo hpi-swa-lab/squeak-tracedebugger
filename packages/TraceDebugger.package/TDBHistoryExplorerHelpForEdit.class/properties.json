@@ -1,0 +1,16 @@
+{
+	"category" : "TraceDebugger-UI-Help",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TTDBHelpForEdit classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TDBHistoryExplorerHelpForEdit",
+	"pools" : [
+		 ],
+	"super" : "TDBHistoryExplorerHelp",
+	"traitcomposition" : "TTDBHelpForEdit",
+	"type" : "normal" }

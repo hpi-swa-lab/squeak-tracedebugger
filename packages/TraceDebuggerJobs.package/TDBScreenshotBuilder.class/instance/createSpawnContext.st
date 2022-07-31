@@ -3,7 +3,6 @@ createSpawnContext
 
 	self recorder writeTo: 'screenshots/spawnContext.png'building: [:helper |
 		| window debugger splitter tree child p spawned |
-		helper worldColor: Color transparent.
 		[4 / 6] debugTrace.
 		window := helper foregroundWindow.
 		debugger := window model.

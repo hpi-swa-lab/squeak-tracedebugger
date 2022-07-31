@@ -1,7 +1,7 @@
 accessing - state
 contextLabelCompactionStrategy: aSymbol
 
-	self assert: (self contextLabelCompactionStrategyMap includesKey: aSymbol).
+	self assert: (self contextLabelCompactionStrategies includes: aSymbol).
 	
 	contextLabelCompactionStrategy := aSymbol.
 	

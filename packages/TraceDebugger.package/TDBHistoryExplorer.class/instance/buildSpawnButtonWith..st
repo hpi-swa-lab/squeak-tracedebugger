@@ -5,4 +5,5 @@ buildSpawnButtonWith: builder
 		model: self;
 		label: 'spawn';
 		action: #spawn;
+		help: 'open a new window on the current history'
 		yourself

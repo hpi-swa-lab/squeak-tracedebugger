@@ -1,5 +1,6 @@
 examples
 exampleParseRegex
+	"See also TDBHistoryExplorer exampleRegex."
 
 	| stream cursor |
 	stream := '(a?(a?))[Qa-z\d}+](?=z:notNil:)' readStream.

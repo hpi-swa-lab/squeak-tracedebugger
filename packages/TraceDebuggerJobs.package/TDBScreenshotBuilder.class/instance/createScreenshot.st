@@ -3,7 +3,6 @@ createScreenshot
 
 	self recorder writeTo: 'screenshots/TraceDebugger.png' building: [:helper |
 		| window debugger splitter tree child cvp |
-		helper worldColor: Color transparent.
 		window := ['A' matchesRegex: '((?<=^)A)+'] traceAndDebug.
 		debugger := window model.
 	
