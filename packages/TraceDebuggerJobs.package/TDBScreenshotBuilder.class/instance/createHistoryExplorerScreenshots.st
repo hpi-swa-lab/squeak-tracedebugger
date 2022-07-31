@@ -1,4 +1,4 @@
-screenshots
+screenshots - history explorer
 createHistoryExplorerScreenshots
 
 	self recorder writeInto: 'screenshots' recordSeries: [:recorder :helper |
