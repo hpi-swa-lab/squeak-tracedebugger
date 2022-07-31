@@ -120,3 +120,9 @@ jobs:
           prerelease: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - uses: dev-drprasad/delete-older-releases@v0.2.0
+        with:
+          keep_latest: 2
+          delete_tag_pattern: untagged-
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
