@@ -2,6 +2,7 @@ toolbuilder
 buildRepresentationButtonWith: builder
 
 	^ builder pluggableButtonSpec new
+		name: #representationMode;
 		model: self;
 		label: #representationLabel;
 		style: #menuButton;
