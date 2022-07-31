@@ -16,14 +16,16 @@ Key features:
 - **Context search** dialog
 - **Context filters** (by package, selector, receiver, ...)
 - **Snapshot inspectors/explorers** for objects during debugging
+- **History explorer** for navigating through the side effects of objects
 
 <p align="center">
-<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true"></img>
+<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true" width="50.2%"></img>
+<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/HistoryExplorer.png?raw=true" width="45%"></img>
 </p>
 
 <small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/build.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/hpi-swa-lab/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
 
-Read the [exposé and the product visions](./docs/) for more details about the aims and USPs of this project.
+Read the [exposés and the product visions](./docs/) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
 There are many open interesting [issues](https://github.com/hpi-swa-lab/squeak-tracedebugger/issues) for future work.
 
@@ -79,7 +81,7 @@ This solution is organized as follows:
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebugger.package/">TraceDebugger</a></td>
-			<td>Tracing machinery and UI for the TraceDebugger. Integration into the base system. Help contents.</td>
+			<td>Tracing/retracing machinery and UI for the TraceDebugger and the history explorer. Integration into the base system. Help contents.</td>
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebuggerTests.package/">TraceDebuggerTests</a></td>
@@ -87,16 +89,20 @@ This solution is organized as follows:
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebuggerBenchmarks.package/">TraceDebuggerBenchmarks</a></td>
-			<td>Benchmarks for the speed of the tracing engine and the UI.</td>
+			<td>Benchmarks for the speed of the tracing/retracing engine and the UI.</td>
 		</tr>
 		<tr>
 			<td><a href="packages/TraceDebuggerJobs.package/">TraceDebuggerJobs</a></td>
-			<td>Auxiliary CI/CD jobs to create screenshots. See also the folders <a href=".github/workflows/"><code>./github/workflows</code></a> and <a href="scripts/"><code>./github/workflows</code></a>.</td>
+			<td>Auxiliary CI/CD jobs to create screenshots. See also the folders <a href=".github/workflows/"><code>./github/workflows</code></a> and <a href="scripts/"><code>./scripts</code></a>.</td>
 		</tr>
 	</tbody>
 </table>
 
-Additionally, some parts of the work on this projects have been contributed to different upstream dependencies, see [Upstream Contributions](./UPSTREAM.md).
+Additionally, some parts of the work on this project have been contributed to different upstream dependencies, see [Upstream Contributions](./UPSTREAM.md).
+
+## Related Projects
+
+- [**Hidden Modularity:** Traces of Object Communication](https://github.com/LucPrestin/Hidden-Modularity) by Luc Prestin ([@LucPrestin](https://github.com/LucPrestin)) and Marcel Taeumel ([@marceltaeumel](https://github.com/marceltaeumel))
 
 ## Acknowledgments
 

@@ -8,8 +8,10 @@ Widgets and toolbuilding:
 
 - Morphic-ct.1893 (adds optional model hook for do-its, `#evaluateExpression:requestor:`)
 - Morphic-ct.1901 (fixes formatting in `PluggableTreeMorph` item labels)
+- Morphic-ct.1978 (adds optional model hook for debug-its, `#debugExpression:requestor:`)
 - ToolBuilder-Kernel-ct.151 (adds new `#dragType` property for `PluggableTreeSpec`)
 - ToolBuilder-Morphic-ct.288 (adds change hook for dynamic `#windowColorToUse`)
+- ToolBuilder-Morphic-ct.318 (fixes pane slitters and pane color in `PluggablePanelMorph` and `PluggableSystemWindow` with dynamic children)
 
 Simulation:
 - Kernel-ct.1358 (fixes simulation of `ProtoObject>>#doesNotUnderstand:`)
