@@ -7,8 +7,9 @@ createScreenshots
 	
 	self screenshotSelectors do: [:selector |
 		Transcript showln: ('Creating screenshot: {1}...' format: {selector}).
-		[self createScreenshot: selector.
-		Transcript showln: ('Screenshot: {1} successful!' format: {selector})]
+		[| time |
+		time := [self createScreenshot: selector] timeToRun milliSeconds.
+		Transcript showln: ('Screenshot: {1} successful! ({2})' format: {selector. time})]
 			on: Error, Warning, Halt, ProvideAnswerNotification do: [:ex |
 				errors add: ex.
 				Transcript showln: ('Screenshot: {1} FAILED!' format: {selector}).
