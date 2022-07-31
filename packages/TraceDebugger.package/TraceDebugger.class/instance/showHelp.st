@@ -1,4 +1,4 @@
 actions
 showHelp
 
-	TraceDebuggerHelp openHelpBrowser.
+	^ self class showHelp
