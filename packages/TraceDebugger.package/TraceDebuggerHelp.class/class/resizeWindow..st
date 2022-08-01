@@ -4,8 +4,8 @@ resizeWindow: result
 
 	| window |
 	window := (self currentHand submorphs , Project current world submorphs) detect: [:m | (m isKindOf: SystemWindow) and: [m model isKindOf: HelpBrowser]] ifNone: [^ result].
-	window extent: (window width clampLow: 875) @ window height.
+	window extent: (window width clampLow: 875 px) @ window height.
 	window allMorphs detect: [:m | (m isKindOf: ProportionalSplitterMorph) and: [m splitsLeftAndRight]] ifFound: [:splitter |
-		splitter repositionBy: (170 - (splitter owner fullBounds; findA: PluggableTreeMorph) width) @ 0].
+		splitter repositionBy: (170 px - (splitter owner fullBounds; findA: PluggableTreeMorph) width) @ 0].
 	
 	^ result

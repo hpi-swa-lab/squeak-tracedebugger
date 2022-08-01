@@ -8,7 +8,7 @@ figureTraceIt
 		initializeFull;
 		yourself.
 	window := ToolBuilder build: debugger.
-	window extent: 500 @ 300.
+	window extent: 500 px @ 300 px.
 	window lookFocused.
 	button := window allMorphs detect: [:m | m isButton and: [m label = 'Trace It']].
 	button updateFillStylePressing: true hovering: false.

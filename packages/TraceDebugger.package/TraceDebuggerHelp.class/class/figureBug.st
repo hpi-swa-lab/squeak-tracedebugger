@@ -1,4 +1,4 @@
 figures
 figureBug
 
-	^ MenuIcons smallDebugIcon
+	^ MenuIcons smallDebugIcon scaleIconToDisplay
