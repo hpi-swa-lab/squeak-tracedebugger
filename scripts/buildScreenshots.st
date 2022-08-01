@@ -19,4 +19,8 @@ Transcript showln: 'Creating screenshots...'.
 errors := (Smalltalk classNamed: #TDBScreenshotBuilder) createScreenshots.
 Transcript showln: (('Done with {1} error' asPluralBasedOn: errors) format: {errors size}) , '.'; cr.
 
+Transcript showln: 'Creating help...'.
+(Smalltalk classNamed: #TDBHelpBuilder) createHelp.
+Transcript showln: 'Done.'; cr.
+
 Smalltalk snapshot: false andQuitWithExitCode: errors notEmpty asBit.
