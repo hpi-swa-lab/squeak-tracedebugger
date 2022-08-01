@@ -29,4 +29,10 @@ mainSliceContextMenu: menu
 			argumentList: #();
 		balloonTextForLastItem: 'Provides several options for controlling the width of the context tree. Play around with them to get a better understanding of the presentation.'.
 	
+	menu
+		tdbAddUpdating: 'hide errors'
+			getState: #shouldHideErrors
+			setState: #shouldHideErrors:;
+		balloonTextForLastItem: 'hide all values where the expression raised an error'.
+	
 	^ menu

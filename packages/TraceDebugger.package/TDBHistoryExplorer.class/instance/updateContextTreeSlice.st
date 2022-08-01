@@ -4,7 +4,11 @@ updateContextTreeSlice
 	| times |
 	memorySlice ifNil: [^ self].
 	
-	times := memorySlice intervals collect: [:interval | interval first].
+	times := memorySlice timesAndValues associations
+		select: [:intervalAndValue |
+			intervalAndValue value in: [:result | self filterResult: result]]
+		thenCollect: [:intervalAndValue |
+			intervalAndValue key first].
 	contextTreeSlice := self cursor
 		makeTreeSliceForTimes: times
 		contractPaths: self shouldContractPaths.

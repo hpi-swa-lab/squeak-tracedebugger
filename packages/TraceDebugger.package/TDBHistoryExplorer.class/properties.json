@@ -19,7 +19,9 @@
 		"contextLabelCompactionStrategy",
 		"contractPaths",
 		"shouldShrinkColumns",
-		"contextLabelTruncation" ],
+		"contextLabelTruncation",
+		"shouldHideErrors",
+		"valueFilter" ],
 	"name" : "TDBHistoryExplorer",
 	"pools" : [
 		 ],

@@ -9,5 +9,6 @@ initialize
 	self shouldShrinkColumns: self defaultShouldShrinkColumns.
 	self contextLabelCompactionStrategy: self defaultContextLabelCompactionStrategy.
 	self contextLabelTruncation: self defaultContextLabelTruncation.
+	self shouldHideErrors: self defaultShouldHideErrors.
 	
 	expanded := Set new.
