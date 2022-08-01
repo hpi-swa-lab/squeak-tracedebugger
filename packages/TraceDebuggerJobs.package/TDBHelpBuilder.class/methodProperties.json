@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"createHelp" : "ct 8/1/2022 18:26",
+		"on:" : "ct 8/1/2022 18:23" },
+	"instance" : {
+		"cleanContents:" : "ct 8/1/2022 18:34",
+		"helpTopic" : "ct 8/1/2022 18:23",
+		"helpTopic:" : "ct 8/1/2022 18:23",
+		"writeContents:to:named:" : "ct 8/1/2022 18:50",
+		"writeHelpForSubtopic:to:" : "ct 8/1/2022 18:43",
+		"writeHelpForSubtopicsIn:to:" : "ct 8/1/2022 18:44",
+		"writeHelpTo:" : "ct 8/1/2022 18:50" } }

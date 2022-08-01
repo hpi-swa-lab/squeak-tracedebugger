@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebuggerJobs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"helpTopic" ],
+	"name" : "TDBHelpBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
