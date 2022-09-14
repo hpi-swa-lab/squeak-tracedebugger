@@ -1,6 +1,6 @@
 primitives
 context: aContext primitiveString: receiver replaceFrom: start to: stop with: replacement startingAt: repStart do: aBlock
-	<simPrimitive: 105 >
+	<simPrimitive: 105>
 	<tdbRequiredIf: #wantsToControlReads>
 	<tdbRequiredIf: #wantsToControlWrites>
 
@@ -10,6 +10,7 @@ context: aContext primitiveString: receiver replaceFrom: start to: stop with: re
 	
 	start to: stop do: [:index |
 		(self context: aContext simulatedObject: replacement basicAt: index + repOff ifHit: [:existingValue |
+			(aContext isPrimFailToken: existingValue) ifTrue: [^ existingValue].
 			value := existingValue.
 			true])
 				ifNil:

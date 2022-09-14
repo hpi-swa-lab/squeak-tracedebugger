@@ -6,6 +6,9 @@ context: aContext pushRemoteTemp: remoteTempIndex inVectorAt: tempVectorIndex do
 		context: aContext
 		simulatedObject: (aContext at: tempVectorIndex + 1)
 		basicAt: remoteTempIndex + 1
-		ifHit: [:value | ^ aContext push: value].
+		ifHit: [:value |
+			^ (aContext isPrimFailToken: value)
+				ifTrue: [value]
+				ifFalse: [aContext push: value]].
 	
 	^ super context: aContext pushRemoteTemp: remoteTempIndex inVectorAt: tempVectorIndex do: aBlock

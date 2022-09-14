@@ -16,6 +16,7 @@ context: aContext doPrimitive: primitiveIndex method: aCompiledMethod receiver: 
 				instVarAt: primitiveIndex - 264 + 1
 				ifHit: [:value |
 					lastPrimitive := nil.
+					(aContext isPrimFailToken: value) ifTrue: [^ value].
 					^ aContext push: value]].
 	
 	"Dispatch to registered primitives."

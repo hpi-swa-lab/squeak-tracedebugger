@@ -9,6 +9,16 @@ context: aContext simulatedObject: anObject basicAt: index ifHit: aBlock
 	super context: aContext simulatedObject: anObject basicAt: index ifHit: [:value | ^ aBlock value: value].
 	
 	"2.) Look up value in memory"
+	(aContext objectClass: anObject) tdbIsContextClass ifTrue:
+		["Test historic variable size of the context instance"
+		(memory
+			object: anObject
+			atTime: timeIndex
+			instVarAt: 3 "stackp"
+			ifAbsent: [nil])
+				ifNotNil: [:size |
+					index <= size ifFalse:
+						[^ aBlock value: (self context: aContext primitiveFailTokenFor: #'bad index')]]].
 	result := memory
 		object: anObject
 		atTime: timeIndex

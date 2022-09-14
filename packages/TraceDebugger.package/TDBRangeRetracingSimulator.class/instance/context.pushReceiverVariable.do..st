@@ -14,6 +14,9 @@ context: aContext pushReceiverVariable: offset do: aBlock
 		context: aContext
 		simulatedObject: receiver
 		instVarAt: offset + 1
-		ifHit: [:value | ^ aContext push: value].
+		ifHit: [:value |
+			^ (aContext isPrimFailToken: value)
+				ifTrue: [value]
+				ifFalse: [aContext push: value]].
 	
 	^ aContext push: (aContext object: receiver instVarAt: offset + 1)

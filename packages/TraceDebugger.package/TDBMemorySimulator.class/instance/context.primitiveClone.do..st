@@ -34,6 +34,7 @@ context: aContext primitiveClone: receiver do: aBlock
 		ifTrue:
 			[1 to: copyClass instSize do: [:index |
 				self context: aContext simulatedObject: receiver instVarAt: index ifHit: [:value |
+					(aContext isPrimFailToken: value) ifTrue: [^ value].
 					aContext
 						object: copy
 						instVarAt: index
@@ -46,6 +47,7 @@ context: aContext primitiveClone: receiver do: aBlock
 	lastPrimitive := 60 "primitiveAt".
 	[1 to: size do: [:index |
 		self context: aContext simulatedObject: receiver basicAt: index ifHit: [:value |
+			(aContext isPrimFailToken: value) ifTrue: [^ result].
 			result := aContext
 				doPrimitive:
 					(((copyClass includesBehavior: String) and: [(aContext objectClass: value) includesBehavior: Character])
