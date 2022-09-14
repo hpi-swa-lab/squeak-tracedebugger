@@ -21,6 +21,6 @@ context: aContext readSlot: anObject at: anInteger
 	self flag: #workaround. "Context >> #receiver:tryPrimitive:withArgs: is broken at the moment"
 	
 	(aContext isPrimFailToken: result)
-		ifTrue: [self error: ('Could not read old field value via primitive {1}' format: {getterPrimitiveIndex})].
+		ifTrue: [self error: ('Could not read field value via primitive {1}: {2}' format: {getterPrimitiveIndex. result second})].
 	
 	^ result

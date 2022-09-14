@@ -21,3 +21,16 @@ testSIMDBinary
 			[({1. 2.0} at: thisContext tdbRetracingTimeIndex)
 				+ 1]
 		values: {2. 3.0}.
+	simulator timeIndices: (1 to: 3).
+	self
+		assertQuery:
+			[[(#((11) (21 22) (31 32 33)) at: thisContext tdbRetracingTimeIndex)
+				at: 2]
+					ifError: [nil]]
+		values: {nil. 22. 32}.
+	self
+		assertQuery:
+			[[(#((11) (21 22) (31 32 33)) at: thisContext tdbRetracingTimeIndex)
+				at: (#(2 2 3) at: thisContext tdbRetracingTimeIndex)]
+					ifError: [nil]]
+		values: {nil. 22. 33}.

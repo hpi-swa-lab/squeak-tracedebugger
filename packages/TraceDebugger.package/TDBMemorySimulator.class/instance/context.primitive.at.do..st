@@ -7,6 +7,9 @@ context: aContext primitive: receiver at: anInteger do: aBlock
 		context: aContext
 		simulatedObject: receiver
 		basicAt: anInteger
-		ifHit: [:value | ^ aContext push: value].
+		ifHit: [:value |
+			^ (aContext isPrimFailToken: value)
+				ifTrue: [value]
+				ifFalse: [aContext push: value]].
 	
 	^ aBlock value
