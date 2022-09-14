@@ -8,3 +8,4 @@ initialize
 	self root: #parent.
 	self truncateLeft: self defaultTruncate.
 	self truncateRight: self defaultTruncate.
+	self delimiter: self defaultDelimiter.

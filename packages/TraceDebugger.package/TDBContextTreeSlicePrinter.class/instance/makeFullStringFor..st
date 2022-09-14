@@ -1,4 +1,4 @@
 building
 makeFullStringFor: path
 
-	^ path joinSeparatedBy: Character space
+	^ path joinSeparatedBy: self delimiter

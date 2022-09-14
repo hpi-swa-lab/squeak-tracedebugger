@@ -11,7 +11,8 @@
 		"relativeToParent",
 		"root",
 		"truncateLeft",
-		"truncateRight" ],
+		"truncateRight",
+		"delimiter" ],
 	"name" : "TDBContextTreeSlicePrinter",
 	"pools" : [
 		 ],

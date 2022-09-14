@@ -27,4 +27,4 @@ makeCompactStringFor: originalPath
 				ifFalse: [{classString , '>>' , contexts first tdbBlockAndSelectorString}]
 				ifTrue: [{contexts first tdbBlockAndSelectorString}])
 					, (contexts allButFirst collect: #tdbBlockAndSelectorString)])
-			joinSeparatedBy: String space
+			joinSeparatedBy: self delimiter
