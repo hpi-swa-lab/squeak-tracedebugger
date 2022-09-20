@@ -12,7 +12,7 @@ baseline: spec
 			baseline: 'SimulationStudio' with: [
 				spec
 					repository: 'github://LinqLover/SimulationStudio/packages';
-					loads: 'SimulationStudio-Base'];
+					loads: #('SimulationStudio-Base' 'SimulationStudio-Tools' "help mentions #exploreProtocol")];
 			project: 'SimulationStudio-Support' copyFrom: 'SimulationStudio' with: [
 				spec loads: 'SimulationStudio-Support'];
 			project: 'SimulationStudio-Tests' copyFrom: 'SimulationStudio-Support' with: [
