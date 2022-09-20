@@ -4,7 +4,7 @@ initializePrimitives
 	| pragmas |
 	pragmas := self primitivePragmas.
 	
-	primitives := Array new: 575.
+	primitives := Array new: 578.
 	pragmas do: [:pragma |
 		| index numArgs selector |
 		index := pragma argumentAt: 1.

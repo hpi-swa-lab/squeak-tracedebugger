@@ -1,6 +1,6 @@
 primitives
-context: aContext primitiveKdbNext: receiver do: aBlock
-	<simPrimitive: 108>
+context: aContext primitiveSuspendBackingUpV2: receiver do: aBlock
+	<simPrimitive: 578>
 	<tdbRequiredIf: #shouldIsolate>
 
 	self shouldIsolate ifTrue:

@@ -4,7 +4,7 @@ initializePrimitives
 	super initializePrimitives.
 	
 	self flag: #optimize. "Class-side cache"
-	primitiveNumArgs := Array new: 575.
+	primitiveNumArgs := Array new: 578.
 	self primitivePragmas
 		select: [:pragma | pragma keyword = #simPrimitive:]
 		thenDo: [:pragma |
