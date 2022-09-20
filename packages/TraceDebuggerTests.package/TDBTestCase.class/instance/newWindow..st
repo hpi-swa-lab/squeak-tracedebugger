@@ -2,6 +2,6 @@
 newWindow: aBlock
 
 	| window |
-	window := aBlock value.
+	window := UIManager tdbDontAttachToCursorDuring: aBlock.
 	self addTearDown: [window delete].
 	^ window
