@@ -1,9 +1,15 @@
 app - self-updating
 selfUpdate
-	"Copied and adjusted from Squot (by Jakob Reschke)."
 	"TraceDebugger selfUpdate"
 
-	((Project uiManager confirm: 'It is recommended to install the latest Trunk updates first.' title: 'Updating TraceDebugger' trueChoice: 'Yes, install latest Trunk updates now' falseChoice: 'Skip latest Trunk updates (not recommended)')
-		ifNil: [^ self])
-		ifTrue: [MCMcmUpdater default doUpdate: true].
+	| squeakVersion |
+	squeakVersion := SystemVersion current version.
+	((Project uiManager
+		confirm: ('It is recommended to install the latest updates for {1} first.' format: {squeakVersion})
+		title: ('Updating {1}' format: {self appName})
+		trueChoice: ('Yes, install latest {1} updates now' format: {'Squeak'})
+		falseChoice: ('Skip latest {1} updates (not recommended)' format: {'Squeak'}))
+			ifNil: [^ self])
+			ifTrue: [MCMcmUpdater default doUpdate: true].
+	
 	^ self selfUpdateFromMetacello

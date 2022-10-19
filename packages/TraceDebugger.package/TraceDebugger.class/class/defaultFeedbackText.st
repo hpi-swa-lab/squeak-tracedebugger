@@ -1,4 +1,8 @@
 app - feedback
 defaultFeedbackText
 
-	^ '<br><br><i>Reported from {1}, for version of {2} last updated at {3}.</i>' asTextFromHtml format: {SystemVersion current. self appName. self latestTimeStamp}
+	^ '<br><br><i>Reported from {1}, for version of {2} (VM: {3}) last updated at {4}.</i>' asTextFromHtml format:
+		{SystemVersion current.
+		self appName.
+		([Smalltalk vm openSmalltalkVMBuildNumber] ifError: [nil]) ifNil: [Smalltalk platformSourceVersion lines first].
+		self latestTimeStamp}

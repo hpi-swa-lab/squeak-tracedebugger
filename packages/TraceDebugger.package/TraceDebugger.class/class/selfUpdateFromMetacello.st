@@ -2,7 +2,7 @@ app - self-updating
 selfUpdateFromMetacello
 
 	| metacello project |
-	metacello := (self environment classNamed: #Metacello) new
+	metacello := Metacello new
 		baseline: self packageInfo name;
 		repository: self selfUpdateGitHubPath;
 		yourself.
