@@ -27,18 +27,28 @@ Key features:
 
 Read the [exposés and the product visions](./docs/) for more details about the aims and USPs of this project.
 In the [`studies`](./studies/) folders, you can also find the documentation of all experiments that have been conducted so far.
-There are many open interesting [issues](https://github.com/hpi-swa-lab/squeak-tracedebugger/issues) for future work.
+There are many interesting open [issues](https://github.com/hpi-swa-lab/squeak-tracedebugger/issues) for future work.
 
 ## Installation
 
-We offer a pre-configured all-in-one image. Please go to the [releases section](https://github.com/hpi-swa-lab/squeak-tracedebugger/releases), download and extract the latest `TraceDebugger-*.zip` archive, and execute it.
+We offer a **pre-configured all-in-one image** for the latest [Squeak Trunk](https://files.squeak.org/trunk/). Please go to the [releases section](https://github.com/hpi-swa-lab/squeak-tracedebugger/releases), download and extract the latest `TraceDebugger-*.zip` archive, and execute it.
 
-To install the TraceDebugger manually, evaluate the following in a workspace:
+To install the TraceDebugger manually **for the latest Squeak Trunk,** evaluate the following in a workspace:
 
 ```smalltalk
 Metacello new
 	baseline: 'TraceDebugger';
 	repository: 'github://hpi-swa-lab/squeak-tracedebugger';
+	get;
+	load.
+```
+
+For the LTS (long-term support) version **for Squeak 6.0,** you can use the following:
+
+```smalltalk
+Metacello new
+	baseline: 'TraceDebugger';
+	repository: 'github://hpi-swa-lab/squeak-tracedebugger:squeak60';
 	get;
 	load.
 ```
