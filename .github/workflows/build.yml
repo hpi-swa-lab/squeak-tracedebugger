@@ -68,10 +68,8 @@ jobs:
         with:
           node-version: 16
       - run: |
-          npm install -g \
-            nodegit@v0.28.0-alpha.18 `#https://github.com/nodegit/nodegit/issues/1840` \
-            crypto
-          npm link nodegit crypto
+          npm install -g nodegit@v0.28.0-alpha.18  # https://github.com/nodegit/nodegit/issues/1840
+          npm link nodegit
         if: ${{ steps.commit.outputs.committed == 'true' }}  # only required for commit comment below
       - if: ${{ steps.commit.outputs.committed == 'true' }}  # no changes -> no commit -> no comment
         name: Create commit comment for screenshot/help diff
@@ -96,7 +94,7 @@ jobs:
               commit_sha: context.sha,
               body: `## Changed Screenshots/Help
 
-              This commit caused [a change of ${files.length} ${files.length === 1 ? 'artifact' : 'artifacts'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : builderUrl})${{ steps.commit.outputs.pushed && ' against the default branch' || '' }}:
+              This push caused [a change of ${files.length} ${files.length === 1 ? 'artifact' : 'artifacts'}](${${{ steps.commit.outputs.pushed }} ? `${{ github.server_url }}/${{ github.repository }}/commit/${commit.sha()}` : builderUrl})${{ steps.commit.outputs.pushed && ' against the default branch' || '' }}:
 
               ${files
                 .map(file =>
