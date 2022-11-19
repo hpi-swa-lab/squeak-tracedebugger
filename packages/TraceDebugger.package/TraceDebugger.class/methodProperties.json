@@ -1,10 +1,12 @@
 {
 	"class" : {
 		"appName" : "ct 11/20/2021 19:48",
+		"basicSelfUpdateBranch:" : "ct 11/19/2022 00:53",
 		"changed:" : "ct 7/30/2022 17:15",
 		"cleanUp" : "ct 7/30/2022 17:14",
 		"cursorClass" : "ct 11/18/2021 18:05",
 		"defaultFeedbackText" : "ct 10/18/2022 16:42",
+		"defaultSelfUpdateBranch" : "ct 11/19/2022 00:55",
 		"doNotBroadcastPreferenceChangesDuring:" : "ct 7/30/2022 17:13",
 		"exampleCoroutines1" : "ct 12/30/2021 17:26",
 		"exampleCoroutines2" : "ct 2/9/2022 01:56",
@@ -39,7 +41,8 @@
 		"prepareShutDownListDuring:" : "ct 6/18/2022 14:27",
 		"repositoryUrl" : "ct 3/15/2022 18:19",
 		"selfUpdate" : "ct 10/18/2022 16:49",
-		"selfUpdateBranch" : "ct 5/26/2021 20:58",
+		"selfUpdateBranch" : "ct 11/19/2022 00:51",
+		"selfUpdateBranch:" : "ct 11/19/2022 00:53",
 		"selfUpdateFromMetacello" : "ct 10/18/2022 16:04",
 		"selfUpdateGitHubPath" : "ct 5/26/2021 23:15",
 		"sendFeedbackGitHub" : "ct 6/15/2021 19:36",
