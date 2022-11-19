@@ -3,17 +3,17 @@ exampleSimple
 
 	| object cursor |
 	cursor := TDBCursor traceForBlock:
-		[object := TDBTestObject new.
-		object plonk: 1.
-		object griffle: 2.
-		object plonk: 3.
-		object griffle: 5].
+		[object := Array new: 2.
+		object at: 1 put: 1.
+		object at: 2 put: 2.
+		object at: 1 put: 3.
+		object at: 2 put: 5].
 	
 	(cursor
 		object: object
-		collect: [:obj | obj plonk])
+		collect: [:obj | obj first])
 			explore.
 	
 	(cursor
 		object: object
-		collect: [:obj | [obj plonk + obj griffle] ifError: [:ex | ex]]) explore.
+		collect: [:obj | [obj first + obj second] ifError: [:ex | ex]]) explore.
