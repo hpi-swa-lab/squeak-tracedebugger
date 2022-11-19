@@ -41,5 +41,6 @@ baseline: spec
 			group: #benchmarks with: #('TraceDebuggerBenchmarks');
 			group: #full with: #('TraceDebugger' 'TraceDebuggerTests' 'TraceDebuggerBenchmarks');
 			group: #fullBenchmarks with: #(full 'StatisticsWorkbench' "with optional dependencies");
+			group: #fullWithoutBenchmarks with: #('TraceDebugger' 'TraceDebuggerTests');
 			group: #minimal with: #('TraceDebugger');
 			group: #tests with: #('TraceDebuggerTests')].
