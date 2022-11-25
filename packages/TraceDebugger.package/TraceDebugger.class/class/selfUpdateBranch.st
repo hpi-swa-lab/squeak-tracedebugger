@@ -1,7 +1,7 @@
 app - self-updating
 selfUpdateBranch
 	<preference: 'TraceDebugger self-update branch'
-		category: #TraceDebugger
+		category: #'Trace Debugger'
 		description: 'The branch used for installing updates for TraceDebugger from the GitHub repository.'
 		type: #String>
 	
