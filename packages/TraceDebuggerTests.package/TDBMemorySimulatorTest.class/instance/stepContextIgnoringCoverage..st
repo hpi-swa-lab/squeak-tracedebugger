@@ -1,12 +1,13 @@
 private
 stepContextIgnoringCoverage: aContext
 
-	| context coverageMethod |
+	| context |
 	context := aContext step.
-	coverageMethod := TestCoverage >> #run:with:in:.
-	[context method == coverageMethod] whileTrue:
+	
+	[context selector == #run:with:in:] whileTrue:
 		[| contextAndError |
 		contextAndError := context runUntilErrorOrReturnFrom: context.
 		self assert: contextAndError second isNil.
 		context := contextAndError first].
-	 ^ context
+	
+	^ context
