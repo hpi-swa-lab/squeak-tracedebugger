@@ -9,4 +9,7 @@ expectedFailureGroups
 		#testResumablePass flag: #todo.
 		#testSimpleIsNested flag: #todo}).
 	
+	groups at: #SimulationContextTest put: ((groups at: #SimulationContextTest ifAbsent: [{}]) ,
+		{#testNonLocalReturn flag: #todo "no support for nested simulation with failing primitives (here: primitive 199) in Trunk so far"}).
+	
 	^ groups
