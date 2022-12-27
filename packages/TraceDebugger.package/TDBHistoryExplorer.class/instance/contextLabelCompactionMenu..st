@@ -23,11 +23,11 @@ contextLabelCompactionMenu: menu
 				setState: [self contextLabelCompactionStrategy: strategy];
 			balloonTextForLastItem: (self contextLabelCompactionStrategyHelpFor: strategy)]].
 	
-	[self contextLabelTruncationLabels withIndexDo: [:label :index |
+	[#((left 'before') (right 'after')) withIndexDo: [:labels :index |
 		menu
 			tdbAddUpdating:
 				[| truncation |
-				('truncate {1}' format: {label})
+				('truncate {1}' format: {labels first})
 					, ((truncation := self contextLabelTruncation at: index) > 0
 						ifFalse: ['']
 						ifTrue: [' ({1})' format: {truncation}])]
@@ -35,7 +35,7 @@ contextLabelCompactionMenu: menu
 				setState:
 					[| newTruncation |
 					newTruncation := self
-						requestContextLabelTruncationFor: label
+						requestContextLabelTruncationFor: labels first
 						oldValue: (self contextLabelTruncation at: index)
 						orCancel: [#cancel].
 					newTruncation = #cancel ifFalse:
@@ -43,7 +43,7 @@ contextLabelCompactionMenu: menu
 							(self contextLabelTruncation copy
 								at: index put: newTruncation;
 								yourself)]];
-			balloonTextForLastItem: ('number of {1} contexts to be shown before truncation' format: {label})]]}
+			balloonTextForLastItem: ('number of {1} contexts to be shown {2} truncation' format: {labels first. labels second})]]}
 	
 		do: #value
 		separatedBy: [menu addLine].
