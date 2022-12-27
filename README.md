@@ -71,6 +71,8 @@ For a quick start, open a normal expression in a debugger and press the new <kbd
 TraceDebuggerHelp openHelpBrowser.
 ```
 
+A static version of the manual is also available [online](https://hpi-swa-lab.github.io/squeak-tracedebugger/help/); however, it is recommended to use the interactive in-image version instead.
+
 (Again, you can also open this help via the [window menu ![window menu](./assets/windowMenuButton.png)](https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/windowMenu.png) of every trace debugger.)
 
 ## Architecture
@@ -113,6 +115,7 @@ Additionally, some parts of the work on this project have been contributed to di
 ## Related Projects
 
 - [**Hidden Modularity:** Traces of Object Communication](https://github.com/LucPrestin/Hidden-Modularity) by Luc Prestin ([@LucPrestin](https://github.com/LucPrestin)) and Marcel Taeumel ([@marceltaeumel](https://github.com/marceltaeumel))
+- [MessageSendRecorder](https://github.com/hpi-swa/MessageSendRecorder)
 
 ## Acknowledgments
 
