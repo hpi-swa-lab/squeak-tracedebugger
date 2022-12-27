@@ -16,7 +16,7 @@ testSpawn
 	
 	secondDebugger :=
 		(self newWindow:
-			(firstDebugger spawnContext: context))
+			[firstDebugger spawnContext: context])
 				model.
 	
 	self assert: #wiffy equals: firstDebugger selectedContext selector.
