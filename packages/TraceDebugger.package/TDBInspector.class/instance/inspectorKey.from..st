@@ -5,7 +5,14 @@ inspectorKey: aChar from: view
 	| selector |
 	selector := aChar
 		caseOf:
-			{[$x]	->	[#removeSelection].
+			{"NEW"
+			[$V] -> [#exploreValueHistory].
+			[$H] -> [#exploreFieldHistory].
+			[$s] -> [#stepToNextChange].
+			[$S] -> [#stepToPreviousChange].
+			[$C] -> [#stepToChange].
+			
+			[$x]	->	[#removeSelection].
 			
 			[$i]		->	[#inspectSelection].
 			[$I]		->	[#exploreSelection].
