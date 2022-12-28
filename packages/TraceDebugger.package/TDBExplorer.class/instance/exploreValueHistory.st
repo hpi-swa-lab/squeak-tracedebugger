@@ -1,7 +1,7 @@
 menus
 exploreValueHistory
 
-	^ self debugger cursor
+	^ self cursor
 		exploreHistory: self object
 		context: self doItContext
 		expression: nil

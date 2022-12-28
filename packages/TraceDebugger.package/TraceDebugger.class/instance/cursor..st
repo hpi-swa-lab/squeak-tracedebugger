@@ -9,4 +9,8 @@ cursor: aCursor
 	cursor ifNotNil:
 		[cursor addDependent: self].
 	
+	receiverInspector ifNotNil:
+		[receiverInspector cursor: aCursor].
+	contextVariablesInspector ifNotNil:
+		[contextVariablesInspector cursor: aCursor].
 	self changed: #cursor.
