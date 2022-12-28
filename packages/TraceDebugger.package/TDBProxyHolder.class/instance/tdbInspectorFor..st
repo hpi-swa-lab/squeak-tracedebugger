@@ -3,4 +3,4 @@ tdbInspectorFor: anInspector
 
 	^ self tdbInspectorClass
 		forModel: anInspector
-		debugger: self debugger
+		cursor: self cursor

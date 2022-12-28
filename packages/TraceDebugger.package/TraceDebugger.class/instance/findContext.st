@@ -3,7 +3,7 @@ findContext
 
 	| signature |
 	signature := Project uiManager
-		tdbChooseFrom:
+		tdbChooseValueFrom:
 			(self cursor allContextHomeSignaturesBelow: self selectedContext) sorted
 		title: 'Context signature?'
 		initialSelection:

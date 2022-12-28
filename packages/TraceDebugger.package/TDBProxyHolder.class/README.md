@@ -2,5 +2,5 @@ I wrap around a regular inspector-like model that is embedded in or spawned from
 
 Because I forward messages in two directions (view -> model; model -> view), my forwarding is currently implemented in an opaque/non-dynamic fashion. As a consequence, my forwarding protocols are pretty extensive. But this way I keep full control over all accesses.
 
-(*) My existence might be a good argument for no longer inlining the message send #class in the Trunk, which would make many proxy-aware adoptions superfluous ...
+(*) My implementation (see #classOf:) might be a good argument for no longer inlining the message send #class in the Trunk, which would make many proxy-aware adoptions superfluous ...
 (**) Autocompletion: https://github.com/LeonMatthes/Autocompletion

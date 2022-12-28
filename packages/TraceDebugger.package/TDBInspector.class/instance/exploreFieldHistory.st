@@ -1,7 +1,7 @@
 field list menu
 exploreFieldHistory
 
-	^ self debugger cursor
+	^ self cursor
 		exploreHistory: self doItReceiver
 		context: self doItContext
 		expression: (self expressionForField: self selectedField)

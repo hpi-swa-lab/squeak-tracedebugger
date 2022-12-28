@@ -7,6 +7,7 @@
 		"memory:intervals:rawValues:" : "ct 6/2/2022 13:25",
 		"memory:intervals:rawValues:sideEffects:" : "ct 5/28/2022 14:57" },
 	"instance" : {
+		"associationAtTime:" : "ct 12/27/2022 23:39",
 		"associationAtTime:ifAbsent:" : "ct 6/1/2022 19:02",
 		"atTime:" : "ct 7/7/2022 19:10",
 		"atTime:ifAbsent:" : "ct 7/7/2022 19:15",

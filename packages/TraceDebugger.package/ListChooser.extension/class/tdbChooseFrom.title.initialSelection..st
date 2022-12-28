@@ -2,7 +2,7 @@
 tdbChooseFrom: aList title: aString initialSelection: selectedLabel
 
 	^ self
-		tdbChooseItemFrom: aList
+		tdbChooseFrom: aList
 		title: aString
 		addAllowed: false
 		initialSelection: selectedLabel
