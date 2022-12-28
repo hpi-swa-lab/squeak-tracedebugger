@@ -6,6 +6,8 @@ dropSourceCode: anObject event: evt
 	
 	(anObject isMethodReference and: [anObject isValid])
 		ifTrue: [^ self dropSourceCode: anObject compiledMethod event: evt].
+	(anObject isClassReference and: [anObject isValid])
+		ifTrue: [^ self dropSourceCode: anObject actualClass event: evt].
 	
 	anObject isString
 		ifTrue: [^ anObject edit].
