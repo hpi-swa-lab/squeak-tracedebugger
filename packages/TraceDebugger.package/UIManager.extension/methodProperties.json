@@ -3,4 +3,7 @@
 		 },
 	"instance" : {
 		"tdbChooseFrom:title:initialSelection:" : "ct 3/19/2022 19:43",
-		"tdbChooseMultipleFrom:title:initialSelection:" : "ct 2/19/2022 17:26" } }
+		"tdbChooseFrom:values:title:initialSelection:" : "ct 12/27/2022 19:42",
+		"tdbChooseFromLabeledValues:title:initialSelection:" : "ct 12/27/2022 20:00",
+		"tdbChooseMultipleFrom:title:initialSelection:" : "ct 2/19/2022 17:26",
+		"tdbChooseValueFrom:title:initialSelection:" : "ct 12/27/2022 19:50" } }

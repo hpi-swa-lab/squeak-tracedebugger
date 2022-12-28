@@ -3,7 +3,7 @@ findClass
 
 	| class |
 	class := Project uiManager
-		tdbChooseFrom:
+		tdbChooseValueFrom:
 			((self cursor allContextClassesBelow: self selectedContext)
 				sorted: #name ascending)
 		title: 'Context class?'

@@ -1,5 +1,5 @@
 *TraceDebugger-UI-initialize-release
-tdbChooseItemFrom: labelList title: aString addAllowed: aBoolean initialSelection: selectedLabel
+tdbChooseFrom: labelList title: aString addAllowed: aBoolean initialSelection: selectedLabel
 
 	self items: labelList asOrderedCollection.
 	self title: aString.
@@ -7,4 +7,4 @@ tdbChooseItemFrom: labelList title: aString addAllowed: aBoolean initialSelectio
 	self tdbSelectedItem: selectedLabel.
 	
 	ToolBuilder open: self.
-	^ self result
+	^ self items indexOf: self result
