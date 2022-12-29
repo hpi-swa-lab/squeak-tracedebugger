@@ -7,5 +7,10 @@ contextSliceKey: aCharacter from: requestor event: event
 		caseOf:
 			{[$i] -> [self inspectSnapshot].
 			[$I] -> [self exploreSnapshot].
-			[$D] -> [self debug]}
+			[$D] -> [self debug].
+			
+			[$J] -> [self stepBackOver].
+			[$j] -> [self stepBackInto].
+			[$k] -> [self stepForwardInto].
+			[$K] -> [self stepForwardOver]}
 		otherwise: [false]

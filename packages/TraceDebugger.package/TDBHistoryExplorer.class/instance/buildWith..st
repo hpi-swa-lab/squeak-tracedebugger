@@ -6,7 +6,7 @@ buildWith: builder
 		{(LayoutFrame new
 			rightFraction: 1;
 			bottomFraction: self controlBarHeightFraction;
-			yourself) -> [self buildControlBar: builder].
+			yourself) -> [self buildControlBarWith: builder].
 		(LayoutFrame new
 			topFraction: self controlBarHeightFraction;
 			rightFraction: 1;

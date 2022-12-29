@@ -11,7 +11,8 @@ buildContentsWith: builder
 					((self buildContextTreeWith: builder)
 						layoutFrame:
 							(LayoutFrame fullFrame
-								rightFraction: self contextTreeWidthFraction
+								rightFraction: self contextTreeWidthFraction;
+								bottomOffset: self navigationBarHeight negated;
 								yourself);
 						yourself);
 				add:
@@ -19,6 +20,15 @@ buildContentsWith: builder
 						frame:
 							(LayoutFrame fullFrame
 								leftFraction: self contextTreeWidthFraction;
+								bottomOffset: self navigationBarHeight negated;
+								yourself);
+						yourself);
+				add:
+					((self buildNavigationBarWith: builder)
+						frame:
+							(LayoutFrame fullFrame
+								topFraction: 1;
+								topOffset: self navigationBarHeight negated;
 								yourself);
 						yourself)];
 		ifTrue:
