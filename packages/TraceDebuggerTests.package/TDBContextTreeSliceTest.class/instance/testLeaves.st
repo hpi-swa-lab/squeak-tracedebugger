@@ -1,5 +1,5 @@
-tests - accessing
-testLeaf
+tests - accessing - navigation
+testLeaves
 
 	#(((a1 a11) (1) (4))
 	((a1 a11 a111 a1111) (1) (1))

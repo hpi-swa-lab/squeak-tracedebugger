@@ -1,4 +1,4 @@
-accessing
+accessing - navigation
 atPath: targetPath exact: exact
 	"Look up the targetPath in the receiver and its descendants. If there is no exact match for the entire path, answer nil if exact is true, or the best match (i.e., for the largest prefix of the path) from the targeted's slice parents otherwise."
 
