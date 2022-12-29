@@ -1,5 +1,5 @@
 accessing
-debugger: aTraceDebugger
-	"The original trace debugger."
+debugger: aTraceDebuggerOrNil
+	"The trace debugger in which the receiver is embedded, or nil if the receiver is standalone."
 
-	debugger := aTraceDebugger.
+	debugger := aTraceDebuggerOrNil.

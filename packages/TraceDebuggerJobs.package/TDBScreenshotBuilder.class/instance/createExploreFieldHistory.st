@@ -18,10 +18,10 @@ createExploreFieldHistory
 		rip := window
 			findDeepSubmorphThat: [:m | m isPluggableListMorph and: [m model == debugger receiverInspector]]
 			ifAbsent: [self error].
-		recorder writeTo: 'exploreFieldHistory.png' frame: [window fullBounds * (0 @ 0.6175 corner: 0.45 @ 1)] building:
+		recorder writeTo: 'exploreFieldHistory.png' frame: [window fullBounds * (0 @ 0.6175 corner: 0.48 @ 1)] building:
 			[helper
 				click: rip
 				at: ((helper boundsOfItemMatching: 'position' in: rip) pointAtFraction: (2 / 3) asPoint)
 				buttons: #(right).
-			helper mouseEnter: (helper menuItemMorphLabeled: 'explore field history' in: helper menu).
+			helper mouseEnter: (helper menuItemMorphLabeled: 'explore field history*' in: helper menu).
 			helper closeBalloons]].

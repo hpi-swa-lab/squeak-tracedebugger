@@ -1,7 +1,7 @@
 field list menu
 exploreValueHistory
 
-	^ self debugger cursor
+	^ self cursor
 		exploreHistory: self selectionOrObject
 		context: self doItContext
 		expression: nil

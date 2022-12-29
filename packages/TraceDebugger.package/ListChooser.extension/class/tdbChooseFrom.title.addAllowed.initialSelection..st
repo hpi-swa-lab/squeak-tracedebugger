@@ -1,8 +1,8 @@
 *TraceDebugger-UI-instance creation
-tdbChooseItemFrom: aList title: aString addAllowed: aBoolean initialSelection: selectedItem
+tdbChooseFrom: aList title: aString addAllowed: aBoolean initialSelection: selectedItem
 
 	^ self new
-		tdbChooseItemFrom: aList 
+		tdbChooseFrom: aList 
 		title: aString
 		addAllowed: aBoolean
 		initialSelection: selectedItem

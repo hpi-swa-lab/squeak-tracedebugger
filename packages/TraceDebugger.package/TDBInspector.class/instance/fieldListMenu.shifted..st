@@ -11,7 +11,7 @@ fieldListMenu: menu shifted: shifted
 	
 	"Dismiss not-yet-forwarded items."
 	fullMenu tdbRemoveAllSelectors: #(editGetterFor:).
-	self flag: #todo. "Dispatch to #newCompilationCueFor:requestor: from InspectorField. See: inspector-compilercue.1.cs"
+	self flag: #todo. "Dispatch to #newCompilationCueFor:requestor: from InspectorField. See: inspector-compilercue.1.cs. Should allow us to improve reuse in TDBInspector>>#createCustomFieldFor:requestor:orCancel: and fix bug that currently, 'add custom field...' does not have access to instvars."
 	"menu items do: [:item |
 		(#(editGetterFor:) includes: item selector)
 			ifTrue:
@@ -25,10 +25,24 @@ fieldListMenu: menu shifted: shifted
 	"Add new items."
 	fullMenu tdbInsertBeforeFirstLine:
 		[fullMenu
-			add: 'explore value history' action: #exploreValueHistory;
-			balloonTextForLastItem: 'open a window on the history of the current value';
-			add: 'explore field history' action: #exploreFieldHistory;
-			balloonTextForLastItem: 'open a window on the history of the selected field'].
+			add: 'explore value history (V)' action: #exploreValueHistory;
+			balloonTextForLastItem: 'open a window on the history of the current value'.
+		self hasSelection ifTrue:
+			[fullMenu
+				add: 'explore field history (H)' action: #exploreFieldHistory;
+				balloonTextForLastItem: 'open a window on the history of the selected field'.
+			self debugger ifNotNil:
+				[self debugger isDisplayingHistory ifTrue:
+					[self flag: #forLater. "support stepping forward until change of value"
+					fullMenu
+						add: 'step to next change (s)' action: #stepToNextChange;
+						balloonTextForLastItem: 'advance the debugger to the next change to the selected field'].
+				fullMenu
+					add: 'step to previous change (S)' action: #stepToPreviousChange;
+					balloonTextForLastItem: 'rewind the debugger to the previous change to the selected field'.
+				fullMenu
+					add: 'step to change... (C)' action: #stepToChange;
+					balloonTextForLastItem: 'search the history of the selected field and move the debugger to any selected change to the field']]].
 	
 	
 	^ fullMenu

@@ -1,7 +1,6 @@
 instance creation
 forModel: originalModel debugger: aTraceDebugger
 
-	^ self new
-		model: originalModel;
+	^ (self forModel: originalModel cursor: aTraceDebugger cursor)
 		debugger: aTraceDebugger;
 		yourself
