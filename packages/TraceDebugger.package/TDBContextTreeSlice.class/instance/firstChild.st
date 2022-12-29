@@ -1,4 +1,4 @@
-accessing
+accessing - navigation
 firstChild
 
 	^ children first

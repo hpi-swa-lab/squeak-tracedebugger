@@ -1,0 +1,19 @@
+{
+	"category" : "TraceDebugger-UI-ToolBuilder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 12/28/2022 20:46",
+	"instvars" : [
+		"getValue",
+		"setValue",
+		"minValue",
+		"maxValue",
+		"quantum",
+		"interval" ],
+	"name" : "TDBPluggableSliderSpec",
+	"pools" : [
+		 ],
+	"super" : "PluggableWidgetSpec",
+	"type" : "normal" }

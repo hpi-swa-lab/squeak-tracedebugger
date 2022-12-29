@@ -1,5 +1,5 @@
 toolbuilder
-buildControlBar: builder
+buildControlBarWith: builder
 
 	| buttonOffset spawnButton |
 	spawnButton := self buildSpawnButtonWith: builder.

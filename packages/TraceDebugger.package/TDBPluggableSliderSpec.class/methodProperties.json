@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildWith:" : "ct 12/29/2022 01:59",
+		"getValue" : "ct 2/10/2020 11:10",
+		"getValue:" : "ct 2/10/2020 11:11",
+		"initialize" : "ct 12/28/2022 18:15",
+		"interval" : "ct 12/28/2022 20:04",
+		"interval:" : "ct 12/28/2022 20:04",
+		"maxValue" : "ct 12/28/2022 18:13",
+		"maxValue:" : "ct 12/28/2022 18:13",
+		"minValue" : "ct 12/28/2022 18:13",
+		"minValue:" : "ct 12/28/2022 18:13",
+		"quantum" : "ct 12/28/2022 18:12",
+		"quantum:" : "ct 12/28/2022 18:13",
+		"setValue" : "ct 2/10/2020 11:12",
+		"setValue:" : "ct 2/10/2020 11:12" } }
