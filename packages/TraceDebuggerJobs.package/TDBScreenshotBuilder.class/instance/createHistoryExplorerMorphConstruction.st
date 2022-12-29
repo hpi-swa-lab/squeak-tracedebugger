@@ -18,7 +18,7 @@ createHistoryExplorerMorphConstruction
 				[WatchMorph methodDict removeKey: #printOn:]].
 		
 		window := TDBHistoryExplorer exampleMorphConstruction.
-		window extent: 586 @ 600.
+		window extent: 586 @ 620.
 		explorer := window model.
 		explorer contextLabelTruncation: #(2 0).
 		
