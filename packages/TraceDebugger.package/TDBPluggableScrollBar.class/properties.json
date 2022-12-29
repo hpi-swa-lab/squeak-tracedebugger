@@ -1,0 +1,14 @@
+{
+	"category" : "TraceDebugger-UI-ToolBuilder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 12/28/2022 20:47",
+	"instvars" : [
+		"getQuantumSelector" ],
+	"name" : "TDBPluggableScrollBar",
+	"pools" : [
+		 ],
+	"super" : "ScrollBar",
+	"type" : "normal" }
