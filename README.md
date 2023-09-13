@@ -129,24 +129,6 @@ If you would like to cite this project or would like to learn more about the the
 
   <details>
   <summary>BibTeX</summary>
-  <pre><code>@inproceedings{thiede2023time,
-  	author = {Thiede, Christoph and Taeumel, Marcel and Hirschfeld, Robert},
-  	title = {Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging},
-  	booktitle = {Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software},
-  	year = {2023},
-  	publisher = {ACM},
-  	address = {New York, NY, USA},
-  	doi = {10.1145/3622758.3622892},
-  	numpages = {14},
-  	location = {Cascais, Portugal},
-  	series = {Onward! '23},
-  	note = {To appear}
-  }</code></pre>
-  </details>
-- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging. In Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward! ’23), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892). To appear.
-
-  <details>
-  <summary>BibTeX</summary>
   <pre><code>@inproceedings{thiede2023object,
   	author = {Thiede, Christoph and Taeumel, Marcel and Hirschfeld, Robert},
   	title = {Object-Centric Time-Travel Debugging: Exploring Traces of Objects},
@@ -159,5 +141,23 @@ If you would like to cite this project or would like to learn more about the the
   	pages = {54–60},
   	location = {Tokyo, Japan},
   	series = {Programming '23 Companion}
+  }</code></pre>
+  </details>
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging. In Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward! ’23), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892). To appear.
+
+  <details>
+  <summary>BibTeX</summary>
+  <pre><code>@inproceedings{thiede2023time,
+  	author = {Thiede, Christoph and Taeumel, Marcel and Hirschfeld, Robert},
+  	title = {Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging},
+  	booktitle = {Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software},
+  	year = {2023},
+  	publisher = {ACM},
+  	address = {New York, NY, USA},
+  	doi = {10.1145/3622758.3622892},
+  	numpages = {14},
+  	location = {Cascais, Portugal},
+  	series = {Onward! '23},
+  	note = {To appear}
   }</code></pre>
   </details>
