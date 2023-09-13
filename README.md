@@ -120,3 +120,44 @@ Additionally, some parts of the work on this project have been contributed to di
 ## Acknowledgments
 
 This project was initially developed in the context of the Programming Experience Seminar 2021/22 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching) and developed further in the context of the Reverse Engineering Seminar 2022 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching). Many thanks to my careful advisor [@marceltaeumel](https://github.com/marceltaeumel)! Furthermore, I'd like to thank [@tom95](https://github.com/tom95) and [@stlutz](https://github.com/stlutz) for their valuable feedback on the prototype.
+
+## Citation
+
+If you would like to cite this project or would like to learn more about the theory behind, please refer to the following publications:
+
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Object-Centric Time-Travel Debugging: Exploring Traces of Objects.](https://doi.org/10.1145/3594671.3594678) In Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming (\<Programming\>’23 Companion), March 13–17, 2023, Tokyo, Japan. ACM, New York, NY, USA, 7 pages. DOI: [10.1145/3594671.3594678](https://doi.org/10.1145/3594671.3594678)
+
+  <details>
+  <summary>BibTeX</summary>
+  <pre><code>@inproceedings{thiede2023time,
+  	author = {Thiede, Christoph and Taeumel, Marcel and Hirschfeld, Robert},
+  	title = {Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging},
+  	booktitle = {Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software},
+  	year = {2023},
+  	publisher = {ACM},
+  	address = {New York, NY, USA},
+  	doi = {10.1145/3622758.3622892},
+  	numpages = {14},
+  	location = {Cascais, Portugal},
+  	series = {Onward! '23},
+  	note = {To appear}
+  }</code></pre>
+  </details>
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging. In Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward! ’23), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892). To appear.
+
+  <details>
+  <summary>BibTeX</summary>
+  <pre><code>@inproceedings{thiede2023object,
+  	author = {Thiede, Christoph and Taeumel, Marcel and Hirschfeld, Robert},
+  	title = {Object-Centric Time-Travel Debugging: Exploring Traces of Objects},
+  	booktitle = {Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming},
+  	year = {2023},
+  	isbn = {9798400707551},
+  	publisher = {Association for Computing Machinery},
+  	address = {New York, NY, USA},
+  	doi = {10.1145/3594671.3594678},
+  	pages = {54–60},
+  	location = {Tokyo, Japan},
+  	series = {Programming '23 Companion}
+  }</code></pre>
+  </details>
