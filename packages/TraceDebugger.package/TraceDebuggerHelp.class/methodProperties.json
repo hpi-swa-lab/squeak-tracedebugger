@@ -2,7 +2,7 @@
 	"class" : {
 		"applyUserInterfaceTheme" : "ct 3/18/2022 20:45",
 		"basicAdvancedNavigation" : "ct 8/1/2022 01:11",
-		"basicBasicNavigation" : "ct 6/18/2022 21:29",
+		"basicBasicNavigation" : "ct 9/15/2023 22:40",
 		"basicContextFilters" : "ct 3/18/2022 20:43",
 		"basicEntryPoints" : "ct 5/11/2022 22:54",
 		"basicFindingContexts" : "ct 3/18/2022 20:32",
@@ -28,6 +28,7 @@
 		"figureButtonProceed" : "ct 3/18/2022 19:36",
 		"figureButtonRestart" : "ct 3/18/2022 19:38",
 		"figureButtonThrough" : "ct 3/18/2022 19:38",
+		"figureButtonUp" : "ct 9/15/2023 22:40",
 		"figureButtonWhere" : "ct 3/18/2022 19:38",
 		"figureContextAddFilter" : "ct 3/18/2022 21:16",
 		"figureContextToolTip" : "ct 3/18/2022 18:35",
