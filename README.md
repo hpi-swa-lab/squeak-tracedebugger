@@ -145,7 +145,7 @@ If you would like to cite this project or would like to learn more about the the
   	series = {Programming '23 Companion}
   }</code></pre>
   </details>
-- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging.](https://dl.acm.org/doi/10.1145/3622758.3622892) In *Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software* (*Onward! ’23*), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892).
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging.](https://dl.acm.org/doi/10.1145/3622758.3622892) In *Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software* (*Onward! ’23*), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892)
 
   <details>
   <summary>BibTeX</summary>
