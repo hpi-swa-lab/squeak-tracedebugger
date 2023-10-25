@@ -125,7 +125,7 @@ This project was initially developed in the context of the Programming Experienc
 
 If you would like to cite this project or would like to learn more about the theory behind, please refer to the following publications:
 
-- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Object-Centric Time-Travel Debugging: Exploring Traces of Objects.](https://doi.org/10.1145/3594671.3594678) In Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming (\<Programming\>’23 Companion), March 13–17, 2023, Tokyo, Japan. ACM, New York, NY, USA, 7 pages. DOI: [10.1145/3594671.3594678](https://doi.org/10.1145/3594671.3594678)
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Object-Centric Time-Travel Debugging: Exploring Traces of Objects.](https://doi.org/10.1145/3594671.3594678) In *Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming* (*\<Programming\>’23 Companion*), March 13–17, 2023, Tokyo, Japan. ACM, New York, NY, USA, 7 pages. DOI: [10.1145/3594671.3594678](https://doi.org/10.1145/3594671.3594678)
 
   <details>
   <summary>BibTeX</summary>
@@ -134,6 +134,8 @@ If you would like to cite this project or would like to learn more about the the
   	title = {Object-Centric Time-Travel Debugging: Exploring Traces of Objects},
   	booktitle = {Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming},
   	year = {2023},
+  	month = {3},
+  	days = {13--17},
   	isbn = {9798400707551},
   	publisher = {Association for Computing Machinery},
   	address = {New York, NY, USA},
@@ -143,7 +145,7 @@ If you would like to cite this project or would like to learn more about the the
   	series = {Programming '23 Companion}
   }</code></pre>
   </details>
-- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging. In Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward! ’23), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892). To appear.
+- Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging.](https://dl.acm.org/doi/10.1145/3622758.3622892) In *Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software* (*Onward! ’23*), October 25–27, 2023, Cascais, Portugal. ACM, New York, NY, USA, 14 pages. DOI: [10.1145/3622758.3622892](https://doi.org/10.1145/3622758.3622892).
 
   <details>
   <summary>BibTeX</summary>
@@ -152,12 +154,13 @@ If you would like to cite this project or would like to learn more about the the
   	title = {Time-Awareness in Object Exploration Tools: Toward In Situ Omniscient Debugging},
   	booktitle = {Proceedings of the 2023 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software},
   	year = {2023},
+  	month = {10},
+  	days = {25--27},
   	publisher = {ACM},
   	address = {New York, NY, USA},
   	doi = {10.1145/3622758.3622892},
   	numpages = {14},
   	location = {Cascais, Portugal},
-  	series = {Onward! '23},
-  	note = {To appear}
+  	series = {Onward! '23}
   }</code></pre>
   </details>
