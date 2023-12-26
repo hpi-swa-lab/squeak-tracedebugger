@@ -4,5 +4,5 @@
 	"instance" : {
 		"asTdbProxyInMemory:atTime:withSideEffects:" : "ct 6/18/2022 16:10",
 		"asTdbRangeProxyInMemory:atTimes:withSideEffects:" : "ct 6/3/2022 12:52",
-		"cull:cull:" : "ct 8/1/2022 21:36",
+		"cull:cull:" : "ct 5/16/2023 20:21",
 		"tdbBlockAndSelectorString" : "ct 7/30/2022 15:33" } }

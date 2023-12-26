@@ -1,4 +1,5 @@
 *TraceDebugger-Core-evaluating-pseudo-override
 cull: firstArg cull: secondArg
 
-	^ firstArg perform: self with: secondArg
+	self numArgs >= 1 ifTrue: [^ self value: firstArg value: secondArg].
+	^ self value: firstArg
