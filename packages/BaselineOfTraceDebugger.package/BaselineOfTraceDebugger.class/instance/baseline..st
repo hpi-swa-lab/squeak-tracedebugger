@@ -11,7 +11,7 @@ baseline: spec
 					repository: 'https://www.hpi.uni-potsdam.de/hirschfeld/squeaksource/BenchmarkRunner/'];
 			baseline: 'SimulationStudio' with: [
 				spec
-					repository: 'github://LinqLover/SimulationStudio/packages';
+					repository: 'github://LinqLover/SimulationStudio:squeak60/packages';
 					loads: #('SimulationStudio-Base' 'SimulationStudio-Tools' "help mentions #exploreProtocol")];
 			project: 'SimulationStudio-Support' copyFrom: 'SimulationStudio' with: [
 				spec loads: 'SimulationStudio-Support'];
