@@ -20,5 +20,6 @@ expand
 			flag: #proxyHacks;
 			collect: [:ea | c in: [:p | ea]])
 		allowSorting: true.
+	container changed. "See mismatch between #removeAllMorphsIn: and #privateAddAllMorphs:atIndex:"
 
 	firstChild := newChildren first.

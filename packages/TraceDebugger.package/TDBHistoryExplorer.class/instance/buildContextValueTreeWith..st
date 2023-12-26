@@ -5,7 +5,7 @@ buildContextValueTreeWith: builder
 		name: #contextValueTree;
 		
 		"icon:"getIconSelector: #contextSliceIconFor:;
-		update: #contextSliceLabelFor:; "update icons"
+		update: #contextSliceIconFor:; "update icons"
 		columns:
 			((1 to: 2) collect: [:index |
 				[:listMorph |

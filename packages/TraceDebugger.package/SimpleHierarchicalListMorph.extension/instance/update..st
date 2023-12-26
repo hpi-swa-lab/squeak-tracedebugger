@@ -2,7 +2,7 @@
 update: aSymbol 
 	aSymbol == getSelectionSelector 
 		ifTrue: 
-			[self selection: self getCurrentSelectionItem.
+			[self updateSelection.
 			^self].
 	aSymbol == getListSelector 
 		ifTrue: 
@@ -12,6 +12,10 @@ update: aSymbol
 		ifTrue:
 			[self flag: #moveUpstream.
 			self expandAllNodes.
+			^self].
+	aSymbol == autoExpandSelector
+		ifTrue:
+			[self updateAutoExpand.
 			^self].
 	((aSymbol isKindOf: Array) 
 		and: [aSymbol notEmpty and: [aSymbol first == #openPath]]) 

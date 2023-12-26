@@ -9,8 +9,7 @@ collapse
 	 	| toDelete |
 		toDelete := OrderedCollection new.
 		collapsingNode withSiblingsDo: [:aNode | aNode recursiveAddTo: toDelete].
-		container noteRemovalOfAll: toDelete].
+		container noteRemovalOfAll: toDelete.
+		firstChild := nil].
 	
 	container noteCollapseOf: self. "<-- TraceDebugger"
-	
-	self changed.
