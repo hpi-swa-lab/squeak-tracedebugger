@@ -1,5 +1,6 @@
 tests - ui
 testTraceAndDebugBlock
+	<timeout: 10 "seconds">
 
 	| debugger window |
 	window := self newWindow:

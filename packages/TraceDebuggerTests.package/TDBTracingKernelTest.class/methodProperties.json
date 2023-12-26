@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"expectedFailureGroups" : "ct 11/26/2022 15:01",
+		"expectedFailureGroups" : "ct 12/26/2023 21:58",
 		"testGroups" : "ct 1/22/2022 20:03" },
 	"instance" : {
 		"checkSnapshots" : "ct 6/1/2022 10:48",

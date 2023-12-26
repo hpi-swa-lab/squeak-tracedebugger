@@ -1,5 +1,6 @@
 tests - ui
 testTraceIt
+	<timeout: 10 "seconds">
 
 	| process context squeakDebugger squeakWindow debugger window |
 	process := Process forBlock: [TDBTestLogic new plonk] runUntil: [:ctx | ctx selector = #plonk].

@@ -3,6 +3,7 @@
 		"shouldInheritSelectors" : "ct 5/10/2022 21:58" },
 	"instance" : {
 		"classUnderTest" : "ct 5/10/2022 21:50",
+		"defaultTimeout" : "ct 12/26/2023 21:50",
 		"memoryClass" : "ct 5/10/2022 21:50",
 		"newSimulator" : "ct 5/10/2022 21:54",
 		"setUp" : "ct 5/26/2022 15:38",

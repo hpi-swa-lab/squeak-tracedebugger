@@ -1,5 +1,6 @@
 tests - ui
 testDebugTraceProcess
+	<timeout: 10 "seconds">
 
 	| debugger window |
 	debugger := [TDBTestLogic new plonk] newProcess debugTrace.

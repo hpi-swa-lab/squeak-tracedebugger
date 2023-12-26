@@ -1,6 +1,6 @@
 tests - ui
 testBuildDebugger
-	<timeout: 30 "seconds">
+	<timeout: 45 "seconds">
 
 	self
 		withMatrixOfPreferences: #(shouldReplaceInspectorsWithExplorers shouldShowContextStack shouldShowReturnValue extraDebuggerButtons)

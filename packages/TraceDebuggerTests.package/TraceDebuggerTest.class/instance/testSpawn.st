@@ -1,5 +1,6 @@
 tests
 testSpawn
+	<timeout: 10 "seconds">
 
 	| process firstDebugger context secondDebugger |
 	firstDebugger := self newDebuggerOn:

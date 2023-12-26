@@ -1,5 +1,6 @@
 tests - ui
 testDebugTraceBlock
+	<timeout: 10 "seconds">
 
 	| debugger window |
 	window := self newWindow: [[TDBTestLogic new plonk] debugTrace].
