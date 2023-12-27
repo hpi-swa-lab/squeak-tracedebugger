@@ -5,5 +5,4 @@ stepsAndAssertionsForContextResumeEvaluating
 	
 	^
 		{{#doStepOver. Context >> #terminate. #(willReturn)}.
-		{[:cursor | cursor doStepOver: cursor context sender sender "Context >> #resumeEvaluating:"]. Context >> #resumeEvaluating:. #(willReallySend)}.
-		{#doStepOver. Context >> #resumeEvaluating:. #(willReturn)}}
+		{[:cursor | cursor doStepOver: cursor context sender sender sender "Context >> #resumeEvaluating:through:"]. Exception >> #signal:. #(willReturn)}}

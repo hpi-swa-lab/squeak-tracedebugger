@@ -27,7 +27,7 @@ interruptedSignalerContextFor: aContext
 			signalContext tdbIsUnhandledSignalContext ifTrue:
 				["UnhandledError>>#defaultAction"
 				^ signalContext].
-			aContext willReturn ifTrue:
+			(aContext in: [:c | c isDead not and: [c willReturn]]) ifTrue:
 				["Error>>#defaultAction et al."
 				self
 					unhandledSignalContextFor: signalContext

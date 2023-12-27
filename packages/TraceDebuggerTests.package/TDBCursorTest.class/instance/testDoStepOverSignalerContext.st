@@ -21,7 +21,6 @@ testDoStepOverSignalerContext
 			} , self stepsAndAssertionsForContextResumeEvaluating , {
 			
 			"back in safer waters again"
-			{#doStepOver. Exception >> #signal:. #(willReturn)}.
 			{#doStepOver. #error:. #(willReturn)}.
 			{#doStepOver. #error. #(willReturn)}.
 			{#doStepOver. #signalError. #(willReturn isDead)}}.

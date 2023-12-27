@@ -24,14 +24,13 @@ testDoStepOverUnhandledSignalerContext
 			{#doStepOver. UnhandledError class >> #signalForException:. #(willReallySend willReallySend)}.
 			{#doStepOver. UnhandledError >> #defaultAction. #(willReturn)}.
 			{#doStepOver. UndefinedObject >> #handleSignal:. #(willReallySend)}.
-			} , self stepsAndAssertionsForContextResumeEvaluating , {
-			{#doStepOver. UnhandledError class >> #signalForException:. #(willReturn)}.
+			{#doStepOver. Context >> #terminate. #(willReturn)}.
+			{[:cursor | cursor doStepOver: cursor context sender sender sender "Context >> #resumeEvaluating:through:"]. UnhandledError class >> #signalForException:. #(willReturn)}.
 			
 			"back in safe waters again"
 			{#doStepOver. Error >> #defaultAction. #(willReturn)}.
 			{#doStepOver. UndefinedObject >> #handleSignal:. #(willReallySend)}.
 			} , self stepsAndAssertionsForContextResumeEvaluating , {
-			{#doStepOver. Exception >> #signal:. #(willReturn)}.
 			{#doStepOver. #error:. #(willReturn)}.
 			{#doStepOver. #error. #(willReturn)}.
 			{#doStepOver. #signalError. #(willReturn isDead)}}.
