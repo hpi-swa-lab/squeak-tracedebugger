@@ -24,13 +24,17 @@ context: aContext runSimulated: aBlock contextAtEachStep: anotherBlock do: simul
 		ensure := thisContext sender.
 		result := (ensure selector
 			caseOf:
-				{[#resume:through:] -> [ensure at: 1 "value"].
+				{"[#resume:through:] -> [ensure at: 1 ""value""]." "goold old eem 4/25/2012 10:48, no longer in use"
 				[#resumeEvaluating:] ->
 					[| resumeBlock |
 					resumeBlock := ensure at: 1 "aBlock".
 					self assert: resumeBlock outerContext selector == #resume:. "other sender #returnEvaluating: is only sent to signaler contexts"
 					resumeBlock value]}
-			otherwise: [(ensure "BlockClosure >> #ensure: or BlockClosure >> #ifCurtailed:" at: 3) "returnValue"]).
+			otherwise: [:selector |
+					| outer |
+					(selector == #ensure: and: [(outer := (ensure at: 1) outerContext) method == (Context >> #runUntilReturnFrom:)])
+						ifTrue: [(outer sender sender at: 1) at: 1]
+						ifFalse: [(ensure "BlockClosure >> #ensure: or BlockClosure >> #ifCurtailed:" at: 3) "returnValue"]]).
 		
 		"Record result."
 		results ifNotNil:
