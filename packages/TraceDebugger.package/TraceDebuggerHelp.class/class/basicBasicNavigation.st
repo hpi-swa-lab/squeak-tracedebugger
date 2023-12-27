@@ -17,9 +17,10 @@ You can use the stepping buttons to navigate through the program trace. The trac
 <#figureButtonThrough> Step to the next expression in the same method, including expressions in blocks.
 <#figureButtonBack> Step back the previous message send.
 <#figureButtonWhere> Select the expression that will be executed next.
+<#figureButtonUp> Jump to the sender of the current context.
 
 Alternatively to the stepping buttons, you can also navigate through the context tree: Red-click any context to jump to the time where it was active. Shift + red-click any context to select its sender at its activation time.!
-]style[(16 1 97 13 1257)a0b,a0,,i,!' readStream nextChunkText)
+]style[(16 1 97 13 1318)a0b,a0,,i,!' readStream nextChunkText)
 			key: #basicBasicNavigation;
 			shouldStyle: false;
 			yourself
