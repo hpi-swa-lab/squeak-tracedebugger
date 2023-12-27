@@ -8,4 +8,4 @@ createSnapshot: aContext
 	1 to: aContext stackPtr do: [:index |
 		dictionary at: index put: (aContext tempAt: index)].
 	(aContext -> dictionary) printString]
-		on: Error, Warning, Halt do: [:ex | ex printString]
+		on: Error, Warning, Halt do: [:ex | ex printStringLimitedTo: 5000]
