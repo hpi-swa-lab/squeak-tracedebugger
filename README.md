@@ -1,4 +1,4 @@
-# Trace Debugger - Artifacts
+# TraceDebugger - Artifacts
 
 [Click here](https://github.com/hpi-swa-lab/squeak-tracedebugger) to browse the entire project on GitHub.
 
