@@ -15,6 +15,7 @@ createContextToolTip
 		helper world fullBounds.
 	
 		tree := helper morphByExternalName: #contextTree in: window.
+		tree selectedMorph expand.
 		child := tree selectedMorph children last.
 		child expand.
 		tree adjustSubmorphPositions.

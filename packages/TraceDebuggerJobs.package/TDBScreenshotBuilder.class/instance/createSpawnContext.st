@@ -1,7 +1,7 @@
 screenshots
 createSpawnContext
 
-	self recorder writeTo: 'screenshots/spawnContext.png'building: [:helper |
+	self recorder writeTo: 'screenshots/spawnContext.png' building: [:helper |
 		| window debugger splitter tree child p spawned |
 		[4 / 6] debugTrace.
 		window := helper foregroundWindow.
@@ -16,6 +16,7 @@ createSpawnContext
 		helper world fullBounds.
 	
 		tree := helper morphByExternalName: #contextTree in: window.
+		tree selectedMorph expand.
 		child := tree selectedMorph children last.
 		child expand.
 		tree adjustSubmorphPositions.

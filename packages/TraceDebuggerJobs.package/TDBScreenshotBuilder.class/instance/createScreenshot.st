@@ -25,6 +25,7 @@ createScreenshot
 		helper keyStroke: cvp key: $p modifiers: #(cmd).
 	
 		tree := helper morphByExternalName: #contextTree in: window.
+		tree selectedMorph expand.
 		child := tree selectedMorph children last.
 		child expand.
 		child firstChild expand.
