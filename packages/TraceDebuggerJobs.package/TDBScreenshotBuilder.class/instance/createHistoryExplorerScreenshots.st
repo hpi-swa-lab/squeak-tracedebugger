@@ -4,14 +4,14 @@ createHistoryExplorerScreenshots
 	self recorder writeInto: 'screenshots' recordSeries: [:recorder :helper |
 		| window explorer tree contextSlice |
 		window := TDBHistoryExplorer exampleRegex.
-		window height: 350.
+		window extent: 597 px @ 360 px.
 		explorer := window model.
 		explorer shouldShrinkColumns: true.
 		helper world fullBounds.
 		
 		recorder writeTo: 'historyExplorerSmall.png' building: [helper tdbUpdateStyles].
 		
-		window height: 400.
+		window height: 400 px.
 		helper world fullBounds.
 		tree := helper morphByExternalName: #contextValueTree in: window.
 		contextSlice := tree items detect: [:item | item contents endsWith: ''''].	
