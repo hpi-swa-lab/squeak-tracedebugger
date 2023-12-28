@@ -19,8 +19,8 @@ Key features:
 - **History explorer** for navigating through the side effects of objects
 
 <p align="center">
-<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true" width="50.2%"></img>
-<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/HistoryExplorer.png?raw=true" width="45%"></img>
+<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/TraceDebugger.png?raw=true" width="49.9%"></img>
+<img src="https://github.com/hpi-swa-lab/squeak-tracedebugger/blob/gh-pages/screenshots/HistoryExplorer.png?raw=true" width="48.3%"></img>
 </p>
 
 <small><b>Fun fact:</b> All screenshots are <a href="./.github/workflows/build.yml">CI-generated</a>. Find all other screenshots <a href="https://github.com/hpi-swa-lab/squeak-tracedebugger/tree/gh-pages/screenshots">here</a>.</small>
