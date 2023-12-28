@@ -8,7 +8,7 @@ basicStructure
 		contents: 
 'Structure of the TraceDebugger
 
-The user interface of the Trace Debugger is largely inspired by Squeak''s default debugger, so we will only describe the differences here:
+The user interface of the TraceDebugger is largely inspired by Squeak''s default debugger, so we will only describe the differences here:
 
 <#figureStart>
 
@@ -31,7 +31,7 @@ You can also perform do-its and print-its in the inspector/explorer value panes.
 <#figureAddAsField>
 
 As you continue stepping, the values in the inspector panes will be updated automatically.!
-]style[(30 1 208 11 168 13 278 43 236 10 83 35 88 9 199 10 161 7 1 7 70 8 117 6 5 9 54 22 221)a0b,a0,,b,,b,,Rcode:// PreferenceBrowser open searchPattern: #balloonHelpInMessageLists;,,b,,Rcode:// PreferenceBrowser open searchPattern: #extraDebuggerButtons;,,b,,b,,i,,i,,i,,i,,i,,i,!' readStream nextChunkText)
+]style[(30 1 207 11 168 13 278 43 236 10 83 35 88 9 199 10 161 7 1 7 70 8 117 6 5 9 54 22 221)a0b,a0,,b,,b,,Rcode:// PreferenceBrowser open searchPattern: #balloonHelpInMessageLists;,,b,,Rcode:// PreferenceBrowser open searchPattern: #extraDebuggerButtons;,,b,,b,,i,,i,,i,,i,,i,,i,!' readStream nextChunkText)
 			key: #basicStructure;
 			shouldStyle: false;
 			yourself

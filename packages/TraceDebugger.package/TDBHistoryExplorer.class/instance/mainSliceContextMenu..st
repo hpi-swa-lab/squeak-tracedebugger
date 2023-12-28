@@ -5,7 +5,7 @@ mainSliceContextMenu: menu
 	self selectedContextSlice ifNotNil: [:selectedSlice |
 		menu
 			add: 'debug (D)' action: #debug;
-			balloonTextForLastItem: 'open a new TraceDebugger on this context'.
+			balloonTextForLastItem: 'open a new trace debugger on this context'.
 		
 		(self isDisplayedAsLeaf: selectedSlice) ifTrue:
 			[(self resultForContextSlice: selectedSlice) hasError

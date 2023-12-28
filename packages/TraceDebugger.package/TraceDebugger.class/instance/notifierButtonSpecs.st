@@ -5,7 +5,7 @@ notifierButtonSpecs
 	specs :=
 		#(('Proceed'	proceed	'close this window and continue this process'	canProceed)
 		('Abandon'		abandon	'terminate this process and close this window')
-		('Debug'		debug 		'bring up a trace debugger for this process'))
+		('Debug'		debug 		'bring up a full trace debugger for this process'))
 			asOrderedCollection.
 	
 	(self interruptedContext selector == #doesNotUnderstand:)

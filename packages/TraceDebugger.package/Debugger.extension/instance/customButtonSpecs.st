@@ -10,7 +10,7 @@ customButtonSpecs
 		('Through'		stepThrough		'step into a block'			interruptedProcessIsReady)
 		('Full Stack'		showFullStack			'show full stack')
 		('Where'		showWhere				'select current pc range')
-		('Trace It'		trace				'switch to a TraceDebugger') "<- TraceDebugger").
+		('Trace It'		trace				'switch to a trace debugger') "<- TraceDebugger").
 	(Preferences restartAlsoProceeds and: [self interruptedProcessShouldResume]) ifTrue:
 		[list := list collect: [:each |
 			each second == #restart

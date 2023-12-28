@@ -1,4 +1,4 @@
-# Trace Debugger
+# TraceDebugger
 
 [![Tests](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/tests.yml/badge.svg)](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/hpi-swa-lab/squeak-tracedebugger/badge.svg?branch=main)](https://coveralls.io/github/hpi-swa-lab/squeak-tracedebugger)

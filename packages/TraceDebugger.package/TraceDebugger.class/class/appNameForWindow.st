@@ -1,7 +1,7 @@
 app - accessing
-appName
+appNameForWindow
 	"Note on casing and breaking:
 	* TraceDebugger, the TraceDebugger: the product
 	* trace debugger: a tool window of the TraceDebugger"
 
-	^ 'TraceDebugger'
+	^ 'Trace Debugger'
