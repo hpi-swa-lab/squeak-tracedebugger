@@ -10,6 +10,7 @@ jobs:
       - uses: LinqLover/create-image@master
         id: create-image
         with:
+          squeak-version: trunk
           prepare-script: ./scripts/prepareImage.st
       - uses: actions/upload-artifact@master
         with:
