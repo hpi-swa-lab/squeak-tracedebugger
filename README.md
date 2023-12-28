@@ -112,18 +112,32 @@ This solution is organized as follows:
 
 Additionally, some parts of the work on this project have been contributed to different upstream dependencies, see [Upstream Contributions](./UPSTREAM.md).
 
+## Implementation
+
+For program tracing, the program is executed in a specialized code simulator that overrides instructions for sending messages (e.g., send, superSend) and for performing side-effects (e.g., popIntoRcvr, primitiveAtPut, push). All message sends are recorded in a tree and all changed object slots are stored in a sparse time-dependent memory structure before they are overwritten. For time-traveling, the tree is traversed using a cursor. For accessing historic objects, a proxy evaluates all messages sent to an object in another specialized simulator (retracing simulator) that emulates historic states for the requested point in time by forwarding read primitives (e.g., pushRcvr, primitiveAt) to the recorded memory. For gathering state changes in the History Explorer efficiently, the query is evaluated in a range retracing simulator with vectorization and fork semantics.
+
+To learn more about the implementation, you can explore the code base by yourself (recommended starting points: `TraceDebugger` and `TDBCursor`) or read our publications about the TraceDebugger (see [citation](#citation)).
+
+## Current Limitations
+
+- **High performance.** While (sufficiently) fast enough for most small to medium workloads, tracing very compute- or mem-intensive operations may require more time (ex.: Compiler/decompiler invocation: <1s, HTTPS request: <10s, tool building: <5m, complex rendering: minutes up to hours).
+- **Not a dataflow analyzer:** The TraceDebugger does not track dataflow events (e.g., argument passing) but only state changes.
+- **No tracing of external states/events** for FFI/OSProcess or custom VM modules.
+- **No support for advanced language concepts** such as identity forwarding/write barriers.
+
 ## Related Projects
 
 - [**Hidden Modularity:** Traces of Object Communication](https://github.com/LucPrestin/Hidden-Modularity) by Luc Prestin ([@LucPrestin](https://github.com/LucPrestin)) and Marcel Taeumel ([@marceltaeumel](https://github.com/marceltaeumel))
 - [MessageSendRecorder](https://github.com/hpi-swa/MessageSendRecorder)
+- [trace4d](https://linqlover.github.io/trace4d): Visualization of program traces through animated 2.5D object maps.
 
 ## Acknowledgments
 
-This project was initially developed in the context of the Programming Experience Seminar 2021/22 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching) and developed further in the context of the Reverse Engineering Seminar 2022 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching). Many thanks to my careful advisor [@marceltaeumel](https://github.com/marceltaeumel)! Furthermore, I'd like to thank [@tom95](https://github.com/tom95) and [@stlutz](https://github.com/stlutz) for their valuable feedback on the prototype.
+This project was initially developed in the context of the Programming Experience Seminar 2021/22 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching) and developed further in the context of the Reverse Engineering Seminar 2022 @ [hpi-swa-teaching](https://github.com/hpi-swa-teaching). Many thanks to my careful advisor [@marceltaeumel](https://github.com/marceltaeumel)! Furthermore, I'd like to thank [@tom95](https://github.com/tom95), [@stlutz](https://github.com/stlutz), and [@MariusDoe](https://github.com/MariusDoe) for their valuable feedback on the prototype.
 
 ## Citation
 
-If you would like to cite this project or would like to learn more about the theory behind, please refer to the following publications:
+If you would like to cite this project or would like to learn more about the theory behind it, please refer to the following publications:
 
 - Christoph Thiede, Marcel Taeumel, and Robert Hirschfeld. 2023. [Object-Centric Time-Travel Debugging: Exploring Traces of Objects.](https://doi.org/10.1145/3594671.3594678) In *Companion Proceedings of the 7th International Conference on the Art, Science, and Engineering of Programming* (*\<Programming\>’23 Companion*), March 13–17, 2023, Tokyo, Japan. ACM, New York, NY, USA, 7 pages. DOI: [10.1145/3594671.3594678](https://doi.org/10.1145/3594671.3594678)
 
