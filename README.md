@@ -5,7 +5,7 @@
 [![Benchmarks](https://img.shields.io/badge/-benchmarks-blue)](https://hpi-swa-lab.github.io/squeak-tracedebugger/dev/bench/)
 [![Build](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/build.yml/badge.svg)](https://github.com/hpi-swa-lab/squeak-tracedebugger/actions/workflows/build.yml)
 
-A lightweight and efficient back-in-time debugger for [Squeak](http://squeak.org/) to trace and retrace past method invocations and state changes.
+A lightweight and interactive back-in-time debugger for [Squeak](http://squeak.org/) to trace and retrace past method invocations and state changes.
 Powered by [SimulationStudio](https://github.com/LinqLover/SimulationStudio).
 
 Key features:
