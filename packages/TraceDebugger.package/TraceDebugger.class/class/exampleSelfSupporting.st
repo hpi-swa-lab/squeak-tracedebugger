@@ -1,7 +1,7 @@
 examples
 exampleSelfSupporting
 	"
-	Debug a stepping operation of the trace debugger. Inception! (but rather slow right now)
+	Debug a stepping operation of the TraceDebugger. Inception! (but rather slow right now)
 	
 	self exampleSelfSupporting
 	"

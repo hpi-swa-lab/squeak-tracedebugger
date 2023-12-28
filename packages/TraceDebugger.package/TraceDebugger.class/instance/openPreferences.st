@@ -1,4 +1,4 @@
 actions
 openPreferences
 
-	PreferenceBrowser open selectedCategory: 'Trace Debugger'.
+	PreferenceBrowser open selectedCategory: 'TraceDebugger'.
