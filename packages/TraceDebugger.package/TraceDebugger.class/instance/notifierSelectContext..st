@@ -1,5 +1,5 @@
 accessing - toolbuilder
 notifierSelectContext: aContext
 
-	self selectContext: aContext.
+	self selectAndExpandContext: aContext.
 	self debug.
