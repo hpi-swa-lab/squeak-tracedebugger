@@ -9,4 +9,4 @@ testDoStepOver
 			arguments: #())
 		step: #doStepOver
 		assertions:
-			#((nil (willReallySend willReallySend willReallySend willReturn isDead))).
+			#((nil (willReallySend willReallySend willReallySend willReturnTopFromMethod))).

@@ -33,4 +33,4 @@ testDoStepOverUnhandledSignalerContext
 			} , self stepsAndAssertionsForContextResumeEvaluating , {
 			{#doStepOver. #error:. #(willReturn)}.
 			{#doStepOver. #error. #(willReturn)}.
-			{#doStepOver. #signalError. #(willReturn isDead)}}.
+			{#doStepOver. #signalError. #(willReturnTopFromMethod)}}.

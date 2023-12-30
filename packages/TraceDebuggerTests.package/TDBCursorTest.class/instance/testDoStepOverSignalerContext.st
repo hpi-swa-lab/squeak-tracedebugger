@@ -23,4 +23,4 @@ testDoStepOverSignalerContext
 			"back in safer waters again"
 			{#doStepOver. #error:. #(willReturn)}.
 			{#doStepOver. #error. #(willReturn)}.
-			{#doStepOver. #signalError. #(willReturn isDead)}}.
+			{#doStepOver. #signalError. #(willReturnTopFromMethod)}}.

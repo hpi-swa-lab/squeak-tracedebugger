@@ -38,9 +38,7 @@ runCursorFrom: homeContext filter: filter stepsAndAssertions: stepsAndAssertions
 					ifTrue: [stepBlock value: cursor value: cursor context]
 					ifFalse: [stepBlock value: cursor].
 				
-				check = #isDead
-					ifFalse: [self assert:
-						cursor context pc > cursor context startpc].
+				self assert: cursor context pc > cursor context startpc.
 				
 				contextChecks do: [:contextCheck |
 					Transcript showln: 'check context '; show: cursor context; show: ' with '; show: contextCheck.

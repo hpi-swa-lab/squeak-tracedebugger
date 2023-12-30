@@ -11,4 +11,4 @@ testDoStepOverError
 			#((doStepOver nil (willReallySend))
 			(doStepOver error: (willReturn))
 			(doStepInto error (willReturn))
-			(doStepInto signalError (willReturn isDead))).
+			(doStepInto signalError (willReturnTopFromMethod))).

@@ -16,4 +16,4 @@ testDoStepRestart
 			(doRestart nil (willReallyStore))
 			(doStepOver nil (willReallyStore willReallySend willReturn))
 			(doRestart nil (willReallyStore willReallyStore willReallyStore))
-			(doStepOver nil (willReallyStore willReallySend willReturn isDead))).
+			(doStepOver nil (willReallyStore willReallySend willReturnTopFromMethod))).

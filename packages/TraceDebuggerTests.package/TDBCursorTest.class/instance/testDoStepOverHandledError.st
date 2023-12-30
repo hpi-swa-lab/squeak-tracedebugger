@@ -11,4 +11,4 @@ testDoStepOverHandledError
 			#((doStepOver nil (willReallySend))
 			(doStepThrough handleError (willReallySend))
 			(doStepOver handleError (willReturn))
-			(doStepThrough nil (willReturn isDead))).
+			(doStepThrough nil (willReturnTopFromMethod))).

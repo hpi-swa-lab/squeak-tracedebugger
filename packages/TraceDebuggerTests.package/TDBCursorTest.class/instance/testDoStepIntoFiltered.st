@@ -14,4 +14,4 @@ testDoStepIntoFiltered
 			(wiffy2 (willReturn))
 			(plonk (willReallySend))
 			(ziffy (willReallySend willReturn))
-			(plonk (willReallySend willReturn isDead))).
+			(plonk (willReallySend willReturnTopFromMethod))).

@@ -12,4 +12,4 @@ testDoStepThrough
 			#((nil (willReallySend))
 			((griffleMethodReturn isExecutingBlock) (willReallySend willReturn))
 			((griffleMethodReturn isExecutingBlock) (willReallySend willReturn))
-			(nil (isDead))).
+			(nil ())).

@@ -14,4 +14,4 @@ testDoStepBack
 			(doStepBack nil (willReallyStore))
 			(doStepOver nil (willReallySend willReturn))
 			(doStepBack nil (willReallySend))
-			(doStepOver nil (willReturn isDead))).
+			(doStepOver nil (willReturnTopFromMethod))).
