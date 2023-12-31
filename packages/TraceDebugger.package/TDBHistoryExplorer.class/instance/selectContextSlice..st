@@ -10,6 +10,8 @@ selectContextSlice: aContextSlice
 		and: [(expanded includes: aContextSlice parent) not])
 			ifTrue:
 				[expanded addAll: aContextSlice withAllParents.
+				
+				self flag: #brittle. "if there are multiple slices with the same name..."
 				self changed:
 					#(openPath) ,
 						(aContextSlice withAllParents
