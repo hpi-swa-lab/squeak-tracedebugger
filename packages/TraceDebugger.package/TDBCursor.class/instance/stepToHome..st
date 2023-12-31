@@ -15,5 +15,5 @@ stepToHome: aContext
 		[^ self context].
 	home := home tdbproxyYourself.
 	^ self stepUntil: [:context |
-		context isDead
+		home isDead
 			or: [context tdbHasHome: home]]
