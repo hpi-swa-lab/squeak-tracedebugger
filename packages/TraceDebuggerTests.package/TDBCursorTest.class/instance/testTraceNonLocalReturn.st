@@ -6,11 +6,12 @@ testTraceNonLocalReturn
 			(Context
 				sender: nil
 				receiver: TDBTestLogic new
-				method: TDBTestLogic >> #griffleMethodReturn
+				method: TDBTestLogic >> #griffleMethodReturnHome
 				arguments: #())
 		like:
-			#(griffleMethodReturn 0 15
-				((griffle:with: 4 15
-					(((griffleMethodReturn 1) 6 8)
-					((griffleMethodReturn 1) 11 15
-						((wiffy2 13 14))))))).
+			#(griffleMethodReturnHome 0 18
+				((griffleMethodReturn 2 17
+					((griffle:with: 6 17
+						(((griffleMethodReturn 1) 8 10)
+						((griffleMethodReturn 1) 13 17
+							((wiffy2 15 16))))))))).
