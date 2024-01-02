@@ -17,6 +17,7 @@ advance
 	self flag: #coroutines. "result could not be located in the trace, search the entire tree instead and insert a new trace. This is a simple workaround only and in particular violates the assumptions of #traceForContext:, but a proper representation of coroutines would require a larger design revision. Hacked."
 	newRoot := (self findNearestTraceFor: result)
 		ifNil: [self findNearestTraceFor: result sender].
+	newRoot ifNil: [newRoot := self]. "last resort"
 	^ newRoot atTime: timeIndex putChild:
 		(self class forContext: result parent: newRoot timeIndex: timeIndex)
 			defangUnhandledErrorIfAny
