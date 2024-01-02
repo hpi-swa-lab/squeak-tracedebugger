@@ -14,7 +14,7 @@ exampleWorldCyclesFor: aDuration
 	recording := false.
 	button target:
 		[| priorLabel world |
-		recording ifTrue: [^ Processor terminateActive].
+		recording ifTrue: [^ Processor activeProcess in: [:process | [process terminate] fork]].
 		recording := true.
 		priorLabel := button label.
 		button label: 'recording... (click to stop)'.
