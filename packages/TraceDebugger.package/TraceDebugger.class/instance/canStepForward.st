@@ -1,5 +1,9 @@
 testing
 canStepForward
 
-	^ (self selectedContext ifNil: [^ false])
-		isDead not
+	^ self isDisplayingHistory
+		ifTrue:
+			[(self selectedContext ifNil: [^ false])
+				isDead not]
+		ifFalse:
+			[self processIsReady]
