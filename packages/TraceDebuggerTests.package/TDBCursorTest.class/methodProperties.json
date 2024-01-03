@@ -29,6 +29,7 @@
 		"testDoStepRestart" : "ct 12/30/2023 23:12",
 		"testDoStepRestartFromSender" : "ct 1/20/2022 20:50",
 		"testDoStepThrough" : "ct 12/30/2023 22:30",
+		"testDoStepThroughHistory" : "ct 1/3/2024 01:56",
 		"testDoStepThroughUntil" : "ct 2/17/2022 19:09",
 		"testDoStepThroughUntilFromSender" : "ct 3/13/2022 14:54",
 		"testReturnValue" : "ct 3/17/2022 00:55",

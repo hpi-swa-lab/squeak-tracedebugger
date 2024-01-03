@@ -13,7 +13,6 @@ stepToHome: aContext
 	home := homeTrace contextAtTime: self timeIndex.
 	home isDead ifTrue:
 		[^ self context].
-	home := home tdbproxyYourself.
 	^ self stepUntil: [:context |
 		home isDead
-			or: [context tdbHasHome: home]]
+			or: [context tdbHasHome: home tdbproxyYourself]]
