@@ -12,7 +12,7 @@ mainContextMenu: menu
 			ifNotNil: ['open a new window on the selected portion of the trace']).
 	context ifNotNil:
 		[menu
-			tdbAddUpdating: 'border context'
+			tdbAddUpdating: 'border context ( )'
 			getState: [context ifNotNil: [self isBorderContext: context]]
 			setState: [self toggleBorderContext: context];
 			balloonTextForLastItem: 'control whether the displayed trace will be clipped beyond this context'].
