@@ -6,7 +6,7 @@ jobs:
   create-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: LinqLover/create-image@master
         id: create-image
         with:
@@ -21,7 +21,7 @@ jobs:
     needs: create-image
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@master
         with:
           name: image
@@ -45,7 +45,7 @@ jobs:
       - build-screenshots
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: gh-pages
       - run: rm -rf screenshots/ help/
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: date
-        run: echo "::set-output name=date::$(date +'%Y%m%d-%H%M%S')"
+        run: echo "date=$(date +'%Y%m%d-%H%M%S')" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@master
         with:
           name: image
