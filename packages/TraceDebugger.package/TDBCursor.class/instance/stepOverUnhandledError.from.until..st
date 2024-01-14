@@ -35,7 +35,7 @@ stepOverUnhandledError: aContext from: startContext until: aBlock
 					[trace := self traceFor: context.
 					[(trace contextAtTime: self timeIndex) isDead]
 						whileFalse:
-							[self step ifNil: [^ nil].
+							[self step.
 							(aBlock cull: (context := self context))
 								ifTrue: [^ context]]]].
 	^ context

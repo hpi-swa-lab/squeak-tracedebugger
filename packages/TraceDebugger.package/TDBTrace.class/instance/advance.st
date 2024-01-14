@@ -4,7 +4,6 @@ advance
 
 	| timeIndex result newRoot |
 	result := context step.
-	result ifNil: [^ nil].
 	timeIndex := timeInterval stop + 1.
 	
 	result sender == context

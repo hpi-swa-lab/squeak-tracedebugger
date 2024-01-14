@@ -8,7 +8,7 @@ doStepOver: aContext
 				[(self completeStep: (self basicCalleeOf: aContext))
 					ifNil: [^ self]]
 			ifTrue:
-				[self step ifNil: [^ self].
+				[self step.
 				((self context tdbIdentical: aContext) not
 					and: [aContext in: [:ctx | self context hasSender: ctx]])
 						ifTrue: [self completeStep: self context]].

@@ -7,7 +7,7 @@ stepUntil: aBlock
 	start := context.
 	[aBlock cull: context]
 		whileFalse:
-			[self step ifNil: [^ nil].
+			[self step.
 			context := self context.
 			
 			"Detect unhandled errors."

@@ -9,7 +9,7 @@ stepToHome: aContext
 	
 	homeTrace := self livingHomeTraceFor: aContext.
 	
-	self step ifNil: [^ nil].
+	self step.
 	home := homeTrace contextAtTime: self timeIndex.
 	home isDead ifTrue:
 		[^ self context].
