@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1704244237763,
+  "lastUpdate": 1705255235991,
   "repoUrl": "https://github.com/hpi-swa-lab/squeak-tracedebugger",
   "entries": {
     "Benchmark": [
@@ -20747,6 +20747,86 @@ window.BENCHMARK_DATA = {
             "unit": "Milliseconds",
             "range": "stdev: 16.62327685305558",
             "extra": "{\"totalTime\":1108.3333333333333,\"preparationTime\":56.666666666666664,\"singleTimesToRun\":[1054.0,1067.0,1034.0],\"postparationTime\":0.0}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "committer": {
+            "email": "christoph.thiede@student.hpi.de",
+            "name": "Christoph Thiede",
+            "username": "LinqLover"
+          },
+          "distinct": true,
+          "id": "91c39ae2715442334cc7204a9a5a458d2614db62",
+          "message": "tdb: document shortcut for #toggleBorderContext in menu",
+          "timestamp": "2024-01-14T18:48:27+01:00",
+          "tree_id": "02ccf9a7b7371f37843dbea2af0690f13d50d9bd",
+          "url": "https://github.com/hpi-swa-lab/squeak-tracedebugger/commit/91c39ae2715442334cc7204a9a5a458d2614db62"
+        },
+        "date": 1705255234689,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchFactorial",
+            "value": 6281.666666666667,
+            "unit": "Milliseconds",
+            "range": "stdev: 79.19806394940052",
+            "extra": "{\"totalTime\":6281.666666666667,\"preparationTime\":0.0,\"singleTimesToRun\":[6232.0,6240.0,6373.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchProxyImageForm",
+            "value": 21184.666666666668,
+            "unit": "Milliseconds",
+            "range": "stdev: 541.8277709137226",
+            "extra": "{\"totalTime\":21185.0,\"preparationTime\":0.3333333333333333,\"singleTimesToRun\":[20588.0,21646.0,21320.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBRetracingSimulatorBenchmark>>#benchRegex",
+            "value": 211.66666666666666,
+            "unit": "Milliseconds",
+            "range": "stdev: 3.7859388972001824",
+            "extra": "{\"totalTime\":211.66666666666666,\"preparationTime\":0.0,\"singleTimesToRun\":[210.0,216.0,209.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchFactorial",
+            "value": 2069.6666666666665,
+            "unit": "Milliseconds",
+            "range": "stdev: 24.906491790963525",
+            "extra": "{\"totalTime\":2069.6666666666665,\"preparationTime\":0.0,\"singleTimesToRun\":[2041.0,2082.0,2086.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TDBTracingSimulatorBenchmark>>#benchRegex",
+            "value": 477.3333333333333,
+            "unit": "Milliseconds",
+            "range": "stdev: 6.8068592855540455",
+            "extra": "{\"totalTime\":477.3333333333333,\"preparationTime\":0.0,\"singleTimesToRun\":[485.0,475.0,472.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchExpandAll",
+            "value": 47750,
+            "unit": "Milliseconds",
+            "range": "stdev: 178.68128049686683",
+            "extra": "{\"totalTime\":47860.666666666664,\"preparationTime\":110.66666666666667,\"singleTimesToRun\":[47563.0,47919.0,47768.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepInto",
+            "value": 2287.3333333333335,
+            "unit": "Milliseconds",
+            "range": "stdev: 17.616280348965084",
+            "extra": "{\"totalTime\":2350.0,\"preparationTime\":62.666666666666664,\"singleTimesToRun\":[2267.0,2297.0,2298.0],\"postparationTime\":0.0}"
+          },
+          {
+            "name": "TraceDebuggerBenchmark>>#benchStepOver",
+            "value": 1043,
+            "unit": "Milliseconds",
+            "range": "stdev: 14.0",
+            "extra": "{\"totalTime\":1100.6666666666667,\"preparationTime\":57.666666666666664,\"singleTimesToRun\":[1059.0,1037.0,1033.0],\"postparationTime\":0.0}"
           }
         ]
       }
