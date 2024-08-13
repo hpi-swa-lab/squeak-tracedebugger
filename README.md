@@ -174,7 +174,7 @@ If you would like to cite this project or would like to learn more about the the
   	publisher = {ACM},
   	address = {New York, NY, USA},
   	doi = {10.1145/3622758.3622892},
-  	numpages = {14},
+  	pages	= {89--102},
   	location = {Cascais, Portugal},
   	series = {Onward! '23}
   }</code></pre>
